@@ -1,0 +1,12 @@
+#Paramètres globaux
+	type		:	MANDELBROT
+
+#Paramètres de calcul
+	max_it		: 	500
+	pas		: 	0.00005
+
+#Paramètres de zone
+	zoom		: 	40
+	decalage_x	: 	-0.76
+	decalage_y	: 	0.1
+	
