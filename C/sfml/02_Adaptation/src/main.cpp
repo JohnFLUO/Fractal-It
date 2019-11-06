@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+//#include <Mouse.hpp>
 #include <array>
 #include <vector>
 #include <thread>
@@ -77,7 +78,6 @@ int main(int argc, char* argv[]) {
     window.setFramerateLimit(0);
 
 
-
     sf::Image image;
     image.create(IMAGE_WIDTH, IMAGE_HEIGHT, sf::Color(0, 0, 0));
     sf::Texture texture;
@@ -88,9 +88,35 @@ int main(int argc, char* argv[]) {
     bool stateChanged = true; // track whether the image needs to be regenerated
 
     while (window.isOpen()) {
+        /*if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+          sf::Vector2i position = sf::Mouse::getPosition(window);
+          std::cout << "position : " << position.x << ", " << position.y << std::endl;
+        }*/
+
         sf::Event event;
+        sf::Vector2i position;
+        sf::Vector2i worldPosition;
         while (window.pollEvent(event)) {
             switch (event.type) {
+              case sf::Event::MouseWheelScrolled:
+                  stateChanged = true;
+                  if (event.mouseWheelScroll.delta > 0) {
+                    zoom *= 0.75;
+                  } else {
+                    zoom /= 0.75;
+                  }
+              break;
+
+              case sf::Event::MouseButtonPressed:
+                  if (event.mouseButton.button == sf::Mouse::Left) {
+                      stateChanged = true;
+                      position = sf::Mouse::getPosition(window);
+                      //std::cout << "offsetX = " << offsetX << ", position : " << worldPosition.x << ", " << worldPosition.y << std::endl;
+                      offsetX += (position.x - IMAGE_WIDTH/2) * zoom;
+                      offsetY += (position.y - IMAGE_HEIGHT/2) * zoom;
+                    }
+                break;
+
                 case sf::Event::Closed:
                     window.close();
                     break;
@@ -108,13 +134,13 @@ int main(int argc, char* argv[]) {
                             break;
 
                         case sf::Keyboard::O :
-                          iterations /= 2;
+                          iterations /= 1.5;
                           iterations  = (iterations == 0) ? 1 : iterations;
                           mb.setIterations( iterations );
                           break;
 
                         case sf::Keyboard::P :
-                          iterations *= 2;
+                          iterations *= 1.5;
                           mb.setIterations( iterations );
                           break;
 
