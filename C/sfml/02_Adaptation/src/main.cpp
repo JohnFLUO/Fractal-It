@@ -24,6 +24,8 @@ int main(int argc, char* argv[]) {
     double zoom    = 0.004; // allow the user to zoom in and out...
     int max_iters  = 256;
 
+    double wheelZoomFactor = 0.05;
+
     int IMAGE_WIDTH  = 1280;
     int IMAGE_HEIGHT = 800;
 
@@ -95,15 +97,35 @@ int main(int argc, char* argv[]) {
 
         sf::Event event;
         sf::Vector2i position;
-        sf::Vector2i worldPosition;
+        sf::Vector2f worldPosition;
+        sf::Vector2i distanceToCenter;
+
         while (window.pollEvent(event)) {
             switch (event.type) {
               case sf::Event::MouseWheelScrolled:
                   stateChanged = true;
+                  position = sf::Mouse::getPosition(window);
+
+                  // Positionnement sur la souris
+                  /*offsetX += (position.x - (float)(IMAGE_WIDTH)/2.0)*zoom;
+                  offsetY += (position.y - (float)(IMAGE_HEIGHT)/2.0)*zoom;*/
+
+                  //Positionnement plus agréable :
+                  worldPosition.x = (position.x - (float)(IMAGE_WIDTH)/2.0)*zoom + offsetX;
+                  worldPosition.y = (position.y - (float)(IMAGE_HEIGHT)/2.0)*zoom + offsetY;
+
                   if (event.mouseWheelScroll.delta > 0) {
-                    zoom *= 0.75;
+                    for (int i = 0 ; i < event.mouseWheelScroll.delta ; i++) {
+                      offsetX += (worldPosition.x - offsetX)*wheelZoomFactor;
+                      offsetY += (worldPosition.y - offsetY)*wheelZoomFactor;
+                      zoom /= wheelZoomFactor+1;
+                    }
                   } else {
-                    zoom /= 0.75;
+                    for (int i = 0 ; i < -event.mouseWheelScroll.delta ; i++) {
+                      offsetX += (offsetX - worldPosition.x)*wheelZoomFactor;
+                      offsetY += (offsetY - worldPosition.y)*wheelZoomFactor;
+                      zoom *= wheelZoomFactor+1;
+                    }
                   }
               break;
 
