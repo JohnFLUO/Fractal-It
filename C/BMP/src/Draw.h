@@ -10,6 +10,7 @@
 #include <fstream>
 #include <vector>
 #include <queue>
+#include <math.h>
 
 #include "CImage++.h"
 #include "MyMath.h"

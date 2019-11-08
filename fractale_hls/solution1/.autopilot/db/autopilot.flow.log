@@ -1,0 +1,181 @@
+INFO-FLOW: Workspace /net/e/floupias001/FRACTALE/fractale_hls/solution1 opened at Fri Nov 08 15:01:29 CET 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a100tcsg324-1 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.21 sec.
+Execute   set_part xc7a100tcsg324-1 -tool vivado 
+Execute     add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7a100t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/artix7/artix7_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/main.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling fractale_hls/src/main.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted fractale_hls/src/main.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "fractale_hls/src/main.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E fractale_hls/src/main.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp
+Command       clang done; 1.22 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/net/e/floupias001/FRACTALE/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp"  -o "/net/e/floupias001/FRACTALE/fractale_hls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /net/e/floupias001/FRACTALE/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp -o /net/e/floupias001/FRACTALE/fractale_hls/solution1/.autopilot/db/useless.bc
+WARNING: [HLS 200-40] In file included from fractale_hls/src/main.cpp:1:
+fractale_hls/src/main.cpp:36:2: error: use of undeclared identifier 'sc_clock'
+ sc_clock clk("clk",10,SC_NS);
+ ^
+fractale_hls/src/main.cpp:39:13: error: use of undeclared identifier 'clk'
+ entree.clk(clk);
+            ^
+fractale_hls/src/main.cpp:40:18: error: use of undeclared identifier 'clk'
+ convergence.clk(clk);
+                 ^
+fractale_hls/src/main.cpp:41:12: error: use of undeclared identifier 'clk'
+ image.clk(clk);
+           ^
+4 errors generated.\n
+Command       clang done; error code: 2; 1.55 sec.
+ERROR: [HLS 200-70] Compilation errors found: Pragma processor failed: In file included from fractale_hls/src/main.cpp:1:
+fractale_hls/src/main.cpp:36:2: error: use of undeclared identifier 'sc_clock'
+ sc_clock clk("clk",10,SC_NS);
+ ^
+fractale_hls/src/main.cpp:39:13: error: use of undeclared identifier 'clk'
+ entree.clk(clk);
+            ^
+fractale_hls/src/main.cpp:40:18: error: use of undeclared identifier 'clk'
+ convergence.clk(clk);
+                 ^
+fractale_hls/src/main.cpp:41:12: error: use of undeclared identifier 'clk'
+ image.clk(clk);
+           ^
+4 errors generated.
+Command     elaborate done; error code: 2; 2.79 sec.
+Command   csynth_design done; error code: 2; 2.8 sec.
+Command ap_source done; error code: 1; 3.15 sec.
+Execute cleanup_all 

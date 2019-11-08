@@ -12,6 +12,7 @@ Creates a .BMP image file diplaying the Mandelbrot set.
 
 */
 
+#include "SDL2/SDL.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -38,7 +39,7 @@ int main(int argc, char * argv[]) {
   cout << "Execution start (" << __DATE__ << " - " << __TIME__ << ")" << endl;
 
   // Parse parameters file
-  string filename = "default.txt";
+  string filename = "mandelbrot_valley_min.txt";
   if (argc > 1) {
     filename = argv[1];
   }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Compilation errors found: Pragma processor failed: In file included from fractale_hls/src/main.cpp:1:&#xA;fractale_hls/src/main.cpp:36:2: error: use of undeclared identifier 'sc_clock'&#xA; sc_clock clk(&quot;clk&quot;,10,SC_NS);&#xA; ^&#xA;fractale_hls/src/main.cpp:39:13: error: use of undeclared identifier 'clk'&#xA; entree.clk(clk);&#xA;            ^&#xA;fractale_hls/src/main.cpp:40:18: error: use of undeclared identifier 'clk'&#xA; convergence.clk(clk);&#xA;                 ^&#xA;fractale_hls/src/main.cpp:41:12: error: use of undeclared identifier 'clk'&#xA; image.clk(clk);&#xA;           ^&#xA;4 errors generated.&#xA;Failed checking during preprocessing.&#xA;    while executing&#xA;&quot;source /net/e/floupias001/FRACTALE/fractale_hls/solution1/csynth.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /net/e/floupias001/FRACTALE/fractale_hls/solution1/csynth.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="fractale_hls" solutionName="solution1" date="2019-11-08T15:01:32.901+0100"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] In file included from fractale_hls/src/main.cpp:1:&#xA;fractale_hls/src/main.cpp:36:2: error: use of undeclared identifier 'sc_clock'&#xA; sc_clock clk(&quot;clk&quot;,10,SC_NS);&#xA; ^&#xA;fractale_hls/src/main.cpp:39:13: error: use of undeclared identifier 'clk'&#xA; entree.clk(clk);&#xA;            ^&#xA;fractale_hls/src/main.cpp:40:18: error: use of undeclared identifier 'clk'&#xA; convergence.clk(clk);&#xA;                 ^&#xA;fractale_hls/src/main.cpp:41:12: error: use of undeclared identifier 'clk'&#xA; image.clk(clk);&#xA;           ^&#xA;4 errors generated.\n" projectName="fractale_hls" solutionName="solution1" date="2019-11-08T15:01:32.884+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

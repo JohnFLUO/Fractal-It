@@ -7,6 +7,6 @@
 
 #Paramètres de zone
 	zoom		: 	1.6
-	decalage_x	: 	-0.4
+	decalage_x	: 	0
 	decalage_y	: 	0
 	
