@@ -3,16 +3,17 @@
 
 #include <SFML/Graphics.hpp>
 #include <array>
+#include "CColor.hpp"
 
 
 class ColorMap {
 public:
     ColorMap(){
-        
+
     }
-    
+
     virtual ~ColorMap(){
-        
+
     }
 
     virtual sf::Color getColor(int iterations){

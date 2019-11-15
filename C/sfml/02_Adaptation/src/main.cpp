@@ -9,9 +9,12 @@
 //
 // Les differentes techniques de coloriage de l'image
 //
+#include "Color/ColorHSV/ColorHSV.hpp"
 #include "Color/ColorSmooth/ColorSmooth.hpp"
 #include "Convergence/double/Convergence_dp_x86.hpp"
 #include "immintrin.h"
+
+
 #include "Mandelbrot.hpp"
 #include "Mandelbrot.cpp"
 
@@ -74,7 +77,7 @@ int main(int argc, char* argv[]) {
     printf("(II) Dimension de la fenetre (%d, %d)\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
 
-    Mandelbrot<Convergence_dp_x86, ColorSmooth> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
+    Mandelbrot<Convergence_dp_x86, ColorHSV> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
 
     sf::RenderWindow window(sf::VideoMode(IMAGE_WIDTH, IMAGE_HEIGHT), "Mandelbrot");
     window.setFramerateLimit(0);
