@@ -25,6 +25,7 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1119630022" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.655964896" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.165794590" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/net/e/floupias001/FRACTALE/fractale/Fractale-It"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/etc"/>
@@ -42,6 +43,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.66166832" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1577435737" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.80000234" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/net/e/floupias001/FRACTALE/fractale/Fractale-It"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/etc"/>
@@ -59,14 +61,18 @@
 								<option id="gnu.c.link.option.paths.469724680" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/lib"/>
 								</option>
-								<option id="gnu.c.link.option.libs.599246656" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
+								<option id="gnu.c.link.option.libs.599246656" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="systemc_debug"/>
+								</option>
 								<option id="gnu.c.link.option.ldflags.830074396" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.943288892" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option id="gnu.cpp.link.option.paths.768577878" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/lib"/>
 								</option>
-								<option id="gnu.cpp.link.option.libs.692779195" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
+								<option id="gnu.cpp.link.option.libs.692779195" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="systemc_debug"/>
+								</option>
 								<option id="gnu.cpp.link.option.flags.618609165" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1948880194" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -109,6 +115,7 @@
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.1362423360" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.385390797" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.999763460" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/net/e/floupias001/FRACTALE/fractale/Fractale-It"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/etc"/>
@@ -121,6 +128,7 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.1410580844" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.91929195" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.482725181" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="/net/e/floupias001/FRACTALE/fractale/Fractale-It"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/etc"/>
@@ -133,14 +141,18 @@
 								<option id="gnu.c.link.option.paths.910502889" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/lib"/>
 								</option>
-								<option id="gnu.c.link.option.libs.1245888498" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
+								<option id="gnu.c.link.option.libs.1245888498" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="systemc_debug"/>
+								</option>
 								<option id="gnu.c.link.option.ldflags.266641378" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1003915328" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
 								<option id="gnu.cpp.link.option.paths.1543209510" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/lib"/>
 								</option>
-								<option id="gnu.cpp.link.option.libs.1585154791" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
+								<option id="gnu.cpp.link.option.libs.1585154791" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="systemc_debug"/>
+								</option>
 								<option id="gnu.cpp.link.option.flags.671452761" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1906104080" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

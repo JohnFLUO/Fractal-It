@@ -10,16 +10,18 @@ void do_convergence()  {
       sc_uint<8> zooom = zoom.read();
       float off_Y = offset_Y.read();
       float off_X = offset_X.read();
-      double Zimag = off_Y - IMAGE_HEIGHT / 2.0f * zooom + (y * zooom);
-      double Zreal = off_X - IMAGE_WIDTH / 2.0f * zooom;
+      double zimag = off_Y - IMAGE_HEIGHT / 2.0f * zooom + (y * zooom);
+      double zreal = off_X - IMAGE_WIDTH / 2.0f * zooom;
+      double startimag = zimag;
+      double startreal = zreal;
 
       for (int x = 0; x < IMAGE_WIDTH;  x++) {
         max_it = 0;
         for (unsigned int counter = 0; counter < MAX_IT; counter++) {
-          double r2 = zReal * zReal;
-          double i2 = zImag * zImag;
-          zImag = 2.0f * zReal * zImag + startImag;
-          zReal = r2 - i2 + startReal;
+          double r2 = zreal * zreal;
+          double i2 = zimag * zimag;
+          zimag = 2.0f * zreal * zimag + startimag;
+          zreal = r2 - i2 + startreal;
           if ( (r2 + i2) > 4.0f) {
             buff_counter = counter;
             max_it = 1;
