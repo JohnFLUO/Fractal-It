@@ -1,10 +1,11 @@
 
+//#include "sc_clock.h"
+#include "systemc.h"
 #include <iostream>
 #include <math.h>
 #include "convergence.h"
 #include "image.h"
-#include "entree.h"
-#include "systemc.h"
+
 
 
 using namespace std;
@@ -13,36 +14,33 @@ using namespace std;
 int main (int argc, char * argv []){
 
 	//cout << "Initialisation des composants..." << endl;
-	entree      		entree ("entree");
 	convergence	    convergence("calcul");
 	image           image("image");
 
 	//cout << "Creation des signaux d'interconnexion..." << endl;
 
 	sc_fifo<sc_uint<32> >  addr("addr", 128);
-	sc_signal<bool>					s_in1("entree");
+	sc_signal<bool>		   s_in1("entree");
 	sc_fifo<sc_uint<8> >  couleur("couleur", 128);
 
 	sc_fifo<sc_uint<8> >  counter;
 	sc_in <sc_uint<8> > zoom;
-	sc_signal <float> offset_X;
-	sc_signal <float> offset_Y;
+	sc_in <float> offset_X;
+	sc_in <float> offset_Y;
 	sc_signal<int> x;
 	sc_signal<int> y;
 
 	sc_signal<bool> reset;
 
 	//sc_signal<bool> clk;
-	sc_clock clk("clk",10,SC_NS);
+	sc_clock clk("clk",(double)10,SC_NS, (double)0.5);
 
 	//cout << "Mapping des composants..." << endl;
-	entree.clk(clk);
 	convergence.clk(clk);
 	image.clk(clk);
 
 	convergence.reset(reset);
 	image.reset(reset);
-	entree.reset(reset);
 
 	image.counter(counter);
 	image.couleur(couleur);

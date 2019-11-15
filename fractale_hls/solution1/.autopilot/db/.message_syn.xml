@@ -1,32 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fractale_hls/src/main.cpp&apos; ..."/>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from fractale_hls/src/main.cpp:1:
-fractale_hls/src/main.cpp:36:2: error: use of undeclared identifier &apos;sc_clock&apos;
- sc_clock clk(&quot;clk&quot;,10,SC_NS);
- ^
-fractale_hls/src/main.cpp:39:13: error: use of undeclared identifier &apos;clk&apos;
- entree.clk(clk);
-            ^
-fractale_hls/src/main.cpp:40:18: error: use of undeclared identifier &apos;clk&apos;
- convergence.clk(clk);
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1310" tag="" content="Cannot find source file entree.cpp; skipping it."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1310" tag="" content="Cannot find source file entree.h; skipping it."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fractale_hls/src/convergence.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from fractale_hls/src/convergence.cpp:1:
+fractale_hls/src/convergence.cpp:10:26: error: use of undeclared identifier &apos;zoom&apos;; did you mean &apos;zooom&apos;?
+      sc_uint&lt;8&gt; zooom = zoom.read();
+                         ^~~~
+                         zooom
+fractale_hls/src/convergence.cpp:10:18: note: &apos;zooom&apos; declared here
+      sc_uint&lt;8&gt; zooom = zoom.read();
                  ^
-fractale_hls/src/main.cpp:41:12: error: use of undeclared identifier &apos;clk&apos;
- image.clk(clk);
-           ^
-4 errors generated.\n"/>
-	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: Pragma processor failed: In file included from fractale_hls/src/main.cpp:1:
-fractale_hls/src/main.cpp:36:2: error: use of undeclared identifier &apos;sc_clock&apos;
- sc_clock clk(&quot;clk&quot;,10,SC_NS);
- ^
-fractale_hls/src/main.cpp:39:13: error: use of undeclared identifier &apos;clk&apos;
- entree.clk(clk);
-            ^
-fractale_hls/src/main.cpp:40:18: error: use of undeclared identifier &apos;clk&apos;
- convergence.clk(clk);
+fractale_hls/src/convergence.cpp:11:21: error: use of undeclared identifier &apos;offset_Y&apos;
+      float off_Y = offset_Y.read();
+                    ^
+fractale_hls/src/convergence.cpp:12:21: error: use of undeclared identifier &apos;offset_X&apos;
+      float off_X = offset_X.read();
+                    ^
+fractale_hls/src/convergence.cpp:32:9: error: use of undeclared identifier &apos;s_out&apos;; did you mean &apos;sc_out&apos;?
+        s_out.write(buff_counter);
+        ^~~~~
+        sc_out
+/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: &apos;sc_out&apos; declared here
+    class sc_out : public sc_inout&lt;_T&gt; {
+          ^
+In file included from fractale_hls/src/convergence.cpp:1:
+fractale_hls/src/convergence.cpp:32:9: error: cannot refer to class template &apos;sc_out&apos; without a template argument list
+        s_out.write(buff_counter);
+        ^
+/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: template is declared here
+    class sc_out : public sc_inout&lt;_T&gt; {
+          ^
+In file included from fractale_hls/src/convergence.cpp:1:
+fractale_hls/src/convergence.cpp:33:9: error: use of undeclared identifier &apos;out_x&apos;
+        out_x.write(x);
+        ^
+fractale_hls/src/convergence.cpp:34:9: error: use of undeclared identifier &apos;out_y&apos;
+        out_y.write(y);
+        ^
+7 errors generated.\n"/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: Pragma processor failed: In file included from fractale_hls/src/convergence.cpp:1:
+fractale_hls/src/convergence.cpp:10:26: error: use of undeclared identifier &apos;zoom&apos;; did you mean &apos;zooom&apos;?
+      sc_uint&lt;8&gt; zooom = zoom.read();
+                         ^~~~
+                         zooom
+fractale_hls/src/convergence.cpp:10:18: note: &apos;zooom&apos; declared here
+      sc_uint&lt;8&gt; zooom = zoom.read();
                  ^
-fractale_hls/src/main.cpp:41:12: error: use of undeclared identifier &apos;clk&apos;
- image.clk(clk);
-           ^
-4 errors generated."/>
+fractale_hls/src/convergence.cpp:11:21: error: use of undeclared identifier &apos;offset_Y&apos;
+      float off_Y = offset_Y.read();
+                    ^
+fractale_hls/src/convergence.cpp:12:21: error: use of undeclared identifier &apos;offset_X&apos;
+      float off_X = offset_X.read();
+                    ^
+fractale_hls/src/convergence.cpp:32:9: error: use of undeclared identifier &apos;s_out&apos;; did you mean &apos;sc_out&apos;?
+        s_out.write(buff_counter);
+        ^~~~~
+        sc_out
+/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: &apos;sc_out&apos; declared here
+    class sc_out : public sc_inout&lt;_T&gt; {
+          ^
+In file included from fractale_hls/src/convergence.cpp:1:
+fractale_hls/src/convergence.cpp:32:9: error: cannot refer to class template &apos;sc_out&apos; without a template argument list
+        s_out.write(buff_counter);
+        ^
+/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: template is declared here
+    class sc_out : public sc_inout&lt;_T&gt; {
+          ^
+In file included from fractale_hls/src/convergence.cpp:1:
+fractale_hls/src/convergence.cpp:33:9: error: use of undeclared identifier &apos;out_x&apos;
+        out_x.write(x);
+        ^
+fractale_hls/src/convergence.cpp:34:9: error: use of undeclared identifier &apos;out_y&apos;
+        out_y.write(y);
+        ^
+7 errors generated."/>
 </Messages>
