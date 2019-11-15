@@ -88,6 +88,7 @@ int main(int argc, char* argv[]) {
     unsigned short iterations = 256;
 
     bool stateChanged = true; // track whether the image needs to be regenerated
+    sf::Clock clicTime;
 
     while (window.isOpen()) {
         /*if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
@@ -97,7 +98,7 @@ int main(int argc, char* argv[]) {
 
         sf::Event event;
         sf::Vector2i position;
-        sf::Vector2f worldPosition;
+        sf::Vector2<double> worldPosition;
         sf::Vector2i distanceToCenter;
 
         while (window.pollEvent(event)) {
@@ -106,13 +107,9 @@ int main(int argc, char* argv[]) {
                   stateChanged = true;
                   position = sf::Mouse::getPosition(window);
 
-                  // Positionnement sur la souris
-                  /*offsetX += (position.x - (float)(IMAGE_WIDTH)/2.0)*zoom;
-                  offsetY += (position.y - (float)(IMAGE_HEIGHT)/2.0)*zoom;*/
-
                   //Positionnement plus agréable :
-                  worldPosition.x = (position.x - (float)(IMAGE_WIDTH)/2.0)*zoom + offsetX;
-                  worldPosition.y = (position.y - (float)(IMAGE_HEIGHT)/2.0)*zoom + offsetY;
+                  worldPosition.x = (position.x - (double)(IMAGE_WIDTH)/2.0)*zoom + offsetX;
+                  worldPosition.y = (position.y - (double)(IMAGE_HEIGHT)/2.0)*zoom + offsetY;
 
                   if (event.mouseWheelScroll.delta > 0) {
                     for (int i = 0 ; i < event.mouseWheelScroll.delta ; i++) {
@@ -131,12 +128,17 @@ int main(int argc, char* argv[]) {
 
               case sf::Event::MouseButtonPressed:
                   if (event.mouseButton.button == sf::Mouse::Left) {
+                    if (clicTime.getElapsedTime() <= sf::seconds(0.2)) {
+                      std::cout << "asSeconds : " << clicTime.getElapsedTime().asSeconds() << std::endl;
                       stateChanged = true;
                       position = sf::Mouse::getPosition(window);
                       //std::cout << "offsetX = " << offsetX << ", position : " << worldPosition.x << ", " << worldPosition.y << std::endl;
                       offsetX += (position.x - IMAGE_WIDTH/2) * zoom;
                       offsetY += (position.y - IMAGE_HEIGHT/2) * zoom;
+                    } else {
+                      clicTime.restart();
                     }
+                  }
                 break;
 
                 case sf::Event::Closed:
