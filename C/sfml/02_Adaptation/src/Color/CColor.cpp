@@ -2,6 +2,8 @@
 
 
 */
+#ifndef _ColorCPP_
+#define _ColorCPP_
 
 #include "CColor.hpp"
 
@@ -26,10 +28,10 @@ sf::Color ColorUtils::HSVToRGB(int h, int s, int v) { //0 to 255 for the 3
     t = (v * (255 - ((s * (255 - rem)) >> 8))) >> 8;
 
     switch (reg) {
-    case 0: // 0° <= H < 60°
+    case 0: //   0° <= H <  60°
       r = v; g = t; b = p;
       break;
-    case 1: // 60° <= H < 120°
+    case 1: //  60° <= H < 120°
       r = q; g = v; b = p;
       break;
     case 2: // 120° <= H < 180°
@@ -48,3 +50,5 @@ sf::Color ColorUtils::HSVToRGB(int h, int s, int v) { //0 to 255 for the 3
   }
   return sf::Color(r, g, b);
 }
+
+#endif

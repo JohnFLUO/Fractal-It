@@ -1,5 +1,5 @@
-#ifndef _ColorHSV_
-#define _ColorHSV_
+#ifndef _ColorLoop_
+#define _ColorLoop_
 
 #include "../ColorMap.hpp"
 #include "../CColor.hpp"
@@ -9,18 +9,18 @@
 #include <cmath>
 #include <cassert>
 
-class ColorHSV : public ColorMap {
+class ColorLSD : public ColorMap {
 public:
-    ColorHSV(int max_iters) {
+    ColorLSD(int max_iters) {
       MAX = max_iters; // memorisation du nombre d'iterations max.
       for (int i=0; i < MAX; ++i) {
-          colors[i] = ColorUtils::HSVToRGB(255*ITER/MAX, 255, 255);
+          colors[i] = ColorUtils::HSVToRGB((255*ITER)%MAX, 255, 255);
       }
       colors[MAX-1] = sf::Color(0, 0, 0);
       colors[MAX] = sf::Color(0, 0, 0);
     }
 
-    virtual ~ColorHSV(){
+    virtual ~ColorLSD(){
 
     }
 
@@ -30,4 +30,4 @@ public:
     }
 };
 
-#endif // _ColorHSV_
+#endif // _ColorLoop_

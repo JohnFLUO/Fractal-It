@@ -5,6 +5,8 @@
 #include <array>
 #include "CColor.hpp"
 
+#define VARIATION 0// (MAX/8)
+#define ITER ((i+VARIATION)%MAX)
 
 class ColorMap {
 public:

@@ -5,12 +5,16 @@
 #include <thread>
 #include <iostream>
 #include <unistd.h>
+#include <sstream>
 
 //
 // Les differentes techniques de coloriage de l'image
 //
 #include "Color/ColorHSV/ColorHSV.hpp"
 #include "Color/ColorSmooth/ColorSmooth.hpp"
+#include "Color/ColorLoop/ColorLoop.hpp"
+#include "Color/ColorLSD/ColorLSD.hpp"
+#include "Color/ColorTest/ColorTest.hpp"
 #include "Convergence/double/Convergence_dp_x86.hpp"
 #include "immintrin.h"
 
@@ -77,7 +81,7 @@ int main(int argc, char* argv[]) {
     printf("(II) Dimension de la fenetre (%d, %d)\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
 
-    Mandelbrot<Convergence_dp_x86, ColorHSV> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
+    Mandelbrot<Convergence_dp_x86, ColorSmooth> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
 
     sf::RenderWindow window(sf::VideoMode(IMAGE_WIDTH, IMAGE_HEIGHT), "Mandelbrot");
     window.setFramerateLimit(0);
@@ -103,6 +107,10 @@ int main(int argc, char* argv[]) {
         sf::Vector2i position;
         sf::Vector2<double> worldPosition;
         sf::Vector2i distanceToCenter;
+
+        std::stringstream dateString;
+        time_t now;
+        tm *ltm;
 
         while (window.pollEvent(event)) {
             switch (event.type) {
@@ -152,6 +160,21 @@ int main(int argc, char* argv[]) {
                     switch (event.key.code) {
                         case sf::Keyboard::Escape :
                             window.close();
+                            break;
+                        case sf::Keyboard::F12 :
+                            now = time(0); //Number of seconds since January 1st,1970
+                            ltm = localtime(&now);
+
+                            // print various components of tm structure.
+                            dateString << (1900 + ltm->tm_year);
+                            dateString << (1 + ltm->tm_mon);
+                            dateString << (ltm->tm_mday);
+                            dateString << "_";
+                            dateString << (ltm->tm_hour);
+                            dateString << (ltm->tm_min);
+                            dateString << (ltm->tm_sec);
+
+                            image.saveToFile("img/Mandelbrot_"+dateString.str()+".png");
                             break;
                         case sf::Keyboard::A :
                             zoom *= 0.75;
