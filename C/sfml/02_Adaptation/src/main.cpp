@@ -10,11 +10,15 @@
 //
 // Les differentes techniques de coloriage de l'image
 //
-#include "Color/ColorHSV/ColorHSV.hpp"
 #include "Color/ColorSmooth/ColorSmooth.hpp"
-#include "Color/ColorLoop/ColorLoop.hpp"
+#include "Color/ColorSmooth/ColorSmoothShifted.hpp"
+#include "Color/ColorSmooth/ColorSmoothLoop.hpp"
+#include "Color/ColorHSV/ColorHSV.hpp"
+#include "Color/ColorHSV/ColorHSVLoop.hpp"
 #include "Color/ColorLSD/ColorLSD.hpp"
 #include "Color/ColorTest/ColorTest.hpp"
+#include "Color/ColorGreyScale/ColorGreyScale.hpp"
+
 #include "Convergence/double/Convergence_dp_x86.hpp"
 #include "immintrin.h"
 
