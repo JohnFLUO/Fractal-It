@@ -20,6 +20,7 @@
 #include "Color/ColorGreyScale/ColorGreyScale.hpp"
 
 #include "Convergence/double/Convergence_dp_x86.hpp"
+#include "Convergence/double/Convergence_dp_x86_AVX.hpp"
 #include "immintrin.h"
 
 
@@ -85,7 +86,7 @@ int main(int argc, char* argv[]) {
     printf("(II) Dimension de la fenetre (%d, %d)\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
 
-    Mandelbrot<Convergence_dp_x86, ColorSmooth> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
+    Mandelbrot<Convergence_dp_x86_AVX, ColorSmoothLoop> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
 
     sf::RenderWindow window(sf::VideoMode(IMAGE_WIDTH, IMAGE_HEIGHT), "Mandelbrot");
     window.setFramerateLimit(0);
@@ -143,11 +144,9 @@ int main(int argc, char* argv[]) {
 
               case sf::Event::MouseButtonPressed:
                   if (event.mouseButton.button == sf::Mouse::Left) {
-                    if (clicTime.getElapsedTime() <= sf::seconds(0.2)) {
-                      std::cout << "asSeconds : " << clicTime.getElapsedTime().asSeconds() << std::endl;
+                    if (clicTime.getElapsedTime() <= sf::seconds(0.2)) { //double clic
                       stateChanged = true;
                       position = sf::Mouse::getPosition(window);
-                      //std::cout << "offsetX = " << offsetX << ", position : " << worldPosition.x << ", " << worldPosition.y << std::endl;
                       offsetX += (position.x - IMAGE_WIDTH/2) * zoom;
                       offsetY += (position.y - IMAGE_HEIGHT/2) * zoom;
                     } else {
