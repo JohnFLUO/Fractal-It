@@ -184,13 +184,13 @@ int main(int argc, char* argv[]) {
                             break;
 
                         case sf::Keyboard::O :
-                          iterations /= 1.5;
-                          iterations  = (iterations == 0) ? 1 : iterations;
+                          iterations /= 2;
+                          iterations  = (iterations <= 1) ? 2 : iterations;
                           mb.setIterations( iterations );
                           break;
 
                         case sf::Keyboard::P :
-                          iterations *= 1.5;
+                          iterations = (iterations*2 <= 65535) ? iterations*2 : iterations;
                           mb.setIterations( iterations );
                           break;
 
