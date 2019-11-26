@@ -20,7 +20,8 @@
 #include "Color/ColorGreyScale/ColorGreyScale.hpp"
 
 #include "Convergence/double/Convergence_dp_x86.hpp"
-#include "Convergence/double/Convergence_dp_x86_AVX.hpp"
+#include "Convergence/double/Convergence_dp_x86_omp.hpp"
+#include "Convergence/double/Convergence_dp_x86_omp_AVX.hpp"
 #include "immintrin.h"
 
 
@@ -86,7 +87,7 @@ int main(int argc, char* argv[]) {
     printf("(II) Dimension de la fenetre (%d, %d)\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
 
-    Mandelbrot<Convergence_dp_x86_AVX, ColorSmoothLoop> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
+    Mandelbrot<Convergence_dp_x86_omp_AVX, ColorSmoothLoop> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
 
     sf::RenderWindow window(sf::VideoMode(IMAGE_WIDTH, IMAGE_HEIGHT), "Mandelbrot");
     window.setFramerateLimit(0);
@@ -113,7 +114,7 @@ int main(int argc, char* argv[]) {
         sf::Vector2<double> worldPosition;
         sf::Vector2i distanceToCenter;
 
-        std::stringstream dateString;
+        std::string dateString;
         time_t now;
         tm *ltm;
 
@@ -168,16 +169,12 @@ int main(int argc, char* argv[]) {
                             now = time(0); //Number of seconds since January 1st,1970
                             ltm = localtime(&now);
 
-                            // print various components of tm structure.
-                            dateString << (1900 + ltm->tm_year);
-                            dateString << (1 + ltm->tm_mon);
-                            dateString << (ltm->tm_mday);
-                            dateString << "_";
-                            dateString << (ltm->tm_hour);
-                            dateString << (ltm->tm_min);
-                            dateString << (ltm->tm_sec);
-
-                            image.saveToFile("img/Mandelbrot_"+dateString.str()+".png");
+                            char buff[16];
+                            snprintf(buff, sizeof(buff), "%4d%02d%02d_%02d%02d%02d",
+                              (1900 + ltm->tm_year), (1 + ltm->tm_mon), (ltm->tm_mday),
+                              (ltm->tm_hour), (ltm->tm_min), (ltm->tm_sec));
+                            dateString = buff;
+                            image.saveToFile("img/Mandelbrot_"+dateString+".png");
                             break;
                         case sf::Keyboard::A :
                             zoom *= 0.75;

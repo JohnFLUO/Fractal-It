@@ -1,0 +1,10 @@
+# Object file
+*.o
+
+C/sfml/02_Adaptation/bin
+C/sfml/02_Adaptation/obj
+
+C/sfml/BMP/bin
+C/sfml/BMP/obj
+
+

@@ -1,5 +1,5 @@
-#ifndef _Convergence_dp_x86_ATX_
-#define _Convergence_dp_x86_ATX_
+#ifndef _Convergence_dp_x86_omp_ATX_
+#define _Convergence_dp_x86_omp_ATX_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -10,18 +10,18 @@
 
 #define CONV_STEP 4
 
-class Convergence_dp_x86_AVX {
+class Convergence_dp_x86_omp_AVX {
 private:
   ColorMap* colors;
   int max_iters;
 
 public:
-  Convergence_dp_x86_AVX(ColorMap* _colors, int _max_iters){
+  Convergence_dp_x86_omp_AVX(ColorMap* _colors, int _max_iters){
     colors    = _colors;
     max_iters = _max_iters;
   }
 
-  ~Convergence_dp_x86_AVX( ){
+  ~Convergence_dp_x86_omp_AVX( ){
 
   }
 
