@@ -14,9 +14,6 @@
 #include "immintrin.h"
 
 
-//enum t_color     = { TABLE_256, TABLE_SMOOTH, UNKNOW };
-
-
 int main(int argc, char* argv[]) {
 
     // Parse parameters file
@@ -27,82 +24,37 @@ int main(int argc, char* argv[]) {
     FileReader configFile(filename);
     configFile.ParseParams();
 
-
+    // Default parameters
     double offsetX =  -0.7; // and move around
     double offsetY =   0.0;
     double zoom    = 0.004; // allow the user to zoom in and out...
     int max_iters  = 256;
+
+    unsigned short iterations = 256;
 
     double wheelZoomFactor = 0.05;
 
     int IMAGE_WIDTH  = Settings::width;
     int IMAGE_HEIGHT = Settings::height;
 
-//    enum t_format    = { f_double, f_float, f_int };
-//    enum t_processor = { x86, sse, avx, cuda };
-
-    enum t_format    f_data = f_double;
-    enum t_processor t_proc = x86;
-
-    int opt = 0;
-    while ((opt = getopt(argc, argv, "i:x:y:w:h:")) != -1) {
-      switch(opt) {
-
-        case 'w':
-          IMAGE_WIDTH = atoi( optarg );
-          printf("(II) IMAGE_WIDTH = %d\n", IMAGE_WIDTH);
-          break;
-
-          case 'h':
-            IMAGE_HEIGHT = atoi( optarg );
-            printf("(II) IMAGE_HEIGHT = %d\n", IMAGE_HEIGHT);
-            break;
-
-            case 'i':
-              max_iters = atoi( optarg );
-              printf("(II) Iteration option value = %d\n", max_iters);
-              break;
-
-        case 'x':
-          offsetX = atof( optarg );
-          printf("(II) X option value = %lf\n", offsetX);
-          break;
-
-        case 'y':
-          offsetY = atof( optarg );
-          printf("(II) Y option value = %lf\n", offsetY);
-          break;
-
-        default:
-         printf("(EE) Invalid option received\n");
-         exit( -1 );
-         break;
-     }
-   }
-
     printf("(II) Dimension de la fenetre (%d, %d)\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
+    // Mandelbrot object instanciation
     Mandelbrot mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
 
+    // Window creation
     sf::RenderWindow window(sf::VideoMode(IMAGE_WIDTH, IMAGE_HEIGHT), "Mandelbrot");
     window.setFramerateLimit(0);
-
 
     sf::Image image;
     image.create(IMAGE_WIDTH, IMAGE_HEIGHT, sf::Color(0, 0, 0));
     sf::Texture texture;
     sf::Sprite sprite;
 
-    unsigned short iterations = 256;
-
     bool stateChanged = true; // track whether the image needs to be regenerated
     sf::Clock clicTime;
 
     while (window.isOpen()) {
-        /*if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-          sf::Vector2i position = sf::Mouse::getPosition(window);
-          std::cout << "position : " << position.x << ", " << position.y << std::endl;
-        }*/
 
         sf::Event event;
         sf::Vector2i position;

@@ -82,6 +82,12 @@ void FileReader::ParseParams() {
               Settings::SetConvergenceType(ConvergenceType::DP_OMP);
             } else if (arg == "DP_OMP_AVX") {
               Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVX);
+            } else if (arg == "SP") {
+              Settings::SetConvergenceType(ConvergenceType::SP);
+            } else if (arg == "SP_OMP") {
+              Settings::SetConvergenceType(ConvergenceType::SP_OMP);
+            } else if (arg == "SP_OMP_AVX") {
+              Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVX);
             } else {
               cout << "\033[33m" << endl; //unix only
               cerr << "warning: unknown parameter \"" << arg << "\" at line " << lineNb << endl;
