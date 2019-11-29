@@ -1,0 +1,1345 @@
+
+
+================================================================
+== Vivado HLS Report for 'convergence_do_convergence'
+================================================================
+* Date:           Fri Nov 29 11:19:43 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fractale_hls
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.908|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   99|   99|   99|   99|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 100
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.90>
+ST_1 : Operation 101 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 101 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 102 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 103 'write' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.90>
+ST_2 : Operation 104 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 104 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 105 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 106 'write' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.90>
+ST_3 : Operation 107 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 107 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 108 'write' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 109 'write' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.90>
+ST_4 : Operation 110 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 110 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 111 'write' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 112 'write' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.90>
+ST_5 : Operation 113 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 113 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 114 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 115 'write' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 3.90>
+ST_6 : Operation 116 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 116 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_6 : Operation 117 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 117 'write' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 118 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 118 'write' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 3.90>
+ST_7 : Operation 119 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 119 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_7 : Operation 120 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 120 'write' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 121 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 121 'write' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 3.90>
+ST_8 : Operation 122 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 122 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 123 'write' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 124 'write' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 3.90>
+ST_9 : Operation 125 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 125 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 126 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 127 'write' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 3.90>
+ST_10 : Operation 128 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 128 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 129 'write' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 0)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 130 'write' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 3.90>
+ST_11 : Operation 131 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 131 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_11 : Operation 132 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 132 'write' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 133 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 133 'write' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 3.90>
+ST_12 : Operation 134 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 134 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_12 : Operation 135 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 135 'write' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 136 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 136 'write' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 3.90>
+ST_13 : Operation 137 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 137 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_13 : Operation 138 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 138 'write' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 139 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 139 'write' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 13> <Delay = 3.90>
+ST_14 : Operation 140 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 140 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_14 : Operation 141 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 141 'write' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 142 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 142 'write' <Predicate = true> <Delay = 0.00>
+
+State 15 <SV = 14> <Delay = 3.90>
+ST_15 : Operation 143 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 143 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_15 : Operation 144 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 144 'write' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 145 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 145 'write' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 15> <Delay = 3.90>
+ST_16 : Operation 146 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 146 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_16 : Operation 147 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 147 'write' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 148 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 148 'write' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 3.90>
+ST_17 : Operation 149 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 149 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_17 : Operation 150 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 150 'write' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 151 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 151 'write' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 17> <Delay = 3.90>
+ST_18 : Operation 152 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 152 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_18 : Operation 153 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 153 'write' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 154 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 154 'write' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 3.90>
+ST_19 : Operation 155 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 155 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_19 : Operation 156 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 156 'write' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 157 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 157 'write' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 19> <Delay = 3.90>
+ST_20 : Operation 158 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 158 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_20 : Operation 159 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 159 'write' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 160 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 1)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 160 'write' <Predicate = true> <Delay = 0.00>
+
+State 21 <SV = 20> <Delay = 3.90>
+ST_21 : Operation 161 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 161 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_21 : Operation 162 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 162 'write' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 163 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 163 'write' <Predicate = true> <Delay = 0.00>
+
+State 22 <SV = 21> <Delay = 3.90>
+ST_22 : Operation 164 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 164 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_22 : Operation 165 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 165 'write' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 166 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 166 'write' <Predicate = true> <Delay = 0.00>
+
+State 23 <SV = 22> <Delay = 3.90>
+ST_23 : Operation 167 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 167 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_23 : Operation 168 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 168 'write' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 169 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 169 'write' <Predicate = true> <Delay = 0.00>
+
+State 24 <SV = 23> <Delay = 3.90>
+ST_24 : Operation 170 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 170 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_24 : Operation 171 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 171 'write' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 172 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 172 'write' <Predicate = true> <Delay = 0.00>
+
+State 25 <SV = 24> <Delay = 3.90>
+ST_25 : Operation 173 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 173 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_25 : Operation 174 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 174 'write' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 175 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 175 'write' <Predicate = true> <Delay = 0.00>
+
+State 26 <SV = 25> <Delay = 3.90>
+ST_26 : Operation 176 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 176 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_26 : Operation 177 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 177 'write' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 178 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 178 'write' <Predicate = true> <Delay = 0.00>
+
+State 27 <SV = 26> <Delay = 3.90>
+ST_27 : Operation 179 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 179 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_27 : Operation 180 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 180 'write' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 181 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 181 'write' <Predicate = true> <Delay = 0.00>
+
+State 28 <SV = 27> <Delay = 3.90>
+ST_28 : Operation 182 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 182 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_28 : Operation 183 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 183 'write' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 184 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 184 'write' <Predicate = true> <Delay = 0.00>
+
+State 29 <SV = 28> <Delay = 3.90>
+ST_29 : Operation 185 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 185 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_29 : Operation 186 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 186 'write' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 187 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 187 'write' <Predicate = true> <Delay = 0.00>
+
+State 30 <SV = 29> <Delay = 3.90>
+ST_30 : Operation 188 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 188 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_30 : Operation 189 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 189 'write' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 190 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 2)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 190 'write' <Predicate = true> <Delay = 0.00>
+
+State 31 <SV = 30> <Delay = 3.90>
+ST_31 : Operation 191 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 191 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_31 : Operation 192 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 192 'write' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 193 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 193 'write' <Predicate = true> <Delay = 0.00>
+
+State 32 <SV = 31> <Delay = 3.90>
+ST_32 : Operation 194 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 194 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_32 : Operation 195 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 195 'write' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 196 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 196 'write' <Predicate = true> <Delay = 0.00>
+
+State 33 <SV = 32> <Delay = 3.90>
+ST_33 : Operation 197 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 197 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_33 : Operation 198 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 198 'write' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 199 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 199 'write' <Predicate = true> <Delay = 0.00>
+
+State 34 <SV = 33> <Delay = 3.90>
+ST_34 : Operation 200 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 200 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_34 : Operation 201 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 201 'write' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 202 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 202 'write' <Predicate = true> <Delay = 0.00>
+
+State 35 <SV = 34> <Delay = 3.90>
+ST_35 : Operation 203 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 203 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_35 : Operation 204 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 204 'write' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 205 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 205 'write' <Predicate = true> <Delay = 0.00>
+
+State 36 <SV = 35> <Delay = 3.90>
+ST_36 : Operation 206 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 206 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_36 : Operation 207 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 207 'write' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 208 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 208 'write' <Predicate = true> <Delay = 0.00>
+
+State 37 <SV = 36> <Delay = 3.90>
+ST_37 : Operation 209 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 209 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_37 : Operation 210 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 210 'write' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 211 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 211 'write' <Predicate = true> <Delay = 0.00>
+
+State 38 <SV = 37> <Delay = 3.90>
+ST_38 : Operation 212 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 212 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_38 : Operation 213 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 213 'write' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 214 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 214 'write' <Predicate = true> <Delay = 0.00>
+
+State 39 <SV = 38> <Delay = 3.90>
+ST_39 : Operation 215 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 215 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_39 : Operation 216 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 216 'write' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 217 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 217 'write' <Predicate = true> <Delay = 0.00>
+
+State 40 <SV = 39> <Delay = 3.90>
+ST_40 : Operation 218 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 218 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_40 : Operation 219 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 219 'write' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 220 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 3)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 220 'write' <Predicate = true> <Delay = 0.00>
+
+State 41 <SV = 40> <Delay = 3.90>
+ST_41 : Operation 221 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 221 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_41 : Operation 222 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 222 'write' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 223 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 223 'write' <Predicate = true> <Delay = 0.00>
+
+State 42 <SV = 41> <Delay = 3.90>
+ST_42 : Operation 224 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 224 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_42 : Operation 225 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 225 'write' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 226 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 226 'write' <Predicate = true> <Delay = 0.00>
+
+State 43 <SV = 42> <Delay = 3.90>
+ST_43 : Operation 227 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 227 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_43 : Operation 228 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 228 'write' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 229 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 229 'write' <Predicate = true> <Delay = 0.00>
+
+State 44 <SV = 43> <Delay = 3.90>
+ST_44 : Operation 230 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 230 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_44 : Operation 231 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 231 'write' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 232 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 232 'write' <Predicate = true> <Delay = 0.00>
+
+State 45 <SV = 44> <Delay = 3.90>
+ST_45 : Operation 233 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 233 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_45 : Operation 234 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 234 'write' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 235 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 235 'write' <Predicate = true> <Delay = 0.00>
+
+State 46 <SV = 45> <Delay = 3.90>
+ST_46 : Operation 236 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 236 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_46 : Operation 237 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 237 'write' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 238 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 238 'write' <Predicate = true> <Delay = 0.00>
+
+State 47 <SV = 46> <Delay = 3.90>
+ST_47 : Operation 239 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 239 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_47 : Operation 240 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 240 'write' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 241 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 241 'write' <Predicate = true> <Delay = 0.00>
+
+State 48 <SV = 47> <Delay = 3.90>
+ST_48 : Operation 242 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 242 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_48 : Operation 243 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 243 'write' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 244 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 244 'write' <Predicate = true> <Delay = 0.00>
+
+State 49 <SV = 48> <Delay = 3.90>
+ST_49 : Operation 245 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 245 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_49 : Operation 246 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 246 'write' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 247 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 247 'write' <Predicate = true> <Delay = 0.00>
+
+State 50 <SV = 49> <Delay = 3.90>
+ST_50 : Operation 248 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 248 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_50 : Operation 249 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 249 'write' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 250 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 4)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 250 'write' <Predicate = true> <Delay = 0.00>
+
+State 51 <SV = 50> <Delay = 3.90>
+ST_51 : Operation 251 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 251 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_51 : Operation 252 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 252 'write' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 253 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 253 'write' <Predicate = true> <Delay = 0.00>
+
+State 52 <SV = 51> <Delay = 3.90>
+ST_52 : Operation 254 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 254 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_52 : Operation 255 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 255 'write' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 256 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 256 'write' <Predicate = true> <Delay = 0.00>
+
+State 53 <SV = 52> <Delay = 3.90>
+ST_53 : Operation 257 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 257 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_53 : Operation 258 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 258 'write' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 259 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 259 'write' <Predicate = true> <Delay = 0.00>
+
+State 54 <SV = 53> <Delay = 3.90>
+ST_54 : Operation 260 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 260 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_54 : Operation 261 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 261 'write' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 262 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 262 'write' <Predicate = true> <Delay = 0.00>
+
+State 55 <SV = 54> <Delay = 3.90>
+ST_55 : Operation 263 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 263 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_55 : Operation 264 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 264 'write' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 265 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 265 'write' <Predicate = true> <Delay = 0.00>
+
+State 56 <SV = 55> <Delay = 3.90>
+ST_56 : Operation 266 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 266 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_56 : Operation 267 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 267 'write' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 268 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 268 'write' <Predicate = true> <Delay = 0.00>
+
+State 57 <SV = 56> <Delay = 3.90>
+ST_57 : Operation 269 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 269 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_57 : Operation 270 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 270 'write' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 271 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 271 'write' <Predicate = true> <Delay = 0.00>
+
+State 58 <SV = 57> <Delay = 3.90>
+ST_58 : Operation 272 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 272 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_58 : Operation 273 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 273 'write' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 274 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 274 'write' <Predicate = true> <Delay = 0.00>
+
+State 59 <SV = 58> <Delay = 3.90>
+ST_59 : Operation 275 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 275 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_59 : Operation 276 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 276 'write' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 277 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 277 'write' <Predicate = true> <Delay = 0.00>
+
+State 60 <SV = 59> <Delay = 3.90>
+ST_60 : Operation 278 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 278 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_60 : Operation 279 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 279 'write' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 280 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 5)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 280 'write' <Predicate = true> <Delay = 0.00>
+
+State 61 <SV = 60> <Delay = 3.90>
+ST_61 : Operation 281 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 281 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_61 : Operation 282 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 282 'write' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 283 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 283 'write' <Predicate = true> <Delay = 0.00>
+
+State 62 <SV = 61> <Delay = 3.90>
+ST_62 : Operation 284 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 284 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_62 : Operation 285 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 285 'write' <Predicate = true> <Delay = 0.00>
+ST_62 : Operation 286 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 286 'write' <Predicate = true> <Delay = 0.00>
+
+State 63 <SV = 62> <Delay = 3.90>
+ST_63 : Operation 287 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 287 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_63 : Operation 288 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 288 'write' <Predicate = true> <Delay = 0.00>
+ST_63 : Operation 289 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 289 'write' <Predicate = true> <Delay = 0.00>
+
+State 64 <SV = 63> <Delay = 3.90>
+ST_64 : Operation 290 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 290 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_64 : Operation 291 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 291 'write' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 292 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 292 'write' <Predicate = true> <Delay = 0.00>
+
+State 65 <SV = 64> <Delay = 3.90>
+ST_65 : Operation 293 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 293 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_65 : Operation 294 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 294 'write' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 295 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 295 'write' <Predicate = true> <Delay = 0.00>
+
+State 66 <SV = 65> <Delay = 3.90>
+ST_66 : Operation 296 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 296 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_66 : Operation 297 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 297 'write' <Predicate = true> <Delay = 0.00>
+ST_66 : Operation 298 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 298 'write' <Predicate = true> <Delay = 0.00>
+
+State 67 <SV = 66> <Delay = 3.90>
+ST_67 : Operation 299 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 299 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_67 : Operation 300 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 300 'write' <Predicate = true> <Delay = 0.00>
+ST_67 : Operation 301 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 301 'write' <Predicate = true> <Delay = 0.00>
+
+State 68 <SV = 67> <Delay = 3.90>
+ST_68 : Operation 302 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 302 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_68 : Operation 303 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 303 'write' <Predicate = true> <Delay = 0.00>
+ST_68 : Operation 304 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 304 'write' <Predicate = true> <Delay = 0.00>
+
+State 69 <SV = 68> <Delay = 3.90>
+ST_69 : Operation 305 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 305 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_69 : Operation 306 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 306 'write' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 307 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 307 'write' <Predicate = true> <Delay = 0.00>
+
+State 70 <SV = 69> <Delay = 3.90>
+ST_70 : Operation 308 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 308 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_70 : Operation 309 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 309 'write' <Predicate = true> <Delay = 0.00>
+ST_70 : Operation 310 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 6)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 310 'write' <Predicate = true> <Delay = 0.00>
+
+State 71 <SV = 70> <Delay = 3.90>
+ST_71 : Operation 311 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 311 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_71 : Operation 312 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 312 'write' <Predicate = true> <Delay = 0.00>
+ST_71 : Operation 313 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 313 'write' <Predicate = true> <Delay = 0.00>
+
+State 72 <SV = 71> <Delay = 3.90>
+ST_72 : Operation 314 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 314 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_72 : Operation 315 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 315 'write' <Predicate = true> <Delay = 0.00>
+ST_72 : Operation 316 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 316 'write' <Predicate = true> <Delay = 0.00>
+
+State 73 <SV = 72> <Delay = 3.90>
+ST_73 : Operation 317 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 317 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_73 : Operation 318 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 318 'write' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 319 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 319 'write' <Predicate = true> <Delay = 0.00>
+
+State 74 <SV = 73> <Delay = 3.90>
+ST_74 : Operation 320 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 320 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_74 : Operation 321 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 321 'write' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 322 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 322 'write' <Predicate = true> <Delay = 0.00>
+
+State 75 <SV = 74> <Delay = 3.90>
+ST_75 : Operation 323 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 323 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_75 : Operation 324 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 324 'write' <Predicate = true> <Delay = 0.00>
+ST_75 : Operation 325 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 325 'write' <Predicate = true> <Delay = 0.00>
+
+State 76 <SV = 75> <Delay = 3.90>
+ST_76 : Operation 326 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 326 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_76 : Operation 327 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 327 'write' <Predicate = true> <Delay = 0.00>
+ST_76 : Operation 328 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 328 'write' <Predicate = true> <Delay = 0.00>
+
+State 77 <SV = 76> <Delay = 3.90>
+ST_77 : Operation 329 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 329 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_77 : Operation 330 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 330 'write' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 331 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 331 'write' <Predicate = true> <Delay = 0.00>
+
+State 78 <SV = 77> <Delay = 3.90>
+ST_78 : Operation 332 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 332 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_78 : Operation 333 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 333 'write' <Predicate = true> <Delay = 0.00>
+ST_78 : Operation 334 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 334 'write' <Predicate = true> <Delay = 0.00>
+
+State 79 <SV = 78> <Delay = 3.90>
+ST_79 : Operation 335 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 335 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_79 : Operation 336 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 336 'write' <Predicate = true> <Delay = 0.00>
+ST_79 : Operation 337 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 337 'write' <Predicate = true> <Delay = 0.00>
+
+State 80 <SV = 79> <Delay = 3.90>
+ST_80 : Operation 338 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 338 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_80 : Operation 339 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 339 'write' <Predicate = true> <Delay = 0.00>
+ST_80 : Operation 340 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 7)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 340 'write' <Predicate = true> <Delay = 0.00>
+
+State 81 <SV = 80> <Delay = 3.90>
+ST_81 : Operation 341 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 341 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_81 : Operation 342 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 342 'write' <Predicate = true> <Delay = 0.00>
+ST_81 : Operation 343 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 343 'write' <Predicate = true> <Delay = 0.00>
+
+State 82 <SV = 81> <Delay = 3.90>
+ST_82 : Operation 344 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 344 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_82 : Operation 345 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 345 'write' <Predicate = true> <Delay = 0.00>
+ST_82 : Operation 346 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 346 'write' <Predicate = true> <Delay = 0.00>
+
+State 83 <SV = 82> <Delay = 3.90>
+ST_83 : Operation 347 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 347 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_83 : Operation 348 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 348 'write' <Predicate = true> <Delay = 0.00>
+ST_83 : Operation 349 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 349 'write' <Predicate = true> <Delay = 0.00>
+
+State 84 <SV = 83> <Delay = 3.90>
+ST_84 : Operation 350 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 350 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_84 : Operation 351 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 351 'write' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 352 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 352 'write' <Predicate = true> <Delay = 0.00>
+
+State 85 <SV = 84> <Delay = 3.90>
+ST_85 : Operation 353 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 353 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_85 : Operation 354 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 354 'write' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 355 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 355 'write' <Predicate = true> <Delay = 0.00>
+
+State 86 <SV = 85> <Delay = 3.90>
+ST_86 : Operation 356 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 356 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_86 : Operation 357 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 357 'write' <Predicate = true> <Delay = 0.00>
+ST_86 : Operation 358 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 358 'write' <Predicate = true> <Delay = 0.00>
+
+State 87 <SV = 86> <Delay = 3.90>
+ST_87 : Operation 359 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 359 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_87 : Operation 360 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 360 'write' <Predicate = true> <Delay = 0.00>
+ST_87 : Operation 361 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 361 'write' <Predicate = true> <Delay = 0.00>
+
+State 88 <SV = 87> <Delay = 3.90>
+ST_88 : Operation 362 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 362 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_88 : Operation 363 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 363 'write' <Predicate = true> <Delay = 0.00>
+ST_88 : Operation 364 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 364 'write' <Predicate = true> <Delay = 0.00>
+
+State 89 <SV = 88> <Delay = 3.90>
+ST_89 : Operation 365 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 365 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_89 : Operation 366 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 366 'write' <Predicate = true> <Delay = 0.00>
+ST_89 : Operation 367 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 367 'write' <Predicate = true> <Delay = 0.00>
+
+State 90 <SV = 89> <Delay = 3.90>
+ST_90 : Operation 368 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 368 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_90 : Operation 369 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 369 'write' <Predicate = true> <Delay = 0.00>
+ST_90 : Operation 370 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 8)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 370 'write' <Predicate = true> <Delay = 0.00>
+
+State 91 <SV = 90> <Delay = 3.90>
+ST_91 : Operation 371 [1/1] (0.00ns)   --->   "%p_020_0_0 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 371 'read' 'p_020_0_0' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 372 [1/1] (0.00ns)   --->   "%empty = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 372 'read' 'empty' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 373 [1/1] (0.00ns)   --->   "%empty_3 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 373 'read' 'empty_3' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 374 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 374 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_91 : Operation 375 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 0)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 375 'write' <Predicate = true> <Delay = 0.00>
+ST_91 : Operation 376 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 376 'write' <Predicate = true> <Delay = 0.00>
+
+State 92 <SV = 91> <Delay = 3.90>
+ST_92 : Operation 377 [1/1] (0.00ns)   --->   "%p_020_0_1 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 377 'read' 'p_020_0_1' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 378 [1/1] (0.00ns)   --->   "%empty_4 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 378 'read' 'empty_4' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 379 [1/1] (0.00ns)   --->   "%empty_5 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 379 'read' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 380 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 380 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_92 : Operation 381 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 1)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 381 'write' <Predicate = true> <Delay = 0.00>
+ST_92 : Operation 382 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 382 'write' <Predicate = true> <Delay = 0.00>
+
+State 93 <SV = 92> <Delay = 3.90>
+ST_93 : Operation 383 [1/1] (0.00ns)   --->   "%p_020_0_2 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 383 'read' 'p_020_0_2' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 384 [1/1] (0.00ns)   --->   "%empty_6 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 384 'read' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 385 [1/1] (0.00ns)   --->   "%empty_7 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 385 'read' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 386 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 386 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_93 : Operation 387 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 2)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 387 'write' <Predicate = true> <Delay = 0.00>
+ST_93 : Operation 388 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 388 'write' <Predicate = true> <Delay = 0.00>
+
+State 94 <SV = 93> <Delay = 3.90>
+ST_94 : Operation 389 [1/1] (0.00ns)   --->   "%p_020_0_3 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 389 'read' 'p_020_0_3' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 390 [1/1] (0.00ns)   --->   "%empty_8 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 390 'read' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 391 [1/1] (0.00ns)   --->   "%empty_9 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 391 'read' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 392 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 392 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_94 : Operation 393 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 3)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 393 'write' <Predicate = true> <Delay = 0.00>
+ST_94 : Operation 394 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 394 'write' <Predicate = true> <Delay = 0.00>
+
+State 95 <SV = 94> <Delay = 3.90>
+ST_95 : Operation 395 [1/1] (0.00ns)   --->   "%p_020_0_4 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 395 'read' 'p_020_0_4' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 396 [1/1] (0.00ns)   --->   "%empty_10 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 396 'read' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 397 [1/1] (0.00ns)   --->   "%empty_11 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 397 'read' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 398 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 398 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_95 : Operation 399 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 4)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 399 'write' <Predicate = true> <Delay = 0.00>
+ST_95 : Operation 400 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 400 'write' <Predicate = true> <Delay = 0.00>
+
+State 96 <SV = 95> <Delay = 3.90>
+ST_96 : Operation 401 [1/1] (0.00ns)   --->   "%p_020_0_5 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 401 'read' 'p_020_0_5' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 402 [1/1] (0.00ns)   --->   "%empty_12 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 402 'read' 'empty_12' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 403 [1/1] (0.00ns)   --->   "%empty_13 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 403 'read' 'empty_13' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 404 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 404 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_96 : Operation 405 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 5)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 405 'write' <Predicate = true> <Delay = 0.00>
+ST_96 : Operation 406 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 406 'write' <Predicate = true> <Delay = 0.00>
+
+State 97 <SV = 96> <Delay = 3.90>
+ST_97 : Operation 407 [1/1] (0.00ns)   --->   "%p_020_0_6 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 407 'read' 'p_020_0_6' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 408 [1/1] (0.00ns)   --->   "%empty_14 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 408 'read' 'empty_14' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 409 [1/1] (0.00ns)   --->   "%empty_15 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 409 'read' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 410 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 410 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_97 : Operation 411 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 6)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 411 'write' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 412 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 412 'write' <Predicate = true> <Delay = 0.00>
+
+State 98 <SV = 97> <Delay = 3.90>
+ST_98 : Operation 413 [1/1] (0.00ns)   --->   "%p_020_0_7 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 413 'read' 'p_020_0_7' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 414 [1/1] (0.00ns)   --->   "%empty_16 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 414 'read' 'empty_16' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 415 [1/1] (0.00ns)   --->   "%empty_17 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 415 'read' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 416 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 416 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_98 : Operation 417 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 7)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 417 'write' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 418 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 418 'write' <Predicate = true> <Delay = 0.00>
+
+State 99 <SV = 98> <Delay = 3.90>
+ST_99 : Operation 419 [1/1] (0.00ns)   --->   "%p_020_0_8 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 419 'read' 'p_020_0_8' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 420 [1/1] (0.00ns)   --->   "%empty_18 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 420 'read' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 421 [1/1] (0.00ns)   --->   "%empty_19 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 421 'read' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 422 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 422 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_99 : Operation 423 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 8)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 423 'write' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 424 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 424 'write' <Predicate = true> <Delay = 0.00>
+
+State 100 <SV = 99> <Delay = 3.90>
+ST_100 : Operation 425 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !186"   --->   Operation 425 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 426 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !190"   --->   Operation 426 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 427 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %zoom), !map !194"   --->   Operation 427 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 428 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %offset_X), !map !198"   --->   Operation 428 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 429 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %offset_Y), !map !202"   --->   Operation 429 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 430 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %s_out), !map !206"   --->   Operation 430 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 431 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i10* %out_x), !map !210"   --->   Operation 431 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 432 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i9* %out_y), !map !214"   --->   Operation 432 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 433 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 0, [7 x i8]* @p_str133, [4 x i8]* @p_str234, i32 0, i32 0, i1* %clk) nounwind" [fractale_hls/src/convergence.cpp:9]   --->   Operation 433 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 434 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 0, [7 x i8]* @p_str133, [6 x i8]* @p_str335, i32 0, i32 0, i1* %reset) nounwind" [fractale_hls/src/convergence.cpp:10]   --->   Operation 434 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 435 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 0, [13 x i8]* @p_str436, [5 x i8]* @p_str537, i32 0, i32 0, i8* %zoom) nounwind" [fractale_hls/src/convergence.cpp:11]   --->   Operation 435 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 436 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 0, [8 x i8]* @p_str638, [9 x i8]* @p_str739, i32 0, i32 0, float* %offset_X) nounwind" [fractale_hls/src/convergence.cpp:12]   --->   Operation 436 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 437 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 0, [8 x i8]* @p_str638, [9 x i8]* @p_str840, i32 0, i32 0, float* %offset_Y) nounwind" [fractale_hls/src/convergence.cpp:13]   --->   Operation 437 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 438 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %s_out, [8 x i8]* @p_str941, i32 0, i32 0, [1 x i8]* @p_str1042, i32 0, i32 0, [1 x i8]* @p_str1042, [1 x i8]* @p_str1042, [1 x i8]* @p_str1042, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1042, [1 x i8]* @p_str1042) nounwind" [fractale_hls/src/convergence.cpp:14]   --->   Operation 438 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 439 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 1, [14 x i8]* @p_str1143, [6 x i8]* @p_str1244, i32 0, i32 0, i10* %out_x) nounwind" [fractale_hls/src/convergence.cpp:15]   --->   Operation 439 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 440 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([12 x i8]* @p_str32, i32 1, [13 x i8]* @p_str1345, [6 x i8]* @p_str1446, i32 0, i32 0, i9* %out_y) nounwind" [fractale_hls/src/convergence.cpp:16]   --->   Operation 440 'specport' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 441 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProcessDef([12 x i8]* @p_str32, i32 2, [15 x i8]* @p_str1547) nounwind" [fractale_hls/src/convergence.cpp:17]   --->   Operation 441 'specprocessdef' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 442 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str1042) nounwind" [fractale_hls/src/convergence.cpp:17]   --->   Operation 442 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 443 [1/1] (0.00ns)   --->   "%p_ssdm_reset_v_0 = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind" [fractale_hls/src/convergence.cpp:17]   --->   Operation 443 'specstatebegin' 'p_ssdm_reset_v_0' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 444 [1/1] (0.00ns)   --->   "%p_020_0_9 = call i8 @_ssdm_op_Read.ap_auto.volatile.i8P(i8* %zoom)" [fractale_hls/src/convergence.cpp:13]   --->   Operation 444 'read' 'p_020_0_9' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 445 [1/1] (0.00ns)   --->   "%empty_20 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_Y)" [fractale_hls/src/convergence.cpp:14]   --->   Operation 445 'read' 'empty_20' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 446 [1/1] (0.00ns)   --->   "%empty_21 = call float @_ssdm_op_Read.ap_auto.volatile.floatP(float* %offset_X)" [fractale_hls/src/convergence.cpp:15]   --->   Operation 446 'read' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 447 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %s_out, i8 49)" [fractale_hls/src/convergence.cpp:39]   --->   Operation 447 'write' <Predicate = true> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_100 : Operation 448 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i10P(i10* %out_x, i10 9)" [fractale_hls/src/convergence.cpp:40]   --->   Operation 448 'write' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 449 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i9P(i9* %out_y, i9 9)" [fractale_hls/src/convergence.cpp:41]   --->   Operation 449 'write' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 450 [1/1] (0.00ns)   --->   "ret void" [fractale_hls/src/convergence.cpp:44]   --->   Operation 450 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [31]  (3.91 ns)
+
+ <State 2>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [34]  (3.91 ns)
+
+ <State 3>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [37]  (3.91 ns)
+
+ <State 4>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [40]  (3.91 ns)
+
+ <State 5>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [43]  (3.91 ns)
+
+ <State 6>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [46]  (3.91 ns)
+
+ <State 7>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [49]  (3.91 ns)
+
+ <State 8>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [52]  (3.91 ns)
+
+ <State 9>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [55]  (3.91 ns)
+
+ <State 10>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [58]  (3.91 ns)
+
+ <State 11>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [64]  (3.91 ns)
+
+ <State 12>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [67]  (3.91 ns)
+
+ <State 13>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [70]  (3.91 ns)
+
+ <State 14>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [73]  (3.91 ns)
+
+ <State 15>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [76]  (3.91 ns)
+
+ <State 16>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [79]  (3.91 ns)
+
+ <State 17>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [82]  (3.91 ns)
+
+ <State 18>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [85]  (3.91 ns)
+
+ <State 19>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [88]  (3.91 ns)
+
+ <State 20>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [91]  (3.91 ns)
+
+ <State 21>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [97]  (3.91 ns)
+
+ <State 22>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [100]  (3.91 ns)
+
+ <State 23>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [103]  (3.91 ns)
+
+ <State 24>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [106]  (3.91 ns)
+
+ <State 25>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [109]  (3.91 ns)
+
+ <State 26>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [112]  (3.91 ns)
+
+ <State 27>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [115]  (3.91 ns)
+
+ <State 28>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [118]  (3.91 ns)
+
+ <State 29>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [121]  (3.91 ns)
+
+ <State 30>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [124]  (3.91 ns)
+
+ <State 31>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [130]  (3.91 ns)
+
+ <State 32>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [133]  (3.91 ns)
+
+ <State 33>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [136]  (3.91 ns)
+
+ <State 34>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [139]  (3.91 ns)
+
+ <State 35>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [142]  (3.91 ns)
+
+ <State 36>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [145]  (3.91 ns)
+
+ <State 37>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [148]  (3.91 ns)
+
+ <State 38>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [151]  (3.91 ns)
+
+ <State 39>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [154]  (3.91 ns)
+
+ <State 40>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [157]  (3.91 ns)
+
+ <State 41>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [163]  (3.91 ns)
+
+ <State 42>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [166]  (3.91 ns)
+
+ <State 43>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [169]  (3.91 ns)
+
+ <State 44>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [172]  (3.91 ns)
+
+ <State 45>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [175]  (3.91 ns)
+
+ <State 46>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [178]  (3.91 ns)
+
+ <State 47>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [181]  (3.91 ns)
+
+ <State 48>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [184]  (3.91 ns)
+
+ <State 49>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [187]  (3.91 ns)
+
+ <State 50>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [190]  (3.91 ns)
+
+ <State 51>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [196]  (3.91 ns)
+
+ <State 52>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [199]  (3.91 ns)
+
+ <State 53>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [202]  (3.91 ns)
+
+ <State 54>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [205]  (3.91 ns)
+
+ <State 55>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [208]  (3.91 ns)
+
+ <State 56>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [211]  (3.91 ns)
+
+ <State 57>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [214]  (3.91 ns)
+
+ <State 58>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [217]  (3.91 ns)
+
+ <State 59>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [220]  (3.91 ns)
+
+ <State 60>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [223]  (3.91 ns)
+
+ <State 61>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [229]  (3.91 ns)
+
+ <State 62>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [232]  (3.91 ns)
+
+ <State 63>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [235]  (3.91 ns)
+
+ <State 64>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [238]  (3.91 ns)
+
+ <State 65>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [241]  (3.91 ns)
+
+ <State 66>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [244]  (3.91 ns)
+
+ <State 67>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [247]  (3.91 ns)
+
+ <State 68>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [250]  (3.91 ns)
+
+ <State 69>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [253]  (3.91 ns)
+
+ <State 70>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [256]  (3.91 ns)
+
+ <State 71>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [262]  (3.91 ns)
+
+ <State 72>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [265]  (3.91 ns)
+
+ <State 73>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [268]  (3.91 ns)
+
+ <State 74>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [271]  (3.91 ns)
+
+ <State 75>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [274]  (3.91 ns)
+
+ <State 76>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [277]  (3.91 ns)
+
+ <State 77>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [280]  (3.91 ns)
+
+ <State 78>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [283]  (3.91 ns)
+
+ <State 79>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [286]  (3.91 ns)
+
+ <State 80>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [289]  (3.91 ns)
+
+ <State 81>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [295]  (3.91 ns)
+
+ <State 82>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [298]  (3.91 ns)
+
+ <State 83>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [301]  (3.91 ns)
+
+ <State 84>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [304]  (3.91 ns)
+
+ <State 85>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [307]  (3.91 ns)
+
+ <State 86>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [310]  (3.91 ns)
+
+ <State 87>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [313]  (3.91 ns)
+
+ <State 88>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [316]  (3.91 ns)
+
+ <State 89>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [319]  (3.91 ns)
+
+ <State 90>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [322]  (3.91 ns)
+
+ <State 91>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [328]  (3.91 ns)
+
+ <State 92>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [331]  (3.91 ns)
+
+ <State 93>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [334]  (3.91 ns)
+
+ <State 94>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [337]  (3.91 ns)
+
+ <State 95>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [340]  (3.91 ns)
+
+ <State 96>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [343]  (3.91 ns)
+
+ <State 97>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [346]  (3.91 ns)
+
+ <State 98>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [349]  (3.91 ns)
+
+ <State 99>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [352]  (3.91 ns)
+
+ <State 100>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 's_out' (fractale_hls/src/convergence.cpp:39) [355]  (3.91 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"convergence::convergence.1": {
+			"proto_instances": {
+			}
+		}
+	}
+}

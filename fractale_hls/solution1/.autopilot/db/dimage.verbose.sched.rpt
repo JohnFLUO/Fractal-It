@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'dimage'
+================================================================
+* Date:           Fri Nov 29 11:19:47 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fractale_hls
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.165|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    2|    1|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !186"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !190"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %counter), !map !194"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12* %couleur), !map !198"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %counter, [8 x i8]* @p_str26, i32 0, i32 0, [1 x i8]* @p_str24, i32 0, i32 0, [1 x i8]* @p_str24, [1 x i8]* @p_str24, [1 x i8]* @p_str24, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str24, [1 x i8]* @p_str24) nounwind" [fractale_hls/src/image.h:15]   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([1 x i8]* @p_str24, i32 4, [1 x i8]* @p_str24, [1 x i8]* @p_str24, i32 0, i32 0, i8* %counter) nounwind" [fractale_hls/src/image.h:15]   --->   Operation 8 'specport' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str23, [7 x i8]* @p_str23) nounwind" [fractale_hls/src/image.h:16]   --->   Operation 9 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%dimage_ssdm_threa = load i1* @dimage_ssdm_thread_M_do_image, align 1" [fractale_hls/src/image.h:17]   --->   Operation 10 'load' 'dimage_ssdm_threa' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %dimage_ssdm_threa, label %1, label %._crit_edge" [fractale_hls/src/image.h:17]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "call void @"dimage::do_image"(i1* %clk, i1* %reset, i8* %counter, i12* %couleur)" [fractale_hls/src/image.h:17]   --->   Operation 12 'call' <Predicate = (dimage_ssdm_threa)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 13 [1/2] (3.25ns)   --->   "call void @"dimage::do_image"(i1* %clk, i1* %reset, i8* %counter, i12* %couleur)" [fractale_hls/src/image.h:17]   --->   Operation 13 'call' <Predicate = (dimage_ssdm_threa)> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br label %._crit_edge" [fractale_hls/src/image.h:17]   --->   Operation 14 'br' <Predicate = (dimage_ssdm_threa)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str23, i32 2, [9 x i8]* @p_str27) nounwind" [fractale_hls/src/image.h:17]   --->   Operation 15 'specprocessdecl' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecSensitive([9 x i8]* @p_str27, [4 x i8]* @p_str8, i1* %clk, i32 1) nounwind" [fractale_hls/src/image.h:18]   --->   Operation 16 'specsensitive' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecSensitive([9 x i8]* @p_str27, [6 x i8]* @p_str9, i1* %reset, i32 3) nounwind" [fractale_hls/src/image.h:19]   --->   Operation 17 'specsensitive' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str23, i32 0, [7 x i8]* @p_str7, [4 x i8]* @p_str8, i32 0, i32 0, i1* %clk) nounwind" [fractale_hls/src/image.h:20]   --->   Operation 18 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str23, i32 0, [7 x i8]* @p_str7, [6 x i8]* @p_str9, i32 0, i32 0, i1* %reset) nounwind" [fractale_hls/src/image.h:21]   --->   Operation 19 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %counter, [8 x i8]* @p_str26, i32 0, i32 0, [1 x i8]* @p_str24, i32 0, i32 0, [1 x i8]* @p_str24, [1 x i8]* @p_str24, [1 x i8]* @p_str24, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str24, [1 x i8]* @p_str24) nounwind" [fractale_hls/src/image.h:22]   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str23, i32 4, [13 x i8]* @p_str16, [8 x i8]* @p_str22, i32 0, i32 0, i8* %counter) nounwind" [fractale_hls/src/image.h:23]   --->   Operation 21 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str23, i32 1, [14 x i8]* @p_str14, [8 x i8]* @p_str15, i32 0, i32 0, i12* %couleur) nounwind" [fractale_hls/src/image.h:24]   --->   Operation 22 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "ret void" [fractale_hls/src/image.h:19]   --->   Operation 23 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 3.26ns
+The critical path consists of the following:
+	'call' operation (fractale_hls/src/image.h:17) to 'dimage::do_image' [17]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
