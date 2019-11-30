@@ -82,6 +82,8 @@ void FileReader::ParseParams() {
               Settings::SetConvergenceType(ConvergenceType::DP_OMP);
             } else if (arg == "DP_OMP_AVX") {
               Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVX);
+            } else if (arg == "DP_OMP_AVX+") {
+              Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVXPLUS);
             } else if (arg == "SP") {
               Settings::SetConvergenceType(ConvergenceType::SP);
             } else if (arg == "SP_OMP") {

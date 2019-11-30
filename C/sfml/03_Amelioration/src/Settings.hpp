@@ -11,7 +11,7 @@
 
 enum ConvergenceType{
 	SP, SP_OMP, SP_OMP_AVX,
-	DP, DP_OMP, DP_OMP_AVX
+	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS
 };
 
 enum ColorMapMode{
