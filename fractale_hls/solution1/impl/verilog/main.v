@@ -26,40 +26,40 @@ input   reset;
 output  [9:0] x;
 output  [8:0] y;
 output  [11:0] couleur;
-input  [7:0] zoom;
+input  [9:0] zoom;
 input  [31:0] offset_X;
 input  [31:0] offset_Y;
 
-wire   [7:0] grp_convergence_fu_104_s_out_din;
-wire    grp_convergence_fu_104_s_out_write;
-wire   [9:0] grp_convergence_fu_104_out_x;
-wire   [8:0] grp_convergence_fu_104_out_y;
-wire    grp_dimage_fu_126_counter_read;
-wire   [11:0] grp_dimage_fu_126_couleur;
+wire   [7:0] grp_convergence_fu_102_s_out_din;
+wire    grp_convergence_fu_102_s_out_write;
+wire   [9:0] grp_convergence_fu_102_out_x;
+wire   [8:0] grp_convergence_fu_102_out_y;
+wire    grp_dimage_fu_124_counter_read;
+wire   [11:0] grp_dimage_fu_124_couleur;
 wire   [1:0] ap_CS_fsm;
 wire    ap_CS_fsm_state2;
 wire   [7:0] sc_fifo_chn_1_dout;
 wire    sc_fifo_chn_1_empty_n;
 wire    sc_fifo_chn_1_full_n;
 
-convergence grp_convergence_fu_104(
+convergence grp_convergence_fu_102(
     .zoom(zoom),
     .offset_X(offset_X),
     .offset_Y(offset_Y),
-    .s_out_din(grp_convergence_fu_104_s_out_din),
+    .s_out_din(grp_convergence_fu_102_s_out_din),
     .s_out_full_n(sc_fifo_chn_1_full_n),
-    .s_out_write(grp_convergence_fu_104_s_out_write),
-    .out_x(grp_convergence_fu_104_out_x),
-    .out_y(grp_convergence_fu_104_out_y),
+    .s_out_write(grp_convergence_fu_102_s_out_write),
+    .out_x(grp_convergence_fu_102_out_x),
+    .out_y(grp_convergence_fu_102_out_y),
     .clk(clk),
     .reset(reset)
 );
 
-dimage grp_dimage_fu_126(
+dimage grp_dimage_fu_124(
     .counter_dout(sc_fifo_chn_1_dout),
     .counter_empty_n(sc_fifo_chn_1_empty_n),
-    .counter_read(grp_dimage_fu_126_counter_read),
-    .couleur(grp_dimage_fu_126_couleur),
+    .counter_read(grp_dimage_fu_124_counter_read),
+    .couleur(grp_dimage_fu_124_couleur),
     .clk(clk),
     .reset(reset)
 );
@@ -69,22 +69,22 @@ fifo_w8_d1_A sc_fifo_chn_1_fifo_U(
     .reset(reset),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(grp_convergence_fu_104_s_out_din),
+    .if_din(grp_convergence_fu_102_s_out_din),
     .if_full_n(sc_fifo_chn_1_full_n),
-    .if_write(grp_convergence_fu_104_s_out_write),
+    .if_write(grp_convergence_fu_102_s_out_write),
     .if_dout(sc_fifo_chn_1_dout),
     .if_empty_n(sc_fifo_chn_1_empty_n),
-    .if_read(grp_dimage_fu_126_counter_read)
+    .if_read(grp_dimage_fu_124_counter_read)
 );
 
 assign ap_CS_fsm = 2'd0;
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
-assign couleur = grp_dimage_fu_126_couleur;
+assign couleur = grp_dimage_fu_124_couleur;
 
-assign x = grp_convergence_fu_104_out_x;
+assign x = grp_convergence_fu_102_out_x;
 
-assign y = grp_convergence_fu_104_out_y;
+assign y = grp_convergence_fu_102_out_y;
 
 endmodule //main

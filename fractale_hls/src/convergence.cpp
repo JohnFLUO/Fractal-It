@@ -19,7 +19,6 @@ void convergence::do_convergence()  {
       double startreal = zreal;
 
       for (int x = 0; x < IMAGE_WIDTH;  x++) {
-#pragma HLS PIPELINE II=1
         max_it = 0;
         unsigned int counter = 0;
         bool end = false;

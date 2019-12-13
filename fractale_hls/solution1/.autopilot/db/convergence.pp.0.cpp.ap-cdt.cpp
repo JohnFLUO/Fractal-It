@@ -31216,7 +31216,7 @@ struct convergence : ::sc_core::sc_module
 public:
   sc_in<bool> clk;
   sc_in<bool> reset;
-  sc_in <sc_uint<8> > zoom;
+  sc_in <sc_uint<10> > zoom;
   sc_in <float > offset_X;
   sc_in <float > offset_Y;
   sc_fifo_out<sc_uint<8> > s_out;
@@ -31242,18 +31242,17 @@ void convergence::do_convergence() {
     int buff_counter = 0;
     int max_it = 0;
 #pragma empty_line
-    for (int y = 0; y < 10; y++) {
+    for (int y = 0; y < 100; y++) {
       sc_uint<8> zooom = zoom.read();
       float off_Y = offset_Y.read();
       float off_X = offset_X.read();
-      double zimag = off_Y - 10 / 2.0f * zooom + (y * zooom);
-      double zreal = off_X - 10 / 2.0f * zooom;
+      double zimag = off_Y - 100 / 2.0f * zooom + (y * zooom);
+      double zreal = off_X - 100 / 2.0f * zooom;
       double startimag = zimag;
       double startreal = zreal;
 #pragma empty_line
-      for (int x = 0; x < 10; x++) {
-#pragma HLS PIPELINE II=1
- max_it = 0;
+      for (int x = 0; x < 100; x++) {
+        max_it = 0;
         unsigned int counter = 0;
         bool end = false;
         while( (counter < 50) && end) {

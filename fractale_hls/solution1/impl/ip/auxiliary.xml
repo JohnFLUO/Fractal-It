@@ -3,7 +3,7 @@
   <xd:arg xd:name="x" xd:originalName="x" xd:direction="out" xd:interfaceRef="x" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="10" xd:firstOut="-1"/>
   <xd:arg xd:name="y" xd:originalName="y" xd:direction="out" xd:interfaceRef="y" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="9" xd:firstOut="-1"/>
   <xd:arg xd:name="couleur" xd:originalName="couleur" xd:direction="out" xd:interfaceRef="couleur" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12" xd:firstOut="-1"/>
-  <xd:arg xd:name="zoom" xd:originalName="zoom" xd:direction="in" xd:interfaceRef="zoom" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8" xd:firstOut="-1"/>
+  <xd:arg xd:name="zoom" xd:originalName="zoom" xd:direction="in" xd:interfaceRef="zoom" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="10" xd:firstOut="-1"/>
   <xd:arg xd:name="offset_X" xd:originalName="offset_X" xd:direction="in" xd:interfaceRef="offset_X" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="-1"/>
   <xd:arg xd:name="offset_Y" xd:originalName="offset_Y" xd:direction="in" xd:interfaceRef="offset_Y" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="-1"/>
   <xd:latencyEstimates xd:best-case="2" xd:worst-case="101" xd:average-case="52"/>

@@ -84,10 +84,5 @@
 <option name="complete" positionalBoolean="type" value=""/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="convergence::do_convergence" label="">
-<pragma name="PIPELINE">
-<option name="II" value="1"/>
-</pragma>
-</directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

@@ -14,7 +14,7 @@ public:
 	sc_out <sc_uint<9> >   y;
 	sc_out <sc_uint<12> >  couleur;
 	sc_fifo<sc_uint<8> >  counter;
-	sc_in <sc_uint<8> > zoom;
+	sc_in <sc_uint<10> > zoom;
 	sc_in <float> offset_X;
 	sc_in <float> offset_Y;
 

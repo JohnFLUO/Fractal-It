@@ -3,7 +3,7 @@
   <spirit:vendor>moi</spirit:vendor>
   <spirit:library>hls</spirit:library>
   <spirit:name>main</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:version>1.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>clk</spirit:name>
@@ -137,7 +137,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ZOOM.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ZOOM.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 10} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -200,7 +200,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>22c677bf</spirit:value>
+            <spirit:value>f2b20883</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -216,7 +216,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>530f0fc0</spirit:value>
+            <spirit:value>837b70fc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -232,7 +232,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e6f27ea0</spirit:value>
+            <spirit:value>9cc57d53</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -248,7 +248,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e8f3b752</spirit:value>
+            <spirit:value>92c4b4a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -386,7 +386,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:left spirit:format="long">9</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -551,7 +551,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/main.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_b0e55eb9</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_47e19164</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -609,7 +609,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/main_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/main_v1_1.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_bdef2832</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -628,7 +628,7 @@
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">main_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">main_v1_1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
@@ -661,15 +661,15 @@
       </xilinx:taxonomies>
       <xilinx:displayName>fractale</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1911291120</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-11-29T10:20:37Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1911291157</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-11-29T10:57:54Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e10b23af"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="316b611e"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="0e81b083"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5a1fe01e"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50231530"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a262703d"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="5503aec0"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d012320e"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

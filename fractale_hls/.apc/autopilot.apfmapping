@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="convergence.cpp" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/convergence.cpp"/>
-    <originFiles name="convergence.h" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/convergence.h"/>
-    <originFiles name="image.cpp" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/image.cpp"/>
-    <originFiles name="image.h" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/image.h"/>
     <originFiles name="main.cpp" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/main.cpp"/>
+    <originFiles name="image.h" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/image.h"/>
+    <originFiles name="image.cpp" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/image.cpp"/>
+    <originFiles name="convergence.h" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/convergence.h"/>
+    <originFiles name="convergence.cpp" path="/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/convergence.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -15,10 +15,8 @@ port (
     reset : IN STD_LOGIC;
     x : OUT STD_LOGIC_VECTOR (9 downto 0);
     y : OUT STD_LOGIC_VECTOR (8 downto 0);
-    couleur : OUT STD_LOGIC_VECTOR (11 downto 0);
-    zoom : IN STD_LOGIC_VECTOR (7 downto 0);
-    offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
-    offset_Y : IN STD_LOGIC_VECTOR (31 downto 0) );
+    couleur : OUT STD_LOGIC_VECTOR (11 downto 0));
+
 end;
 
 
@@ -31,12 +29,12 @@ architecture behav of main is
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_logic_0 : STD_LOGIC := '0';
 
-    signal grp_convergence_fu_104_s_out_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_convergence_fu_104_s_out_write : STD_LOGIC;
-    signal grp_convergence_fu_104_out_x : STD_LOGIC_VECTOR (9 downto 0);
-    signal grp_convergence_fu_104_out_y : STD_LOGIC_VECTOR (8 downto 0);
-    signal grp_dimage_fu_126_counter_read : STD_LOGIC;
-    signal grp_dimage_fu_126_couleur : STD_LOGIC_VECTOR (11 downto 0);
+    signal grp_convergence_fu_102_s_out_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_convergence_fu_102_s_out_write : STD_LOGIC;
+    signal grp_convergence_fu_102_out_x : STD_LOGIC_VECTOR (9 downto 0);
+    signal grp_convergence_fu_102_out_y : STD_LOGIC_VECTOR (8 downto 0);
+    signal grp_dimage_fu_124_counter_read : STD_LOGIC;
+    signal grp_dimage_fu_124_couleur : STD_LOGIC_VECTOR (11 downto 0);
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0);
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
@@ -45,10 +43,22 @@ architecture behav of main is
     signal sc_fifo_chn_1_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal sc_fifo_chn_1_empty_n : STD_LOGIC;
     signal sc_fifo_chn_1_full_n : STD_LOGIC;
+    
+    
+    signal zoom : STD_LOGIC_VECTOR (9 downto 0);
+    signal offset_X : STD_LOGIC_VECTOR (31 downto 0);
+    signal offset_Y : STD_LOGIC_VECTOR (31 downto 0);
+
+    component test IS
+    port(
+        zoom : OUT STD_LOGIC_VECTOR (9 downto 0);
+        offset_X : OUT STD_LOGIC_VECTOR (31 downto 0);
+        offset_Y : OUT STD_LOGIC_VECTOR (31 downto 0));
+    end component;
 
     component convergence IS
     port (
-        zoom : IN STD_LOGIC_VECTOR (7 downto 0);
+        zoom : IN STD_LOGIC_VECTOR (9 downto 0);
         offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
         offset_Y : IN STD_LOGIC_VECTOR (31 downto 0);
         s_out_din : OUT STD_LOGIC_VECTOR (7 downto 0);
@@ -89,25 +99,32 @@ architecture behav of main is
 
 
 begin
-    grp_convergence_fu_104 : component convergence
+
+    grp_test : component test
+    port map (
+        zoom => zoom,
+        offset_X => offset_X,
+        offset_Y => offset_Y);
+
+    grp_convergence_fu_102 : component convergence
     port map (
         zoom => zoom,
         offset_X => offset_X,
         offset_Y => offset_Y,
-        s_out_din => grp_convergence_fu_104_s_out_din,
+        s_out_din => grp_convergence_fu_102_s_out_din,
         s_out_full_n => sc_fifo_chn_1_full_n,
-        s_out_write => grp_convergence_fu_104_s_out_write,
-        out_x => grp_convergence_fu_104_out_x,
-        out_y => grp_convergence_fu_104_out_y,
+        s_out_write => grp_convergence_fu_102_s_out_write,
+        out_x => grp_convergence_fu_102_out_x,
+        out_y => grp_convergence_fu_102_out_y,
         clk => clk,
         reset => reset);
 
-    grp_dimage_fu_126 : component dimage
+    grp_dimage_fu_124 : component dimage
     port map (
         counter_dout => sc_fifo_chn_1_dout,
         counter_empty_n => sc_fifo_chn_1_empty_n,
-        counter_read => grp_dimage_fu_126_counter_read,
-        couleur => grp_dimage_fu_126_couleur,
+        counter_read => grp_dimage_fu_124_counter_read,
+        couleur => grp_dimage_fu_124_couleur,
         clk => clk,
         reset => reset);
 
@@ -117,19 +134,19 @@ begin
         reset => reset,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => grp_convergence_fu_104_s_out_din,
+        if_din => grp_convergence_fu_102_s_out_din,
         if_full_n => sc_fifo_chn_1_full_n,
-        if_write => grp_convergence_fu_104_s_out_write,
+        if_write => grp_convergence_fu_102_s_out_write,
         if_dout => sc_fifo_chn_1_dout,
         if_empty_n => sc_fifo_chn_1_empty_n,
-        if_read => grp_dimage_fu_126_counter_read);
+        if_read => grp_dimage_fu_124_counter_read);
 
 
 
 
     ap_CS_fsm <= ap_const_lv2_0;
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
-    couleur <= grp_dimage_fu_126_couleur;
-    x <= grp_convergence_fu_104_out_x;
-    y <= grp_convergence_fu_104_out_y;
+    couleur <= grp_dimage_fu_124_couleur;
+    x <= grp_convergence_fu_102_out_x;
+    y <= grp_convergence_fu_102_out_y;
 end behav;

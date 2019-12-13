@@ -25,7 +25,7 @@ module convergence (
 
 input   clk;
 input   reset;
-input  [7:0] zoom;
+input  [9:0] zoom;
 input  [31:0] offset_X;
 input  [31:0] offset_Y;
 output  [7:0] s_out_din;

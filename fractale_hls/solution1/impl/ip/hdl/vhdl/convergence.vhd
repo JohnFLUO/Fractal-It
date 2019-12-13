@@ -13,7 +13,7 @@ entity convergence is
 port (
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
-    zoom : IN STD_LOGIC_VECTOR (7 downto 0);
+    zoom : IN STD_LOGIC_VECTOR (9 downto 0);
     offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
     offset_Y : IN STD_LOGIC_VECTOR (31 downto 0);
     s_out_din : OUT STD_LOGIC_VECTOR (7 downto 0);
@@ -53,7 +53,7 @@ architecture behav of convergence is
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
-        zoom : IN STD_LOGIC_VECTOR (7 downto 0);
+        zoom : IN STD_LOGIC_VECTOR (9 downto 0);
         offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
         offset_Y : IN STD_LOGIC_VECTOR (31 downto 0);
         s_out_din : OUT STD_LOGIC_VECTOR (7 downto 0);

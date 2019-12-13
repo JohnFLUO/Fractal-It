@@ -125,7 +125,7 @@ parameter    ap_ST_fsm_state100 = 100'd633825300114114700748351602688;
 
 input   ap_clk;
 input   ap_rst;
-input  [7:0] zoom;
+input  [9:0] zoom;
 input  [31:0] offset_X;
 input  [31:0] offset_Y;
 output  [7:0] s_out_din;

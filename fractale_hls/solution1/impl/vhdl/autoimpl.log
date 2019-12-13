@@ -12,9 +12,9 @@
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source run_vivadosyn.tcl -notrace
-[Fri Nov 29 11:20:48 2019] Launched synth_1...
+[Fri Nov 29 11:58:06 2019] Launched synth_1...
 Run output will be captured here: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1/runme.log
-[Fri Nov 29 11:20:49 2019] Waiting for synth_1 to finish...
+[Fri Nov 29 11:58:06 2019] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
@@ -31,14 +31,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7884 
+INFO: Helper process launched with PID 25290 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1418.094 ; gain = 88.824 ; free physical = 1360 ; free virtual = 22521
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1418.090 ; gain = 88.824 ; free physical = 544 ; free virtual = 21439
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:25]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:40]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:43]
-INFO: [Synth 8-3491] module 'convergence' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:12' bound to instance 'grp_convergence_fu_104' of component 'convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:92]
+INFO: [Synth 8-3491] module 'convergence' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:12' bound to instance 'grp_convergence_fu_102' of component 'convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:92]
 INFO: [Synth 8-638] synthesizing module 'convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:27]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:40]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:49]
@@ -143,7 +143,7 @@ INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/flou
 INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-256] done synthesizing module 'convergence_do_convergence' (1#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'convergence' (2#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:27]
-INFO: [Synth 8-3491] module 'dimage' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:12' bound to instance 'grp_dimage_fu_126' of component 'dimage' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:105]
+INFO: [Synth 8-3491] module 'dimage' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:12' bound to instance 'grp_dimage_fu_124' of component 'dimage' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:105]
 INFO: [Synth 8-638] synthesizing module 'dimage' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:23]
 INFO: [Synth 8-3491] module 'dimage_do_image' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:12' bound to instance 'grp_dimage_do_image_fu_58' of component 'dimage_do_image' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'dimage_do_image' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:24]
@@ -185,6 +185,8 @@ WARNING: [Synth 8-3331] design fifo_w8_d1_A_shiftReg has unconnected port a[0]
 WARNING: [Synth 8-3331] design dimage_do_image_cbkb has unconnected port reset
 WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[7]
 WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[8]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[7]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[6]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[5]
@@ -258,7 +260,7 @@ WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port o
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[1]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1477.734 ; gain = 148.465 ; free physical = 1362 ; free virtual = 22524
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 547 ; free virtual = 21443
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -271,10 +273,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.734 ; gain = 148.465 ; free physical = 1364 ; free virtual = 22525
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 549 ; free virtual = 21444
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.734 ; gain = 148.465 ; free physical = 1364 ; free virtual = 22525
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 549 ; free virtual = 21444
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -288,22 +290,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1849.699 ; gain = 0.004 ; free physical = 1077 ; free virtual = 22238
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1849.695 ; gain = 0.004 ; free physical = 260 ; free virtual = 21156
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1178 ; free virtual = 22340
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 361 ; free virtual = 21257
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1178 ; free virtual = 22340
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 361 ; free virtual = 21257
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1179 ; free virtual = 22341
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 362 ; free virtual = 21259
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -410,7 +412,7 @@ INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instan
 INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1171 ; free virtual = 22333
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 355 ; free virtual = 21252
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -692,6 +694,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design main has unconnected port zoom[9]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[8]
 WARNING: [Synth 8-3331] design main has unconnected port zoom[7]
 WARNING: [Synth 8-3331] design main has unconnected port zoom[6]
 WARNING: [Synth 8-3331] design main has unconnected port zoom[5]
@@ -712,10 +716,6 @@ WARNING: [Synth 8-3331] design main has unconnected port offset_X[23]
 WARNING: [Synth 8-3331] design main has unconnected port offset_X[22]
 WARNING: [Synth 8-3331] design main has unconnected port offset_X[21]
 WARNING: [Synth 8-3331] design main has unconnected port offset_X[20]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[19]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[18]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[17]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[16]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
@@ -725,44 +725,44 @@ INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shift
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0] )
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_y_reg[4]' (FDE) to 'grp_convergence_fu_104/out_y_reg[5]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_y_reg[5]' (FDE) to 'grp_convergence_fu_104/out_y_reg[6]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_y_reg[6]' (FDE) to 'grp_convergence_fu_104/out_y_reg[7]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_y_reg[7]' (FDE) to 'grp_convergence_fu_104/out_y_reg[8]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_y_reg[8]' (FDE) to 'grp_convergence_fu_104/out_x_reg[4]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_x_reg[4]' (FDE) to 'grp_convergence_fu_104/out_x_reg[5]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_x_reg[5]' (FDE) to 'grp_convergence_fu_104/out_x_reg[6]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_x_reg[6]' (FDE) to 'grp_convergence_fu_104/out_x_reg[7]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_x_reg[7]' (FDE) to 'grp_convergence_fu_104/out_x_reg[8]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_104/out_x_reg[8]' (FDE) to 'grp_convergence_fu_104/out_x_reg[9]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\grp_convergence_fu_104/out_x_reg[9] )
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[4]' (FDE) to 'grp_convergence_fu_102/out_y_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[5]' (FDE) to 'grp_convergence_fu_102/out_y_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[6]' (FDE) to 'grp_convergence_fu_102/out_y_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[7]' (FDE) to 'grp_convergence_fu_102/out_y_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[8]' (FDE) to 'grp_convergence_fu_102/out_x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[4]' (FDE) to 'grp_convergence_fu_102/out_x_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[5]' (FDE) to 'grp_convergence_fu_102/out_x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[6]' (FDE) to 'grp_convergence_fu_102/out_x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[7]' (FDE) to 'grp_convergence_fu_102/out_x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[8]' (FDE) to 'grp_convergence_fu_102/out_x_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\grp_convergence_fu_102/out_x_reg[9] )
 WARNING: [Synth 8-3332] Sequential element (sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]) is unused and will be removed from module main.
 WARNING: [Synth 8-3332] Sequential element (sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (grp_convergence_fu_104/out_x_reg[9]) is unused and will be removed from module main.
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[0]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]' (FDE) to 'grp_dimage_fu_126/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[11]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[0]' (FDE) to 'grp_dimage_fu_126/couleur_reg[1]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[1]' (FDE) to 'grp_dimage_fu_126/couleur_reg[2]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[2]' (FDE) to 'grp_dimage_fu_126/couleur_reg[3]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[3]' (FDE) to 'grp_dimage_fu_126/couleur_reg[4]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[4]' (FDE) to 'grp_dimage_fu_126/couleur_reg[5]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[5]' (FDE) to 'grp_dimage_fu_126/couleur_reg[6]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[6]' (FDE) to 'grp_dimage_fu_126/couleur_reg[7]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[7]' (FDE) to 'grp_dimage_fu_126/couleur_reg[8]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[8]' (FDE) to 'grp_dimage_fu_126/couleur_reg[9]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[9]' (FDE) to 'grp_dimage_fu_126/couleur_reg[10]'
-INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_126/couleur_reg[10]' (FDE) to 'grp_dimage_fu_126/couleur_reg[11]'
+WARNING: [Synth 8-3332] Sequential element (grp_convergence_fu_102/out_x_reg[9]) is unused and will be removed from module main.
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[0]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[0]' (FDE) to 'grp_dimage_fu_124/couleur_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[1]' (FDE) to 'grp_dimage_fu_124/couleur_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[2]' (FDE) to 'grp_dimage_fu_124/couleur_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[3]' (FDE) to 'grp_dimage_fu_124/couleur_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[4]' (FDE) to 'grp_dimage_fu_124/couleur_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[5]' (FDE) to 'grp_dimage_fu_124/couleur_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[6]' (FDE) to 'grp_dimage_fu_124/couleur_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[7]' (FDE) to 'grp_dimage_fu_124/couleur_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[8]' (FDE) to 'grp_dimage_fu_124/couleur_reg[9]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[9]' (FDE) to 'grp_dimage_fu_124/couleur_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[10]' (FDE) to 'grp_dimage_fu_124/couleur_reg[11]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:46 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1147 ; free virtual = 22311
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:46 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 343 ; free virtual = 21242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -789,13 +789,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:57 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1027 ; free virtual = 22192
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:58 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 222 ; free virtual = 21121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1010 ; free virtual = 22175
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 207 ; free virtual = 21106
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -807,7 +807,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:58 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1010 ; free virtual = 22175
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -831,7 +831,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22175
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -844,7 +844,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22175
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -856,25 +856,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22176
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22176
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22176
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -905,20 +905,20 @@ Report Instance Areas:
 |      |Instance                                 |Module                     |Cells |
 +------+-----------------------------------------+---------------------------+------+
 |1     |top                                      |                           |   198|
-|2     |  grp_convergence_fu_104                 |convergence                |   180|
+|2     |  grp_convergence_fu_102                 |convergence                |   180|
 |3     |    grp_convergence_do_convergence_fu_76 |convergence_do_convergence |   172|
-|4     |  grp_dimage_fu_126                      |dimage                     |     8|
+|4     |  grp_dimage_fu_124                      |dimage                     |     8|
 |5     |    grp_dimage_do_image_fu_58            |dimage_do_image            |     7|
 |6     |      color_U                            |dimage_do_image_cbkb       |     3|
 |7     |        dimage_do_image_cbkb_rom_U       |dimage_do_image_cbkb_rom   |     3|
 |8     |  sc_fifo_chn_1_fifo_U                   |fifo_w8_d1_A               |    10|
 +------+-----------------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1011 ; free virtual = 22176
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 75 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1849.699 ; gain = 148.465 ; free physical = 1064 ; free virtual = 22229
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.699 ; gain = 520.430 ; free physical = 1075 ; free virtual = 22239
+Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1849.695 ; gain = 148.465 ; free physical = 258 ; free virtual = 21157
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 269 ; free virtual = 21168
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -928,14 +928,14 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 282 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:00 . Memory (MB): peak = 1857.707 ; gain = 541.066 ; free physical = 1068 ; free virtual = 22233
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1857.703 ; gain = 541.066 ; free physical = 264 ; free virtual = 21163
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1881.727 ; gain = 0.000 ; free physical = 1068 ; free virtual = 22233
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 11:21:58 2019...
-[Fri Nov 29 11:21:59 2019] synth_1 finished
-wait_on_run: Time (s): cpu = 00:00:32 ; elapsed = 00:01:10 . Memory (MB): peak = 1341.223 ; gain = 3.824 ; free physical = 1696 ; free virtual = 22857
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1881.723 ; gain = 0.000 ; free physical = 264 ; free virtual = 21163
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 11:59:16 2019...
+[Fri Nov 29 11:59:17 2019] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:32 ; elapsed = 00:01:11 . Memory (MB): peak = 1341.223 ; gain = 3.824 ; free physical = 892 ; free virtual = 21788
 Design is defaulting to impl run constrset: constrs_1
 Design is defaulting to synth run part: xc7a100tcsg324-1
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
@@ -947,22 +947,22 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1669.059 ; gain = 327.836 ; free physical = 1419 ; free virtual = 22581
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1669.059 ; gain = 0.000 ; free physical = 1418 ; free virtual = 22580
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1669.059 ; gain = 327.836 ; free physical = 616 ; free virtual = 21512
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1669.059 ; gain = 0.000 ; free physical = 615 ; free virtual = 21511
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
 Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
 INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
-report_timing: Time (s): cpu = 00:00:12 ; elapsed = 00:00:42 . Memory (MB): peak = 2206.586 ; gain = 537.527 ; free physical = 1037 ; free virtual = 22199
+report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 2206.586 ; gain = 537.527 ; free physical = 233 ; free virtual = 21129
 
 
 Implementation tool: Xilinx Vivado v.2018.2
 Project:             fractale_hls
 Solution:            solution1
 Device target:       xc7a100tcsg324-1
-Report date:         Fri Nov 29 11:23:16 CET 2019
+Report date:         Fri Nov 29 12:00:34 CET 2019
 
 #=== Post-Synthesis Resource usage ===
 SLICE:            0
@@ -975,4 +975,4 @@ SRL:              0
 CP required:    10.000
 CP achieved post-synthesis:    4.546
 Timing met
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 11:23:16 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 12:00:35 2019...
