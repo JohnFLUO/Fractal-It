@@ -27,6 +27,10 @@
 #include "Convergence/double/Convergence_dp_x86.hpp"
 #include "Convergence/double/Convergence_dp_x86_omp.hpp"
 #include "Convergence/double/Convergence_dp_x86_omp_AVX.hpp"
+#include "Convergence/double/Convergence_dp_x86_omp_AVX_plus.hpp"
+#include "Convergence/simple/Convergence_sp_x86.hpp"
+#include "Convergence/simple/Convergence_sp_x86_omp.hpp"
+#include "Convergence/simple/Convergence_sp_x86_omp_AVX.hpp"
 
 #include "immintrin.h"
 
