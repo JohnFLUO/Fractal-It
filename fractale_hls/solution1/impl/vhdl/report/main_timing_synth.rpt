@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Fri Nov 29 12:00:34 2019
+| Date         : Fri Dec 13 12:57:42 2019
 | Host         : heliamphoria running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command      : report_timing -file ./report/main_timing_synth.rpt
 | Design       : main
@@ -11,16 +11,16 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 Timing Report
 
-Slack (MET) :             5.454ns  (required time - arrival time)
-  Source:                 grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_reg[37]/C
+Slack (MET) :             3.823ns  (required time - arrival time)
+  Source:                 grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_reg[249]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            grp_convergence_fu_102/out_x_reg[0]/CE
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
-  Data Path Delay:        4.260ns  (logic 1.145ns (26.878%)  route 3.115ns (73.122%))
-  Logic Levels:           4  (LUT6=4)
+  Data Path Delay:        5.891ns  (logic 1.269ns (21.541%)  route 4.622ns (78.459%))
+  Logic Levels:           5  (LUT4=1 LUT6=4)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -35,34 +35,36 @@ Slack (MET) :             5.454ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk rise edge)        0.000     0.000 r  
                                                       0.000     0.000 r  clk (IN)
-                         net (fo=115, unset)          0.973     0.973    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/clk
-                         FDRE                                         r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_reg[37]/C
+                         net (fo=417, unset)          0.973     0.973    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/clk
+                         FDRE                                         r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_reg[249]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_reg[37]/Q
-                         net (fo=3, unplaced)         0.983     2.434    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_state38
-                         LUT6 (Prop_lut6_I0_O)        0.295     2.729 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_24/O
-                         net (fo=1, unplaced)         0.449     3.178    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_24_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     3.302 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_11/O
-                         net (fo=2, unplaced)         0.743     4.045    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_11_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     4.169 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_3/O
-                         net (fo=1, unplaced)         0.419     4.588    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_3_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     4.712 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[3]_i_1/O
-                         net (fo=12, unplaced)        0.521     5.233    grp_convergence_fu_102/grp_convergence_fu_102_s_out_write
+                         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_reg[249]/Q
+                         net (fo=3, unplaced)         0.983     2.434    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/ap_CS_fsm_state250
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.729 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_y[3]_i_18/O
+                         net (fo=1, unplaced)         0.941     3.670    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_y[3]_i_18_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.794 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_y[3]_i_5/O
+                         net (fo=7, unplaced)         0.767     4.561    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_y1234_out__18
+                         LUT4 (Prop_lut4_I1_O)        0.124     4.685 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_y[3]_i_2/O
+                         net (fo=3, unplaced)         0.959     5.644    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_y[3]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.768 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[4]_i_6/O
+                         net (fo=1, unplaced)         0.449     6.217    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[4]_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.341 r  grp_convergence_fu_102/grp_convergence_do_convergence_fu_76/out_x[4]_i_1/O
+                         net (fo=13, unplaced)        0.523     6.864    grp_convergence_fu_102/grp_convergence_do_convergence_fu_76_out_y_ap_vld
                          FDRE                                         r  grp_convergence_fu_102/out_x_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)       10.000    10.000 r  
                                                       0.000    10.000 r  clk (IN)
-                         net (fo=115, unset)          0.924    10.924    grp_convergence_fu_102/clk
+                         net (fo=417, unset)          0.924    10.924    grp_convergence_fu_102/clk
                          FDRE                                         r  grp_convergence_fu_102/out_x_reg[0]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
                          FDRE (Setup_fdre_C_CE)      -0.202    10.687    grp_convergence_fu_102/out_x_reg[0]
   -------------------------------------------------------------------
                          required time                         10.687    
-                         arrival time                          -5.233    
+                         arrival time                          -6.864    
   -------------------------------------------------------------------
-                         slack                                  5.454    
+                         slack                                  3.823    
 
 
 

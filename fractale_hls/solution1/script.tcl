@@ -5,11 +5,11 @@
 ############################################################
 open_project fractale_hls
 set_top main
-add_files fractale_hls/src/main.cpp
-add_files fractale_hls/src/image.h
-add_files fractale_hls/src/image.cpp
-add_files fractale_hls/src/convergence.h
 add_files fractale_hls/src/convergence.cpp
+add_files fractale_hls/src/convergence.h
+add_files fractale_hls/src/image.cpp
+add_files fractale_hls/src/image.h
+add_files fractale_hls/src/main.cpp
 open_solution "solution1"
 set_part {xc7a100tcsg324-1} -tool vivado
 create_clock -period 10 -name default
@@ -17,4 +17,4 @@ create_clock -period 10 -name default
 #csim_design
 csynth_design
 #cosim_design -rtl vhdl -tool modelsim
-export_design -flow syn -rtl vhdl -format ip_catalog -vendor "moi" -version "1.1" -display_name "fractale"
+export_design -flow syn -rtl vhdl -format ip_catalog -vendor "moi" -version "2.1" -display_name "fractale"

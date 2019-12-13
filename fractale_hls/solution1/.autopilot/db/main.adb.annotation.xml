@@ -1,0 +1,7 @@
+<annotationInfo>
+<item  id="24" filename="fractale_hls/src/convergence.h" linenumber="21" name="" contextFuncName="convergence" moduleName="convergence" rtlName="grp_convergence_do_convergence_fu_76" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/net/e/floupias001/FRACTALE/fractale/Fractale-It"&gt;&lt;\/item&gt;
+<item  id="19" filename="fractale_hls/src/image.cpp" linenumber="45" name="tmp" contextFuncName="do_image" moduleName="dimage::do_image" rtlName="tmp_fu_85_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/net/e/floupias001/FRACTALE/fractale/Fractale-It"&gt;&lt;\/item&gt;
+<item  id="17" filename="fractale_hls/src/image.h" linenumber="17" name="" contextFuncName="dimage" moduleName="dimage" rtlName="grp_dimage_do_image_fu_58" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/net/e/floupias001/FRACTALE/fractale/Fractale-It"&gt;&lt;\/item&gt;
+<item  id="50" filename="fractale_hls/src/convergence.h" linenumber="23" name="" contextFuncName="convergence" moduleName="main" rtlName="grp_convergence_fu_102" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/net/e/floupias001/FRACTALE/fractale/Fractale-It"><\/item>
+<item  id="51" filename="fractale_hls/src/image.h" linenumber="19" name="" contextFuncName="dimage" moduleName="main" rtlName="grp_dimage_fu_124" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/net/e/floupias001/FRACTALE/fractale/Fractale-It"><\/item>
+</annotationInfo>

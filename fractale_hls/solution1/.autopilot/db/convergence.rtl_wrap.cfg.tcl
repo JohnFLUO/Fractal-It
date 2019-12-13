@@ -21,7 +21,7 @@ lappend portList $port1
 set portName2 "zoom"
 set isMeta2 0
 set portInterface2 [list "sc_in"]
-set portData2 [list "sc_uint" 10]
+set portData2 [list "float"]
 set isClock2 0
 set isReset2 0
 set portAttribute2 [list $isClock2 $isReset2]

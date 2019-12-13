@@ -10,7 +10,7 @@ void convergence::do_convergence()  {
     int max_it = 0;
 
     for (int y = 0; y < IMAGE_HEIGHT; y++) {
-      sc_uint<8> zooom = zoom.read();
+      float zooom = zoom.read();
       float off_Y = offset_Y.read();
       float off_X = offset_X.read();
       double zimag = off_Y - IMAGE_HEIGHT / 2.0f * zooom + (y * zooom);

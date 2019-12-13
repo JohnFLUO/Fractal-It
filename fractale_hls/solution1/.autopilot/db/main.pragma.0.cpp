@@ -31224,7 +31224,7 @@ struct convergence : ::sc_core::sc_module
 public:
   sc_in<bool> clk;
   sc_in<bool> reset;
-  sc_in <sc_uint<10> > zoom;
+  sc_in <float > zoom;
   sc_in <float > offset_X;
   sc_in <float > offset_Y;
   sc_fifo_out<sc_uint<8> > s_out;
@@ -31278,7 +31278,7 @@ public:
  sc_out <sc_uint<9> > y;
  sc_out <sc_uint<12> > couleur;
  sc_fifo<sc_uint<8> > counter;
- sc_in <sc_uint<10> > zoom;
+ sc_in <float > zoom;
  sc_in <float> offset_X;
  sc_in <float> offset_Y;
 

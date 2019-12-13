@@ -13,7 +13,7 @@ entity dimage_do_image_cbkb_rom is
     generic(
              DWIDTH     : integer := 12; 
              AWIDTH     : integer := 6; 
-             MEM_SIZE    : integer := 51
+             MEM_SIZE    : integer := 50
     ); 
     port (
           addr0      : in std_logic_vector(AWIDTH-1 downto 0); 
@@ -45,7 +45,7 @@ signal mem : mem_array := (
     40 => "111001010000", 41 => "110101000000", 42 => "110000110000", 
     43 => "101100100000", 44 => "101000010000", 45 => "100000010000", 
     46 => "011100000000", 47 => "010100000000", 48 => "001000000000", 
-    49 to 50=> "000000000000" );
+    49 => "111111111111" );
 
 attribute syn_rom_style : string;
 attribute syn_rom_style of mem : signal is "select_rom";
@@ -85,7 +85,7 @@ use IEEE.std_logic_1164.all;
 entity dimage_do_image_cbkb is
     generic (
         DataWidth : INTEGER := 12;
-        AddressRange : INTEGER := 51;
+        AddressRange : INTEGER := 50;
         AddressWidth : INTEGER := 6);
     port (
         reset : IN STD_LOGIC;

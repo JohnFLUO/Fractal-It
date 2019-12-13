@@ -1,7 +1,7 @@
 #include "systemc.h"
 
-#define IMAGE_WIDTH  100
-#define IMAGE_HEIGHT 100
+#define IMAGE_WIDTH  20
+#define IMAGE_HEIGHT 20
 #define MAX_IT 50
 
 SC_MODULE(convergence)
@@ -9,7 +9,7 @@ SC_MODULE(convergence)
 public:
   sc_in<bool> clk;
   sc_in<bool> reset;
-  sc_in <sc_uint<10> > zoom;
+  sc_in <float > zoom;
   sc_in <float > offset_X;
   sc_in <float > offset_Y;
   sc_fifo_out<sc_uint<8> >  s_out;

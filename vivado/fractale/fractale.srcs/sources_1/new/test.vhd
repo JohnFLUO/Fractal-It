@@ -35,7 +35,7 @@ entity test is
     Port (
            offset_X : out STD_LOGIC_VECTOR (31 downto 0);
            offset_Y : out STD_LOGIC_VECTOR (31 downto 0);
-           zoom : out STD_LOGIC_VECTOR (9 downto 0));
+           zoom : out STD_LOGIC_VECTOR (31 downto 0));
 end test;
 
 architecture Behavioral of test is
@@ -43,6 +43,6 @@ architecture Behavioral of test is
 begin
     offset_X <= "00000000000000000000000000000000";
     offset_Y <= "00000000000000000000000000000000";
-    zoom <= "0000000001";
+    zoom <= "00111011100000110001001001101111";
 
 end Behavioral;

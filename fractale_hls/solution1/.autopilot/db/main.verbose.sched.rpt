@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vivado HLS Report for 'main'
+================================================================
+* Date:           Fri Dec 13 12:54:21 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        fractale_hls
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.165|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|  401|    2|  401|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [2/2] (0.00ns)   --->   "call void @"convergence::convergence.1"(i1* %clk_form, i1* %reset_form, float* %zoom_form, float* %offset_X_form, float* %offset_Y_form, i8* %sc_fifo_chn_1_form3, i10* %x_form, i9* %y_form)" [fractale_hls/src/convergence.h:23->fractale_hls/src/main.cpp:22]   --->   Operation 3 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 4 [2/2] (0.00ns)   --->   "call void @"dimage::dimage.1"(i1* %clk_form1, i1* %reset_form2, i8* %sc_fifo_chn_1_form, i12* %couleur_form)" [fractale_hls/src/image.h:19->fractale_hls/src/main.cpp:22]   --->   Operation 4 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %sc_fifo_chn_1_form, [8 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str23, i32 0, i32 0, [1 x i8]* @p_str23, [1 x i8]* @p_str23, [1 x i8]* @p_str23, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str23, [1 x i8]* @p_str23)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %sc_fifo_chn_1_form3, [8 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str23, i32 0, i32 0, [1 x i8]* @p_str23, [1 x i8]* @p_str23, [1 x i8]* @p_str23, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str23, [1 x i8]* @p_str23)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk), !map !168"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset), !map !172"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i10* %x), !map !176"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i9* %y), !map !180"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12* %couleur), !map !184"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %sc_fifo_chn_1), !map !188"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %zoom), !map !192"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %offset_X), !map !196"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %offset_Y), !map !200"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk_form), !map !204"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset_form), !map !208"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %zoom_form), !map !212"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %offset_X_form), !map !216"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %offset_Y_form), !map !220"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %sc_fifo_chn_1_form3), !map !224"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i10* %x_form), !map !228"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i9* %y_form), !map !232"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %clk_form1), !map !236"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %reset_form2), !map !240"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %sc_fifo_chn_1_form), !map !244"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i12* %couleur_form), !map !248"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecChannel([1 x i8]* @p_str23, i32 1, [1 x i8]* @p_str23, [12 x i8]* @p_str24, i32 1, i32 1, i8* %sc_fifo_chn_1, i8* %sc_fifo_chn_1) nounwind" [fractale_hls/src/main.cpp:22]   --->   Operation 28 'specchannel' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %sc_fifo_chn_1, [8 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str23, i32 0, i32 0, [1 x i8]* @p_str23, [1 x i8]* @p_str23, [1 x i8]* @p_str23, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str23, [1 x i8]* @p_str23) nounwind" [fractale_hls/src/main.cpp:22]   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/2] (0.00ns)   --->   "call void @"convergence::convergence.1"(i1* %clk_form, i1* %reset_form, float* %zoom_form, float* %offset_X_form, float* %offset_Y_form, i8* %sc_fifo_chn_1_form3, i10* %x_form, i9* %y_form)" [fractale_hls/src/convergence.h:23->fractale_hls/src/main.cpp:22]   --->   Operation 30 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 31 [1/2] (0.00ns)   --->   "call void @"dimage::dimage.1"(i1* %clk_form1, i1* %reset_form2, i8* %sc_fifo_chn_1_form, i12* %couleur_form)" [fractale_hls/src/image.h:19->fractale_hls/src/main.cpp:22]   --->   Operation 31 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @p_str6, [5 x i8]* @p_str6) nounwind" [fractale_hls/src/main.cpp:23]   --->   Operation 32 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 0, [7 x i8]* @p_str7, [4 x i8]* @p_str8, i32 0, i32 0, i1* %clk) nounwind" [fractale_hls/src/main.cpp:24]   --->   Operation 33 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 0, [7 x i8]* @p_str7, [6 x i8]* @p_str9, i32 0, i32 0, i1* %reset) nounwind" [fractale_hls/src/main.cpp:25]   --->   Operation 34 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 1, [14 x i8]* @p_str10, [2 x i8]* @p_str11, i32 0, i32 0, i10* %x) nounwind" [fractale_hls/src/main.cpp:26]   --->   Operation 35 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 1, [13 x i8]* @p_str12, [2 x i8]* @p_str13, i32 0, i32 0, i9* %y) nounwind" [fractale_hls/src/main.cpp:27]   --->   Operation 36 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 1, [14 x i8]* @p_str14, [8 x i8]* @p_str15, i32 0, i32 0, i12* %couleur) nounwind" [fractale_hls/src/main.cpp:28]   --->   Operation 37 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 0, [8 x i8]* @p_str16, [5 x i8]* @p_str17, i32 0, i32 0, float* %zoom) nounwind" [fractale_hls/src/main.cpp:29]   --->   Operation 38 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 0, [8 x i8]* @p_str16, [9 x i8]* @p_str18, i32 0, i32 0, float* %offset_X) nounwind" [fractale_hls/src/main.cpp:30]   --->   Operation 39 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPort([5 x i8]* @p_str6, i32 0, [8 x i8]* @p_str16, [9 x i8]* @p_str19, i32 0, i32 0, float* %offset_Y) nounwind" [fractale_hls/src/main.cpp:31]   --->   Operation 40 'specport' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i1* %clk_form, i1* %clk) nounwind" [fractale_hls/src/main.cpp:32]   --->   Operation 41 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i1* %clk_form1, i1* %clk) nounwind" [fractale_hls/src/main.cpp:33]   --->   Operation 42 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i1* %reset_form, i1* %reset) nounwind" [fractale_hls/src/main.cpp:34]   --->   Operation 43 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i1* %reset_form2, i1* %reset) nounwind" [fractale_hls/src/main.cpp:35]   --->   Operation 44 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i8* %sc_fifo_chn_1_form, i8* %sc_fifo_chn_1) nounwind" [fractale_hls/src/main.cpp:36]   --->   Operation 45 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i12* %couleur_form, i12* %couleur) nounwind" [fractale_hls/src/main.cpp:37]   --->   Operation 46 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(float* %zoom_form, float* %zoom) nounwind" [fractale_hls/src/main.cpp:38]   --->   Operation 47 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(float* %offset_X_form, float* %offset_X) nounwind" [fractale_hls/src/main.cpp:39]   --->   Operation 48 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(float* %offset_Y_form, float* %offset_Y) nounwind" [fractale_hls/src/main.cpp:40]   --->   Operation 49 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i8* %sc_fifo_chn_1_form3, i8* %sc_fifo_chn_1) nounwind" [fractale_hls/src/main.cpp:41]   --->   Operation 50 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i10* %x_form, i10* %x) nounwind" [fractale_hls/src/main.cpp:42]   --->   Operation 51 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPortMap(i9* %y_form, i9* %y) nounwind" [fractale_hls/src/main.cpp:43]   --->   Operation 52 'specportmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "ret void" [fractale_hls/src/main.cpp:40]   --->   Operation 53 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

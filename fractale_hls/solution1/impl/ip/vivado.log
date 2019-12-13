@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Nov 29 11:57:44 2019
-# Process ID: 24131
+# Start of session at: Fri Dec 13 12:54:34 2019
+# Process ID: 379
 # Current directory: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/vivado.log
@@ -13,4 +13,4 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/vivado/2018.2/Vivado/2018.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 11:57:54 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 12:54:43 2019...

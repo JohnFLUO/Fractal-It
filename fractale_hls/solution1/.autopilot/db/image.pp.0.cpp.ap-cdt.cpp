@@ -31236,12 +31236,12 @@ void do_image();
 void dimage::do_image()
 {
 #pragma line 32 "fractale_hls/src/image.cpp"
-const sc_uint<12> color[50 +1] = { 0, 2, 4, 6, 24, 25, 43,
+const sc_uint<12> color[50] = { 0, 2, 4, 6, 24, 25, 43,
   60, 76, 93, 109, 382, 382, 398, 670, 685, 957, 973,
   1228, 1244, 1499, 1771, 1770, 2025, 2281, 25532, 2535,
   2791, 3046, 3045, 3285, 3540, 3524, 3779, 3763, 3746,
   3986, 3969, 3953, 3680, 3664, 3392, 3120, 2848, 2576,
-  2064, 1792, 1280, 512, 0};
+  2064, 1792, 1280, 512};
 _ssdm_SpecConstant(color);
 #pragma line 37 "fractale_hls/src/image.cpp"
 

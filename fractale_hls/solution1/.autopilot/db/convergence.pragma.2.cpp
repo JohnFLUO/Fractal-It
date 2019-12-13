@@ -34272,7 +34272,7 @@ static bool __ssdm_thread_M_do_convergence;;
   public:
   sc_in<bool> clk;
   sc_in<bool> reset;
-  sc_in <sc_uint<10> > zoom;
+  sc_in <float > zoom;
   sc_in <float > offset_X;
   sc_in <float > offset_Y;
   sc_fifo_out<sc_uint<8> > s_out;
@@ -34286,7 +34286,7 @@ static bool __ssdm_thread_M_do_convergence;;
     _ssdm_op_SpecSensitive("do_convergence", "reset", &reset, _ssdm_sensitive_reset0);;
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"bool\"", "clk", 0, 0, &clk);
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"bool\"", "reset", 0, 0, &reset);
-    _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"sc_uint<10>\"", "zoom", 0, 0, &zoom);
+    _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "zoom", 0, 0, &zoom);
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "offset_X", 0, 0, &offset_X);
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "offset_Y", 0, 0, &offset_Y);
     _ssdm_op_SpecInterface(&s_out, "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
@@ -34311,7 +34311,7 @@ _ssdm_op_SpecExt("member_name", "out_y", &out_y);;
 void convergence::do_convergence()
 {; _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"bool\"", "clk", 0, 0, &clk);
 ; _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"bool\"", "reset", 0, 0, &reset);
-; _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"sc_uint<10>\"", "zoom", 0, 0, &zoom);
+; _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "zoom", 0, 0, &zoom);
 ; _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "offset_X", 0, 0, &offset_X);
 ; _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "offset_Y", 0, 0, &offset_Y);
 ; _ssdm_op_SpecInterface(&s_out, "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
@@ -34332,16 +34332,16 @@ int buff_counter = 0;
 # 10 "fractale_hls/src/convergence.cpp"
 int max_it = 0;
 # 12 "fractale_hls/src/convergence.cpp"
-for (int y = 0; y < 100; y++) {
-      sc_uint<8> zooom = zoom.read();
+for (int y = 0; y < 20; y++) {
+      float zooom = zoom.read();
       float off_Y = offset_Y.read();
       float off_X = offset_X.read();
-      double zimag = off_Y - 100 / 2.0f * zooom + (y * zooom);
-      double zreal = off_X - 100 / 2.0f * zooom;
+      double zimag = off_Y - 20 / 2.0f * zooom + (y * zooom);
+      double zreal = off_X - 20 / 2.0f * zooom;
       double startimag = zimag;
       double startreal = zreal;
 
-      for (int x = 0; x < 100; x++) {
+      for (int x = 0; x < 20; x++) {
         max_it = 0;
         unsigned int counter = 0;
         bool end = false;
@@ -34367,4 +34367,4 @@ for (int y = 0; y < 100; y++) {
 
 
 
-convergence ssdm_ins_convergence_0_0("ssdm_dut");
+convergence ssdm_ins_convergence_2_0("ssdm_dut");

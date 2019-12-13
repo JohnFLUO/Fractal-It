@@ -1,7 +1,7 @@
 #include "systemc.h"
 
-#define IMAGE_WIDTH  100
-#define IMAGE_HEIGHT 100
+#define IMAGE_WIDTH  20
+#define IMAGE_HEIGHT 20
 #define MAX_IT 50
 
 SC_MODULE(dimage)
