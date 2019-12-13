@@ -81,3 +81,15 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fr
 INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
 WARNING: [VRFC 10-1194] overwriting existing secondary unit rtl [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
 INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+WARNING: [VRFC 10-1194] overwriting existing secondary unit rtl [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity test

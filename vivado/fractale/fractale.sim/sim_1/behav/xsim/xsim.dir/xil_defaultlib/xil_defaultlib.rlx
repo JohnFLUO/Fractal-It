@@ -4,11 +4,10 @@ Jun 14 2018
 20:07:38
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/convergence_do_convergence.vhd,1576234420,vhdl,,,,convergence_do_convergence,,,,,,,,
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image.vhd,1576234425,vhdl,,,,dimage_do_image,,,,,,,,
-/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd,1576235070,vhdl,/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd,,,dimage_do_image_cbkb;dimage_do_image_cbkb_rom,,,,,,,,
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd,1576234423,vhdl,,,,convergence,,,,,,,,
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd,1576234425,vhdl,,,,dimage,,,,,,,,
-/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd,1576234427,vhdl,,,,,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd,1576235618,vhdl,,,,dimage_do_image_cbkb;dimage_do_image_cbkb_rom,,,,,,,,
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd,1576234427,vhdl,,,,fifo_w8_d1_a;fifo_w8_d1_a_shiftreg,,,,,,,,
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd,1576234427,vhdl,,,,main,,,,,,,,
-/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/test.vhd,1576234051,vhdl,,,,test,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/test.vhd,1576235931,vhdl,,,,test,,,,,,,,
 /net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd,1576233957,vhdl,,,,testbench,,,,,,,,
