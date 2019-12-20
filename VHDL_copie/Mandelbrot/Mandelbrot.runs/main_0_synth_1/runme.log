@@ -1,0 +1,930 @@
+
+*** Running vivado
+    with args -log main_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main_0.tcl -notrace
+Command: synth_design -top main_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 31961 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1447.910 ; gain = 83.824 ; free physical = 583 ; free virtual = 21511
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_0' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/synth/main_0.vhd:69]
+INFO: [Synth 8-3491] module 'main' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:12' bound to instance 'U0' of component 'main' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/synth/main_0.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'main' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:40]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:43]
+INFO: [Synth 8-3491] module 'convergence' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence.vhd:12' bound to instance 'grp_convergence_fu_102' of component 'convergence' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'convergence' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence.vhd:27]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence.vhd:40]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence.vhd:49]
+INFO: [Synth 8-3491] module 'convergence_do_convergence' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:12' bound to instance 'grp_convergence_do_convergence_fu_76' of component 'convergence_do_convergence' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'convergence_do_convergence' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:29]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:256]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:259]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:261]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:263]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:265]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:267]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:269]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:271]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:273]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:275]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:277]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:281]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:283]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:285]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:287]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:289]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:293]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:295]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:297]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:299]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:301]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:303]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:305]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:307]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:309]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:311]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:313]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:315]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:317]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:319]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:321]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:323]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:325]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:327]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:329]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:331]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:333]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:335]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:337]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:339]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:341]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:343]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:345]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:347]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:349]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:351]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:353]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:355]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:357]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:359]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:361]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:363]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:365]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:367]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:369]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:371]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:373]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:375]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:377]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:379]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:381]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:383]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:385]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:387]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:389]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:391]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:393]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:395]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:397]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:399]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:401]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:403]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:405]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:407]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:409]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:411]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:413]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:415]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:417]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:419]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:421]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:423]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:425]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:427]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:429]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:431]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:433]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:435]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:437]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:439]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:441]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:443]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:445]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:447]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'convergence_do_convergence' (1#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence_do_convergence.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'convergence' (2#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/convergence.vhd:27]
+INFO: [Synth 8-3491] module 'dimage' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage.vhd:12' bound to instance 'grp_dimage_fu_124' of component 'dimage' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'dimage' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage.vhd:23]
+INFO: [Synth 8-3491] module 'dimage_do_image' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image.vhd:12' bound to instance 'grp_dimage_do_image_fu_58' of component 'dimage_do_image' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'dimage_do_image' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image.vhd:24]
+	Parameter DataWidth bound to: 12 - type: integer 
+	Parameter AddressRange bound to: 51 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'dimage_do_image_cbkb' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:85' bound to instance 'color_U' of component 'dimage_do_image_cbkb' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'dimage_do_image_cbkb' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:98]
+	Parameter DataWidth bound to: 12 - type: integer 
+	Parameter AddressRange bound to: 51 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'dimage_do_image_cbkb_rom' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:12' bound to instance 'dimage_do_image_cbkb_rom_U' of component 'dimage_do_image_cbkb_rom' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'dimage_do_image_cbkb_rom' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:27]
+	Parameter DWIDTH bound to: 12 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 51 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dimage_do_image_cbkb_rom' (3#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'dimage_do_image_cbkb' (4#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image_cbkb.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'dimage_do_image' (5#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage_do_image.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'dimage' (6#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/dimage.vhd:23]
+INFO: [Synth 8-3491] module 'fifo_w8_d1_A' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:50' bound to instance 'sc_fifo_chn_1_fifo_U' of component 'fifo_w8_d1_A' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'fifo_w8_d1_A' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:69]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w8_d1_A_shiftReg' declared at '/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:13' bound to instance 'U_fifo_w8_d1_A_shiftReg' of component 'fifo_w8_d1_A_shiftReg' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'fifo_w8_d1_A_shiftReg' [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w8_d1_A_shiftReg' (7#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w8_d1_A' (8#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/fifo_w8_d1_A.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/hdl/vhdl/main.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'main_0' (10#1) [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/synth/main_0.vhd:69]
+WARNING: [Synth 8-3331] design fifo_w8_d1_A_shiftReg has unconnected port a[0]
+WARNING: [Synth 8-3331] design dimage_do_image_cbkb has unconnected port reset
+WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[7]
+WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[8]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[7]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[5]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[4]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[3]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[2]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[1]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[0]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[31]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[30]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[29]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[28]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[27]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[26]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[25]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[24]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[23]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[22]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[21]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[20]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[19]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[18]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[17]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[16]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[15]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[14]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[13]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[12]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[11]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[10]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[8]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[7]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[5]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[4]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[3]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[2]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[1]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[0]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[31]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[30]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[29]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[28]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[27]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[26]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[25]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[24]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[23]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[22]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[21]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[20]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[19]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[18]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[17]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[16]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[15]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[14]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[13]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[12]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[11]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[10]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[8]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[7]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[5]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[4]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[3]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[2]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[1]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1506.551 ; gain = 142.465 ; free physical = 577 ; free virtual = 21506
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1506.551 ; gain = 142.465 ; free physical = 583 ; free virtual = 21511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1506.551 ; gain = 142.465 ; free physical = 583 ; free virtual = 21511
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/constraints/main_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/constraints/main_ooc.xdc] for cell 'U0'
+Parsing XDC File [/net/e/floupias001/FRACTALE/fractale/Fractale-It/VHDL_copie/Mandelbrot/Mandelbrot.runs/main_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/net/e/floupias001/FRACTALE/fractale/Fractale-It/VHDL_copie/Mandelbrot/Mandelbrot.runs/main_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1879.516 ; gain = 0.004 ; free physical = 470 ; free virtual = 21405
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 571 ; free virtual = 21506
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 571 ; free virtual = 21506
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /net/e/floupias001/FRACTALE/fractale/Fractale-It/VHDL_copie/Mandelbrot/Mandelbrot.runs/main_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 572 ; free virtual = 21507
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 563 ; free virtual = 21499
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    100 Bit        Muxes := 2     
+	   2 Input     99 Bit        Muxes := 1     
+	   2 Input     98 Bit        Muxes := 1     
+	   2 Input     97 Bit        Muxes := 1     
+	   2 Input     96 Bit        Muxes := 1     
+	   2 Input     95 Bit        Muxes := 1     
+	   2 Input     94 Bit        Muxes := 1     
+	   2 Input     93 Bit        Muxes := 1     
+	   2 Input     92 Bit        Muxes := 1     
+	   2 Input     91 Bit        Muxes := 1     
+	   2 Input     90 Bit        Muxes := 1     
+	   2 Input     89 Bit        Muxes := 1     
+	   2 Input     88 Bit        Muxes := 1     
+	   2 Input     87 Bit        Muxes := 1     
+	   2 Input     86 Bit        Muxes := 1     
+	   2 Input     85 Bit        Muxes := 1     
+	   2 Input     84 Bit        Muxes := 1     
+	   2 Input     83 Bit        Muxes := 1     
+	   2 Input     82 Bit        Muxes := 1     
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input     80 Bit        Muxes := 1     
+	   2 Input     79 Bit        Muxes := 1     
+	   2 Input     78 Bit        Muxes := 1     
+	   2 Input     77 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 1     
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     70 Bit        Muxes := 1     
+	   2 Input     69 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     65 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     59 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     51 Bit        Muxes := 1     
+	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     45 Bit        Muxes := 1     
+	   2 Input     44 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     42 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     38 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module convergence_do_convergence 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    100 Bit        Muxes := 2     
+	   2 Input     99 Bit        Muxes := 1     
+	   2 Input     98 Bit        Muxes := 1     
+	   2 Input     97 Bit        Muxes := 1     
+	   2 Input     96 Bit        Muxes := 1     
+	   2 Input     95 Bit        Muxes := 1     
+	   2 Input     94 Bit        Muxes := 1     
+	   2 Input     93 Bit        Muxes := 1     
+	   2 Input     92 Bit        Muxes := 1     
+	   2 Input     91 Bit        Muxes := 1     
+	   2 Input     90 Bit        Muxes := 1     
+	   2 Input     89 Bit        Muxes := 1     
+	   2 Input     88 Bit        Muxes := 1     
+	   2 Input     87 Bit        Muxes := 1     
+	   2 Input     86 Bit        Muxes := 1     
+	   2 Input     85 Bit        Muxes := 1     
+	   2 Input     84 Bit        Muxes := 1     
+	   2 Input     83 Bit        Muxes := 1     
+	   2 Input     82 Bit        Muxes := 1     
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input     80 Bit        Muxes := 1     
+	   2 Input     79 Bit        Muxes := 1     
+	   2 Input     78 Bit        Muxes := 1     
+	   2 Input     77 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 1     
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     70 Bit        Muxes := 1     
+	   2 Input     69 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     65 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     59 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     51 Bit        Muxes := 1     
+	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     45 Bit        Muxes := 1     
+	   2 Input     44 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     42 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     38 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module convergence 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+Module dimage_do_image_cbkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module dimage_do_image 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module dimage 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module fifo_w8_d1_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module fifo_w8_d1_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design main has unconnected port zoom[9]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[8]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[7]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[6]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[5]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[4]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[3]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[2]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[1]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[0]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[31]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[30]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[29]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[28]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[27]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[26]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[25]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[24]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[23]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[22]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[21]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[20]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][3]' (FDE) to 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][6]' (FDE) to 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][7]' (FDE) to 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'U0/sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0] )
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_y_reg[4]' (FDE) to 'U0/grp_convergence_fu_102/out_y_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_y_reg[5]' (FDE) to 'U0/grp_convergence_fu_102/out_y_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_y_reg[6]' (FDE) to 'U0/grp_convergence_fu_102/out_y_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_y_reg[7]' (FDE) to 'U0/grp_convergence_fu_102/out_y_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_y_reg[8]' (FDE) to 'U0/grp_convergence_fu_102/out_x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_x_reg[4]' (FDE) to 'U0/grp_convergence_fu_102/out_x_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_x_reg[5]' (FDE) to 'U0/grp_convergence_fu_102/out_x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_x_reg[6]' (FDE) to 'U0/grp_convergence_fu_102/out_x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_x_reg[7]' (FDE) to 'U0/grp_convergence_fu_102/out_x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_convergence_fu_102/out_x_reg[8]' (FDE) to 'U0/grp_convergence_fu_102/out_x_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\grp_convergence_fu_102/out_x_reg[9] )
+WARNING: [Synth 8-3332] Sequential element (sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (grp_convergence_fu_102/out_x_reg[9]) is unused and will be removed from module main.
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[0]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]' (FDE) to 'U0/grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[0]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[1]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[2]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[3]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[4]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[5]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[6]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[7]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[8]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[9]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_dimage_fu_124/couleur_reg[10]' (FDE) to 'U0/grp_dimage_fu_124/couleur_reg[11]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 539 ; free virtual = 21477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|dimage_do_image_cbkb_rom | p_0_out    | 64x12         | LUT            | 
+|main                     | p_0_out    | 64x12         | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:01:00 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 419 ; free virtual = 21357
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:01:00 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21342
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:01:00 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 403 ; free virtual = 21341
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     6|
+|3     |LUT3 |    10|
+|4     |LUT4 |     4|
+|5     |LUT5 |    26|
+|6     |LUT6 |    34|
+|7     |FDRE |   114|
+|8     |FDSE |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+---------------------------+------+
+|      |Instance                                   |Module                     |Cells |
++------+-------------------------------------------+---------------------------+------+
+|1     |top                                        |                           |   198|
+|2     |  U0                                       |main                       |   198|
+|3     |    grp_convergence_fu_102                 |convergence                |   180|
+|4     |      grp_convergence_do_convergence_fu_76 |convergence_do_convergence |   172|
+|5     |    grp_dimage_fu_124                      |dimage                     |     8|
+|6     |      grp_dimage_do_image_fu_58            |dimage_do_image            |     7|
+|7     |        color_U                            |dimage_do_image_cbkb       |     3|
+|8     |          dimage_do_image_cbkb_rom_U       |dimage_do_image_cbkb_rom   |     3|
+|9     |    sc_fifo_chn_1_fifo_U                   |fifo_w8_d1_A               |    10|
++------+-------------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 404 ; free virtual = 21341
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1879.516 ; gain = 142.465 ; free physical = 457 ; free virtual = 21395
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1879.516 ; gain = 515.430 ; free physical = 467 ; free virtual = 21405
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+285 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:01:02 . Memory (MB): peak = 1887.523 ; gain = 535.059 ; free physical = 461 ; free virtual = 21399
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/net/e/floupias001/FRACTALE/fractale/Fractale-It/VHDL_copie/Mandelbrot/Mandelbrot.runs/main_0_synth_1/main_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /net/e/floupias001/ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_2/main_0.xci
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/net/e/floupias001/FRACTALE/fractale/Fractale-It/VHDL_copie/Mandelbrot/Mandelbrot.runs/main_0_synth_1/main_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_0_utilization_synth.rpt -pb main_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1911.543 ; gain = 0.000 ; free physical = 461 ; free virtual = 21399
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 12:03:07 2019...

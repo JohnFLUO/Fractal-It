@@ -31196,12 +31196,12 @@ struct convergence : ::sc_core::sc_module
 public:
   sc_in<bool> clk;
   sc_in<bool> reset;
-  sc_in <sc_uint<8> > zoom;
+  sc_in <sc_uint<10> > zoom;
   sc_in <float > offset_X;
   sc_in <float > offset_Y;
   sc_fifo_out<sc_uint<8> > s_out;
-  sc_out<int> out_x;
-  sc_out<int> out_y;
+  sc_out<sc_uint<10> > out_x;
+  sc_out<sc_uint<9> > out_y;
 
  typedef convergence SC_CURRENT_USER_MODULE; convergence( ::sc_core::sc_module_name )
  {
@@ -31215,22 +31215,27 @@ public:
 
 
 
-void do_convergence() {
+
+
+
+void convergence::do_convergence() {
     int buff_counter = 0;
     int max_it = 0;
 
-    for (int y = 0; y < 800; y++) {
+    for (int y = 0; y < 100; y++) {
       sc_uint<8> zooom = zoom.read();
       float off_Y = offset_Y.read();
       float off_X = offset_X.read();
-      double zimag = off_Y - 800 / 2.0f * zooom + (y * zooom);
-      double zreal = off_X - 1280 / 2.0f * zooom;
+      double zimag = off_Y - 100 / 2.0f * zooom + (y * zooom);
+      double zreal = off_X - 100 / 2.0f * zooom;
       double startimag = zimag;
       double startreal = zreal;
 
-      for (int x = 0; x < 1280; x++) {
+      for (int x = 0; x < 100; x++) {
         max_it = 0;
-        for (unsigned int counter = 0; counter < 256; counter++) {
+        unsigned int counter = 0;
+        bool end = false;
+        while( (counter < 50) && end) {
           double r2 = zreal * zreal;
           double i2 = zimag * zimag;
           zimag = 2.0f * zreal * zimag + startimag;
@@ -31238,10 +31243,11 @@ void do_convergence() {
           if ( (r2 + i2) > 4.0f) {
             buff_counter = counter;
             max_it = 1;
-            break;
+            end = true;
           }
+          counter++;
         }
-        if (max_it == 0) buff_counter = 256 - 1;
+        if (max_it == 0) buff_counter = 50 - 1;
         s_out.write(buff_counter);
         out_x.write(x);
         out_y.write(y);

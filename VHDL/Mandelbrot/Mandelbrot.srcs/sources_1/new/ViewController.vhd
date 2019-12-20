@@ -20,8 +20,8 @@ entity ViewController is
         bouton_bas_hold       : in std_logic;
 
         -- valeurs de sortie
-        offset_x              : out std_logic_vector(9 downto 0);               
-        offset_y              : out std_logic_vector(9 downto 0);  
+        offset_x              : out std_logic_vector(31 downto 0);               
+        offset_y              : out std_logic_vector(31 downto 0);  
         zoom                  : out std_logic_vector(9 downto 0)    --TODO: reflexion sur le format de donnée  
     );
 end ViewController;
@@ -54,6 +54,12 @@ begin
         end if;
     end process;
     
-    zoom <= std_logic_vector(s_zoom);
+    --zoom <= std_logic_vector(s_zoom);
+    
+    -- Test avec aucun Zoom/Offset
+    zoom <= (others => '0');
+    offset_x <= (others => '0');        
+    offset_y <= (others => '0');
+    
     
 end Behavioral;

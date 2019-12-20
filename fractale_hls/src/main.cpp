@@ -1,70 +1,47 @@
 
-//#include "sc_clock.h"
+
 #include "systemc.h"
-#include <iostream>
-#include <math.h>
+
 #include "convergence.h"
 #include "image.h"
 
-
-
-using namespace std;
-
-
-int main (int argc, char * argv []){
-
-	//cout << "Initialisation des composants..." << endl;
-	convergence	    convergence("calcul");
-	image           image("image");
-
-	//cout << "Creation des signaux d'interconnexion..." << endl;
-
-	sc_fifo<sc_uint<32> >  addr("addr", 128);
-	sc_signal<bool>		   s_in1("entree");
-	sc_fifo<sc_uint<8> >  couleur("couleur", 128);
-
+SC_MODULE(main)
+{
+public:
+    sc_in<bool> clk;
+    sc_in<bool> reset;
+	sc_out <sc_uint<10> >  x;
+	sc_out <sc_uint<9> >   y;
+	sc_out <sc_uint<12> >  couleur;
 	sc_fifo<sc_uint<8> >  counter;
-	sc_in <sc_uint<8> > zoom;
+	sc_in <sc_uint<10> > zoom;
 	sc_in <float> offset_X;
 	sc_in <float> offset_Y;
-	sc_signal<int> x;
-	sc_signal<int> y;
 
-	sc_signal<bool> reset;
+	SC_CTOR(main):
+		convergence ("convergence"),
+		dimage ("image")
+	{
+		convergence.clk(clk);
+		dimage.clk(clk);
 
-	//sc_signal<bool> clk;
-	sc_clock clk("clk",(double)10,SC_NS, (double)0.5);
+		convergence.reset(reset);
+		dimage.reset(reset);
 
-	//cout << "Mapping des composants..." << endl;
-	convergence.clk(clk);
-	image.clk(clk);
+		dimage.counter(counter);
+		dimage.couleur(couleur);
 
-	convergence.reset(reset);
-	image.reset(reset);
+		convergence.zoom(zoom);
+		convergence.offset_X(offset_X);
+		convergence.offset_Y(offset_Y);
+		convergence.s_out(counter);
+		convergence.out_x(x);
+		convergence.out_y(y);
+	}
 
-	image.counter(counter);
-	image.couleur(couleur);
-	image.addr(addr);
-	image.x(x);
-	image.y(y);
+private :
+	convergence	    convergence;
+	dimage           dimage;
 
-	convergence.zoom(zoom);
-	convergence.offset_X(offset_X);
-	convergence.offset_Y(offset_Y);
-	convergence.s_out(counter);
-	convergence.out_x(x);
-	convergence.out_y(y);
 
-	/*sc_trace_file* ma_trace = sc_create_vcd_trace_file("trace.vcd");
-	sc_trace(ma_trace, clk, "signal_clk");
-	sc_trace(ma_trace, counter, "counter");
-	sc_trace(ma_trace, couleur, "couleur");
-	cout << "Lancement de la simulation du circuit..." << endl;
-	sc_start(100,SC_MS);
-	cout << "TIME : "<< sc_time_stamp()<< endl;
-	cout << "Fin de la simulation du circuit..." << endl;
-	//sc_start(200, SC_NS);
-	sc_close_vcd_trace_file(ma_trace);*/
-
-    return 0;
-}
+};

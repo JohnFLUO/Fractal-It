@@ -20,19 +20,19 @@ Changelog :
 
 #include "FileHandler.hpp"
 
-FileReader::FileReader() {
+ConfigReader::ConfigReader() {
 }
 
-FileReader::FileReader(string filename) {
+ConfigReader::ConfigReader(string filename) {
   Open(filename);
   debug = false;
 }
 
-FileReader::~FileReader() {
+ConfigReader::~ConfigReader() {
 }
 
-int FileReader::Open(string filename) {
-  FileReader::filename = filename;
+int ConfigReader::Open(string filename) {
+  ConfigReader::filename = filename;
   if (filename.length() <= 4 || filename.substr(filename.length()-4) != ".ini") {
     filename+= ".ini";
   }
@@ -55,7 +55,7 @@ int FileReader::Open(string filename) {
 }
 
 
-void FileReader::ParseParams() {
+void ConfigReader::ParseParams() {
   if (fr) {
     string line;
     int lineNb = 1;
@@ -75,6 +75,31 @@ void FileReader::ParseParams() {
             Settings::SetWidth(stringToInt(arg));
           } else if (identifier == "HEIGHT") {
             Settings::SetHeight(stringToInt(arg));
+
+          } else if (identifier == "OFFSETX") {
+            Settings::SetOffsetX(stringToDouble(arg));
+          } else if (identifier == "OFFSETY") {
+            Settings::SetOffsetY(stringToDouble(arg));
+          } else if (identifier == "MAXITER") {
+            Settings::SetMaxIter(stringToInt(arg));
+          } else if (identifier == "ZOOMFACTOR") {
+            Settings::SetZoomFactor(stringToDouble(arg));
+          } else if (identifier == "ZOOMSTEPTIME") {
+            Settings::SetZoomStepTime(stringToDouble(arg));
+          } else if (identifier == "STARTZOOM") {
+            Settings::SetZoom(stringToDouble(arg));
+          } else if (identifier == "FINALZOOM") {
+            Settings::SetFinalZoom(stringToDouble(arg));
+          } else if (identifier == "AUTOZOOM") {
+            if (arg == "TRUE" || arg == "ON") {
+              Settings::SetAutoZoom(true);
+            } else if (arg == "FALSE" || arg == "OFF") {
+              Settings::SetAutoZoom(false);
+            } else {
+              cout << "\033[33m" << endl; //unix only
+              cerr << "warning: unknown parameter \"" << arg << "\" at line " << lineNb << endl;
+              cout << "\033[0m"  << endl;
+            }
           } else if (identifier == "CONVERGENCE") {
             if (arg == "DP") {
               Settings::SetConvergenceType(ConvergenceType::DP);
@@ -82,6 +107,14 @@ void FileReader::ParseParams() {
               Settings::SetConvergenceType(ConvergenceType::DP_OMP);
             } else if (arg == "DP_OMP_AVX") {
               Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVX);
+            } else if (arg == "DP_OMP_AVX+") {
+              Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVXPLUS);
+            } else if (arg == "SP") {
+              Settings::SetConvergenceType(ConvergenceType::SP);
+            } else if (arg == "SP_OMP") {
+              Settings::SetConvergenceType(ConvergenceType::SP_OMP);
+            } else if (arg == "SP_OMP_AVX") {
+              Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVX);
             } else {
               cout << "\033[33m" << endl; //unix only
               cerr << "warning: unknown parameter \"" << arg << "\" at line " << lineNb << endl;
@@ -102,6 +135,8 @@ void FileReader::ParseParams() {
               Settings::SetColorMapMode(ColorMapMode::SMOOTH_LOOP);
             } else if (arg == "SMOOTH_SHIFTED") {
               Settings::SetColorMapMode(ColorMapMode::SMOOTH_SHIFTED);
+            } else if (arg == "LERP_BLUE_RED") {
+              Settings::SetColorMapMode(ColorMapMode::LERP_BLUE_RED);
             } else if (arg == "LSD") {
               Settings::SetColorMapMode(ColorMapMode::LSD);
             } else {

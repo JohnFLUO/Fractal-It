@@ -2,7 +2,10 @@
 
 /// zoom offset_X offset_Y => counter
 
-void do_convergence()  {
+
+
+
+void convergence::do_convergence()  {
     int buff_counter = 0;
     int max_it = 0;
 
@@ -17,7 +20,9 @@ void do_convergence()  {
 
       for (int x = 0; x < IMAGE_WIDTH;  x++) {
         max_it = 0;
-        for (unsigned int counter = 0; counter < MAX_IT; counter++) {
+        unsigned int counter = 0;
+        bool end = false;
+        while( (counter < MAX_IT) && end) {
           double r2 = zreal * zreal;
           double i2 = zimag * zimag;
           zimag = 2.0f * zreal * zimag + startimag;
@@ -25,8 +30,9 @@ void do_convergence()  {
           if ( (r2 + i2) > 4.0f) {
             buff_counter = counter;
             max_it = 1;
-            break;
+            end = true;
           }
+          counter++;
         }
         if (max_it == 0) buff_counter = MAX_IT - 1;
         s_out.write(buff_counter);

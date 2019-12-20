@@ -5,8 +5,8 @@
 #include <array>
 #include <vector>
 #include <thread>
-//#include "immintrin.h"
 #include <immintrin.h>
+#include <unistd.h>
 
 #define CONV_STEP 4
 
@@ -17,21 +17,21 @@ public:
   Convergence_dp_x86_omp_AVX() {
   }
 
-  Convergence_dp_x86_omp_AVX(ColorMap* _colors, int _max_iters){
+  Convergence_dp_x86_omp_AVX(ColorMap* _colors, int _max_iters) {
     colors    = _colors;
     max_iters = _max_iters;
   }
 
-  ~Convergence_dp_x86_omp_AVX( ){
+  ~Convergence_dp_x86_omp_AVX() {
 
   }
 
-  virtual unsigned int process(const double real, const double image, unsigned int max_iters)  {
+  virtual unsigned int process(const double real, const double image, unsigned int max_iters) {
     return -1;
   }
 
 
-  void showd(string varName, double d){
+  void showd(string varName, double d) {
     std::cout << varName << " : ";
     for (int i = 0 ; i < 4 ; i++) {
       printf("%1.4f ", d);
@@ -39,7 +39,7 @@ public:
     printf("\n");
   }
 
-  void show_double_array(string varName, double *d, size_t size){
+  void show_double_array(string varName, double *d, size_t size) {
     std::cout << varName << " : ";
     for (int i = 0 ; i < size ; i++) {
       printf("%1.4f ", d[i]);
@@ -47,7 +47,7 @@ public:
     printf("\n");
   }
 
-  void _mm256_showd(string varName, __m256d v){
+  void _mm256_showd(string varName, __m256d v) {
     __attribute__ ((aligned (32))) double tmp[4] = {0.0f, 0.0f, 0.0f, 0.0f};
     _mm256_storeu_pd(tmp, v);
     std::cout << varName << " : ";
@@ -59,8 +59,9 @@ public:
 
   virtual void updateImage(double zoom, double offsetX, double offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
     // consts :
-    const __m256 v_4_0f = _mm256_set1_pd(4.0f);
-    const __m256 v_2_0f = _mm256_set1_pd(2.0f);
+    const __m256d v_4_0f = _mm256_set1_pd(4.0f);
+    const __m256d v_2_0f = _mm256_set1_pd(2.0f);
+    const __m256d v_1_0f = _mm256_set1_pd(1.0f);
 
     #pragma omp parallel // on declare une section parallel
     {
@@ -79,9 +80,8 @@ public:
         __attribute__ ((aligned (32))) double t_r2_plus_i2[4] = {0.0f, 0.0f, 0.0f, 0.0f};
 
         for (int x = 0 ; x < IMAGE_WIDTH ; x += CONV_STEP) {
-          bool finished[4] = {false, false, false, false};
-          int t_value[4] =  {max_iters - 1, max_iters - 1, max_iters - 1, max_iters - 1};
-
+          double t_value[4] =  {0.0f, 0.0f, 0.0f, 0.0f};
+          __m256d v_value = _mm256_setzero_pd();
           __m256d v_zReal = v_startReal;
           __m256d v_zImag = v_startImag;
 
@@ -93,40 +93,21 @@ public:
             v_zReal = _mm256_add_pd(_mm256_sub_pd(v_r2, v_i2), v_startReal);
 
             __m256d v_r2_plus_i2 = _mm256_add_pd(v_r2, v_i2);
-            _mm256_storeu_pd(t_r2_plus_i2, v_r2_plus_i2);
 
-            /* // debug :
-              showd("d", r2_plus_i2);
-              _mm256_showd("v", v_r2_plus_i2);
-              show_double_array("t", t_tmp, 4);
-            */
+            __m256d v_cmp_res = _mm256_cmp_pd(v_r2_plus_i2, v_4_0f, _CMP_LT_OS);
+            v_value = _mm256_blendv_pd(v_value, _mm256_add_pd(v_value, v_1_0f), v_cmp_res); // si r2+i2 < 4 value++
 
-            if (t_r2_plus_i2[0] > 4.0f && finished[0] == false) {
-              t_value[0] = counter;
-              finished[0] = true;
-            }
-            if (t_r2_plus_i2[1] > 4.0f && finished[1] == false) {
-              t_value[1] = counter;
-              finished[1] = true;
-            }
-            if (t_r2_plus_i2[2] > 4.0f && finished[2] == false) {
-              t_value[2] = counter;
-              finished[2] = true;
-            }
-            if (t_r2_plus_i2[3] > 4.0f && finished[3] == false) {
-              t_value[3] = counter;
-              finished[3] = true;
-            }
-
-            if (finished[0] == true && finished[1] == true && finished[2] == true && finished[3] == true) {
+            short res = _mm256_movemask_pd(v_cmp_res);
+            if (res == 0) { // si r2+i2 > 4 pour tous les élements
               break;
             }
           }
-          //std::cout << "value = " << value << std::endl;
-          image.setPixel(x+0, y, colors->getColor(t_value[0]));
-          image.setPixel(x+1, y, colors->getColor(t_value[1]));
-          image.setPixel(x+2, y, colors->getColor(t_value[2]));
-          image.setPixel(x+3, y, colors->getColor(t_value[3]));
+
+          _mm256_storeu_pd(t_value, v_value);
+          image.setPixel(x+0, y, colors->getColor((int)round(t_value[0])));
+          image.setPixel(x+1, y, colors->getColor((int)round(t_value[1])));
+          image.setPixel(x+2, y, colors->getColor((int)round(t_value[2])));
+          image.setPixel(x+3, y, colors->getColor((int)round(t_value[3])));
 
           v_startReal = _mm256_add_pd(v_startReal, _mm256_set1_pd(zoom*CONV_STEP));
         }

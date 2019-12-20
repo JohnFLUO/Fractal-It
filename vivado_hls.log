@@ -1,101 +1,26 @@
 INFO: [HLS 200-10] Running '/opt/xilinx/vivado/2018.2/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'floupias001' on host 'heliamphoria.pedago.ipb.fr' (Linux_x86_64 version 3.10.0-957.21.3.el7.x86_64) on Fri Nov 15 11:06:34 CET 2019
+INFO: [HLS 200-10] For user 'floupias001' on host 'heliamphoria.pedago.ipb.fr' (Linux_x86_64 version 3.10.0-957.21.3.el7.x86_64) on Fri Dec 13 11:39:08 CET 2019
 INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
 INFO: [HLS 200-10] In directory '/net/e/floupias001/FRACTALE/fractale/Fractale-It'
 INFO: [HLS 200-10] Opening project '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls'.
 INFO: [HLS 200-10] Adding design file 'fractale_hls/src/main.cpp' to the project
 INFO: [HLS 200-10] Adding design file 'fractale_hls/src/image.h' to the project
 INFO: [HLS 200-10] Adding design file 'fractale_hls/src/image.cpp' to the project
-WARNING: [HLS 200-40] Cannot find design file 'entree.h'
-WARNING: [HLS 200-40] Cannot find design file 'entree.cpp'
 INFO: [HLS 200-10] Adding design file 'fractale_hls/src/convergence.h' to the project
 INFO: [HLS 200-10] Adding design file 'fractale_hls/src/convergence.cpp' to the project
 INFO: [HLS 200-10] Opening solution '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
-WARNING: [HLS 200-40] Cannot find source file entree.cpp; skipping it.
-WARNING: [HLS 200-40] Cannot find source file entree.h; skipping it.
 INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/convergence.cpp' ... 
-WARNING: [HLS 200-40] In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:10:26: error: use of undeclared identifier 'zoom'; did you mean 'zooom'?
-      sc_uint<8> zooom = zoom.read();
-                         ^~~~
-                         zooom
-fractale_hls/src/convergence.cpp:10:18: note: 'zooom' declared here
-      sc_uint<8> zooom = zoom.read();
-                 ^
-fractale_hls/src/convergence.cpp:11:21: error: use of undeclared identifier 'offset_Y'
-      float off_Y = offset_Y.read();
-                    ^
-fractale_hls/src/convergence.cpp:12:21: error: use of undeclared identifier 'offset_X'
-      float off_X = offset_X.read();
-                    ^
-fractale_hls/src/convergence.cpp:32:9: error: use of undeclared identifier 's_out'; did you mean 'sc_out'?
-        s_out.write(buff_counter);
-        ^~~~~
-        sc_out
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: 'sc_out' declared here
-    class sc_out : public sc_inout<_T> {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:32:9: error: cannot refer to class template 'sc_out' without a template argument list
-        s_out.write(buff_counter);
-        ^
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: template is declared here
-    class sc_out : public sc_inout<_T> {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:33:9: error: use of undeclared identifier 'out_x'
-        out_x.write(x);
-        ^
-fractale_hls/src/convergence.cpp:34:9: error: use of undeclared identifier 'out_y'
-        out_y.write(y);
-        ^
-7 errors generated.\n
-ERROR: [HLS 200-70] Compilation errors found: Pragma processor failed: In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:10:26: error: use of undeclared identifier 'zoom'; did you mean 'zooom'?
-      sc_uint<8> zooom = zoom.read();
-                         ^~~~
-                         zooom
-fractale_hls/src/convergence.cpp:10:18: note: 'zooom' declared here
-      sc_uint<8> zooom = zoom.read();
-                 ^
-fractale_hls/src/convergence.cpp:11:21: error: use of undeclared identifier 'offset_Y'
-      float off_Y = offset_Y.read();
-                    ^
-fractale_hls/src/convergence.cpp:12:21: error: use of undeclared identifier 'offset_X'
-      float off_X = offset_X.read();
-                    ^
-fractale_hls/src/convergence.cpp:32:9: error: use of undeclared identifier 's_out'; did you mean 'sc_out'?
-        s_out.write(buff_counter);
-        ^~~~~
-        sc_out
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: 'sc_out' declared here
-    class sc_out : public sc_inout<_T> {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:32:9: error: cannot refer to class template 'sc_out' without a template argument list
-        s_out.write(buff_counter);
-        ^
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: template is declared here
-    class sc_out : public sc_inout<_T> {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:33:9: error: use of undeclared identifier 'out_x'
-        out_x.write(x);
-        ^
-fractale_hls/src/convergence.cpp:34:9: error: use of undeclared identifier 'out_y'
-        out_y.write(y);
-        ^
-7 errors generated.
-Failed checking during preprocessing.
-    while executing
-"source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/csynth.tcl"
-    invoked from within
-"hls::main /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/csynth.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"
+INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/image.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/main.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:03:16 ; elapsed = 00:02:03 . Memory (MB): peak = 472.195 ; gain = 6.320 ; free physical = 738 ; free virtual = 21905
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:03:16 ; elapsed = 00:02:03 . Memory (MB): peak = 472.195 ; gain = 6.320 ; free physical = 738 ; free virtual = 21905
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:03:17 ; elapsed = 00:02:04 . Memory (MB): peak = 600.855 ; gain = 134.980 ; free physical = 713 ; free virtual = 21883
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:03:17 ; elapsed = 00:02:05 . Memory (MB): peak = 600.855 ; gain = 134.980 ; free physical = 695 ; free virtual = 21867
+INFO: [XFORM 203-501] Unrolling loop with tag "__ssdm_reset__"(fractale_hls/src/convergence.cpp:12) in function 'convergence::do_convergence' completely.
+INFO: [XFORM 203-501] Unrolling loop with tag "__ssdm_reset__"(fractale_hls/src/convergence.cpp:21) in function 'convergence::do_convergence' completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:03:21 ; elapsed = 00:02:09 . Memory (MB): peak = 664.020 ; gain = 198.145 ; free physical = 614 ; free virtual = 21785

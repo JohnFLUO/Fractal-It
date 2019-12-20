@@ -59,15 +59,11 @@ begin
         -- Afficheur gauche :
         if (signed(val_joystick_x) < 0) then
             aff_0 <= char_tiret_milieu; 
-            if (signed(val_joystick_x) <= -100) then
-                aff_1 <= char_1;
-            else
-                aff_1 <= char_0;
-            end if;
+            aff_1 <= std_logic_vector(resize(((10-((signed(val_joystick_x))/100)) mod 10), 6));
             aff_2 <= std_logic_vector(resize(((10-((signed(val_joystick_x))/10)) mod 10), 6));
             aff_3 <= std_logic_vector(resize(((10-(signed(val_joystick_x))) mod 10), 6));                
         else 
-            aff_0 <= char_tiret_milieu;
+            aff_0 <= char_vide;
             aff_1 <= std_logic_vector(resize((signed(val_joystick_x))/100, 6));
             aff_2 <= std_logic_vector(resize(((signed(val_joystick_x))/10) mod 10, 6));
             aff_3 <= std_logic_vector(resize((signed(val_joystick_x)) mod 10, 6));
@@ -76,15 +72,11 @@ begin
         -- Afficheur droite :
         if (signed(val_joystick_y) < 0) then
             aff_4 <= char_tiret_milieu; 
-            if (signed(val_joystick_y) <= -100) then
-                aff_5 <= char_1;
-            else
-                aff_5 <= char_0;
-            end if;
+            aff_5 <= std_logic_vector(resize(((10-((signed(val_joystick_y))/100)) mod 10), 6));
             aff_6 <= std_logic_vector(resize(((10-((signed(val_joystick_y))/10)) mod 10), 6));
             aff_7 <= std_logic_vector(resize(((10-(signed(val_joystick_y))) mod 10), 6));                
         else 
-            aff_4 <= char_tiret_milieu;
+            aff_4 <= char_vide;
             aff_5 <= std_logic_vector(resize((signed(val_joystick_y))/100, 6));
             aff_6 <= std_logic_vector(resize(((signed(val_joystick_y))/10) mod 10, 6));
             aff_7 <= std_logic_vector(resize((signed(val_joystick_y)) mod 10, 6));

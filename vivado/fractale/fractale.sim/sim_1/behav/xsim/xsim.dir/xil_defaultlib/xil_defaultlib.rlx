@@ -1,0 +1,13 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/convergence.vhd,1575021419,vhdl,,,,convergence,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/convergence_do_convergence.vhd,1575021418,vhdl,,,,convergence_do_convergence,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage.vhd,1575021421,vhdl,,,,dimage,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image.vhd,1575021420,vhdl,,,,dimage_do_image,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd,1575021422,vhdl,,,,dimage_do_image_cbkb;dimage_do_image_cbkb_rom,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/fifo_w8_d1_A.vhd,1575021422,vhdl,,,,fifo_w8_d1_a;fifo_w8_d1_a_shiftreg,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/main.vhd,1576227198,vhdl,,,,main,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/test.vhd,1576227138,vhdl,,,,test,,,,,,,,
+/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd,1576228777,vhdl,,,,testbench,,,,,,,,

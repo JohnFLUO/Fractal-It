@@ -1,78 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1310" tag="" content="Cannot find source file entree.cpp; skipping it."/>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1310" tag="" content="Cannot find source file entree.h; skipping it."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fractale_hls/src/convergence.cpp&apos; ..."/>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:10:26: error: use of undeclared identifier &apos;zoom&apos;; did you mean &apos;zooom&apos;?
-      sc_uint&lt;8&gt; zooom = zoom.read();
-                         ^~~~
-                         zooom
-fractale_hls/src/convergence.cpp:10:18: note: &apos;zooom&apos; declared here
-      sc_uint&lt;8&gt; zooom = zoom.read();
-                 ^
-fractale_hls/src/convergence.cpp:11:21: error: use of undeclared identifier &apos;offset_Y&apos;
-      float off_Y = offset_Y.read();
-                    ^
-fractale_hls/src/convergence.cpp:12:21: error: use of undeclared identifier &apos;offset_X&apos;
-      float off_X = offset_X.read();
-                    ^
-fractale_hls/src/convergence.cpp:32:9: error: use of undeclared identifier &apos;s_out&apos;; did you mean &apos;sc_out&apos;?
-        s_out.write(buff_counter);
-        ^~~~~
-        sc_out
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: &apos;sc_out&apos; declared here
-    class sc_out : public sc_inout&lt;_T&gt; {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:32:9: error: cannot refer to class template &apos;sc_out&apos; without a template argument list
-        s_out.write(buff_counter);
-        ^
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: template is declared here
-    class sc_out : public sc_inout&lt;_T&gt; {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:33:9: error: use of undeclared identifier &apos;out_x&apos;
-        out_x.write(x);
-        ^
-fractale_hls/src/convergence.cpp:34:9: error: use of undeclared identifier &apos;out_y&apos;
-        out_y.write(y);
-        ^
-7 errors generated.\n"/>
-	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: Pragma processor failed: In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:10:26: error: use of undeclared identifier &apos;zoom&apos;; did you mean &apos;zooom&apos;?
-      sc_uint&lt;8&gt; zooom = zoom.read();
-                         ^~~~
-                         zooom
-fractale_hls/src/convergence.cpp:10:18: note: &apos;zooom&apos; declared here
-      sc_uint&lt;8&gt; zooom = zoom.read();
-                 ^
-fractale_hls/src/convergence.cpp:11:21: error: use of undeclared identifier &apos;offset_Y&apos;
-      float off_Y = offset_Y.read();
-                    ^
-fractale_hls/src/convergence.cpp:12:21: error: use of undeclared identifier &apos;offset_X&apos;
-      float off_X = offset_X.read();
-                    ^
-fractale_hls/src/convergence.cpp:32:9: error: use of undeclared identifier &apos;s_out&apos;; did you mean &apos;sc_out&apos;?
-        s_out.write(buff_counter);
-        ^~~~~
-        sc_out
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: &apos;sc_out&apos; declared here
-    class sc_out : public sc_inout&lt;_T&gt; {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:32:9: error: cannot refer to class template &apos;sc_out&apos; without a template argument list
-        s_out.write(buff_counter);
-        ^
-/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc/ap_sc_core.h:430:11: note: template is declared here
-    class sc_out : public sc_inout&lt;_T&gt; {
-          ^
-In file included from fractale_hls/src/convergence.cpp:1:
-fractale_hls/src/convergence.cpp:33:9: error: use of undeclared identifier &apos;out_x&apos;
-        out_x.write(x);
-        ^
-fractale_hls/src/convergence.cpp:34:9: error: use of undeclared identifier &apos;out_y&apos;
-        out_y.write(y);
-        ^
-7 errors generated."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fractale_hls/src/image.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;fractale_hls/src/main.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:03:16 ; elapsed = 00:02:03 . Memory (MB): peak = 472.195 ; gain = 6.320 ; free physical = 738 ; free virtual = 21905"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1465" tag="" content="Validating synthesis directives ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:03:16 ; elapsed = 00:02:03 . Memory (MB): peak = 472.195 ; gain = 6.320 ; free physical = 738 ; free virtual = 21905"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:03:17 ; elapsed = 00:02:04 . Memory (MB): peak = 600.855 ; gain = 134.980 ; free physical = 713 ; free virtual = 21883"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:03:17 ; elapsed = 00:02:05 . Memory (MB): peak = 600.855 ; gain = 134.980 ; free physical = 695 ; free virtual = 21867"/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_325" tag="" content="Unrolling loop with tag &quot;__ssdm_reset__&quot;(fractale_hls/src/convergence.cpp:12) in function &apos;convergence::do_convergence&apos; completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_325" tag="" content="Unrolling loop with tag &quot;__ssdm_reset__&quot;(fractale_hls/src/convergence.cpp:21) in function &apos;convergence::do_convergence&apos; completely."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:03:21 ; elapsed = 00:02:09 . Memory (MB): peak = 664.020 ; gain = 198.145 ; free physical = 614 ; free virtual = 21785"/>
 </Messages>
