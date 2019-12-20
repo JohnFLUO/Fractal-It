@@ -1,8 +1,6 @@
 #include "Mandelbrot.hpp"
 
-Mandelbrot::Mandelbrot(int _IMAGE_WIDTH, int _IMAGE_HEIGHT, unsigned int iters) {
-  IMAGE_WIDTH  = _IMAGE_WIDTH;
-  IMAGE_HEIGHT = _IMAGE_HEIGHT;
+Mandelbrot::Mandelbrot(unsigned int iters) {
   max_iters    = iters;
   allocRessources( );
 }
@@ -64,13 +62,13 @@ void Mandelbrot::setIterations(unsigned short iters){
 }
 
 void Mandelbrot::updateImage(double zoom, double offsetX, double offsetY, sf::Image& image) {
-    c->updateImage(zoom, offsetX, offsetY, IMAGE_WIDTH, IMAGE_HEIGHT, image);
+    c->updateImage(zoom, offsetX, offsetY, Settings::width, Settings::height, image);
     sf::Color white(255, 255, 255);
-    image.setPixel(IMAGE_WIDTH/2-1, IMAGE_HEIGHT/2,   white);
-    image.setPixel(IMAGE_WIDTH/2+1, IMAGE_HEIGHT/2,   white);
-    image.setPixel(IMAGE_WIDTH/2,   IMAGE_HEIGHT/2,   white);
-    image.setPixel(IMAGE_WIDTH/2,   IMAGE_HEIGHT/2-1, white);
-    image.setPixel(IMAGE_WIDTH/2,   IMAGE_HEIGHT/2+1, white);
+    image.setPixel(Settings::width/2-1, Settings::height/2,   white);
+    image.setPixel(Settings::width/2+1, Settings::height/2,   white);
+    image.setPixel(Settings::width/2,   Settings::height/2,   white);
+    image.setPixel(Settings::width/2,   Settings::height/2-1, white);
+    image.setPixel(Settings::width/2,   Settings::height/2+1, white);
 }
 
 
@@ -78,9 +76,9 @@ void Mandelbrot::updateImage(double zoom, double offsetX, double offsetY, sf::Im
 template <class processor, class render>
 void Mandelbrot<processor, render>::updateImageSlice(double zoom, double offsetX, double offsetY, sf::Image& image, int minY, int maxY)
 {
-    double real = 0 * zoom - IMAGE_WIDTH / 2.0 * zoom + offsetX;
-    double imagstart = minY * zoom - IMAGE_HEIGHT / 2.0 * zoom + offsetY;
-    for (int x = 0; x < IMAGE_WIDTH; x++, real += zoom) {
+    double real = 0 * zoom - Settings::width / 2.0 * zoom + offsetX;
+    double imagstart = minY * zoom - Settings::height / 2.0 * zoom + offsetY;
+    for (int x = 0; x < Settings::width; x++, real += zoom) {
         double imag = imagstart;
         for (int y = minY; y < maxY; y++, imag += zoom) {
             assert( c != nullptr );

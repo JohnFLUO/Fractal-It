@@ -8,8 +8,19 @@
    Settings
 *************/
 
-int Settings::width = 1200;
-int Settings::height = 900;
+int Settings::width = 1280;
+int Settings::height = 800;
+
+int Settings::max_iters = 256;
+bool Settings::autoZoom = false;
+double Settings::offsetX = -0.7;
+double Settings::offsetY = 0.0;
+double Settings::zoom = 0.004;
+double Settings::finalZoom = 0.004;
+double Settings::zoomFactor = 0.01;
+double Settings::zoomStepTime = 0.01;
+
+bool Settings::isCentralDotEnable = false;
 
 ConvergenceType Settings::convergenceType = DP_OMP_AVX;
 ColorMapMode Settings::colorMapMode = SMOOTH_SHIFTED;
@@ -34,6 +45,39 @@ void Settings::SetConvergenceType(ConvergenceType ct) {
 
 void Settings::SetColorMapMode(ColorMapMode cm) {
   Settings::colorMapMode = cm;
+}
+
+void Settings::SetOffsetX(double ox) {
+  Settings::offsetX = ox;
+}
+
+void Settings::SetOffsetY(double oy) {
+  Settings::offsetY = oy;
+}
+
+void Settings::SetZoom(double z) {
+  Settings::zoom = z;
+}
+
+void Settings::SetFinalZoom(double z) {
+  Settings::finalZoom = z;
+}
+
+void Settings::SetZoomFactor(double zf) {
+  Settings::zoomFactor = zf;
+}
+
+void Settings::SetZoomStepTime(double zts) {
+  Settings::zoomStepTime = zts;
+}
+
+void Settings::SetAutoZoom(bool az) {
+  Settings::autoZoom = az;
+}
+
+
+void Settings::SetMaxIter(int mi) {
+  Settings::max_iters = mi;
 }
 
 ConvergenceType Settings::GetConvergenceType() {

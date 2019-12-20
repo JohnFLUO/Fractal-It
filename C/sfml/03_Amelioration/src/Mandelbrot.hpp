@@ -46,7 +46,7 @@ private:
     unsigned int max_iters;
 
 public:
-    Mandelbrot(int _IMAGE_WIDTH, int _IMAGE_HEIGHT, unsigned int iters);
+    Mandelbrot(unsigned int iters);
 
     ~Mandelbrot();
 
