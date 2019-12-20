@@ -10,8 +10,9 @@
 #include <string>
 
 enum ConvergenceType{
-	SP, SP_OMP, SP_OMP_AVX,
-	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS
+	SP, SP_OMP, SP_OMP_AVX, SP_OMP_AVXPLUS,
+	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS,
+	CUDA
 };
 
 enum ColorMapMode{

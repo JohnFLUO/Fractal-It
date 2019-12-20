@@ -1,33 +1,44 @@
 TARGET 		= fractal
 
 CC 		= clang++
-
-CFLAGS 		= -Ofast -std=c++11 -march=native -mtune=native -fopenmp
-
+NVCC 		= nvcc
 LINKER 		= clang++ -o
 
-LFLAGS 		= -lsfml-graphics -lsfml-window -lsfml-system -fopenmp
+CUDA_INSTALL_PATH ?= /usr/local/cuda
+
+INCD 		= -I$(CUDA_INSTALL_PATH)/include
+LIBS 		= -L$(CUDA_INSTALL_PATH)/lib -lcudart
+
+CFLAGS 		= -O3 -std=c++11 -march=native -mtune=native -fopenmp
+NFLAGS 		= -O3 -arch=compute_32
+LFLAGS 		= -Wall -I. -lm -lGL -lGLEW -lSDL2 -lGLU -fopenmp -lsfml-graphics -lsfml-window -lsfml-system
 
 SRCDIR 		= src
 OBJDIR 		= obj
 BINDIR 		= bin
 
 SOURCES 	:= $(wildcard $(SRCDIR)/*.cpp)
-INCLUDES 	:= $(wildcard $(SRCDIR)/*.hpp)
+SOURCES_CU 	:= $(wildcard $(SRCDIR)/*.cu)
+INCLUDES 	:= $(wildcard $(SRCDIR)/*.h)
+INCLUDES_CU 	:= $(wildcard $(SRCDIR)/*.cuh)
 OBJECTS 	:= $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
+OBJECTS_CU 	:= $(SOURCES_CU:$(SRCDIR)/%.cu=$(OBJDIR)/%.cuo)
 rm 			= rm -f
 
 all: $(BINDIR)/$(TARGET)
 
-$(BINDIR)/$(TARGET): $(OBJECTS)
-	@$(LINKER) $@ $(OBJECTS) $(LFLAGS) 
+$(BINDIR)/$(TARGET): $(OBJECTS_CU) $(OBJECTS)
+	@$(LINKER) $@ $(OBJECTS_CU) $(OBJECTS) $(INCD) $(LIBS) $(LFLAGS)
 
 $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCD) -c $< -o $@
+
+$(OBJECTS_CU): $(OBJDIR)/%.cuo : $(SRCDIR)/%.cu
+	@$(NVCC) $(NFLAGS) $(INCD) -c $< -o $@
 
 .PHONY: clean
 clean:
-	@$(rm) $(OBJECTS)
+	@$(rm) $(OBJECTS_CU) $(OBJECTS)
 
 .PHONY: remove
 remove: clean

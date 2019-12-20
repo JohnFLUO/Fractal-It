@@ -115,6 +115,10 @@ void ConfigReader::ParseParams() {
               Settings::SetConvergenceType(ConvergenceType::SP_OMP);
             } else if (arg == "SP_OMP_AVX") {
               Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVX);
+            } else if (arg == "SP_OMP_AVX+") {
+              Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVXPLUS);
+            } else if (arg == "CUDA") {
+              Settings::SetConvergenceType(ConvergenceType::CUDA);
             } else {
               cout << "\033[33m" << endl; //unix only
               cerr << "warning: unknown parameter \"" << arg << "\" at line " << lineNb << endl;

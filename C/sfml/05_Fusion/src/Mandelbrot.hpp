@@ -31,6 +31,7 @@
 #include "Convergence/simple/Convergence_sp_x86.hpp"
 #include "Convergence/simple/Convergence_sp_x86_omp.hpp"
 #include "Convergence/simple/Convergence_sp_x86_omp_AVX.hpp"
+#include "Convergence/cuda/Convergence_cuda.hpp"
 
 #include "immintrin.h"
 

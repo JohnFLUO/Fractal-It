@@ -15,20 +15,22 @@
 #include "../../kernel.cuh"
 
 
-class Convergence_dp_x86 {
+class Convergence_CUDA : public Convergence {
 private:
   ColorMap* colors;
   int max_iters;
 
 public:
-  Convergence_dp_x86(ColorMap* _colors, int _max_iters){
-    colors    = _colors;
-    max_iters = _max_iters;
 
-
+  Convergence_CUDA(){
   }
 
-  ~Convergence_dp_x86( ){
+  Convergence_CUDA(ColorMap* _colors, int _max_iters){
+    colors    = _colors;
+    max_iters = _max_iters;
+  }
+
+  ~Convergence_CUDA(){
 
   }
 
