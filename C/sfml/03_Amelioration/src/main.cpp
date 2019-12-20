@@ -53,6 +53,9 @@ int main(int argc, char* argv[]) {
     sf::Clock clicTime;
 
     sf::Clock autoZoomTime;
+    std::chrono::steady_clock::time_point autoZoomBegin = std::chrono::steady_clock::now();
+
+    bool autoZoomFinished = false;
 
     while (window.isOpen()) {
 
@@ -154,32 +157,42 @@ int main(int argc, char* argv[]) {
                           printf("zoom = %0.16lf\n", zoom);
                           break;
 
+                        case sf::Keyboard::C :
+                          Settings::SetCentralDot(!Settings::isCentralDotEnable);
+                          break;
+
                         case sf::Keyboard::R :
                         break;
 
                         case sf::Keyboard::Up:
-                            offsetY -= 10 * zoom;
-                            break;
+                          offsetY -= 10 * zoom;
+                          break;
                         case sf::Keyboard::Down:
-                            offsetY += 10 * zoom;
-                            break;
+                          offsetY += 10 * zoom;
+                          break;
                         case sf::Keyboard::Left:
-                            offsetX -= 10 * zoom;
-                            break;
+                          offsetX -= 10 * zoom;
+                          break;
                         case sf::Keyboard::Right:
-                            offsetX += 10 * zoom;
-                            break;
+                          offsetX += 10 * zoom;
+                          break;
 
                         default:
-                            stateChanged = false;
-                            break;
+                          stateChanged = false;
+                          break;
                     }
                 default:
                     break;
             }
         }
 
-        if (Settings::autoZoom && autoZoomTime.getElapsedTime() > sf::seconds(Settings::zoomStepTime) && zoom > Settings::finalZoom) {
+        if (zoom < Settings::finalZoom && !autoZoomFinished) {
+          std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+          std:: cout << "AutoZoom terminé, durée totale : " <<std::chrono::duration_cast<std::chrono::milliseconds>(end - autoZoomBegin).count()/1000.0f <<  " s" << std::endl;
+          autoZoomFinished = true;
+        }
+
+        if (Settings::autoZoom && autoZoomTime.getElapsedTime() > sf::seconds(Settings::zoomStepTime) && !autoZoomFinished) {
           zoom /= Settings::zoomFactor;
           autoZoomTime.restart();
           stateChanged = true;

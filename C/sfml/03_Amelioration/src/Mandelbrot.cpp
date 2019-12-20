@@ -62,13 +62,16 @@ void Mandelbrot::setIterations(unsigned short iters){
 }
 
 void Mandelbrot::updateImage(double zoom, double offsetX, double offsetY, sf::Image& image) {
-    c->updateImage(zoom, offsetX, offsetY, Settings::width, Settings::height, image);
+  c->updateImage(zoom, offsetX, offsetY, Settings::width, Settings::height, image);
+
+  if (Settings::isCentralDotEnable) {
     sf::Color white(255, 255, 255);
     image.setPixel(Settings::width/2-1, Settings::height/2,   white);
     image.setPixel(Settings::width/2+1, Settings::height/2,   white);
     image.setPixel(Settings::width/2,   Settings::height/2,   white);
     image.setPixel(Settings::width/2,   Settings::height/2-1, white);
     image.setPixel(Settings::width/2,   Settings::height/2+1, white);
+  }
 }
 
 

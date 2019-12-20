@@ -75,6 +75,9 @@ void Settings::SetAutoZoom(bool az) {
   Settings::autoZoom = az;
 }
 
+void Settings::SetCentralDot(bool cd) {
+  Settings::isCentralDotEnable = cd;
+}
 
 void Settings::SetMaxIter(int mi) {
   Settings::max_iters = mi;

@@ -53,6 +53,7 @@ public:
 	static void SetZoomStepTime(double z);
 	static void SetMaxIter(int mi);
 	static void SetAutoZoom(bool az);
+	static void SetCentralDot(bool cd);
 
 	static void SetConvergenceType(ConvergenceType ct);
 	static void SetColorMapMode(ColorMapMode cm);
