@@ -48,5 +48,4 @@ void compute (int nthreads, double zoom, double offsetX, double offsetY, unsigne
 
   kernel_compute<<<DimGrid, DimBlock>>>( zoom, offsetX, offsetY, max_iters,
     IMAGE_WIDTH, IMAGE_HEIGHT, device_value);
-
 }

@@ -19,6 +19,7 @@ double Settings::zoom = 0.004;
 double Settings::finalZoom = 0.004;
 double Settings::zoomFactor = 0.01;
 double Settings::zoomStepTime = 0.01;
+unsigned int Settings::nbSimulations = 1;
 
 bool Settings::isCentralDotEnable = false;
 
@@ -73,6 +74,10 @@ void Settings::SetZoomStepTime(double zts) {
 
 void Settings::SetAutoZoom(bool az) {
   Settings::autoZoom = az;
+}
+
+void Settings::SetNbSimulations(unsigned int nbSimu) {
+  Settings::nbSimulations = nbSimu;
 }
 
 void Settings::SetCentralDot(bool cd) {

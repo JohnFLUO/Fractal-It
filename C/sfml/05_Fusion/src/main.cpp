@@ -54,8 +54,14 @@ int main(int argc, char* argv[]) {
 
     sf::Clock autoZoomTime;
     std::chrono::steady_clock::time_point autoZoomBegin = std::chrono::steady_clock::now();
+    unsigned int sumDuration = 0;
+    unsigned int avgTime;
+    unsigned int maxDuration = 0;
+    unsigned int minDuration = 1000000;
 
     bool autoZoomFinished = false;
+    bool autoZoomFinished_10times = false;
+    unsigned int compteur_autoZoom = 1;
 
     while (window.isOpen()) {
 
@@ -185,12 +191,39 @@ int main(int argc, char* argv[]) {
                     break;
             }
         }
-
-        if (zoom < Settings::finalZoom && !autoZoomFinished) {
+/*
+        if (zoom < Settings::finalZoom && !autoZoomFinished ) {
           std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-          std:: cout << "AutoZoom terminé, durée totale : " <<std::chrono::duration_cast<std::chrono::milliseconds>(end - autoZoomBegin).count()/1000.0f <<  " s" << std::endl;
+          std:: cout << "AutoZoom "<<compteur_autoZoom<<"/"<<3<< " terminé, durée totale : " <<std::chrono::duration_cast<std::chrono::milliseconds>(end - autoZoomBegin).count()/1000.0f <<  " s" << std::endl;
           autoZoomFinished = true;
+
         }
+*/
+        if (zoom < Settings::finalZoom && !autoZoomFinished ) {
+          std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+          //calcul stats
+          unsigned int nbSimu = Settings::nbSimulations;
+          unsigned int curentDuration = std::chrono::duration_cast<std::chrono::milliseconds>(end - autoZoomBegin).count();
+          sumDuration += curentDuration;
+          maxDuration = (maxDuration > curentDuration ? maxDuration : curentDuration);
+          minDuration = (minDuration < curentDuration ? minDuration : curentDuration);
+          avgTime = sumDuration/compteur_autoZoom;
+          std:: cout << "AutoZoom "<<compteur_autoZoom<<"/"<< nbSimu << " terminé, durée totale : " << curentDuration/1000.0f <<  " s" << std::endl;
+          //actualisation variables
+          compteur_autoZoom += 1;
+          zoom = Settings::zoom; //zoom remis a zero
+          autoZoomBegin = std::chrono::steady_clock::now();//remise pour que les calculs de stats n'ai pas d'influence
+          if (compteur_autoZoom > nbSimu){
+            autoZoomFinished = true; //fini
+            std:: cout << "Temps total : " << sumDuration/1000.0f << " s" <<std::endl;
+            std:: cout << "Temps moyen : " << avgTime/1000.0f << " s" <<std::endl;
+            std:: cout << "Temps max : " << maxDuration/1000.0f << " s" <<std::endl;
+            std:: cout << "Temps min : " << minDuration/1000.0f << " s" <<std::endl;
+          }
+          else
+            autoZoomFinished = false;//pas fini
+        }
+
 
         if (Settings::autoZoom && autoZoomTime.getElapsedTime() > sf::seconds(Settings::zoomStepTime) && !autoZoomFinished) {
           zoom /= Settings::zoomFactor;
@@ -198,11 +231,12 @@ int main(int argc, char* argv[]) {
           stateChanged = true;
         }
 
+
         if (stateChanged) {
             std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
             mb.updateImage(zoom, offsetX, offsetY, image);
             std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-            std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() <<std::endl;
+            //std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() <<std::endl;
             texture.loadFromImage(image);
             sprite.setTexture(texture);
             stateChanged = false;

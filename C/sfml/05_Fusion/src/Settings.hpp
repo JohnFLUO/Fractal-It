@@ -36,6 +36,7 @@ public:
 	static double finalZoom;
 	static double zoomFactor;
 	static double zoomStepTime;
+	static unsigned int nbSimulations;
 
 	static bool isCentralDotEnable;
 
@@ -52,6 +53,7 @@ public:
 	static void SetFinalZoom(double z);
 	static void SetZoomFactor(double z);
 	static void SetZoomStepTime(double z);
+	static void SetNbSimulations(unsigned int nbSimu);
 	static void SetMaxIter(int mi);
 	static void SetAutoZoom(bool az);
 	static void SetCentralDot(bool cd);

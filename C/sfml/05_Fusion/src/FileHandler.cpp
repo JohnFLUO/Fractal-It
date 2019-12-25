@@ -90,6 +90,8 @@ void ConfigReader::ParseParams() {
             Settings::SetZoom(stringToDouble(arg));
           } else if (identifier == "FINALZOOM") {
             Settings::SetFinalZoom(stringToDouble(arg));
+          } else if (identifier == "NBSIMU") {
+            Settings::SetNbSimulations(stringToInt(arg));
           } else if (identifier == "AUTOZOOM") {
             if (arg == "TRUE" || arg == "ON") {
               Settings::SetAutoZoom(true);

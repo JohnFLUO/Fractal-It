@@ -30,7 +30,7 @@ public:
     max_iters = _max_iters;
   }
 
-  ~Convergence_CUDA(){
+  ~Convergence_CUDA( ){
 
   }
 
@@ -41,6 +41,16 @@ public:
     cudaStatus = cudaMalloc( devPtr, size );
     if ( cudaStatus != cudaSuccess ) {
       printf( "error: unable to allocate buffer\n");
+      return false;
+    }
+    return true;
+  }
+
+  inline bool CUDA_FREE( void * devPtr){
+    cudaError_t cudaStatus;
+    cudaStatus = cudaFree( devPtr );
+    if ( cudaStatus != cudaSuccess ) {
+      printf( "error: unable to free buffer\n");
       return false;
     }
     return true;
@@ -112,6 +122,10 @@ public:
         }
       }
     }
+
+  free(host_value_iteration);
+  CUDA_FREE(device_value_iteration);
+
   }
 };
 
