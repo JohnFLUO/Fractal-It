@@ -11,28 +11,108 @@
 #include "FileHandler.hpp"
 #include "Mandelbrot.hpp"
 
-#include "immintrin.h"
+#include "StringUtils.hpp"
+#include <getopt.h>
+#define LONG_OPTION 0
 
+#include "immintrin.h"
 
 int main(int argc, char* argv[]) {
 
-    // Parse parameters file
+    // Parse parameters file :
     string filename = "default_config.ini";
-    if (argc > 1) {
+    string argv1 = argv[1];
+    if (argc > 1 && argv1.at(0) != '-') {
       filename = argv[1];
     }
+
     ConfigReader configFile(filename);
     configFile.ParseParams();
 
-    // Default parameters
+    // Parse command options :
+    int opt = 0;
+    int option_index = 0;
 
+    static struct option long_options[] = {
+      {"dp",           no_argument, 0, 0},
+      {"dp_omp",       no_argument, 0, 0},
+      {"dp_omp_avx",   no_argument, 0, 0},
+      {"dp_omp_avx+",  no_argument, 0, 0},
+      {"sp",           no_argument, 0, 0},
+      {"sp_omp",       no_argument, 0, 0},
+      {"sp_omp_avx",   no_argument, 0, 0},
+      {"sp_omp_avx+",  no_argument, 0, 0},
+      {"fp",           no_argument, 0, 0},
+      {"cuda",         no_argument, 0, 0},
+
+      {"nbsimu",       required_argument, 0, 0},
+      {"maxiters",     required_argument, 0, 0},
+
+      {0, 0, 0, 0}
+    };
+
+    while ((opt = getopt_long(argc, argv, "x:y:w:h:i:c", long_options, &option_index)) != -1) {
+    //while ((opt = getopt(argc, argv, ":c:")) != -1) {
+      string long_opt;
+      switch (opt) {
+      case LONG_OPTION :
+        long_opt = long_options[option_index].name;
+        stringToUppercase(&long_opt);
+        if (optarg) {
+          if (long_opt == "NBSIMU") {
+            Settings::SetNbSimulations(atoi(optarg));
+          } else if (long_opt == "NBSIMU") {
+            Settings::SetNbSimulations(atoi(optarg));
+          }
+        } else {
+          bool sucessfullyParsed = ConfigReader::ParseConvergenceType(long_opt);
+          if (!sucessfullyParsed) {
+            cout << "\033[33m" << endl; //unix only
+            cerr << "warning: unknown long option \"" << long_opt << "\""<< endl;
+            cout << "\033[0m"  << endl;
+          }
+        }
+        break;
+
+      case 'x' :
+        Settings::SetOffsetX(stringToDouble(optarg));
+        break;
+
+      case 'y' :
+        Settings::SetOffsetY(stringToDouble(optarg));
+        break;
+
+      case 'w' :
+        Settings::SetWidth(stringToInt(optarg));
+        break;
+
+      case 'h' :
+        Settings::SetHeight(stringToInt(optarg));
+        break;
+
+      case 'i' :
+        Settings::SetMaxIter(stringToInt(optarg));
+        break;
+
+      case 'c' :
+        printf("coucou\n");
+        break;
+
+      default:
+        printf("Invalid option received\n");
+        exit(-1);
+        break;
+      }
+   }
+
+    // Apply parameters :
     double offsetX =  Settings::offsetX; // and move around
     double offsetY =  Settings::offsetY;
     double zoom    = Settings::zoom; // allow the user to zoom in and out...
     int max_iters  = Settings::max_iters;
 
-    unsigned short iterations = 256;
 
+    unsigned short iterations = Settings::max_iters; //256;
     double wheelZoomFactor = 0.05;
 
     printf("(II) Dimension de la fenetre (%d, %d)\n", Settings::width, Settings::height);
@@ -199,7 +279,7 @@ int main(int argc, char* argv[]) {
 
         }
 */
-        if (zoom < Settings::finalZoom && !autoZoomFinished ) {
+        if (zoom < Settings::finalZoom && !autoZoomFinished && Settings::autoZoom) {
           std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
           //calcul stats
           unsigned int nbSimu = Settings::nbSimulations;
@@ -208,7 +288,11 @@ int main(int argc, char* argv[]) {
           maxDuration = (maxDuration > curentDuration ? maxDuration : curentDuration);
           minDuration = (minDuration < curentDuration ? minDuration : curentDuration);
           avgTime = sumDuration/compteur_autoZoom;
-          std:: cout << "AutoZoom "<<compteur_autoZoom<<"/"<< nbSimu << " terminé, durée totale : " << curentDuration/1000.0f <<  " s" << std::endl;
+          if (nbSimu == 1) {
+            std:: cout << "AutoZoom terminé, durée totale : " << curentDuration/1000.0f <<  " s" << std::endl;
+          } else {
+            std:: cout << "AutoZoom "<<compteur_autoZoom<<"/"<< nbSimu << " terminé, durée totale : " << curentDuration/1000.0f <<  " s" << std::endl;
+          }
           //actualisation variables
           compteur_autoZoom += 1;
           zoom = Settings::zoom; //zoom remis a zero
@@ -216,12 +300,14 @@ int main(int argc, char* argv[]) {
           if (compteur_autoZoom > nbSimu){
             autoZoomFinished = true; //fini
             std:: cout << "Temps total : " << sumDuration/1000.0f << " s" <<std::endl;
-            std:: cout << "Temps moyen : " << avgTime/1000.0f << " s" <<std::endl;
-            std:: cout << "Temps max : " << maxDuration/1000.0f << " s" <<std::endl;
-            std:: cout << "Temps min : " << minDuration/1000.0f << " s" <<std::endl;
+            if (nbSimu > 1) {
+              std:: cout << "Temps moyen : " << avgTime/1000.0f << " s" <<std::endl;
+              std:: cout << "Temps max : " << maxDuration/1000.0f << " s" <<std::endl;
+              std:: cout << "Temps min : " << minDuration/1000.0f << " s" <<std::endl;
+            }
+          } else {
+            autoZoomFinished = false; //pas fini
           }
-          else
-            autoZoomFinished = false;//pas fini
         }
 
 
@@ -236,7 +322,7 @@ int main(int argc, char* argv[]) {
             std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
             mb.updateImage(zoom, offsetX, offsetY, image);
             std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-            //std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() <<std::endl;
+            if (!Settings::autoZoom) std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() <<std::endl;
             texture.loadFromImage(image);
             sprite.setTexture(texture);
             stateChanged = false;

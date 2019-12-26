@@ -1,0 +1,90 @@
+#ifndef _Convergence_fp_x86_
+#define _Convergence_fp_x86_
+
+#include <SFML/Graphics.hpp>
+#include <array>
+#include <vector>
+#include <thread>
+#include "immintrin.h"
+
+#include "../Convergence.hpp"
+#include "fixed_point.hpp"
+
+/*
+void disp_real(string name, double float_val, fi32_t fixed_val)  {
+  std::cout << name << " : ";
+  printf("float =%1.9lf, fixed = %1.9lf\n", float_val, fi32_to_double(fixed_val, FI_32_28));
+  //std::cout << name <<  "float = " << float_val << ", fixed = " << fi32_to_double(fixed_val, FI_32_28) << std::endl;
+}
+*/
+
+class Convergence_fp_x86 : public Convergence {
+
+public:
+
+  Convergence_fp_x86() {
+  }
+
+  Convergence_fp_x86(ColorMap* _colors, int _max_iters){
+    colors    = _colors;
+    max_iters = _max_iters;
+  }
+
+  ~Convergence_fp_x86() {
+  }
+
+  virtual unsigned int process(const double startReal, const double startImag, unsigned int max_iters)  {
+    return -1;
+  }
+
+  virtual void updateImage(double d_zoom, double d_offsetX, double d_offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
+    for (int y = 0; y < IMAGE_HEIGHT; y++) {
+
+      fi32_t offsetX = double_to_fi32(d_offsetX, FI_32_28);
+      fi32_t offsetY = double_to_fi32(d_offsetY, FI_32_28);
+
+      fi32_t zoom = double_to_fi32(d_zoom, FI_32_28);
+
+      //fi32_t startImag = ((offsetY << FI_32_28) - (((IMAGE_HEIGHT >> 2) * zoom)) + (y * zoom)) << 1;
+      double d_startImag = d_offsetY  -  IMAGE_HEIGHT / 2.0f * d_zoom  +  y * d_zoom;
+      fi32_t startImag = offsetY  -  IMAGE_HEIGHT/2 * zoom  +  y * zoom;
+      //cout << "startImag (float) = " << d_startImag << ", startImag (fixed) = " << fi32_to_double(startImag, FI_32_28) << std::endl;
+
+      double d_startReal = d_offsetX - IMAGE_WIDTH / 2.0f * d_zoom;
+      fi32_t startReal = offsetX  -  IMAGE_WIDTH/2 * zoom;
+      //cout << "startReal (float) = " << d_startReal << ", startReal (fixed) = " << fi32_to_double(startReal, FI_32_28) << std::endl;
+      //sleep(1);
+
+      for (int x = 0; x < IMAGE_WIDTH;  x++) {
+        int value = max_iters - 1;
+
+        double d_zReal = d_startReal;
+        fi32_t zReal = startReal;
+        double d_zImag = d_startImag;
+        fi32_t zImag = startImag;
+
+        for (unsigned int counter = 0; counter < max_iters; counter++) {
+          double d_r2 = d_zReal * d_zReal;
+          fi32_t r2 = (zReal * zReal) >> FI_32_28;
+          printf("r2 : float = %1.9lf, fixed = %1.9lf\n", d_r2, fi32_to_double(r2, FI_32_28));
+          double d_i2 = d_zImag * d_zImag;
+          fi32_t i2 = zImag * (zImag >> FI_32_28);
+
+          d_zImag = 2.0f * d_zReal * d_zImag + d_startImag;
+          zImag = 2 * zReal * zImag  +  startImag;
+          d_zReal = d_r2 - d_i2 + d_startReal;
+          zReal = r2  -  i2  +  startReal;
+          if ( (r2 + i2) > 4) {
+            value = counter;
+            break;
+          }
+        }
+        image.setPixel(x, y, colors->getColor(value));
+        d_startReal += d_zoom;
+        startReal = startReal + zoom;
+      }
+    }
+  }
+};
+
+#endif

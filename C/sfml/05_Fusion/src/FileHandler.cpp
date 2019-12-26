@@ -13,7 +13,7 @@ Text file parser
 Changelog :
 -----------
   - 2019/04/17 : Initial release
-  - 2019/04/27 : Improved to hanle complex parsing
+  - 2019/04/27 : Improved to handle complex parsing
   - 2019/10/21 : Adapted to fit fractal plotting
   - 2019/11/28 : Adapted to fit fractal plotting with sfml
 */
@@ -103,51 +103,17 @@ void ConfigReader::ParseParams() {
               cout << "\033[0m"  << endl;
             }
           } else if (identifier == "CONVERGENCE") {
-            if (arg == "DP") {
-              Settings::SetConvergenceType(ConvergenceType::DP);
-            } else if (arg == "DP_OMP") {
-              Settings::SetConvergenceType(ConvergenceType::DP_OMP);
-            } else if (arg == "DP_OMP_AVX") {
-              Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVX);
-            } else if (arg == "DP_OMP_AVX+") {
-              Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVXPLUS);
-            } else if (arg == "SP") {
-              Settings::SetConvergenceType(ConvergenceType::SP);
-            } else if (arg == "SP_OMP") {
-              Settings::SetConvergenceType(ConvergenceType::SP_OMP);
-            } else if (arg == "SP_OMP_AVX") {
-              Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVX);
-            } else if (arg == "SP_OMP_AVX+") {
-              Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVXPLUS);
-            } else if (arg == "CUDA") {
-              Settings::SetConvergenceType(ConvergenceType::CUDA);
-            } else {
+            bool sucessfullyParsed = ParseConvergenceType(arg);
+            if (!sucessfullyParsed) {
               cout << "\033[33m" << endl; //unix only
-              cerr << "warning: unknown parameter \"" << arg << "\" at line " << lineNb << endl;
+              cerr << "warning: unknown convergence type \"" << arg << "\" at line " << lineNb << endl;
               cout << "\033[0m"  << endl;
             }
           } else if (identifier == "COLORMAP") {
-            if (arg == "GREYSCALE") {
-              Settings::SetColorMapMode(ColorMapMode::GREYSCALE);
-            } else if (arg == "HSV") {
-              Settings::SetColorMapMode(ColorMapMode::HSV);
-            } else if (arg == "HSV_LOOP") {
-              Settings::SetColorMapMode(ColorMapMode::HSV_LOOP);
-            } else if (arg == "HSV_SHIFTED") {
-              Settings::SetColorMapMode(ColorMapMode::HSV_SHIFTED);
-            } else if (arg == "SMOOTH") {
-              Settings::SetColorMapMode(ColorMapMode::SMOOTH);
-            } else if (arg == "SMOOTH_LOOP") {
-              Settings::SetColorMapMode(ColorMapMode::SMOOTH_LOOP);
-            } else if (arg == "SMOOTH_SHIFTED") {
-              Settings::SetColorMapMode(ColorMapMode::SMOOTH_SHIFTED);
-            } else if (arg == "LERP_BLUE_RED") {
-              Settings::SetColorMapMode(ColorMapMode::LERP_BLUE_RED);
-            } else if (arg == "LSD") {
-              Settings::SetColorMapMode(ColorMapMode::LSD);
-            } else {
+            bool sucessfullyParsed = ParseColorMap(arg);
+            if (!sucessfullyParsed) {
               cout << "\033[33m" << endl; //unix only
-              cerr << "warning: unknown parameter \"" << arg << "\" at line " << lineNb << endl;
+              cerr << "warning: unknown colormap \"" << arg << "\" at line " << lineNb << endl;
               cout << "\033[0m"  << endl;
             }
           } else  {
@@ -164,4 +130,60 @@ void ConfigReader::ParseParams() {
       lineNb++;
     }
   }
+}
+
+
+bool ConfigReader::ParseConvergenceType(string arg) {
+  bool success = true;
+  if (arg == "DP") {
+    Settings::SetConvergenceType(ConvergenceType::DP);
+  } else if (arg == "DP_OMP") {
+    Settings::SetConvergenceType(ConvergenceType::DP_OMP);
+  } else if (arg == "DP_OMP_AVX") {
+    Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVX);
+  } else if (arg == "DP_OMP_AVX+") {
+    Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVXPLUS);
+  } else if (arg == "SP") {
+    Settings::SetConvergenceType(ConvergenceType::SP);
+  } else if (arg == "SP_OMP") {
+    Settings::SetConvergenceType(ConvergenceType::SP_OMP);
+  } else if (arg == "SP_OMP_AVX") {
+    Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVX);
+  } else if (arg == "SP_OMP_AVX+") {
+    Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVXPLUS);
+  } else if (arg == "FP") {
+    Settings::SetConvergenceType(ConvergenceType::FP);
+  } else if (arg == "CUDA") {
+    Settings::SetConvergenceType(ConvergenceType::CUDA);
+  } else {
+    success = false;
+  }
+  return success;
+}
+
+
+bool ConfigReader::ParseColorMap(string arg) {
+  bool success = true;
+  if (arg == "GREYSCALE") {
+    Settings::SetColorMapMode(ColorMapMode::GREYSCALE);
+  } else if (arg == "HSV") {
+    Settings::SetColorMapMode(ColorMapMode::HSV);
+  } else if (arg == "HSV_LOOP") {
+    Settings::SetColorMapMode(ColorMapMode::HSV_LOOP);
+  } else if (arg == "HSV_SHIFTED") {
+    Settings::SetColorMapMode(ColorMapMode::HSV_SHIFTED);
+  } else if (arg == "SMOOTH") {
+    Settings::SetColorMapMode(ColorMapMode::SMOOTH);
+  } else if (arg == "SMOOTH_LOOP") {
+    Settings::SetColorMapMode(ColorMapMode::SMOOTH_LOOP);
+  } else if (arg == "SMOOTH_SHIFTED") {
+    Settings::SetColorMapMode(ColorMapMode::SMOOTH_SHIFTED);
+  } else if (arg == "LERP_BLUE_RED") {
+    Settings::SetColorMapMode(ColorMapMode::LERP_BLUE_RED);
+  } else if (arg == "LSD") {
+    Settings::SetColorMapMode(ColorMapMode::LSD);
+  } else {
+    success = false;
+  }
+  return success;
 }

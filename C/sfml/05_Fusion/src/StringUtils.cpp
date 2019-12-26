@@ -101,6 +101,10 @@ void stringToUppercase(string* str) {
   transform(str->begin(), str->end(), str->begin(), ::toupper);
 }
 
+void stringToLowercase(string* str) {
+  transform(str->begin(), str->end(), str->begin(), ::tolower);
+}
+
 int stringToInt(string s) {
   return atoi(s.c_str());
 }

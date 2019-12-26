@@ -1,5 +1,5 @@
-#ifndef _Convergence_dp_x86_omp_ATXplus_
-#define _Convergence_dp_x86_omp_ATXplus_
+#ifndef _Convergence_sp_x86_omp_ATXplus_
+#define _Convergence_sp_x86_omp_ATXplus_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -8,22 +8,21 @@
 #include <immintrin.h>
 #include <unistd.h>
 
-#define DPP_CONV_STEP 8
+#define SPP_CONV_STEP 16
 
-class Convergence_dp_x86_omp_AVXplus : public Convergence {
+class Convergence_sp_x86_omp_AVXplus : public Convergence {
 
 public:
 
-  Convergence_dp_x86_omp_AVXplus() {
+  Convergence_sp_x86_omp_AVXplus() {
   }
 
-  Convergence_dp_x86_omp_AVXplus(ColorMap* _colors, int _max_iters) {
+  Convergence_sp_x86_omp_AVXplus(ColorMap* _colors, int _max_iters) {
     colors    = _colors;
     max_iters = _max_iters;
   }
 
-  ~Convergence_dp_x86_omp_AVXplus() {
-
+  ~Convergence_sp_x86_omp_AVXplus() {
   }
 
   virtual unsigned int process(const double real, const double image, unsigned int max_iters) {
@@ -47,22 +46,26 @@ public:
     printf("\n");
   }
 
-  void _mm256_showd(string varName, __m256d v) {
-    __attribute__ ((aligned (32))) double tmp[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-    _mm256_storeu_pd(tmp, v);
+  void _mm256_shows(string varName, __m256 v){
+    __attribute__ ((aligned (32))) float tmp[8] = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+    _mm256_storeu_ps(tmp, v);
     std::cout << varName << " : ";
-    for (int i = 0 ; i < 4 ; i++) {
+    for (int i = 0 ; i < 8 ; i++) {
       printf("%1.4f ", tmp[i]);
     }
     printf("\n");
   }
 
 
-  virtual void updateImage(double zoom, double offsetX, double offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
+  virtual void updateImage(double d_zoom, double d_offsetX, double d_offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
+    float zoom = (float) d_zoom;
+    float offsetX = (float) d_offsetX;
+    float offsetY = (float) d_offsetY;
+
     // consts :
-    const __m256d v_4_0f = _mm256_set1_pd(4.0f);
-    const __m256d v_2_0f = _mm256_set1_pd(2.0f);
-    const __m256d v_1_0f = _mm256_set1_pd(1.0f);
+    const __m256 v_4_0f = _mm256_set1_ps(4.0f);
+    const __m256 v_2_0f = _mm256_set1_ps(2.0f);
+    const __m256 v_1_0f = _mm256_set1_ps(1.0f);
 
     #pragma omp parallel // on declare une section parallel
     {
@@ -70,66 +73,74 @@ public:
       #pragma omp for // on fait du multicoeur
       for (int y = 0 ; y < IMAGE_HEIGHT ; y++) {
 
-        double startImag = offsetY - IMAGE_HEIGHT / 2.0f * zoom + (y * zoom);
-        __attribute__ ((aligned (32))) double t_startImag[4] = {startImag, startImag, startImag, startImag};
-        __m256d v_startImag = _mm256_loadu_pd(t_startImag);
+        float startImag = offsetY - IMAGE_HEIGHT / 2.0f * zoom + (y * zoom);
+        __attribute__ ((aligned (32))) float t_startImag[8] = {startImag, startImag, startImag, startImag, startImag, startImag, startImag, startImag};
+        __m256 v_startImag = _mm256_loadu_ps(t_startImag);
 
-        double startReal = offsetX - IMAGE_WIDTH / 2.0f * zoom;
-        __attribute__ ((aligned (32))) double t_startReal_1[4] = {startReal, startReal+zoom, startReal+zoom*2, startReal+zoom*3};
-        __m256d v_startReal_1 = _mm256_loadu_pd(t_startReal_1);
-        __attribute__ ((aligned (32))) double t_startReal_2[4] = {startReal+zoom*4, startReal+zoom*5, startReal+zoom*6, startReal+zoom*7};
-        __m256d v_startReal_2 = _mm256_loadu_pd(t_startReal_2);
+        float startReal = offsetX - IMAGE_WIDTH / 2.0f * zoom;
+        __attribute__ ((aligned (32))) float t_startReal_1[8] = {startReal       , startReal+zoom  , startReal+zoom*2 , startReal+zoom*3 , startReal+zoom*4 , startReal+zoom*5 , startReal+zoom*6 , startReal+zoom*7 };
+        __m256 v_startReal_1 = _mm256_loadu_ps(t_startReal_1);
+        __attribute__ ((aligned (32))) float t_startReal_2[8] = {startReal+zoom*8, startReal+zoom*9, startReal+zoom*10, startReal+zoom*11, startReal+zoom*12, startReal+zoom*13, startReal+zoom*14, startReal+zoom*15};
+        __m256 v_startReal_2 = _mm256_loadu_ps(t_startReal_2);
 
-        __attribute__ ((aligned (32))) double t_r2_plus_i2[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+        __attribute__ ((aligned (32))) float t_r2_plus_i2[8] = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
 
-        for (int x = 0 ; x < IMAGE_WIDTH ; x += DPP_CONV_STEP) {
-          double t_value_1[4] =  {0.0f, 0.0f, 0.0f, 0.0f};
-          double t_value_2[4] =  {0.0f, 0.0f, 0.0f, 0.0f};
-          __m256d v_value_1 = _mm256_setzero_pd();
-          __m256d v_value_2 = _mm256_setzero_pd();
-          __m256d v_zReal_1 = v_startReal_1;
-          __m256d v_zReal_2 = v_startReal_2;
-          __m256d v_zImag_1 = v_startImag;
-          __m256d v_zImag_2 = v_startImag;
+        for (int x = 0 ; x < IMAGE_WIDTH ; x += SPP_CONV_STEP) {
+          float t_value_1[8] =  {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+          float t_value_2[8] =  {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
+          __m256 v_value_1 = _mm256_setzero_ps();
+          __m256 v_value_2 = _mm256_setzero_ps();
+          __m256 v_zReal_1 = v_startReal_1;
+          __m256 v_zReal_2 = v_startReal_2;
+          __m256 v_zImag_1 = v_startImag;
+          __m256 v_zImag_2 = v_startImag;
 
           for (unsigned int counter = 0; counter < max_iters; counter++) {
-            __m256d v_r2_1 = _mm256_mul_pd(v_zReal_1, v_zReal_1);
-            __m256d v_i2_1 = _mm256_mul_pd(v_zImag_1, v_zImag_1);
-            __m256d v_r2_2 = _mm256_mul_pd(v_zReal_2, v_zReal_2);
-            __m256d v_i2_2 = _mm256_mul_pd(v_zImag_2, v_zImag_2);
+            __m256 v_r2_1 = _mm256_mul_ps(v_zReal_1, v_zReal_1);
+            __m256 v_i2_1 = _mm256_mul_ps(v_zImag_1, v_zImag_1);
+            __m256 v_r2_2 = _mm256_mul_ps(v_zReal_2, v_zReal_2);
+            __m256 v_i2_2 = _mm256_mul_ps(v_zImag_2, v_zImag_2);
 
-            v_zImag_1 = _mm256_add_pd(_mm256_mul_pd(v_2_0f, _mm256_mul_pd(v_zReal_1, v_zImag_1)), v_startImag);
-            v_zImag_2 = _mm256_add_pd(_mm256_mul_pd(v_2_0f, _mm256_mul_pd(v_zReal_2, v_zImag_2)), v_startImag);
-            v_zReal_1 = _mm256_add_pd(_mm256_sub_pd(v_r2_1, v_i2_1), v_startReal_1);
-            v_zReal_2 = _mm256_add_pd(_mm256_sub_pd(v_r2_2, v_i2_2), v_startReal_2);
+            v_zImag_1 = _mm256_add_ps(_mm256_mul_ps(v_2_0f, _mm256_mul_ps(v_zReal_1, v_zImag_1)), v_startImag);
+            v_zImag_2 = _mm256_add_ps(_mm256_mul_ps(v_2_0f, _mm256_mul_ps(v_zReal_2, v_zImag_2)), v_startImag);
+            v_zReal_1 = _mm256_add_ps(_mm256_sub_ps(v_r2_1, v_i2_1), v_startReal_1);
+            v_zReal_2 = _mm256_add_ps(_mm256_sub_ps(v_r2_2, v_i2_2), v_startReal_2);
 
-            __m256d v_r2_plus_i2_1 = _mm256_add_pd(v_r2_1, v_i2_1);
-            __m256d v_r2_plus_i2_2 = _mm256_add_pd(v_r2_2, v_i2_2);
+            __m256 v_r2_plus_i2_1 = _mm256_add_ps(v_r2_1, v_i2_1);
+            __m256 v_r2_plus_i2_2 = _mm256_add_ps(v_r2_2, v_i2_2);
 
-            __m256d v_cmp_res_1 = _mm256_cmp_pd(v_r2_plus_i2_1, v_4_0f, _CMP_LT_OS);
-            __m256d v_cmp_res_2 = _mm256_cmp_pd(v_r2_plus_i2_2, v_4_0f, _CMP_LT_OS);
-            v_value_1 = _mm256_blendv_pd(v_value_1, _mm256_add_pd(v_value_1, v_1_0f), v_cmp_res_1);
-            v_value_2 = _mm256_blendv_pd(v_value_2, _mm256_add_pd(v_value_2, v_1_0f), v_cmp_res_2);
+            __m256 v_cmp_res_1 = _mm256_cmp_ps(v_r2_plus_i2_1, v_4_0f, _CMP_LT_OS);
+            __m256 v_cmp_res_2 = _mm256_cmp_ps(v_r2_plus_i2_2, v_4_0f, _CMP_LT_OS);
+            v_value_1 = _mm256_blendv_ps(v_value_1, _mm256_add_ps(v_value_1, v_1_0f), v_cmp_res_1);
+            v_value_2 = _mm256_blendv_ps(v_value_2, _mm256_add_ps(v_value_2, v_1_0f), v_cmp_res_2);
 
-            short res_1 = _mm256_movemask_pd(v_cmp_res_1);
-            short res_2 = _mm256_movemask_pd(v_cmp_res_2);
-            if (res_1 == 0 && res_2 == 2) { // si r2+i2 > 4 pour tous les élements
+            short res_1 = _mm256_movemask_ps(v_cmp_res_1);
+            short res_2 = _mm256_movemask_ps(v_cmp_res_2);
+            if (res_1 == 0 && res_2 == 0) { // si r2+i2 > 4 pour tous les élements
               break;
             }
           }
 
-          _mm256_storeu_pd(t_value_1, v_value_1);
-          _mm256_storeu_pd(t_value_2, v_value_2);
-          image.setPixel(x+0, y, colors->getColor((int)round(t_value_1[0])));
-          image.setPixel(x+1, y, colors->getColor((int)round(t_value_1[1])));
-          image.setPixel(x+2, y, colors->getColor((int)round(t_value_1[2])));
-          image.setPixel(x+3, y, colors->getColor((int)round(t_value_1[3])));
-          image.setPixel(x+4, y, colors->getColor((int)round(t_value_2[0])));
-          image.setPixel(x+5, y, colors->getColor((int)round(t_value_2[1])));
-          image.setPixel(x+6, y, colors->getColor((int)round(t_value_2[2])));
-          image.setPixel(x+7, y, colors->getColor((int)round(t_value_2[3])));
-          v_startReal_1 = _mm256_add_pd(v_startReal_1, _mm256_set1_pd(zoom*DPP_CONV_STEP));
-          v_startReal_2 = _mm256_add_pd(v_startReal_2, _mm256_set1_pd(zoom*DPP_CONV_STEP));
+          _mm256_storeu_ps(t_value_1, v_value_1);
+          _mm256_storeu_ps(t_value_2, v_value_2);
+          image.setPixel(x+0,  y, colors->getColor((int)round(t_value_1[0])));
+          image.setPixel(x+1,  y, colors->getColor((int)round(t_value_1[1])));
+          image.setPixel(x+2,  y, colors->getColor((int)round(t_value_1[2])));
+          image.setPixel(x+3,  y, colors->getColor((int)round(t_value_1[3])));
+          image.setPixel(x+4,  y, colors->getColor((int)round(t_value_1[4])));
+          image.setPixel(x+5,  y, colors->getColor((int)round(t_value_1[5])));
+          image.setPixel(x+6,  y, colors->getColor((int)round(t_value_1[6])));
+          image.setPixel(x+7,  y, colors->getColor((int)round(t_value_1[7])));
+          image.setPixel(x+8,  y, colors->getColor((int)round(t_value_2[0])));
+          image.setPixel(x+9,  y, colors->getColor((int)round(t_value_2[1])));
+          image.setPixel(x+10, y, colors->getColor((int)round(t_value_2[2])));
+          image.setPixel(x+11, y, colors->getColor((int)round(t_value_2[3])));
+          image.setPixel(x+12, y, colors->getColor((int)round(t_value_2[4])));
+          image.setPixel(x+13, y, colors->getColor((int)round(t_value_2[5])));
+          image.setPixel(x+14, y, colors->getColor((int)round(t_value_2[6])));
+          image.setPixel(x+15, y, colors->getColor((int)round(t_value_2[7])));
+          v_startReal_1 = _mm256_add_ps(v_startReal_1, _mm256_set1_ps(zoom*SPP_CONV_STEP));
+          v_startReal_2 = _mm256_add_ps(v_startReal_2, _mm256_set1_ps(zoom*SPP_CONV_STEP));
         }
       }
     }

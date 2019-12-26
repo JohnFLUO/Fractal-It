@@ -26,32 +26,33 @@ public:
   }
 
   virtual unsigned int process(const double startReal, const double startImag, unsigned int max_iters)  {
-    double zReal = startReal;
-    double zImag = startImag;
-
-    for (unsigned int counter = 0; counter < max_iters; counter++) {
-      double r2 = zReal * zReal;
-      double i2 = zImag * zImag;
-      zImag = 2.0f * zReal * zImag + startImag;
-      zReal = r2 - i2 + startReal;
-      if ( (r2 + i2) > 4.0f) {
-        return counter;
-      }
-    }
-    return max_iters - 1;
+    return -1;
   }
 
   virtual void updateImage(double zoom, double offsetX, double offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
     for (int y = 0; y < IMAGE_HEIGHT; y++) {
 
-      double imag = offsetY - IMAGE_HEIGHT / 2.0f * zoom + (y * zoom);
-      double real = offsetX - IMAGE_WIDTH / 2.0f * zoom;
+      double startImag = offsetY - IMAGE_HEIGHT / 2.0f * zoom + (y * zoom);
+      double startReal = offsetX - IMAGE_WIDTH / 2.0f * zoom;
       for (int x = 0; x < IMAGE_WIDTH;  x++) {
-        int value = process(real, imag, max_iters);
-        image.setPixel(x, y, colors->getColor(value));
-        real += zoom;
-      }
+        int value = max_iters - 1;
 
+        double zReal = startReal;
+        double zImag = startImag;
+
+        for (unsigned int counter = 0; counter < max_iters; counter++) {
+          double r2 = zReal * zReal;
+          double i2 = zImag * zImag;
+          zImag = 2.0f * zReal * zImag + startImag;
+          zReal = r2 - i2 + startReal;
+          if ( (r2 + i2) > 4.0f) {
+            value = counter;
+            break;
+          }
+        }
+        image.setPixel(x, y, colors->getColor(value));
+        startReal += zoom;
+      }
     }
   }
 };

@@ -34,6 +34,9 @@ public:
 
 	int Open(string filename);
 	void ParseParams();
+  static bool ParseConvergenceType(string arg);
+  static bool ParseColorMap(string arg);
+
 };
 
 #endif /*FILEHANDLER_H_*/
