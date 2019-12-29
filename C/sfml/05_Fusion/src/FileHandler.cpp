@@ -153,6 +153,8 @@ bool ConfigReader::ParseConvergenceType(string arg) {
     Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVXPLUS);
   } else if (arg == "FP") {
     Settings::SetConvergenceType(ConvergenceType::FP);
+  } else if (arg == "FP_OMP") {
+    Settings::SetConvergenceType(ConvergenceType::FP_OMP);
   } else if (arg == "CUDA") {
     Settings::SetConvergenceType(ConvergenceType::CUDA);
   } else {

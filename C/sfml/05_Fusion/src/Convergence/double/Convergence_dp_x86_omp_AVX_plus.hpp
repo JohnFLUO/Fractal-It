@@ -113,7 +113,7 @@ public:
 
             short res_1 = _mm256_movemask_pd(v_cmp_res_1);
             short res_2 = _mm256_movemask_pd(v_cmp_res_2);
-            if (res_1 == 0 && res_2 == 2) { // si r2+i2 > 4 pour tous les élements
+            if (res_1 == 0 && res_2 == 0) { // si r2+i2 > 4 pour tous les élements
               break;
             }
           }

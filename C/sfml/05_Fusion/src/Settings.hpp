@@ -12,7 +12,7 @@
 enum ConvergenceType{
 	SP, SP_OMP, SP_OMP_AVX, SP_OMP_AVXPLUS,
 	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS,
-	FP,
+	FP, FP_OMP,
 	CUDA
 };
 

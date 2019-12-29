@@ -1,5 +1,5 @@
-#ifndef _Convergence_fp_x86_
-#define _Convergence_fp_x86_
+#ifndef _Convergence_fp_x86_nfwa_
+#define _Convergence_fp_x86_nfwa_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -18,23 +18,19 @@ void disp_real(string name, double float_val, fi32_t fixed_val)  {
 }
 */
 
-class Convergence_fp_x86 : public Convergence {
+class Convergence_fp_x86_nfwa : public Convergence {
 
 public:
 
-  Convergence_fp_x86() {
+  Convergence_fp_x86_nfwa() {
   }
 
-  Convergence_fp_x86(ColorMap* _colors, int _max_iters){
+  Convergence_fp_x86_nfwa(ColorMap* _colors, int _max_iters){
     colors    = _colors;
     max_iters = _max_iters;
   }
 
-  ~Convergence_fp_x86() {
-  }
-
-  void disp_cmp_real(double float_val, fi32_t fixed_val, unsigned int fractionalBitCount)  {
-    std::cout << "float = " << float_val << ", fixed = " << fi32_to_double(fixed_val, fractionalBitCount) << std::endl;
+  ~Convergence_fp_x86_nfwa() {
   }
 
   virtual unsigned int process(const double startReal, const double startImag, unsigned int max_iters)  {
@@ -44,10 +40,10 @@ public:
   virtual void updateImage(double d_zoom, double d_offsetX, double d_offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
     for (int y = 0; y < IMAGE_HEIGHT; y++) {
 
-      fi32_t offsetX = double_to_fi32(d_offsetX, FI_32_19);
-      fi32_t offsetY = double_to_fi32(d_offsetY, FI_32_19);
+      fi32_t offsetX = double_to_fi32(d_offsetX, FI_32_28);
+      fi32_t offsetY = double_to_fi32(d_offsetY, FI_32_28);
 
-      fi32_t zoom = double_to_fi32(d_zoom, FI_32_19);
+      fi32_t zoom = double_to_fi32(d_zoom, FI_32_28);
 
       //fi32_t startImag = ((offsetY << FI_32_28) - (((IMAGE_HEIGHT >> 2) * zoom)) + (y * zoom)) << 1;
       double d_startImag = d_offsetY  -  IMAGE_HEIGHT / 2.0f * d_zoom  +  y * d_zoom;
@@ -69,26 +65,22 @@ public:
 
         for (unsigned int counter = 0; counter < max_iters; counter++) {
           double d_r2 = d_zReal * d_zReal;
-          fi64_t r2_64 = ((fi64_t)(zReal)*(fi64_t)(zReal));
-          fi32_t r2 = ((r2_64 >> FI_32_19) < MAX_FI_32) ? (fi32_t)(r2_64 >> FI_32_19) : MAX_FI_32;
-          //disp_cmp_real(d_r2, r2, FI_32_19);
-          //usleep(100000);
+          fi64_t r2_64 = (fi64_t)zReal*(fi64_t)zReal;
+          fi32_t r2 = (fi32_t)(r2_64 >> FI_32_28);
+          disp_cmp_real(d_r2, r2, FI_32_28);
+          sleep(1);
 
           double d_i2 = d_zImag * d_zImag;
-          fi64_t i2_64 = ((fi64_t)(zImag)*(fi64_t)(zImag));
-          fi32_t i2 = ((i2_64 >> FI_32_19) < MAX_FI_32) ? (fi32_t)(i2_64 >> FI_32_19) : MAX_FI_32;
-          //disp_cmp_real(d_i2, i2, FI_32_19);
+          fi64_t i2_64 = (fi64_t)zImag*(fi64_t)zImag;
+          fi32_t i2 = (fi32_t)(i2_64 >> FI_32_28);
 
           d_zImag = 2.0f * d_zReal * d_zImag + d_startImag;
           fi64_t z_real_z_imag_64 = (fi64_t)zReal*(fi64_t)zImag;
-          fi32_t z_real_z_imag = (fi32_t)(z_real_z_imag_64 >> FI_32_19);
-          zImag = (2 * z_real_z_imag  + startImag);
-          //disp_cmp_real(d_zImag, zImag, FI_32_19);
+          fi32_t z_real_z_imag = (fi32_t)(z_real_z_imag_64 >> FI_32_28);
+          zImag = 2 * z_real_z_imag  +  startImag;
           d_zReal = d_r2 - d_i2 + d_startReal;
-          zReal = (r2  -  i2  +  startReal);
-          //disp_cmp_real(d_zReal, zReal, FI_32_19);
-          if ( (r2 + i2) > (4 << FI_32_19)) {
-          //if ( (d_r2 + d_i2) > 4) {
+          zReal = r2  -  i2  +  startReal;
+          if ( (r2 + i2) > 4) {
             value = counter;
             break;
           }

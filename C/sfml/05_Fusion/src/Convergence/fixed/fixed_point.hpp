@@ -41,14 +41,35 @@
 #define FI_32_31 31
 #define FI_32_32 32
 
-typedef int32_t fi32_t; // classe ? template ?
+#define MAX_FI_32 (0x7fffffff)
 
-inline fi32_t double_to_fi32(double double_in, unsigned int fractionalBitCount) { // inline ou void ?
+typedef int32_t fi32_t; // classe ? template ?
+typedef int64_t fi64_t;
+
+inline fi32_t double_to_fi32(double double_in, unsigned int fractionalBitCount) {
   return (fi32_t)(std::round(double_in * (1 << fractionalBitCount)));
 }
 
-inline double fi32_to_double(fi32_t fi32_in, unsigned int fractionalBitCount) { // inline ou void ?
+inline double fi32_to_double(fi32_t fi32_in, unsigned int fractionalBitCount) {
   return (double)(fi32_in / (double)(1 << fractionalBitCount));
 }
+
+inline double fi32_mul(fi32_t fi32_in_a, fi32_t fi32_in_b, unsigned int fractionalBitCount) {
+  fi64_t f64_a = (fi64_t)fi32_in_a*(fi64_t)fi32_in_b;
+  return (fi32_t)(f64_a >> fractionalBitCount);
+}
+
+
+// debug log :
+
+/*
+void print_fi32_hex(char* name, fi32_t value) {
+  printf("%s = %0.8x \n", name, value);
+}
+
+void print_fi64_hex(char* name, fi64_t value) {
+  printf("%s = %0.16x \n", name, value);
+}*/
+
 
 #endif

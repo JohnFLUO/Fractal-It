@@ -43,6 +43,7 @@ int main(int argc, char* argv[]) {
       {"sp_omp_avx",   no_argument, 0, 0},
       {"sp_omp_avx+",  no_argument, 0, 0},
       {"fp",           no_argument, 0, 0},
+      {"fp_omp",       no_argument, 0, 0},
       {"cuda",         no_argument, 0, 0},
 
       {"nbsimu",       required_argument, 0, 0},
@@ -99,15 +100,17 @@ int main(int argc, char* argv[]) {
         break;
 
       default:
-        printf("Invalid option received\n");
-        exit(-1);
+      /*cout << "\033[33m" << endl; //unix only
+      cerr << "warning: invalid option received\"-" << opt << "\""<< endl;
+      cout << "\033[0m"  << endl;
+      exit(-1);*/
         break;
       }
    }
 
     // Apply parameters :
-    double offsetX =  Settings::offsetX; // and move around
-    double offsetY =  Settings::offsetY;
+    double offsetX = Settings::offsetX; // and move around
+    double offsetY = Settings::offsetY;
     double zoom    = Settings::zoom; // allow the user to zoom in and out...
     int max_iters  = Settings::max_iters;
 
@@ -279,7 +282,7 @@ int main(int argc, char* argv[]) {
 
         }
 */
-        if (zoom < Settings::finalZoom && !autoZoomFinished && Settings::autoZoom) {
+        if (Settings::autoZoom && !autoZoomFinished && zoom < Settings::finalZoom && Settings::nbSimulations > 0) {
           std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
           //calcul stats
           unsigned int nbSimu = Settings::nbSimulations;
@@ -311,7 +314,7 @@ int main(int argc, char* argv[]) {
         }
 
 
-        if (Settings::autoZoom && autoZoomTime.getElapsedTime() > sf::seconds(Settings::zoomStepTime) && !autoZoomFinished) {
+        if (Settings::autoZoom && Settings::nbSimulations > 0 && !autoZoomFinished && autoZoomTime.getElapsedTime() > sf::seconds(Settings::zoomStepTime)) {
           zoom /= Settings::zoomFactor;
           autoZoomTime.restart();
           stateChanged = true;
