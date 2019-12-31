@@ -44,6 +44,8 @@ int main(int argc, char* argv[]) {
       {"sp_omp_avx+",  no_argument, 0, 0},
       {"fp",           no_argument, 0, 0},
       {"fp_omp",       no_argument, 0, 0},
+      {"fp_omp_SSE2",  no_argument, 0, 0},
+      {"fp_omp_AVX2",  no_argument, 0, 0},
       {"cuda",         no_argument, 0, 0},
 
       {"nbsimu",       required_argument, 0, 0},
@@ -52,7 +54,7 @@ int main(int argc, char* argv[]) {
       {0, 0, 0, 0}
     };
 
-    while ((opt = getopt_long(argc, argv, "x:y:w:h:i:c", long_options, &option_index)) != -1) {
+    while ((opt = getopt_long(argc, argv, "x:y:w:h:i:cl", long_options, &option_index)) != -1) {
     //while ((opt = getopt(argc, argv, ":c:")) != -1) {
       string long_opt;
       switch (opt) {
@@ -95,8 +97,12 @@ int main(int argc, char* argv[]) {
         Settings::SetMaxIter(stringToInt(optarg));
         break;
 
-      case 'c' :
-        printf("coucou\n");
+      case 'c' : // close after simulation
+        printf("TODO -c\n");
+        break;
+
+      case 'l' : // log to file log.txt
+        printf("TODO -l\n");
         break;
 
       default:

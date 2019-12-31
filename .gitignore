@@ -1,5 +1,6 @@
 # Object file
 *.o
+*.cuo
 
 C/sfml/02_Adaptation/bin
 C/sfml/02_Adaptation/obj

@@ -1,5 +1,5 @@
-#ifndef _Convergence_fp_x86_omp_
-#define _Convergence_fp_x86_omp_
+#ifndef _Convergence_fp_x86_omp_SSE2_
+#define _Convergence_fp_x86_omp_SSE2_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -18,19 +18,19 @@ void disp_real(string name, double float_val, fi32_t fixed_val)  {
 }
 */
 
-class Convergence_fp_x86_omp : public Convergence {
+class Convergence_fp_x86_omp_SSE2 : public Convergence {
 
 public:
 
-  Convergence_fp_x86_omp() {
+  Convergence_fp_x86_omp_SSE2() {
   }
 
-  Convergence_fp_x86_omp(ColorMap* _colors, int _max_iters){
+  Convergence_fp_x86_omp_SSE2(ColorMap* _colors, int _max_iters){
     colors    = _colors;
     max_iters = _max_iters;
   }
 
-  ~Convergence_fp_x86_omp() {
+  ~Convergence_fp_x86_omp_SSE2() {
   }
 
   void disp_cmp_real(double float_val, fi32_t fixed_val, unsigned int fractionalBitCount)  {
@@ -42,65 +42,53 @@ public:
   }
 
   virtual void updateImage(double d_zoom, double d_offsetX, double d_offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image) {
+
+    const __m128i v_4_0f = _mm_set1_epi32(4.0f);
+    const __m128i v_2_0f = _mm_set1_epi32(2.0f);
+    const __m128i v_1_0f = _mm_set1_epi32(1.0f);
+
     #pragma omp parallel // on declare une section parallel
     {
       #pragma omp for // on fait du multicoeur
       for (int y = 0; y < IMAGE_HEIGHT; y++) {
-
         fi32_t offsetX = double_to_fi32(d_offsetX, FI_32_25);
         fi32_t offsetY = double_to_fi32(d_offsetY, FI_32_25);
 
         fi32_t zoom = double_to_fi32(d_zoom, FI_32_25);
 
-        //double d_startImag = d_offsetY  -  IMAGE_HEIGHT / 2.0f * d_zoom  +  y * d_zoom;
         fi32_t startImag = offsetY  -  IMAGE_HEIGHT/2 * zoom  +  y * zoom;
+        __m128i v_startImag = _mm_set1_epi32(startImag);
 
-        //double d_startReal = d_offsetX - IMAGE_WIDTH / 2.0f * d_zoom;
         fi32_t startReal = offsetX  -  IMAGE_WIDTH/2 * zoom;
+        __m128i v_startReal = _mm_set_epi32(startReal, startReal+zoom, startReal+zoom*2, startReal+zoom*3);
 
         for (int x = 0; x < IMAGE_WIDTH;  x++) {
           int value = max_iters - 1;
 
-          /*if (d_startReal < -3.5f || d_startReal > 3.5f || d_startImag < -3.5f || d_startImag > 3.5f) {
-            image.setPixel(x, y, colors->getColor(value));
-            startReal = startReal + zoom;
-            break;
-          }*/
-
-          //double d_zReal = d_startReal;
           fi32_t zReal = startReal;
-          //double d_zImag = d_startImag;
+          __m128i v_zReal = v_startReal;
           fi32_t zImag = startImag;
+          __m128i v_zImag = v_startImag;
 
           for (unsigned int counter = 0; counter < max_iters; counter++) {
-            //double d_r2 = d_zReal * d_zReal;
-            fi64_t r2_64 = ((fi64_t)(zReal)*(fi64_t)(zReal));
+            fi64_t r2_64 = ((fi64_t)(zReal)*(fi64_t)(zReal)); //comment faire le calcul sur 64 bits ???
             fi32_t r2 = ((r2_64 >> FI_32_25) < MAX_FI_32) ? (fi32_t)(r2_64 >> FI_32_25) : MAX_FI_32;
-            //disp_cmp_real(d_r2, r2, FI_32_25);
-            //usleep(100000);
 
-            //double d_i2 = d_zImag * d_zImag;
             fi64_t i2_64 = ((fi64_t)(zImag)*(fi64_t)(zImag));
             fi32_t i2 = ((i2_64 >> FI_32_25) < MAX_FI_32) ? (fi32_t)(i2_64 >> FI_32_25) : MAX_FI_32;
-            //disp_cmp_real(d_i2, i2, FI_32_25);
 
-            //d_zImag = 2.0f * d_zReal * d_zImag + d_startImag;
             fi64_t z_real_z_imag_64 = (fi64_t)zReal*(fi64_t)zImag;
             fi32_t z_real_z_imag = (fi32_t)(z_real_z_imag_64 >> FI_32_25);
             zImag = (2 * z_real_z_imag  + startImag);
-            //disp_cmp_real(d_zImag, zImag, FI_32_25);
-            //d_zReal = d_r2 - d_i2 + d_startReal;
+
             zReal = (r2  -  i2  +  startReal);
-            //disp_cmp_real(d_zReal, zReal, FI_32_25);
 
             if ( (r2 + i2) > (4 << FI_32_25)) {
-            //if ( (d_r2 + d_i2) > 4) {
               value = counter;
               break;
             }
           }
           image.setPixel(x, y, colors->getColor(value));
-          //d_startReal += d_zoom;
           startReal = startReal + zoom;
         }
       }

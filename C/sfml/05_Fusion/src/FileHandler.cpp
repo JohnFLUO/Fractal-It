@@ -155,6 +155,12 @@ bool ConfigReader::ParseConvergenceType(string arg) {
     Settings::SetConvergenceType(ConvergenceType::FP);
   } else if (arg == "FP_OMP") {
     Settings::SetConvergenceType(ConvergenceType::FP_OMP);
+  } else if (arg == "FP_OMP") {
+    Settings::SetConvergenceType(ConvergenceType::FP_OMP);
+  } else if (arg == "FP_OMP_SSE2") {
+    Settings::SetConvergenceType(ConvergenceType::FP_OMP_SSE2);
+  } else if (arg == "FP_OMP_AVX2") {
+    Settings::SetConvergenceType(ConvergenceType::FP_OMP_AVX2);
   } else if (arg == "CUDA") {
     Settings::SetConvergenceType(ConvergenceType::CUDA);
   } else {

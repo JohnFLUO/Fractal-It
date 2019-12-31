@@ -1,8 +1,4 @@
 
-** Table des matières **
-
-[TOCM]
-
 
 # Introduction
 Ce projet s'inscrit dans le cadre des projet de semestre 9 de l'option systèmes embarqués (SE) de la filière électronique de l'ENSEIRB-MATMECA. L'objectif est d'adapter sur plusieurs supports (CPU, GPU, FPGA) la fractale de Mandelbrot afin de réaliser un comparatif des diverses solution sur plusieurs critères : 
@@ -27,8 +23,8 @@ L'implémentation C++ proposera à terme plusieurs modes de convergence :
 		- [x]  OpenMP + AVX
 		- [x]  OpenMP + AVX amélioré
 	- Virgule fixe
-		- [ ] Sans optimisation
-		- [ ] OpenMP
+		- [x] Sans optimisation
+		- [x] OpenMP
 		- [ ] OpenMP + AVX
 		- [ ] OpenMP + AVX amélioré
 - GPU
