@@ -1,6 +1,6 @@
-/*
-
-*/
+/********************
+      Settings
+********************/
 
 #ifndef SETTINGS_H_
 #define SETTINGS_H_
@@ -10,8 +10,8 @@
 #include <string>
 
 enum ConvergenceType{
-	SP, SP_OMP, SP_OMP_AVX, SP_OMP_AVXPLUS,
-	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS,
+	SP, SP_OMP, SP_OMP_AVX, SP_OMP_AVXPLUS, SP_OMP_AVXPLUSPLUS,
+	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS, DP_OMP_AVXPLUSPLUS,
 	FP, FP_OMP, FP_OMP_SSE2, FP_OMP_AVX2,
 	CUDA
 };
@@ -40,6 +40,11 @@ public:
 	static unsigned int nbSimulations;
 
 	static bool isCentralDotEnable;
+	static bool closeAfterSimulation;
+	static bool logTofile;
+	static unsigned int testID;
+	static bool firstSimulation;
+	static bool lastSimulation;
 
 	static ConvergenceType convergenceType;
 	static ColorMapMode colorMapMode;
@@ -58,11 +63,17 @@ public:
 	static void SetMaxIter(int mi);
 	static void SetAutoZoom(bool az);
 	static void SetCentralDot(bool cd);
+	static void SetCloseAfterSimulation(bool cas);
+	static void SetLogToFile(bool ltf);
+	static void SetTestID(unsigned int tid);
+	static void SetFirstSimulation(bool fs);
+	static void SetLastSimulation(bool ls);
 
 	static void SetConvergenceType(ConvergenceType ct);
 	static void SetColorMapMode(ColorMapMode cm);
 
 	static ConvergenceType GetConvergenceType();
+	static unsigned int GetConvOffset();
 
 };
 

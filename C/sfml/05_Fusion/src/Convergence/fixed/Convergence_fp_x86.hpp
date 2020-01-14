@@ -70,6 +70,20 @@ public:
         fi32_t zImag = startImag;
 
         for (unsigned int counter = 0; counter < max_iters; counter++) {
+
+          /*//double d_r2 = d_zReal * d_zReal;
+          fi64_t r2_64 = (fi64_t)zReal*(fi64_t)zReal;
+          fi64_t r2_64_shift = r2_64 >> FI_32_25;
+          fi32_t r2 = (r2_64_shift < MAX_FI_32) ? (fi32_t)r2_64_shift : MAX_FI_32;
+          //disp_cmp_real(d_r2, r2, FI_32_25);
+          //usleep(100000);
+
+          //double d_i2 = d_zImag * d_zImag;
+          fi64_t i2_64 = (fi64_t)zImag*(fi64_t)zImag;
+          fi64_t i2_64_shift = i2_64 >> FI_32_25;
+          fi32_t i2 = (i2_64_shift < MAX_FI_32) ? (fi32_t)i2_64_shift : MAX_FI_32;
+          //disp_cmp_real(d_i2, i2, FI_32_25);*/
+          
           //double d_r2 = d_zReal * d_zReal;
           fi64_t r2_64 = ((fi64_t)(zReal)*(fi64_t)(zReal));
           fi32_t r2 = ((r2_64 >> FI_32_25) < MAX_FI_32) ? (fi32_t)(r2_64 >> FI_32_25) : MAX_FI_32;

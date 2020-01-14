@@ -143,6 +143,8 @@ bool ConfigReader::ParseConvergenceType(string arg) {
     Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVX);
   } else if (arg == "DP_OMP_AVX+") {
     Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVXPLUS);
+  } else if (arg == "DP_OMP_AVX++") {
+    Settings::SetConvergenceType(ConvergenceType::DP_OMP_AVXPLUSPLUS);
   } else if (arg == "SP") {
     Settings::SetConvergenceType(ConvergenceType::SP);
   } else if (arg == "SP_OMP") {
@@ -151,6 +153,8 @@ bool ConfigReader::ParseConvergenceType(string arg) {
     Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVX);
   } else if (arg == "SP_OMP_AVX+") {
     Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVXPLUS);
+  } else if (arg == "SP_OMP_AVX++") {
+    Settings::SetConvergenceType(ConvergenceType::SP_OMP_AVXPLUSPLUS);
   } else if (arg == "FP") {
     Settings::SetConvergenceType(ConvergenceType::FP);
   } else if (arg == "FP_OMP") {
@@ -194,4 +198,73 @@ bool ConfigReader::ParseColorMap(string arg) {
     success = false;
   }
   return success;
+}
+
+
+vector< vector<string> > CSVHandler::ReadCSV(string filename) {
+  ifstream file;
+  if (filename.length() <= 4 || filename.substr(filename.length()-4) != ".csv") {
+    filename+= ".csv";
+  }
+
+  vector< vector<string> > tab;
+  file.open(filename.c_str(), fstream::in | fstream::out);
+  if (!file) {
+    cout << "\033[31m" << endl; //unix only
+    cerr << "error: can't open \"" << filename << "\", log disabled" << endl;
+    cout << "\033[0m"  << endl;
+    Settings::SetLogToFile(false);
+  } else {
+    int rowNb = 0;
+    string line;
+    while (std::getline(file, line)) {
+      vector<string> row = splitString(line, ",");
+      /*vector<string> row;
+      string element;
+      while (std::getline(line, element, ',')) {
+        row.push_back(element);
+      }*/
+      tab.push_back(row);
+    }
+    return tab;
+  }
+  return tab;
+}
+
+
+
+
+bool CSVHandler::WriteCSV(vector< vector<string> > tab, string filename) {
+  ofstream file;
+  if (filename.length() <= 4 || filename.substr(filename.length()-4) != ".csv") {
+    filename+= ".csv";
+  }
+
+  file.open(filename.c_str());
+  if (!file) {
+    cout << "\033[31m" << endl; //unix only
+    cerr << "error: can't save to \"" << filename << "\", log disabled" << endl;
+    cout << "\033[0m"  << endl;
+    Settings::SetLogToFile(false);
+    return false;
+  } else {
+    for (size_t i = 0 ; i < tab.size() ; i++) {
+      for (size_t j = 0 ; j < tab[i].size() ; j++) {
+        file << tab[i][j] << ",";
+      }
+      file << std::endl;
+    }
+  }
+  return true;
+}
+
+
+
+void CSVHandler::PrintCSV(vector< vector<string> > tab) {
+  for (size_t i = 0 ; i < tab.size() ; i++) {
+    for (size_t j = 0 ; j < tab[i].size() ; j++) {
+      std::cout << tab[i][j] << ",";
+    }
+    std::cout << std::endl;
+  }
 }

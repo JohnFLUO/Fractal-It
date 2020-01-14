@@ -10,6 +10,7 @@
 #include <fstream>
 #include <vector>
 
+#include "Utils.hpp"
 #include "Settings.hpp"
 #include "StringUtils.hpp"
 
@@ -38,5 +39,15 @@ public:
   static bool ParseColorMap(string arg);
 
 };
+
+class CSVHandler {
+public:
+
+  static vector< vector<string> > ReadCSV(string filename);
+  static bool WriteCSV(vector< vector<string> > tab, std::string filename);
+  static void PrintCSV(vector< vector<string> > tab);
+
+};
+
 
 #endif /*FILEHANDLER_H_*/

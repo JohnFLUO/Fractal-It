@@ -45,6 +45,8 @@ vector<string> splitString(string str, string delimiter) {
       string token = str.substr(lastPos, pos - lastPos);
       if (!token.empty()) {
         parts.push_back(token);
+      } else {
+        parts.push_back("");
       }
       //lastPos = pos + 1;
       lastPos = pos + delimiter.length();

@@ -1,5 +1,5 @@
-#ifndef _Convergence_sp_x86_omp_ATXplus_
-#define _Convergence_sp_x86_omp_ATXplus_
+#ifndef _Convergence_sp_x86_omp_AVXplus_
+#define _Convergence_sp_x86_omp_AVXplus_
 
 #include <SFML/Graphics.hpp>
 #include <array>
