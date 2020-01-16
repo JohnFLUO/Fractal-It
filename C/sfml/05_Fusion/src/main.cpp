@@ -20,7 +20,7 @@
 #define LONG_OPTION 0
 #define TAB_CSV_HSTART 2
 #define TAB_CSV_VSTART 10
-#define TAB_CSV_VSTEP 20
+#define TAB_CSV_VSTEP 30
 
 
 int main(int argc, char* argv[]) {
@@ -56,7 +56,9 @@ int main(int argc, char* argv[]) {
       {"fp_omp",       no_argument, 0, 0},
       {"fp_omp_SSE2",  no_argument, 0, 0},
       {"fp_omp_AVX2",  no_argument, 0, 0},
-      {"cuda",         no_argument, 0, 0},
+      {"cuda_d",       no_argument, 0, 0},
+      {"cuda_d2",      no_argument, 0, 0},
+      {"cuda_d2_wp",   no_argument, 0, 0},
 
       {"close",        no_argument, 0, 0},
       {"fluffy",       no_argument, 0, 0},

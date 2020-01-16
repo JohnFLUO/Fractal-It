@@ -10,7 +10,7 @@
 // Les differentes techniques de coloriage de l'image
 //
 #include "Color/ColorSmooth/ColorSmooth.hpp"
-#include "Convergence/double/Convergence_dp_x86.hpp"
+#include "Convergence/double/Convergence_cuda.hpp"
 #include "immintrin.h"
 #include "Mandelbrot.hpp"
 #include "Mandelbrot.cpp"
@@ -26,8 +26,8 @@ int main(int argc, char* argv[]) {
 
     double wheelZoomFactor = 0.05;
 
-    int IMAGE_WIDTH  = 1920; //1280
-    int IMAGE_HEIGHT = 1080; //800
+    int IMAGE_WIDTH  = 1280;
+    int IMAGE_HEIGHT = 800;
 
 //    enum t_format    = { f_double, f_float, f_int };
 //    enum t_processor = { x86, sse, avx, cuda };
@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
     printf("(II) Dimension de la fenetre (%d, %d)\n", IMAGE_WIDTH, IMAGE_HEIGHT);
 
 
-    Mandelbrot<Convergence_dp_x86, ColorSmooth> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
+    Mandelbrot<Convergence_CUDA, ColorSmooth> mb(IMAGE_WIDTH, IMAGE_HEIGHT, max_iters);
 
     sf::RenderWindow window(sf::VideoMode(IMAGE_WIDTH, IMAGE_HEIGHT), "Mandelbrot");
     window.setFramerateLimit(0);

@@ -1,5 +1,5 @@
-#ifndef _Convergence_dp_x86_
-#define _Convergence_dp_x86_
+#ifndef _Convergence_cuda_
+#define _Convergence_cuda_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -7,7 +7,6 @@
 #include <thread>
 #include "immintrin.h"
 
-#include <vector_types.h>
 #include "GL/glew.h"
 #include <omp.h>
 #include "cuda.h"
@@ -16,20 +15,18 @@
 #include "../../kernel.cuh"
 
 
-class Convergence_dp_x86 {
+class Convergence_CUDA /*: public Convergence*/ {
 private:
   ColorMap* colors;
   int max_iters;
 
 public:
-  Convergence_dp_x86(ColorMap* _colors, int _max_iters){
+  Convergence_CUDA(ColorMap* _colors, int _max_iters){
     colors    = _colors;
     max_iters = _max_iters;
-
-
   }
 
-  ~Convergence_dp_x86( ){
+  ~Convergence_CUDA( ){
 
   }
 
@@ -40,6 +37,16 @@ public:
     cudaStatus = cudaMalloc( devPtr, size );
     if ( cudaStatus != cudaSuccess ) {
       printf( "error: unable to allocate buffer\n");
+      return false;
+    }
+    return true;
+  }
+
+  inline bool CUDA_FREE( void * devPtr){
+    cudaError_t cudaStatus;
+    cudaStatus = cudaFree( devPtr );
+    if ( cudaStatus != cudaSuccess ) {
+      printf( "error: unable to free buffer\n");
       return false;
     }
     return true;
@@ -71,14 +78,12 @@ public:
     unsigned short *host_value_iteration = (unsigned short *)malloc( sizeof( unsigned short ) * IMAGE_WIDTH*IMAGE_HEIGHT );
     unsigned short *device_value_iteration = (unsigned short *)malloc( sizeof( unsigned short ) * IMAGE_WIDTH*IMAGE_HEIGHT );
 
-    //double *hst_color =
-
     //---allocation GPU
     CUDA_MALLOC( (void**)&device_value_iteration, IMAGE_WIDTH*IMAGE_HEIGHT * sizeof( unsigned short ) );
 
 
     //---Compute on GPU
-    int numThreads = 15;
+    int numThreads = 16;
     compute(numThreads, zoom, offsetX, offsetY, max_iters,
       IMAGE_WIDTH, IMAGE_HEIGHT, device_value_iteration);
 
@@ -96,21 +101,15 @@ public:
       #pragma omp for // on fait du multicoeur
       for (int y = 0; y < IMAGE_HEIGHT;  y++) {
         for (int x = 0; x < IMAGE_WIDTH;  x++) {
-/*
-          for (int i=0; i <= MAX; ++i) {
-              float t = (float)i/(float)max_iters;
-              int r   = (int)round( 9.f * (1.0f-t) * t * t * t               * 255.0f);
-              int g   = (int)round(15.f * (1.0f-t) * (1.0f-t) * t * t        * 255.0f);
-              int b   = (int)round(8.5f * (1.0f-t) * (1.0f-t) * (1.0f-t) * t * 255.0f);
-              colors[i] = sf::Color(r, g, b);
-            }
-*/
-
 
           image.setPixel(x, y, colors->getColor(host_value_iteration[y*IMAGE_WIDTH+x]));
         }
       }
     }
+
+  free(host_value_iteration);
+  CUDA_FREE(device_value_iteration);
+
   }
 };
 

@@ -141,8 +141,12 @@ unsigned int Settings::GetConvOffset() {
     return 11;
   } else if (Settings::convergenceType == ConvergenceType::FP_OMP_SSE2) {
     return 12;
-  } else if (Settings::convergenceType == ConvergenceType::CUDA) {
+  } else if (Settings::convergenceType == ConvergenceType::CUDA_D) {
     return 14;
+  } else if (Settings::convergenceType == ConvergenceType::CUDA_D2) {
+    return 15;
+  } else if (Settings::convergenceType == ConvergenceType::CUDA_D2_WP) {
+    return 16;
   } else {
     return -1;
   }

@@ -37,7 +37,9 @@
 #include "Convergence/fixed/Convergence_fp_x86.hpp"
 #include "Convergence/fixed/Convergence_fp_x86_omp.hpp"
 #include "Convergence/fixed/Convergence_fp_x86_omp_SSE2.hpp"
-#include "Convergence/cuda/Convergence_cuda.hpp"
+#include "Convergence/cuda/Convergence_cuda_d.hpp"
+#include "Convergence/cuda/Convergence_cuda_d2.hpp"
+#include "Convergence/cuda/Convergence_cuda_d2_wp.hpp"
 
 #include "immintrin.h"
 

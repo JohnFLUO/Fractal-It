@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 #include "Color/ColorSmooth/ColorSmooth.hpp"
-#include "Convergence/double/Convergence_dp_x86.hpp"
+#include "Convergence/double/Convergence_cuda.hpp"
 #include "immintrin.h"
 
 enum t_format    { f_double, f_float, f_int };

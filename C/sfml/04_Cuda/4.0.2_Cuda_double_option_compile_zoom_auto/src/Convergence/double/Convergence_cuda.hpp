@@ -83,7 +83,7 @@ public:
 
 
     //---Compute on GPU
-    int numThreads = 16;
+    int numThreads = 15;
     compute(numThreads, zoom, offsetX, offsetY, max_iters,
       IMAGE_WIDTH, IMAGE_HEIGHT, device_value_iteration);
 

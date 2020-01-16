@@ -1,7 +1,6 @@
 #include "cuda.h"
 #include "Color/ColorSmooth/ColorSmooth.hpp"
 #include <stdio.h>
-//#include "Convergence/double/Convergence_dp_x86.hpp"
 
 
 __device__ unsigned short process(const double startReal, const double startImag, unsigned short max_iters)  {

@@ -1,5 +1,5 @@
-#ifndef _Convergence_cuda_
-#define _Convergence_cuda_
+#ifndef _Convergence_cuda_d2_
+#define _Convergence_cuda_d2_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -15,18 +15,18 @@
 #include "../../kernel.cuh"
 
 
-class Convergence_CUDA /*: public Convergence*/ {
+class Convergence_CUDA_D2 : public Convergence {
 private:
   ColorMap* colors;
   int max_iters;
 
 public:
-  Convergence_CUDA(ColorMap* _colors, int _max_iters){
+  Convergence_CUDA_D2(ColorMap* _colors, int _max_iters){
     colors    = _colors;
     max_iters = _max_iters;
   }
 
-  ~Convergence_CUDA( ){
+  ~Convergence_CUDA_D2( ){
 
   }
 
@@ -84,7 +84,7 @@ public:
 
     //---Compute on GPU
     int numThreads = 16;
-    compute(numThreads, zoom, offsetX, offsetY, max_iters,
+    compute_cuda_d2(numThreads, zoom, offsetX, offsetY, max_iters,
       IMAGE_WIDTH, IMAGE_HEIGHT, device_value_iteration);
 
     cudaStatus = cudaDeviceSynchronize();
