@@ -1,7 +1,7 @@
 TARGET 		= fractal
 
 CC 		= g++
-NVCC 		= nvcc
+NVCC 		= nvcc --ptxas-options=-v
 LINKER 		= g++ -o
 
 CUDA_INSTALL_PATH ?= /usr/local/cuda
@@ -10,7 +10,7 @@ INCD 		= -I$(CUDA_INSTALL_PATH)/include
 LIBS 		= -L$(CUDA_INSTALL_PATH)/lib -lcudart
 
 CFLAGS 		= -O3 -std=c++11 -march=native -mtune=native -fopenmp -g
-NFLAGS 		= -O3 -arch=compute_32 
+NFLAGS 		= -O3 -arch=compute_32 --ptxas-options=-v
 LFLAGS 		= -Wall -I. -lm -lGL -lGLEW -lSDL2 -lGLU -fopenmp -lsfml-graphics -lsfml-window -lsfml-system
 
 SRCDIR 		= src
@@ -43,4 +43,3 @@ clean:
 .PHONY: remove
 remove: clean
 	@$(rm) $(BINDIR)/$(TARGET)
-

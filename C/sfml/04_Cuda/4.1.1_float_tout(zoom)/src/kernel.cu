@@ -30,8 +30,6 @@ __global__ void kernel_compute(float zoom, float offsetX, float offsetY, unsigne
   float imag;
   float real;
 
-
-
   if ( (x<IMAGE_WIDTH) && (y<IMAGE_HEIGHT) ) {
     imag = offsetY - IMAGE_HEIGHT / 2.0f * zoom + (y * zoom);
     real = (offsetX - IMAGE_WIDTH / 2.0f * zoom)+((x)*zoom);

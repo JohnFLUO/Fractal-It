@@ -13,7 +13,7 @@ enum ConvergenceType{
 	SP, SP_OMP, SP_OMP_AVX, SP_OMP_AVXPLUS, SP_OMP_AVXPLUSPLUS,
 	DP, DP_OMP, DP_OMP_AVX, DP_OMP_AVXPLUS, DP_OMP_AVXPLUSPLUS,
 	FP, FP_OMP, FP_OMP_SSE2, FP_OMP_AVX2,
-	CUDA_D, CUDA_D2, CUDA_D2_WP
+	CUDA_D, CUDA_D2, CUDA_D2_WP, CUDA_S
 };
 
 enum ColorMapMode{
@@ -38,6 +38,7 @@ public:
 	static double zoomFactor;
 	static double zoomStepTime;
 	static unsigned int nbSimulations;
+	static unsigned int nbCudaThreads;
 
 	static bool isCentralDotEnable;
 	static bool closeAfterSimulation;
@@ -60,6 +61,7 @@ public:
 	static void SetZoomFactor(double z);
 	static void SetZoomStepTime(double z);
 	static void SetNbSimulations(unsigned int nbSimu);
+	static void SetNbCudaThreads(unsigned int nbCudaTh);
 	static void SetMaxIter(int mi);
 	static void SetAutoZoom(bool az);
 	static void SetCentralDot(bool cd);

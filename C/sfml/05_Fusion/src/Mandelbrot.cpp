@@ -62,6 +62,8 @@ void Mandelbrot::allocRessources( ){
     c = new Convergence_CUDA_D2(colors, max_iters);
   } else if (Settings::convergenceType == ConvergenceType::CUDA_D2_WP) {
     c = new Convergence_CUDA_D2_WP(colors, max_iters);
+  } else if (Settings::convergenceType == ConvergenceType::CUDA_S) {
+    c = new Convergence_CUDA_S(colors, max_iters);
   } else {
     c = new Convergence_dp_x86_omp_AVX(colors, max_iters);
   }

@@ -92,6 +92,8 @@ void ConfigReader::ParseParams() {
             Settings::SetFinalZoom(stringToDouble(arg));
           } else if (identifier == "NBSIMU") {
             Settings::SetNbSimulations(stringToInt(arg));
+          } else if (identifier == "NBCUDATHREADS") {
+            Settings::SetNbCudaThreads(stringToInt(arg));
           } else if (identifier == "AUTOZOOM") {
             if (arg == "TRUE" || arg == "ON") {
               Settings::SetAutoZoom(true);
@@ -171,6 +173,8 @@ bool ConfigReader::ParseConvergenceType(string arg) {
     Settings::SetConvergenceType(ConvergenceType::CUDA_D2);
   } else if (arg == "CUDA_D2_WP") {
     Settings::SetConvergenceType(ConvergenceType::CUDA_D2_WP);
+  } else if (arg == "CUDA_S") {
+    Settings::SetConvergenceType(ConvergenceType::CUDA_S);
   } else {
     success = false;
   }

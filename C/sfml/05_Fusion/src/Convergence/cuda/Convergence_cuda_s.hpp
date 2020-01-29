@@ -1,5 +1,5 @@
-#ifndef _Convergence_cuda_d_
-#define _Convergence_cuda_d_
+#ifndef _Convergence_cuda_s_
+#define _Convergence_cuda_s_
 
 #include <SFML/Graphics.hpp>
 #include <array>
@@ -15,18 +15,17 @@
 #include "../../kernel.cuh"
 
 
-class Convergence_CUDA_D : public Convergence {
+class Convergence_CUDA_S : public Convergence {
 private:
   ColorMap* colors;
   int max_iters;
 
 public:
-  Convergence_CUDA_D(ColorMap* _colors, int _max_iters){
+  Convergence_CUDA_S(ColorMap* _colors, int _max_iters){
     colors    = _colors;
     max_iters = _max_iters;
   }
-
-  ~Convergence_CUDA_D( ){
+  ~Convergence_CUDA_S( ){
 
   }
 
@@ -62,8 +61,12 @@ public:
     return true;
   }
 
-  void updateImage(double zoom, double offsetX, double offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image)
+  void updateImage(double d_zoom, double d_offsetX, double d_offsetY, int IMAGE_WIDTH, int IMAGE_HEIGHT, sf::Image& image)
   {
+
+    float zoom = (float) d_zoom;
+    float offsetX = (float) d_offsetX;
+    float offsetY = (float) d_offsetY;
 
   //--Initialisation
     cudaError_t cudaStatus;
@@ -72,7 +75,6 @@ public:
     if ( cudaStatus != cudaSuccess ) {
       printf( "error: unable to setup cuda device\n");
     }
-
 
     //---déclaration et allucation RAM
     unsigned short *host_value_iteration = (unsigned short *)malloc( sizeof( unsigned short ) * IMAGE_WIDTH*IMAGE_HEIGHT );
@@ -84,7 +86,7 @@ public:
 
     //---Compute on GPU
     int numThreads = Settings::nbCudaThreads;
-    compute_cuda_d(numThreads, zoom, offsetX, offsetY, max_iters,
+    compute_cuda_s(numThreads, zoom, offsetX, offsetY, max_iters,
       IMAGE_WIDTH, IMAGE_HEIGHT, device_value_iteration);
 
     cudaStatus = cudaDeviceSynchronize();
@@ -106,10 +108,8 @@ public:
         }
       }
     }
-
-  free(host_value_iteration);
-  CUDA_FREE(device_value_iteration);
-
+    free(host_value_iteration);
+    CUDA_FREE(device_value_iteration);
   }
 };
 

@@ -40,6 +40,7 @@
 #include "Convergence/cuda/Convergence_cuda_d.hpp"
 #include "Convergence/cuda/Convergence_cuda_d2.hpp"
 #include "Convergence/cuda/Convergence_cuda_d2_wp.hpp"
+#include "Convergence/cuda/Convergence_cuda_s.hpp"
 
 #include "immintrin.h"
 

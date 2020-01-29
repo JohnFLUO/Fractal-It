@@ -17,6 +17,7 @@ double Settings::finalZoom = 0.004;
 double Settings::zoomFactor = 0.01;
 double Settings::zoomStepTime = 0.01;
 unsigned int Settings::nbSimulations = 1;
+unsigned int Settings::nbCudaThreads = 1;
 
 bool Settings::isCentralDotEnable = false;
 bool Settings::closeAfterSimulation = false;
@@ -80,6 +81,10 @@ void Settings::SetAutoZoom(bool az) {
 
 void Settings::SetNbSimulations(unsigned int nbSimu) {
   Settings::nbSimulations = nbSimu;
+}
+
+void Settings::SetNbCudaThreads(unsigned int nbCudaTh) {
+  Settings::nbCudaThreads = nbCudaTh;
 }
 
 void Settings::SetCentralDot(bool cd) {
@@ -147,6 +152,8 @@ unsigned int Settings::GetConvOffset() {
     return 15;
   } else if (Settings::convergenceType == ConvergenceType::CUDA_D2_WP) {
     return 16;
+  } else if (Settings::convergenceType == ConvergenceType::CUDA_S) {
+    return 17;
   } else {
     return -1;
   }

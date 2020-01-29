@@ -59,6 +59,7 @@ int main(int argc, char* argv[]) {
       {"cuda_d",       no_argument, 0, 0},
       {"cuda_d2",      no_argument, 0, 0},
       {"cuda_d2_wp",   no_argument, 0, 0},
+      {"cuda_s",       no_argument, 0, 0},
 
       {"close",        no_argument, 0, 0},
       {"fluffy",       no_argument, 0, 0},
@@ -67,6 +68,7 @@ int main(int argc, char* argv[]) {
       {"save",         no_argument, 0, 0},
 
       {"nbsimu",       required_argument, 0, 0},
+      {"nbcudath",     required_argument, 0, 0},
       {"maxiter",      required_argument, 0, 0},
       {"testid",       required_argument, 0, 0},
       {"testID",       required_argument, 0, 0},
@@ -84,6 +86,8 @@ int main(int argc, char* argv[]) {
         if (optarg) {
           if (long_opt == "NBSIMU") {
             Settings::SetNbSimulations(atoi(optarg));
+          }else if (long_opt == "NBCUDATH") {
+              Settings::SetNbCudaThreads(atoi(optarg));
           } else if (long_opt == "MAXITER") {
             Settings::SetMaxIter(atoi(optarg));
           } else if (long_opt == "MAXITER") {
