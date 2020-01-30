@@ -49,7 +49,7 @@ signal zoom :  std_logic_vector ( 31 downto 0);
 
 constant clock_period: time := 10 ns;
 
-component main IS
+component convergence IS
 port (
 clk : IN STD_LOGIC;
 reset : IN STD_LOGIC;
@@ -70,7 +70,7 @@ end component;
 
 begin
 
-    grp_main : component main
+    grp_convergence : component convergence
     port map (
         clk => clock,
         reset => reset,

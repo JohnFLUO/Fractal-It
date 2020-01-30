@@ -60,7 +60,13 @@ entity top_Mandelbrot is
         -- LED
         led             : out std_logic_vector(15 downto 0);
         rgb_17          : out std_logic_vector(2 downto 0);
-        rgb_16          : out std_logic_vector(2 downto 0)
+        rgb_16          : out std_logic_vector(2 downto 0);
+        
+        -- SPI
+        MISO            : in  STD_LOGIC;	                  -- Master In Slave Out, JA3
+        SS              : out  STD_LOGIC;                     -- Slave Select, Pin 1, Port JA
+        MOSI            : out  STD_LOGIC;                     -- Master Out Slave In, Pin 2, Port JA
+        SCLK            : out  STD_LOGIC                      -- Serial Clock, Pin 4, Port JA
     );
 end top_Mandelbrot;
 
@@ -69,6 +75,8 @@ architecture Top_Level of top_Mandelbrot is
 -- Reset & Clock
 signal s_rst                    : std_logic;
 signal s_CE_3kHz                : std_logic;
+signal s_CE_SPI_66_67kHz        : std_logic;
+signal s_CE_SPI_5Hz             : std_logic;
 
 -- Boutons
 signal s_bouton_haut            : std_logic;
@@ -85,8 +93,8 @@ signal s_val_joystick_x         : std_logic_vector(9 downto 0);
 signal s_val_joystick_y         : std_logic_vector(9 downto 0);
 
 -- Processed inputs 
-signal s_offset_x               : std_logic_vector(9 downto 0);
-signal s_offset_y               : std_logic_vector(9 downto 0);
+signal s_offset_x               : std_logic_vector(31 downto 0);
+signal s_offset_y               : std_logic_vector(31 downto 0);
 signal s_zoom                   : std_logic_vector(9 downto 0);
 
 signal s_pixel_x                : std_logic_vector(9 downto 0);  
@@ -104,10 +112,12 @@ begin
     
     inst_Gestionnaire_Horloge: entity work.Gestionnaire_Horloge
     port map(
-        clk           => clock,
-        rst           => s_rst,
-        CE_3kHz       => s_CE_3kHz  -- clock enable d'affichage 7-segments
-    );                           
+        clk             => clock,
+        rst             => s_rst,
+        CE_3kHz         => s_CE_3kHz,           -- clock enable d'affichage 7-segments
+        CE_SPI_66_67kHz => s_CE_SPI_66_67kHz,   -- clock enable de communication SPI_int
+        CE_SPI_5Hz      => s_CE_SPI_5Hz         -- clock enable de communication SPI_ctrl
+    );                         
    
    
 -------------------------------
@@ -165,7 +175,18 @@ begin
         btn_hold          => open
     );
     
-    
+    joystick : entity work.JSTK
+     port map( clk             => clock,			
+              rst              => s_rst,            
+              MISO             => MISO,           
+              CE_SPI_5Hz       => s_CE_SPI_5Hz,           
+              CE_SPI_66_67kHz  => s_CE_SPI_66_67kHz,           
+              SS               => SS,           
+              MOSI             => MOSI,           
+              SCLK             => SCLK,
+              X_OFFSET         => s_val_joystick_x,   
+              Y_OFFSET         => s_val_joystick_y
+     );
     
     inst_ViewController: entity work.ViewController
     port map(
@@ -192,15 +213,15 @@ begin
     inst_Convergence: entity work.Convergence 
     port map (
         clk               => clock, 
-        rst               => s_rst,
+        reset             => s_rst,
       
-        offset_x          => s_offset_x, 
-        offset_y          => s_offset_y, 
+        offset_X          => s_offset_x, 
+        offset_Y          => s_offset_y, 
         zoom              => s_zoom, 
       
-        pixel_x           => s_pixel_x,          
-        pixel_y           => s_pixel_y,         
-        pixel_color       => s_pixel_color
+        x           => s_pixel_x,          
+        y           => s_pixel_y,         
+        couleur     => s_pixel_color
     );
     
     

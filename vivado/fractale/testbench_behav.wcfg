@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="7518987342fs"></ZoomEndTime>
-      <Cursor1Time time="12000000000fs"></Cursor1Time>
+      <ZoomStartTime time="36273288693fs"></ZoomStartTime>
+      <ZoomEndTime time="36540293910fs"></ZoomEndTime>
+      <Cursor1Time time="40000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="127"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="9" />
    <wvobject type="logic" fp_name="/testbench/clock">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
@@ -35,10 +35,6 @@
       <obj_property name="ElementShortName">y[8:0]</obj_property>
       <obj_property name="ObjectShortName">y[8:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/testbench/couleur">
-      <obj_property name="ElementShortName">couleur[11:0]</obj_property>
-      <obj_property name="ObjectShortName">couleur[11:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/testbench/offset_X">
       <obj_property name="ElementShortName">offset_X[31:0]</obj_property>
       <obj_property name="ObjectShortName">offset_X[31:0]</obj_property>
@@ -48,16 +44,15 @@
       <obj_property name="ObjectShortName">offset_Y[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/testbench/zoom">
-      <obj_property name="ElementShortName">zoom[9:0]</obj_property>
-      <obj_property name="ObjectShortName">zoom[9:0]</obj_property>
+      <obj_property name="ElementShortName">zoom[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zoom[31:0]</obj_property>
    </wvobject>
    <wvobject type="other" fp_name="/testbench/clock_period">
       <obj_property name="ElementShortName">clock_period</obj_property>
       <obj_property name="ObjectShortName">clock_period</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/testbench/grp_main/grp_dimage_fu_124/grp_dimage_do_image_fu_58/counter_dout">
-      <obj_property name="ElementShortName">counter_dout[7:0]</obj_property>
-      <obj_property name="ObjectShortName">counter_dout[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="array" fp_name="/testbench/couleur">
+      <obj_property name="ElementShortName">couleur[11:0]</obj_property>
+      <obj_property name="ObjectShortName">couleur[11:0]</obj_property>
    </wvobject>
 </wave_config>

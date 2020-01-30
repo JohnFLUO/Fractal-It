@@ -1,0 +1,21 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/decodeur_7seg.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/Affichage_7seg.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/vga_bitmap_640x480.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/Affichage_VGA.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/Gestionnaire_Horloge.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/imports/src/PmodJSTK_Demo.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/ViewController.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/point.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/convergence.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/debounce.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/iteration.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/push_detector.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/imports/src/spiCtrl.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/imports/src/spiMode0.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sources_1/new/top_Mandelbrot.vhd" \
+"../../../../mandelbrot_nouveau.srcs/sim_1/new/fullTest.vhd" \
+
+# Do not sort compile order
+nosort

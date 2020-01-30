@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"dimage::dimage.1": {
-			"proto_instances": {
-			}
-		}
-	}
-}

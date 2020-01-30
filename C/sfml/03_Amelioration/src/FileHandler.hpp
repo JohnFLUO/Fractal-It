@@ -21,16 +21,16 @@
 
 using namespace std;
 
-class FileReader {
+class ConfigReader {
 private:
   bool debug;
 	string filename;
 	ifstream fr;
 
 public:
-	FileReader();
-	FileReader(string filename);
-	~FileReader();
+	ConfigReader();
+	ConfigReader(string filename);
+	~ConfigReader();
 
 	int Open(string filename);
 	void ParseParams();
