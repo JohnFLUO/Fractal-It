@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1580473318">
+  <File Type="PA-TCL" Name="top_Mandelbrot.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_Mandelbrot_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_Mandelbrot_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_Mandelbrot.vds"/>
+  <File Type="RDS-UTIL" Name="top_Mandelbrot_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_Mandelbrot_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_Mandelbrot.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_Mandelbrot_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_Mandelbrot_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/decodeur_7seg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/decodeur_7seg.vhd"/>
+        <Attr Name="ImportTime" Val="1577787476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Affichage_7seg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/Affichage_7seg.vhd"/>
+        <Attr Name="ImportTime" Val="1579457554"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/vga_bitmap_640x480.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/vga_bitmap_640x480.vhd"/>
+        <Attr Name="ImportTime" Val="1580239694"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Affichage_VGA.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/Affichage_VGA.vhd"/>
+        <Attr Name="ImportTime" Val="1579101308"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Gestionnaire_Horloge.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/Gestionnaire_Horloge.vhd"/>
+        <Attr Name="ImportTime" Val="1577787476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/PmodJSTK_Demo.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/imports/src/PmodJSTK_Demo.vhd"/>
+        <Attr Name="ImportTime" Val="1579463557"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/ViewController.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/ViewController.vhd"/>
+        <Attr Name="ImportTime" Val="1580290776"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/point.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/point.vhd"/>
+        <Attr Name="ImportTime" Val="1580232412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/convergence.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/convergence.vhd"/>
+        <Attr Name="ImportTime" Val="1580238175"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/debounce.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/debounce.vhd"/>
+        <Attr Name="ImportTime" Val="1577787476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/iteration.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/iteration.vhd"/>
+        <Attr Name="ImportTime" Val="1580230331"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/push_detector.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/push_detector.vhd"/>
+        <Attr Name="ImportTime" Val="1579945764"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/spiCtrl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/imports/src/spiCtrl.vhd"/>
+        <Attr Name="ImportTime" Val="1577787476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/spiMode0.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/imports/src/spiMode0.vhd"/>
+        <Attr Name="ImportTime" Val="1577787476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/top_Mandelbrot.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/sources_1/new/top_Mandelbrot.vhd"/>
+        <Attr Name="ImportTime" Val="1580290792"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top_Mandelbrot"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/NexysA7.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="P:/Fractal_NexysA7/mandelbrot_nouveau.srcs/constrs_1/new/NexysA7.xdc"/>
+        <Attr Name="ImportTime" Val="1578658880"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

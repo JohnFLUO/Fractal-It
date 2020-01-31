@@ -1,0 +1,120 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Jan 31 13:28:45 2020
+| Host         : DESKTOP-OVE3R84 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_Mandelbrot_control_sets_placed.rpt
+| Design       : top_Mandelbrot
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    54 |
+| Unused register locations in slices containing registers |    60 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      8 |            2 |
+|    16+ |           50 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            6002 |          444 |
+| No           | No                    | Yes                    |             108 |           18 |
+| No           | Yes                   | No                     |            4378 |          531 |
+| Yes          | No                    | No                     |            2794 |          361 |
+| Yes          | No                    | Yes                    |             136 |           23 |
+| Yes          | Yes                   | No                     |             594 |           88 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|       Clock Signal      |                           Enable Signal                          |                         Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++-------------------------+------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/VGA_vs_i_1_n_0                | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |                1 |              2 |
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/VGA_hs                        | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |                1 |              2 |
+|  clock_IBUF_BUFG        | inst_Gestionnaire_Horloge/aff_reg[0]                             | inst_Gestionnaire_Horloge/Num_aff_reg[4]                         |                2 |              8 |
+|  clock_IBUF_BUFG        | inst_Gestionnaire_Horloge/aff_reg[0]                             | inst_Gestionnaire_Horloge/Num_aff_reg[3]                         |                3 |              8 |
+|  s_CE_SPI_66_67kHz_BUFG | joystick/SPI_Int/rSR                                             | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |                2 |             16 |
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/v_counter_0                   | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |                4 |             20 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Affichage_VGA/inst_VGA_bitmap/VGA_red[3]_i_1_n_0            |                4 |             24 |
+|  clock_IBUF_BUFG        | inst_Gestionnaire_Horloge/aff_reg[0]                             |                                                                  |                6 |             26 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Gestionnaire_Horloge/cmpt_3kHz[15]_i_1_n_0                  |                4 |             30 |
+| ~s_CE_SPI_66_67kHz_BUFG |                                                                  | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |                7 |             36 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Convergence/g_point/r1_startreal2_i_1_n_0                   |                5 |             38 |
+|  clock_IBUF_BUFG        | inst_Convergence/g_point/r1_startimag2_i_1_n_2                   | inst_Convergence/g_point/r1_startimag2_i_2_n_0                   |                5 |             38 |
+|  clock_IBUF_BUFG        | gestion_bouton_bas/deb_inst/counter0_carry__0_n_1                | gestion_bouton_bas/deb_inst/counter[0]_i_1__0_n_0                |                5 |             40 |
+| ~s_CE_SPI_66_67kHz_BUFG | joystick/SPI_Ctrl/FSM_onehot_STATE_reg_n_0_[4]                   | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |                7 |             40 |
+|  clock_IBUF_BUFG        | gestion_bouton_haut/deb_inst/counter0_carry__0_n_1               | gestion_bouton_haut/deb_inst/counter[0]_i_1_n_0                  |                5 |             40 |
+|  clock_IBUF_BUFG        |                                                                  | gestion_bouton_haut/deb_inst/burst_handler.burst_counter_reg[22] |                6 |             46 |
+|  clock_IBUF_BUFG        |                                                                  | gestion_bouton_bas/deb_inst/burst_handler.burst_counter_reg[22]  |                6 |             46 |
+|  clock_IBUF_BUFG        | gestion_bouton_bas/_carry__1_n_2                                 | gestion_bouton_bas/deb_inst/burst_handler.time_counter_reg[25]   |                7 |             52 |
+|  clock_IBUF_BUFG        | gestion_bouton_haut/_carry__1_n_2                                | gestion_bouton_haut/deb_inst/burst_handler.time_counter_reg[25]  |                7 |             52 |
+|  clock_IBUF_BUFG        | gestion_bouton_haut/deb_inst/E[0]                                | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |               13 |             72 |
+| ~s_CE_SPI_66_67kHz_BUFG | joystick/SPI_Ctrl/tmpSR_0                                        | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |               14 |             80 |
+|  clock_IBUF_BUFG        | inst_Convergence/g_point/update                                  | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |               12 |             88 |
+|  clock_IBUF_BUFG        | inst_Convergence/g_point/E[0]                                    |                                                                  |               14 |             88 |
+|  clock_IBUF_BUFG        | n_reset_IBUF                                                     |                                                                  |               17 |             88 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[20].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[21].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[22].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[23].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[4].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[5].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[7].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[6].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[9].ITX/r1_zreal_out_reg[23]_0[0]         |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[12].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[13].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[14].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/g_point/r1_zreal_out_reg[23][0]                 |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[15].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[16].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[2].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[17].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[18].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[10].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[0].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[11].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[3].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[25].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[19].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[8].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[24].ITX/E[0]                             |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Convergence/Gen_IT[1].ITX/E[0]                              |                                                                  |               12 |             96 |
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_rep[18]_i_2_n_0 | inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_rep[18]_i_1_n_0 |               23 |            172 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Convergence/Gen_IT[25].ITX/SR[0]                            |              517 |           4266 |
+|  clock_IBUF_BUFG        |                                                                  |                                                                  |              896 |          12600 |
++-------------------------+------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+
+

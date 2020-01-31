@@ -1,0 +1,309 @@
+INFO-FLOW: Workspace /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1 opened at Fri Dec 13 11:39:08 CET 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a100tcsg324-1 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.3 sec.
+Execute   set_part xc7a100tcsg324-1 -tool vivado 
+Execute     add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7a100t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/artix7/artix7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/convergence.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling fractale_hls/src/convergence.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted fractale_hls/src/convergence.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "fractale_hls/src/convergence.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E fractale_hls/src/convergence.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp
+Command       clang done; 1.48 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp"  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.66 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp std=gnu++98 -directive=/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.28 sec.
+INFO-FLOW: CDT Preprocessing without tidy-3.1...
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp.ap-line.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp.ap-line.cpp.CXX 1
+INFO-FLOW: Converting Markers to Pragmas...
+Execute       cdt  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp.ap-line.cpp"  -m "main" -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp.ap-cdt.cpp" --pp --directive /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/solution1.directive --source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/convergence.cpp --error /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --ca --es --gf --pd --p2d /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --sd --scff /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag --ad 
+INFO-FLOW: Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+Command       cdt done; 6.91 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.0.cpp.ap-cdt.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.0.cpp.ap-line.CXX 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute       source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/pragma.status.tcl 
+INFO-FLOW: Pragma Handling...
+INFO-FLOW: SystemC Checker
+Execute       ap_eval exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang++ -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -DAP_PRE  -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/include" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/ap_sysc" -S "fractale_hls/src/convergence.cpp" -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pp.00.o 
+Command       ap_eval done; 1.78 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.1.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.scpp.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.scpp.0.cpp.line_pre.CXX 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: SystemC preprocessor
+Execute       ap_eval exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java -Xmx512m -classpath "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.cdt.core_5.0.0.200806171202.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/jargs.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.core.runtime_3.4.0.v20080512.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/autopilot.scelaborator.jar"  autopilot.scelaborator.ScParser  -S "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" --force-inline  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/" "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.scpp.0.cpp" --mi-suffix=0 -d -t 
+Command       ap_eval done; error code: 1; 24.35 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.scpp.0.cpp.ssdm.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.scpp.1.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.scpp.1.cpp.line_post.CXX 0
+INFO-FLOW: Converting Pragmas to Markers...
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.2.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.2.cpp
+Command       clang done; 1.24 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.bc" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.bc
+Command       clang done; 1.64 sec.
+INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/image.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling fractale_hls/src/image.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted fractale_hls/src/image.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "fractale_hls/src/image.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E fractale_hls/src/image.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp
+Command       clang done; 1.29 sec.
+INFO-FLOW: GCC PP time: 1 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp std=gnu++98 -directive=/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.83 sec.
+INFO-FLOW: CDT Preprocessing without tidy-3.1...
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp.ap-line.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp.ap-line.cpp.CXX 1
+INFO-FLOW: Converting Markers to Pragmas...
+Execute       cdt  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp.ap-line.cpp"  -m "main" -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp.ap-cdt.cpp" --pp --directive /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/solution1.directive --source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/image.cpp --error /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --ca --es --gf --pd --p2d /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --sd --scff /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag --ad 
+INFO-FLOW: Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+Command       cdt done; 5.89 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.0.cpp.ap-cdt.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.0.cpp.ap-line.CXX 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute       source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/pragma.status.tcl 
+INFO-FLOW: Pragma Handling...
+INFO-FLOW: SystemC Checker
+Execute       ap_eval exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang++ -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -DAP_PRE  -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/include" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/ap_sysc" -S "fractale_hls/src/image.cpp" -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pp.00.o 
+Command       ap_eval done; 1.42 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.1.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.scpp.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.scpp.0.cpp.line_pre.CXX 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: SystemC preprocessor
+Execute       ap_eval exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java -Xmx512m -classpath "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.cdt.core_5.0.0.200806171202.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/jargs.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.core.runtime_3.4.0.v20080512.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/autopilot.scelaborator.jar"  autopilot.scelaborator.ScParser  -S "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" --force-inline  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/" "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.scpp.0.cpp" --mi-suffix=1 -d -t 
+Command       ap_eval done; error code: 1; 23.94 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.scpp.0.cpp.ssdm.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.scpp.1.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.scpp.1.cpp.line_post.CXX 0
+INFO-FLOW: Converting Pragmas to Markers...
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.2.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.2.cpp
+Command       clang done; 1.22 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.bc" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.bc
+Command       clang done; 1.62 sec.
+INFO: [HLS 200-10] Analyzing design file 'fractale_hls/src/main.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling fractale_hls/src/main.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted fractale_hls/src/main.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "fractale_hls/src/main.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E fractale_hls/src/main.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp
+Command       clang done; 1.33 sec.
+INFO-FLOW: GCC PP time: 1 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp std=gnu++98 -directive=/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.81 sec.
+INFO-FLOW: CDT Preprocessing without tidy-3.1...
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp.ap-line.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp.ap-line.cpp.CXX 1
+INFO-FLOW: Converting Markers to Pragmas...
+Execute       cdt  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp.ap-line.cpp"  -m "main" -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp.ap-cdt.cpp" --pp --directive /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/solution1.directive --source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/src/main.cpp --error /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --ca --es --gf --pd --p2d /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db --sd --scff /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/.systemc_flag --ad 
+INFO-FLOW: Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+Command       cdt done; 5.68 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.0.cpp.ap-cdt.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.0.cpp.ap-line.CXX 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute       source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/pragma.status.tcl 
+INFO-FLOW: Pragma Handling...
+INFO-FLOW: SystemC Checker
+Execute       ap_eval exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang++ -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -DAP_PRE  -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/systemc/include" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/include" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/include/ap_sysc" -S "fractale_hls/src/main.cpp" -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pp.00.o 
+Command       ap_eval done; 1.43 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.1.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.scpp.0.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.scpp.0.cpp.line_pre.CXX 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: SystemC preprocessor
+Execute       ap_eval exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java -Xmx512m -classpath "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.cdt.core_5.0.0.200806171202.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/jargs.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.core.runtime_3.4.0.v20080512.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar:/opt/xilinx/vivado/2018.2/Vivado/2018.2/lib/classes/autopilot.scelaborator.jar"  autopilot.scelaborator.ScParser  -S "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" --force-inline  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/" "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.scpp.0.cpp" --mi-suffix=2 -d -t 
+Command       ap_eval done; error code: 1; 24.97 sec.
+INFO-FLOW: Marker-Pragma convertor: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.scpp.0.cpp.ssdm.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.scpp.1.cpp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.scpp.1.cpp.line_post.CXX 0
+INFO-FLOW: Converting Pragmas to Markers...
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.2.cpp" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.2.cpp
+Command       clang done; 1.23 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot" -I "/opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.bc" 
+INFO-FLOW: exec /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot -I /opt/xilinx/vivado/2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.bc
+Command       clang done; 1.72 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/convergence.g.bc /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/image.g.bc /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/main.g.bc -disable-opt -L/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.82 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:03:16 ; elapsed = 00:02:03 . Memory (MB): peak = 472.195 ; gain = 6.320 ; free physical = 738 ; free virtual = 21905
+Execute       source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/ve_warning.tcl 
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/pragma.status.tcl 
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:03:16 ; elapsed = 00:02:03 . Memory (MB): peak = 472.195 ; gain = 6.320 ; free physical = 738 ; free virtual = 21905
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.pp.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.13 sec.
+Execute         llvm-ld /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/xilinx/vivado/2018.2/Vivado/2018.2/lnx64/lib -lfloatconversion -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.72 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top main -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.0.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.31 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:03:17 ; elapsed = 00:02:04 . Memory (MB): peak = 600.855 ; gain = 134.980 ; free physical = 713 ; free virtual = 21883
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.1.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.21 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.12 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:03:17 ; elapsed = 00:02:05 . Memory (MB): peak = 600.855 ; gain = 134.980 ; free physical = 695 ; free virtual = 21867
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.g.1.bc to /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.1.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-501] Unrolling loop with tag "__ssdm_reset__"(fractale_hls/src/convergence.cpp:12) in function 'convergence::do_convergence' completely.
+INFO: [XFORM 203-501] Unrolling loop with tag "__ssdm_reset__"(fractale_hls/src/convergence.cpp:21) in function 'convergence::do_convergence' completely.
+Command         transform done; 2.48 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 1.51 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:03:21 ; elapsed = 00:02:09 . Memory (MB): peak = 664.020 ; gain = 198.145 ; free physical = 614 ; free virtual = 21785
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.2.bc -o /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 

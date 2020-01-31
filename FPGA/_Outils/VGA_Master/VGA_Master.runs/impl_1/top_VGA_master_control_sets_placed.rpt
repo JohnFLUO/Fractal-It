@@ -1,0 +1,86 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Dec 23 17:47:17 2019
+| Host         : jonathan-N76VM running 64-bit Ubuntu 18.04.3 LTS
+| Command      : report_control_sets -verbose -file top_VGA_master_control_sets_placed.rpt
+| Design       : top_VGA_master
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    21 |
+| Unused register locations in slices containing registers |    42 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|    16+ |           19 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              34 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             314 |           51 |
+| Yes          | No                    | No                     |              38 |            7 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             476 |           65 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|   Clock Signal   |                           Enable Signal                          |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++------------------+------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|  clock_IBUF_BUFG | inst_diplay_module/inst_VGA_bitmap/VGA_vs_i_1_n_0                | inst_diplay_module/inst_VGA_bitmap/SR[0]                      |                1 |              2 |
+|  clock_IBUF_BUFG | inst_diplay_module/inst_VGA_bitmap/VGA_hs                        | inst_diplay_module/inst_VGA_bitmap/SR[0]                      |                1 |              2 |
+|  clock_IBUF_BUFG | inst_diplay_module/inst_VGA_bitmap/v_counter_1                   | inst_diplay_module/inst_VGA_bitmap/SR[0]                      |                4 |             20 |
+|  clock_IBUF_BUFG |                                                                  | inst_diplay_module/inst_VGA_bitmap/VGA_red0                   |                5 |             24 |
+|  clock_IBUF_BUFG |                                                                  |                                                               |               13 |             34 |
+|  clock_IBUF_BUFG |                                                                  | inst_diplay_module/s_ADDR[18]_i_1_n_0                         |                6 |             38 |
+|  clock_IBUF_BUFG | inst_controller/s_pos[18]_i_1_n_0                                |                                                               |                7 |             38 |
+|  clock_IBUF_BUFG | e_button_left/deb_inst/counter0_carry__0_n_1                     | e_button_left/deb_inst/counter[0]_i_1__1_n_0                  |                5 |             40 |
+|  clock_IBUF_BUFG | inst_button_down/deb_inst/counter0_carry__0_n_1                  | inst_button_down/deb_inst/counter[0]_i_1__0_n_0               |                5 |             40 |
+|  clock_IBUF_BUFG | inst_button_right/deb_inst/counter0_carry__0_n_1                 | inst_button_right/deb_inst/counter[0]_i_1__2_n_0              |                5 |             40 |
+|  clock_IBUF_BUFG | inst_button_up/deb_inst/counter0_carry__0_n_1                    | inst_button_up/deb_inst/counter[0]_i_1_n_0                    |                5 |             40 |
+|  clock_IBUF_BUFG |                                                                  | e_button_left/deb_inst/burst_handler.burst_counter_reg[0]     |                6 |             48 |
+|  clock_IBUF_BUFG |                                                                  | inst_button_down/deb_inst/burst_handler.burst_counter_reg[0]  |                6 |             48 |
+|  clock_IBUF_BUFG |                                                                  | inst_button_up/deb_inst/burst_handler.burst_counter_reg[0]    |                6 |             48 |
+|  clock_IBUF_BUFG |                                                                  | inst_button_right/deb_inst/burst_handler.burst_counter_reg[0] |                6 |             48 |
+|  clock_IBUF_BUFG | inst_button_up/_carry__1_n_1                                     | inst_button_up/deb_inst/burst_handler.time_counter_reg[26]    |                7 |             54 |
+|  clock_IBUF_BUFG | inst_button_down/_carry__1_n_1                                   | inst_button_down/deb_inst/burst_handler.time_counter_reg[26]  |                7 |             54 |
+|  clock_IBUF_BUFG | e_button_left/_carry__1_n_1                                      | e_button_left/deb_inst/burst_handler.time_counter_reg[26]     |                7 |             54 |
+|  clock_IBUF_BUFG | inst_button_right/_carry__1_n_1                                  | inst_button_right/deb_inst/burst_handler.time_counter_reg[26] |                7 |             54 |
+|  clock_IBUF_BUFG |                                                                  | inst_diplay_module/inst_VGA_bitmap/SR[0]                      |               16 |             60 |
+|  clock_IBUF_BUFG | inst_diplay_module/inst_VGA_bitmap/pix_read_addr_rep[18]_i_2_n_0 | inst_diplay_module/inst_VGA_bitmap/pix_read_addr0             |               11 |             76 |
++------------------+------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,8 +1,0 @@
-convergence.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/convergence.vhd,
-convergence_do_convergence.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/convergence_do_convergence.vhd,
-dimage.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/dimage.vhd,
-dimage_do_image.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/dimage_do_image.vhd,
-dimage_do_image_cbkb.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/dimage_do_image_cbkb.vhd,
-fifo_w8_d1_A.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/fifo_w8_d1_A.vhd,
-main.vhd,vhdl,xil_defaultlib,../../../ipstatic/hdl/vhdl/main.vhd,
-main_0.vhd,vhdl,xil_defaultlib,../../../../../../../../../ok/EN325-Advanced-digital-design/6_HLS/RGB_2_YUV/solution1/impl/ip/main_0_1/sim/main_0.vhd,

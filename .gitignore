@@ -2,20 +2,20 @@
 *.o
 *.cuo
 
-C/sfml/02_Adaptation/bin
-C/sfml/02_Adaptation/obj
+Software/sfml/02_Adaptation/bin
+Software/sfml/02_Adaptation/obj
 
-C/sfml/03_Amelioration/bin
-C/sfml/03_Amelioration/obj
+Software/sfml/03_Amelioration/bin
+Software/sfml/03_Amelioration/obj
 
-C/sfml/04_CUDA/bin
-C/sfml/04_CUDA/obj
+Software/sfml/04_CUDA/bin
+Software/sfml/04_CUDA/obj
 
-C/sfml/05_Fusion/bin
-C/sfml/05_Fusion/obj
+Software/sfml/05_Fusion/bin
+Software/sfml/05_Fusion/obj
 
-C/sfml/BMP/bin
-C/sfml/BMP/obj
+Software/sfml/BMP/bin
+Software/sfml/BMP/obj
 
 Test
 

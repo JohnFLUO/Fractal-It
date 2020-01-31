@@ -1,0 +1,976 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 29 11:57:55 2019
+# Process ID: 24539
+# Current directory: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl
+# Command line: vivado -notrace -mode batch -source run_vivadosyn.tcl
+# Log file: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/vivado.log
+# Journal file: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/vivado.jou
+#-----------------------------------------------------------
+source run_vivadosyn.tcl -notrace
+[Fri Nov 29 11:58:06 2019] Launched synth_1...
+Run output will be captured here: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1/runme.log
+[Fri Nov 29 11:58:06 2019] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a100tcsg324-1 -directive sdx_optimization_effort_high -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25290 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1418.090 ; gain = 88.824 ; free physical = 544 ; free virtual = 21439
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:25]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:40]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:43]
+INFO: [Synth 8-3491] module 'convergence' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:12' bound to instance 'grp_convergence_fu_102' of component 'convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:27]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:40]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:49]
+INFO: [Synth 8-3491] module 'convergence_do_convergence' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:12' bound to instance 'grp_convergence_do_convergence_fu_76' of component 'convergence_do_convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'convergence_do_convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:29]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:256]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:259]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:261]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:263]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:265]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:267]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:269]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:271]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:273]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:275]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:277]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:279]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:281]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:283]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:285]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:287]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:289]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:291]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:293]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:295]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:297]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:299]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:301]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:303]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:305]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:307]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:309]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:311]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:313]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:315]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:317]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:319]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:321]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:323]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:325]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:327]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:329]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:331]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:333]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:335]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:337]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:339]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:341]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:343]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:345]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:347]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:349]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:351]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:353]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:355]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:357]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:359]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:361]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:363]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:365]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:367]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:369]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:371]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:373]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:375]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:377]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:379]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:381]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:383]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:385]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:387]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:389]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:391]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:393]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:395]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:397]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:399]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:401]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:403]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:405]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:407]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:409]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:411]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:413]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:415]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:417]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:419]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:421]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:423]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:425]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:427]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:429]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:431]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:433]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:435]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:437]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:439]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:441]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:443]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:445]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:447]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'convergence_do_convergence' (1#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'convergence' (2#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:27]
+INFO: [Synth 8-3491] module 'dimage' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:12' bound to instance 'grp_dimage_fu_124' of component 'dimage' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'dimage' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:23]
+INFO: [Synth 8-3491] module 'dimage_do_image' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:12' bound to instance 'grp_dimage_do_image_fu_58' of component 'dimage_do_image' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'dimage_do_image' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:24]
+	Parameter DataWidth bound to: 12 - type: integer 
+	Parameter AddressRange bound to: 51 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'dimage_do_image_cbkb' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:85' bound to instance 'color_U' of component 'dimage_do_image_cbkb' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'dimage_do_image_cbkb' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:98]
+	Parameter DataWidth bound to: 12 - type: integer 
+	Parameter AddressRange bound to: 51 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'dimage_do_image_cbkb_rom' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:12' bound to instance 'dimage_do_image_cbkb_rom_U' of component 'dimage_do_image_cbkb_rom' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'dimage_do_image_cbkb_rom' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
+	Parameter DWIDTH bound to: 12 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 51 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dimage_do_image_cbkb_rom' (3#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'dimage_do_image_cbkb' (4#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'dimage_do_image' (5#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'dimage' (6#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:23]
+INFO: [Synth 8-3491] module 'fifo_w8_d1_A' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:50' bound to instance 'sc_fifo_chn_1_fifo_U' of component 'fifo_w8_d1_A' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'fifo_w8_d1_A' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:69]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_w8_d1_A_shiftReg' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:13' bound to instance 'U_fifo_w8_d1_A_shiftReg' of component 'fifo_w8_d1_A_shiftReg' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'fifo_w8_d1_A_shiftReg' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:26]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_w8_d1_A_shiftReg' (7#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'fifo_w8_d1_A' (8#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:25]
+WARNING: [Synth 8-3331] design fifo_w8_d1_A_shiftReg has unconnected port a[0]
+WARNING: [Synth 8-3331] design dimage_do_image_cbkb has unconnected port reset
+WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[7]
+WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[8]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[7]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[5]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[4]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[3]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[2]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[1]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[0]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[31]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[30]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[29]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[28]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[27]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[26]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[25]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[24]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[23]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[22]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[21]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[20]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[19]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[18]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[17]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[16]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[15]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[14]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[13]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[12]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[11]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[10]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[8]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[7]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[5]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[4]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[3]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[2]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[1]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_X[0]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[31]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[30]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[29]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[28]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[27]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[26]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[25]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[24]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[23]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[22]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[21]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[20]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[19]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[18]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[17]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[16]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[15]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[14]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[13]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[12]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[11]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[10]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[9]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[8]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[7]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[5]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[4]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[3]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[2]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[1]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 547 ; free virtual = 21443
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 549 ; free virtual = 21444
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 549 ; free virtual = 21444
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.xdc]
+Finished Parsing XDC File [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1849.695 ; gain = 0.004 ; free physical = 260 ; free virtual = 21156
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 361 ; free virtual = 21257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 361 ; free virtual = 21257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 362 ; free virtual = 21259
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 355 ; free virtual = 21252
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    100 Bit        Muxes := 2     
+	   2 Input     99 Bit        Muxes := 1     
+	   2 Input     98 Bit        Muxes := 1     
+	   2 Input     97 Bit        Muxes := 1     
+	   2 Input     96 Bit        Muxes := 1     
+	   2 Input     95 Bit        Muxes := 1     
+	   2 Input     94 Bit        Muxes := 1     
+	   2 Input     93 Bit        Muxes := 1     
+	   2 Input     92 Bit        Muxes := 1     
+	   2 Input     91 Bit        Muxes := 1     
+	   2 Input     90 Bit        Muxes := 1     
+	   2 Input     89 Bit        Muxes := 1     
+	   2 Input     88 Bit        Muxes := 1     
+	   2 Input     87 Bit        Muxes := 1     
+	   2 Input     86 Bit        Muxes := 1     
+	   2 Input     85 Bit        Muxes := 1     
+	   2 Input     84 Bit        Muxes := 1     
+	   2 Input     83 Bit        Muxes := 1     
+	   2 Input     82 Bit        Muxes := 1     
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input     80 Bit        Muxes := 1     
+	   2 Input     79 Bit        Muxes := 1     
+	   2 Input     78 Bit        Muxes := 1     
+	   2 Input     77 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 1     
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     70 Bit        Muxes := 1     
+	   2 Input     69 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     65 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     59 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     51 Bit        Muxes := 1     
+	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     45 Bit        Muxes := 1     
+	   2 Input     44 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     42 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     38 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module convergence_do_convergence 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    100 Bit        Muxes := 2     
+	   2 Input     99 Bit        Muxes := 1     
+	   2 Input     98 Bit        Muxes := 1     
+	   2 Input     97 Bit        Muxes := 1     
+	   2 Input     96 Bit        Muxes := 1     
+	   2 Input     95 Bit        Muxes := 1     
+	   2 Input     94 Bit        Muxes := 1     
+	   2 Input     93 Bit        Muxes := 1     
+	   2 Input     92 Bit        Muxes := 1     
+	   2 Input     91 Bit        Muxes := 1     
+	   2 Input     90 Bit        Muxes := 1     
+	   2 Input     89 Bit        Muxes := 1     
+	   2 Input     88 Bit        Muxes := 1     
+	   2 Input     87 Bit        Muxes := 1     
+	   2 Input     86 Bit        Muxes := 1     
+	   2 Input     85 Bit        Muxes := 1     
+	   2 Input     84 Bit        Muxes := 1     
+	   2 Input     83 Bit        Muxes := 1     
+	   2 Input     82 Bit        Muxes := 1     
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input     80 Bit        Muxes := 1     
+	   2 Input     79 Bit        Muxes := 1     
+	   2 Input     78 Bit        Muxes := 1     
+	   2 Input     77 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 1     
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     70 Bit        Muxes := 1     
+	   2 Input     69 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     65 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     59 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     57 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     53 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     51 Bit        Muxes := 1     
+	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     45 Bit        Muxes := 1     
+	   2 Input     44 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     42 Bit        Muxes := 1     
+	   2 Input     41 Bit        Muxes := 1     
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     39 Bit        Muxes := 1     
+	   2 Input     38 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module convergence 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+Module dimage_do_image_cbkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module dimage_do_image 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module dimage 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module fifo_w8_d1_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module fifo_w8_d1_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design main has unconnected port zoom[9]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[8]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[7]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[6]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[5]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[4]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[3]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[2]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[1]
+WARNING: [Synth 8-3331] design main has unconnected port zoom[0]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[31]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[30]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[29]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[28]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[27]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[26]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[25]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[24]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[23]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[22]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[21]
+WARNING: [Synth 8-3331] design main has unconnected port offset_X[20]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][3]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][6]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][7]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0] )
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[4]' (FDE) to 'grp_convergence_fu_102/out_y_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[5]' (FDE) to 'grp_convergence_fu_102/out_y_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[6]' (FDE) to 'grp_convergence_fu_102/out_y_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[7]' (FDE) to 'grp_convergence_fu_102/out_y_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[8]' (FDE) to 'grp_convergence_fu_102/out_x_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[4]' (FDE) to 'grp_convergence_fu_102/out_x_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[5]' (FDE) to 'grp_convergence_fu_102/out_x_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[6]' (FDE) to 'grp_convergence_fu_102/out_x_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[7]' (FDE) to 'grp_convergence_fu_102/out_x_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[8]' (FDE) to 'grp_convergence_fu_102/out_x_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\grp_convergence_fu_102/out_x_reg[9] )
+WARNING: [Synth 8-3332] Sequential element (sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (grp_convergence_fu_102/out_x_reg[9]) is unused and will be removed from module main.
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[0]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[1]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[2]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[3]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[4]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[5]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[6]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[7]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[8]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[9]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[10]' (FDE) to 'grp_dimage_fu_124/grp_dimage_do_image_fu_58/color_U/dimage_do_image_cbkb_rom_U/q0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[0]' (FDE) to 'grp_dimage_fu_124/couleur_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[1]' (FDE) to 'grp_dimage_fu_124/couleur_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[2]' (FDE) to 'grp_dimage_fu_124/couleur_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[3]' (FDE) to 'grp_dimage_fu_124/couleur_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[4]' (FDE) to 'grp_dimage_fu_124/couleur_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[5]' (FDE) to 'grp_dimage_fu_124/couleur_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[6]' (FDE) to 'grp_dimage_fu_124/couleur_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[7]' (FDE) to 'grp_dimage_fu_124/couleur_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[8]' (FDE) to 'grp_dimage_fu_124/couleur_reg[9]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[9]' (FDE) to 'grp_dimage_fu_124/couleur_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[10]' (FDE) to 'grp_dimage_fu_124/couleur_reg[11]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:46 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 343 ; free virtual = 21242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|dimage_do_image_cbkb_rom | p_0_out    | 64x12         | LUT            | 
+|main                     | p_0_out    | 64x12         | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:58 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 222 ; free virtual = 21121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 207 ; free virtual = 21106
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     6|
+|3     |LUT3 |    10|
+|4     |LUT4 |     4|
+|5     |LUT5 |    26|
+|6     |LUT6 |    34|
+|7     |FDRE |   114|
+|8     |FDSE |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------------------------------------+---------------------------+------+
+|      |Instance                                 |Module                     |Cells |
++------+-----------------------------------------+---------------------------+------+
+|1     |top                                      |                           |   198|
+|2     |  grp_convergence_fu_102                 |convergence                |   180|
+|3     |    grp_convergence_do_convergence_fu_76 |convergence_do_convergence |   172|
+|4     |  grp_dimage_fu_124                      |dimage                     |     8|
+|5     |    grp_dimage_do_image_fu_58            |dimage_do_image            |     7|
+|6     |      color_U                            |dimage_do_image_cbkb       |     3|
+|7     |        dimage_do_image_cbkb_rom_U       |dimage_do_image_cbkb_rom   |     3|
+|8     |  sc_fifo_chn_1_fifo_U                   |fifo_w8_d1_A               |    10|
++------+-----------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1849.695 ; gain = 148.465 ; free physical = 258 ; free virtual = 21157
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 269 ; free virtual = 21168
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+282 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1857.703 ; gain = 541.066 ; free physical = 264 ; free virtual = 21163
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1881.723 ; gain = 0.000 ; free physical = 264 ; free virtual = 21163
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 11:59:16 2019...
+[Fri Nov 29 11:59:17 2019] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:32 ; elapsed = 00:01:11 . Memory (MB): peak = 1341.223 ; gain = 3.824 ; free physical = 892 ; free virtual = 21788
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.xdc]
+Finished Parsing XDC File [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1669.059 ; gain = 327.836 ; free physical = 616 ; free virtual = 21512
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1669.059 ; gain = 0.000 ; free physical = 615 ; free virtual = 21511
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 2206.586 ; gain = 537.527 ; free physical = 233 ; free virtual = 21129
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             fractale_hls
+Solution:            solution1
+Device target:       xc7a100tcsg324-1
+Report date:         Fri Nov 29 12:00:34 CET 2019
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:             72
+FF:             116
+DSP:              0
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    4.546
+Timing met
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 12:00:35 2019...

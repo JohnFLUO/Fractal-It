@@ -1,0 +1,107 @@
+.\" Manpage for fractal.
+.\" Contact jsaussereau@enseirb-matmeca.fr to correct errors or typos.
+
+.TH man 7 "14 January 2020" "1.1" "fractal man page"
+
+.SH NAME
+fractal \- a program that displays the Mandelbrot fractal
+
+.SH SYNOPSIS
+fractal [config file] [OPTIONS]
+
+.SH DESCRIPTION
+\fBfractal\fP displays the Mandelbrot fractal and allows to move and zoom into it.
+Several convergence methods can be choosen, including cpu and gpu optimized convergence.
+Several color maps are also available.
+.P config file name is optionnal but when specified, it should always be the first argument. Others options can be used in any order.
+
+.SH OPTIONS
+.IP "\fB\-w\fP \fIwidth\fR"
+\fIinteger\fR x size of the window
+.IP "\fB\-h\fP \fIheight\fR"
+\fIinteger\fR y size of the window
+.IP "\fB\-x\fP \fIoffsetx\fR"
+\fIreal\fR x start position
+.IP "\fB\-y\fP \fIoffsetx\fR"
+\fIreal\fR y start position
+.IP "\fB\-i, \-\-maxiter\fP \fIiter\fR"
+maximum number of iteration, must be an \fIinteger\fR
+.IP "\fB\-c, \-\-close\fP
+close program after autozoom simulation
+.IP "\fB\-s, \-\-save\fP
+If several simulations are done, -f (--first) and -l (--last) should be used so that the program can handle cumulative results.
+.IP "\fB\-d, \-\-testID\fP \fIID\fR"
+If the saving option -s (--save) is used, a test ID should be added to tell the program which simulation is performed. It corresponds to the column in the .csv result output. The first column has an ID of 1. Must be an \fIinteger\fR
+.IP "\fB\-f, \-\-first\fP
+first element of a set of simulation. If used, the source file is for result output is tmp.csv (cumulative result storing), otherwise results_template.csv is used.
+.IP "\fB\-l, \-\-last\fP 
+last element of a set of simulation. If used, the cumulative results are stored into a new file results_<date>_<time>.csv, instead of tmp.csv.
+.IP "\fB\-\-fluffy\fP
+enable a cute fluffy mode (WIP)
+
+.SH CONVERGENCE OPTIONS
+.TP
+.B ----------- double precision floatting point -----------
+.IP "\fB\-\-dp\fP"
+double precision floatting point computation without any optimization.
+.IP "\fB\-\-dp_omp\fP"
+double precision floatting point computation with OpenMP.
+.IP "\fB\-\-dp_omp_avx\fP"
+double precision floatting point computation with OpenMP and AVX vectorization.
+.IP "\fB\-\-dp_omp_avx+\fP"
+double precision floatting point computation with OpenMP, AVX vectorization and latency optimization.
+.IP "\fB\-\-dp_omp_avx++\fP"
+double precision floatting point computation with OpenMP, AVX vectorization and experimental optimizations.
+.TP
+.B ----------- simple precision floatting point -----------
+.IP "\fB\-\-sp\fP"
+simple precision floatting point computation without any optimization.
+.IP "\fB\-\-sp_omp\fP"
+simple precision floatting point computation with OpenMP.
+.IP "\fB\-\-sp_omp_avx\fP"
+simple precision floatting point computation with OpenMP and AVX vectorization.
+.IP "\fB\-\-sp_omp_avx+\fP"
+simple precision floatting point computation with OpenMP, AVX vectorization and latency optimization.
+.IP "\fB\-\-sp_omp_avx++\fP"
+simple precision floatting point computation with OpenMP, AVX vectorization and experimental optimizations.
+.TP
+.B ---------------------- fixed point ----------------------
+.IP "\fB\-\-fp\fP"
+fixed point computation without any optimization.
+.IP "\fB\-\-fp_omp\fP"
+sfixed point computation with OpenMP.
+.IP "\fB\-\-fp_omp_sse\fP"
+fixed point computation with OpenMP and SSE vectorization.
+.IP "\fB\-\-fp_omp_sse+\fP"
+fixed point computation with OpenMP and SSE vectorization, latency optimization.
+.IP "\fB\-\-fp_omp_sse++\fP"
+fixed point computation with OpenMP and SSE vectorization, experimental optimizations.
+.TP
+.B --------- GPU double precision floatting point ---------
+.IP "\fB\-\-cuda\fP"
+double precision floatting point computation using GPU.
+
+\.SH EXAMPLES
+.TP
+fractal --dp_omp_avx+
+.TP
+fractal -w 800 -h 600
+.TP
+fractal default_config.ini -w 800 -h 600
+.TP
+fractal -w 800 -h 600 -x -1 -y -0.5 -i 1024
+.TP
+fractal --cuda -w 800 -h 600 -x -1 -y -0.5 -i 256
+.TP
+fractal auto_zoom1 --cuda
+.TP
+fractal auto_zoom1 --cuda --nbsimu 8
+
+.SH SEE ALSO
+simu(7)
+
+.SH BUGS
+No known bugs (of course).
+
+.SH AUTHOR
+Jonathan SAUSSEREAU (jsaussereau@enseirb-matmeca.fr)
