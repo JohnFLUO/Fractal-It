@@ -37,6 +37,12 @@ public:
     std::cout << "float = " << float_val << ", fixed = " << fi32_to_double(fixed_val, fractionalBitCount) << std::endl;
   }
 
+  void print_fi32_all(fi32_t fixed_val, string name)  {
+    std::bitset<32> y(fixed_val);
+    std::cout << name << " = 0b" << y;
+    printf(" = 0x%0.8x = %11d\n", fixed_val, fixed_val);
+  }
+
   virtual unsigned int process(const double startReal, const double startImag, unsigned int max_iters)  {
     return -1;
   }
@@ -83,10 +89,12 @@ public:
           fi64_t i2_64_shift = i2_64 >> FI_32_25;
           fi32_t i2 = (i2_64_shift < MAX_FI_32) ? (fi32_t)i2_64_shift : MAX_FI_32;
           //disp_cmp_real(d_i2, i2, FI_32_25);*/
-          
+
           //double d_r2 = d_zReal * d_zReal;
           fi64_t r2_64 = ((fi64_t)(zReal)*(fi64_t)(zReal));
           fi32_t r2 = ((r2_64 >> FI_32_25) < MAX_FI_32) ? (fi32_t)(r2_64 >> FI_32_25) : MAX_FI_32;
+          print_fi32_all(r2, "r2");
+          usleep(1000005);
           //disp_cmp_real(d_r2, r2, FI_32_25);
           //usleep(100000);
 

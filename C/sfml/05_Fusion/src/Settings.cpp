@@ -19,12 +19,14 @@ double Settings::zoomStepTime = 0.01;
 unsigned int Settings::nbSimulations = 1;
 unsigned int Settings::nbCudaThreads = 1;
 
-bool Settings::isCentralDotEnable = false;
+bool Settings::isCentralDotEnabled = false;
 bool Settings::closeAfterSimulation = false;
 bool Settings::logTofile = false;
 unsigned int Settings::testID = 0;
 bool Settings::firstSimulation = false;
 bool Settings::lastSimulation = false;
+
+bool Settings::isCuteModeEnabled = false;
 
 ConvergenceType Settings::convergenceType = DP_OMP_AVXPLUS;
 ColorMapMode Settings::colorMapMode = SMOOTH_SHIFTED;
@@ -88,7 +90,7 @@ void Settings::SetNbCudaThreads(unsigned int nbCudaTh) {
 }
 
 void Settings::SetCentralDot(bool cd) {
-  Settings::isCentralDotEnable = cd;
+  Settings::isCentralDotEnabled = cd;
 }
 
 void Settings::SetMaxIter(int mi) {
@@ -117,6 +119,10 @@ void Settings::SetFirstSimulation(bool fs) {
 
 void Settings::SetLastSimulation(bool ls) {
   Settings::lastSimulation = ls;
+}
+
+void Settings::SetCuteMode(bool cm) {
+  Settings::isCuteModeEnabled = cm;
 }
 
 unsigned int Settings::GetConvOffset() {

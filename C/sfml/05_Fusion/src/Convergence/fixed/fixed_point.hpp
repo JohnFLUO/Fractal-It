@@ -1,10 +1,14 @@
 #ifndef _FIXED_POINT_HPP_
 #define _FIXED_POINT_HPP_
 
+#include <cmath>
 #include <array>
+#include <bitset>
 #include <vector>
 #include <cstdint>
 #include "immintrin.h"
+
+using namespace std;
 
  // fractional bit count :
 #define FI_32_0 0
@@ -63,13 +67,23 @@ inline double fi32_mul(fi32_t fi32_in_a, fi32_t fi32_in_b, unsigned int fraction
 // debug log :
 
 /*
-void print_fi32_hex(char* name, fi32_t value) {
-  printf("%s = %0.8x \n", name, value);
+void print_fi32_bin(fi32_t fixed_val)  {
+  std::bitset<32> y(fixed_val);
+  std::cout << "0b" << y << '\n';
 }
 
-void print_fi64_hex(char* name, fi64_t value) {
-  printf("%s = %0.16x \n", name, value);
-}*/
+void print_fi32_bin(fi32_t fixed_val, string name)  {
+  std::bitset<32> y(fixed_val);
+  std::cout << name << " = 0b" << y << '\n';
+}
 
+void print_fi32_hex(fi32_t fixed_val)  {
+  printf("0x%0.8x \n", fixed_val);
+}
+
+void print_fi32_hex(fi32_t fixed_val, string name)  {
+  printf("%s = 0x%0.8x \n", name.c_str(), fixed_val);
+}
+*/
 
 #endif

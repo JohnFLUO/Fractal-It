@@ -40,12 +40,14 @@ public:
 	static unsigned int nbSimulations;
 	static unsigned int nbCudaThreads;
 
-	static bool isCentralDotEnable;
+	static bool isCentralDotEnabled;
 	static bool closeAfterSimulation;
 	static bool logTofile;
 	static unsigned int testID;
 	static bool firstSimulation;
 	static bool lastSimulation;
+
+	static bool isCuteModeEnabled;
 
 	static ConvergenceType convergenceType;
 	static ColorMapMode colorMapMode;
@@ -70,6 +72,7 @@ public:
 	static void SetTestID(unsigned int tid);
 	static void SetFirstSimulation(bool fs);
 	static void SetLastSimulation(bool ls);
+	static void SetCuteMode(bool cm);
 
 	static void SetConvergenceType(ConvergenceType ct);
 	static void SetColorMapMode(ColorMapMode cm);

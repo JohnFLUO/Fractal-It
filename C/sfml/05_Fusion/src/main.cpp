@@ -11,6 +11,7 @@
 #include "Settings.hpp"
 #include "FileHandler.hpp"
 #include "Mandelbrot.hpp"
+#include "CuteMode.hpp"
 #include "Convergence/fixed/fixed_point.hpp"
 
 #include "immintrin.h"
@@ -51,18 +52,18 @@ int main(int argc, char* argv[]) {
       {"sp_omp",       no_argument, 0, 0},
       {"sp_omp_avx",   no_argument, 0, 0},
       {"sp_omp_avx+",  no_argument, 0, 0},
-      {"sp_omp_avx++", no_argument, 0, 0},
+      //{"sp_omp_avx++", no_argument, 0, 0},
       {"fp",           no_argument, 0, 0},
       {"fp_omp",       no_argument, 0, 0},
-      {"fp_omp_SSE2",  no_argument, 0, 0},
-      {"fp_omp_AVX2",  no_argument, 0, 0},
+      {"fp_omp_sse2",  no_argument, 0, 0},
+      //{"fp_omp_avx2",  no_argument, 0, 0},
       {"cuda_d",       no_argument, 0, 0},
       {"cuda_d2",      no_argument, 0, 0},
       {"cuda_d2_wp",   no_argument, 0, 0},
       {"cuda_s",       no_argument, 0, 0},
 
       {"close",        no_argument, 0, 0},
-      {"fluffy",       no_argument, 0, 0},
+      {"cute",         no_argument, 0, 0},
       {"first",        no_argument, 0, 0},
       {"last",         no_argument, 0, 0},
       {"save",         no_argument, 0, 0},
@@ -98,8 +99,8 @@ int main(int argc, char* argv[]) {
         } else {
           if (long_opt == "CLOSE") {
             Settings::SetCloseAfterSimulation(true);
-          } else if (long_opt == "FLUFFY") {
-            printf("TODO --fluffy\n");
+          } else if (long_opt == "CUTE") {
+            Settings::SetCuteMode(true);
           } else if (long_opt == "FIRST") {
             Settings::SetFirstSimulation(true);
           } else if (long_opt == "LAST") {
@@ -112,6 +113,7 @@ int main(int argc, char* argv[]) {
               cout << "\033[33m" << endl; //unix only
               cerr << "warning: unknown long option \"" << long_opt << "\""<< endl;
               cout << "\033[0m"  << endl;
+              exit(-1);
             }
           }
         }
@@ -160,8 +162,8 @@ int main(int argc, char* argv[]) {
       default:
       /*cout << "\033[33m" << endl; //unix only
       cerr << "warning: invalid option received\"-" << opt << "\""<< endl;
-      cout << "\033[0m"  << endl;
-      exit(-1);*/
+      cout << "\033[0m"  << endl;*/
+      exit(-1);
         break;
       }
    }
@@ -174,6 +176,8 @@ int main(int argc, char* argv[]) {
      tab_csv = CSVHandler::ReadCSV("tmp.csv");
    }
 
+    //Kittens :
+    CuteMode::LoadCuteness();
 
     // Apply parameters :
     double offsetX = Settings::offsetX; // and move around
@@ -310,7 +314,7 @@ int main(int argc, char* argv[]) {
                           break;
 
                         case sf::Keyboard::C :
-                          Settings::SetCentralDot(!Settings::isCentralDotEnable);
+                          Settings::SetCentralDot(!Settings::isCentralDotEnabled);
                           break;
 
                         case sf::Keyboard::R :
@@ -355,10 +359,12 @@ int main(int argc, char* argv[]) {
           } else {
             std:: cout << "AutoZoom "<<compteur_autoZoom<<"/"<< nbSimu << " terminé, durée totale : " << curentDuration/1000.0f <<  " s" << std::endl;
           }
-          //actualisation variables
-          compteur_autoZoom += 1;
-          zoom = Settings::zoom; //zoom remis a zero
-          autoZoomBegin = std::chrono::steady_clock::now();//remise pour que les calculs de stats n'ai pas d'influence
+            //actualisation variables
+            compteur_autoZoom += 1;
+          if (compteur_autoZoom <= nbSimu) {  
+            zoom = Settings::zoom; //zoom remis a zero
+            autoZoomBegin = std::chrono::steady_clock::now();//remise pour que les calculs de stats n'ai pas d'influence
+          }
           if (compteur_autoZoom > nbSimu) {
             autoZoomFinished = true; //fini
             execTimes.clear();
@@ -414,8 +420,14 @@ int main(int argc, char* argv[]) {
             texture.loadFromImage(image);
             sprite.setTexture(texture);
             stateChanged = false;
+
         }
         window.draw(sprite);
+
+        if (Settings::isCuteModeEnabled) {
+          CuteMode::ShowCuteness(offsetX, offsetY, zoom, &window);
+        }
+
         window.display();
     }
 }
