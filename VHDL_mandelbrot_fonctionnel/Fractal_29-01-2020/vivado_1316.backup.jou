@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jan 28 15:03:18 2020
+# Process ID: 7340
+# Current directory: P:/mandelbrot_nouveau
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5044 P:\mandelbrot_nouveau\mandelbrot_nouveau.xpr
+# Log file: P:/mandelbrot_nouveau/vivado.log
+# Journal file: P:/mandelbrot_nouveau\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project P:/mandelbrot_nouveau/mandelbrot_nouveau.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+reset_run synth_1
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+open_run synth_1 -name synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {P:/mandelbrot_nouveau/mandelbrot_nouveau.runs/impl_2/top_Mandelbrot.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {s25fl128sxxxxxx0-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {P:/mandelbrot_nouveau/mandelbrot_nouveau.runs/impl_2/top_Mandelbrot.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+config_ip_cache -import_from_project -use_cache_location C:/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.cache/ip
+update_ip_catalog
+set_property STEPS.SYNTH_DESIGN.ARGS.RETIMING true [get_runs synth_1]
+config_ip_cache -import_from_project -use_cache_location C:/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.cache/ip
+update_ip_catalog
+config_ip_cache -import_from_project -use_cache_location C:/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.cache/ip
+update_ip_catalog
+reset_run synth_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {P:/mandelbrot_nouveau/mandelbrot_nouveau.runs/impl_2/top_Mandelbrot.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property strategy Performance_Retiming [get_runs impl_2]
+config_ip_cache -import_from_project -use_cache_location C:/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.cache/ip
+update_ip_catalog
+config_ip_cache -import_from_project -use_cache_location C:/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.cache/ip
+update_ip_catalog
+reset_run impl_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {P:/mandelbrot_nouveau/mandelbrot_nouveau.runs/impl_2/top_Mandelbrot.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_run impl_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {P:/mandelbrot_nouveau/mandelbrot_nouveau.runs/impl_2/top_Mandelbrot.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {P:/mandelbrot_nouveau/mandelbrot_nouveau.runs/impl_2/top_Mandelbrot.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_design
+open_run impl_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1

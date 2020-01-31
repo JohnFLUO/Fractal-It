@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="convergence,hls_ip_2018_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.908000,HLS_SYN_LAT=51,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=119,HLS_SYN_LUT=554,HLS_VERSION=2018_2}" *)
+(* CORE_GENERATION_INFO="convergence,hls_ip_2018_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.908000,HLS_SYN_LAT=201,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=419,HLS_SYN_LUT=1960,HLS_VERSION=2018_2}" *)
 
 module convergence (
         clk,
@@ -25,7 +25,7 @@ module convergence (
 
 input   clk;
 input   reset;
-input  [9:0] zoom;
+input  [31:0] zoom;
 input  [31:0] offset_X;
 input  [31:0] offset_Y;
 output  [7:0] s_out_din;

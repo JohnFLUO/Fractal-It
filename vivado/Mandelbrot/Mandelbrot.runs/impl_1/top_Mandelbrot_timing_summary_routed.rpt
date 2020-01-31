@@ -1,0 +1,2019 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jan 14 14:22:44 2020
+| Host         : ewe running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_timing_summary -max_paths 10 -file top_Mandelbrot_timing_summary_routed.rpt -pb top_Mandelbrot_timing_summary_routed.pb -rpx top_Mandelbrot_timing_summary_routed.rpx -warn_on_violation
+| Design       : top_Mandelbrot
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 86 register/latch pins with no clock driven by root clock pin: inst_Gestionnaire_Horloge/s_CE_SPI_66_67kHz_reg/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 240 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 31 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -6.767   -35058.668                   8245                13048        0.058        0.000                      0                13048        4.500        0.000                       0                  1832  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        -6.767   -35058.668                   8245                13048        0.058        0.000                      0                13048        4.500        0.000                       0                  1832  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :         8245  Failing Endpoints,  Worst Slack       -6.767ns,  Total Violation   -35058.667ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.058ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -6.767ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/iteration_out_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        16.405ns  (logic 10.734ns (65.431%)  route 5.671ns (34.569%))
+  Logic Levels:           26  (CARRY4=20 DSP48E1=1 LUT2=3 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.403ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 r  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.861    17.918    inst_Convergence/g_it_14/r21
+    SLICE_X60Y146        LUT4 (Prop_lut4_I0_O)        0.124    18.042 r  inst_Convergence/g_it_14/iteration_out[6]_i_84__6/O
+                         net (fo=1, routed)           0.000    18.042    inst_Convergence/g_it_14/iteration_out[6]_i_84__6_n_0
+    SLICE_X60Y146        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    18.555 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6/CO[3]
+                         net (fo=1, routed)           0.000    18.555    inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6_n_0
+    SLICE_X60Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.672 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6/CO[3]
+                         net (fo=1, routed)           0.000    18.672    inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6_n_0
+    SLICE_X60Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.789 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6/CO[3]
+                         net (fo=1, routed)           0.000    18.789    inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6_n_0
+    SLICE_X60Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.906 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6/CO[3]
+                         net (fo=1, routed)           0.001    18.906    inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6_n_0
+    SLICE_X60Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.023 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6/CO[3]
+                         net (fo=1, routed)           0.000    19.023    inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6_n_0
+    SLICE_X60Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.140 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6/CO[3]
+                         net (fo=1, routed)           0.000    19.140    inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6_n_0
+    SLICE_X60Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.257 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6/CO[3]
+                         net (fo=1, routed)           0.000    19.257    inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6_n_0
+    SLICE_X60Y153        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    19.496 f  inst_Convergence/g_it_14/iteration_out_reg[6]_i_22__6/O[2]
+                         net (fo=2, routed)           0.773    20.270    inst_Convergence/g_it_14/enable_out1[30]
+    SLICE_X59Y151        LUT2 (Prop_lut2_I0_O)        0.301    20.571 r  inst_Convergence/g_it_14/iteration_out[6]_i_9__6/O
+                         net (fo=1, routed)           0.000    20.571    inst_Convergence/g_it_14/iteration_out[6]_i_9__6_n_0
+    SLICE_X59Y151        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    20.972 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_2__6/CO[3]
+                         net (fo=8, routed)           0.817    21.788    inst_Convergence/g_it_13/CO[0]
+    SLICE_X58Y148        LUT6 (Prop_lut6_I0_O)        0.124    21.912 r  inst_Convergence/g_it_13/iteration_out[3]_i_1__9/O
+                         net (fo=1, routed)           0.000    21.912    inst_Convergence/g_it_14/iteration_out_reg[5]_0[3]
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.494    14.916    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[3]/C
+                         clock pessimism              0.188    15.104    
+                         clock uncertainty           -0.035    15.069    
+    SLICE_X58Y148        FDRE (Setup_fdre_C_D)        0.077    15.146    inst_Convergence/g_it_14/iteration_out_reg[3]
+  -------------------------------------------------------------------
+                         required time                         15.146    
+                         arrival time                         -21.912    
+  -------------------------------------------------------------------
+                         slack                                 -6.767    
+
+Slack (VIOLATED) :        -6.760ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/iteration_out_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        16.402ns  (logic 10.734ns (65.443%)  route 5.668ns (34.557%))
+  Logic Levels:           26  (CARRY4=20 DSP48E1=1 LUT2=3 LUT4=2)
+  Clock Path Skew:        -0.403ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 r  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.861    17.918    inst_Convergence/g_it_14/r21
+    SLICE_X60Y146        LUT4 (Prop_lut4_I0_O)        0.124    18.042 r  inst_Convergence/g_it_14/iteration_out[6]_i_84__6/O
+                         net (fo=1, routed)           0.000    18.042    inst_Convergence/g_it_14/iteration_out[6]_i_84__6_n_0
+    SLICE_X60Y146        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    18.555 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6/CO[3]
+                         net (fo=1, routed)           0.000    18.555    inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6_n_0
+    SLICE_X60Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.672 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6/CO[3]
+                         net (fo=1, routed)           0.000    18.672    inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6_n_0
+    SLICE_X60Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.789 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6/CO[3]
+                         net (fo=1, routed)           0.000    18.789    inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6_n_0
+    SLICE_X60Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.906 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6/CO[3]
+                         net (fo=1, routed)           0.001    18.906    inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6_n_0
+    SLICE_X60Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.023 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6/CO[3]
+                         net (fo=1, routed)           0.000    19.023    inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6_n_0
+    SLICE_X60Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.140 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6/CO[3]
+                         net (fo=1, routed)           0.000    19.140    inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6_n_0
+    SLICE_X60Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.257 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6/CO[3]
+                         net (fo=1, routed)           0.000    19.257    inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6_n_0
+    SLICE_X60Y153        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    19.496 f  inst_Convergence/g_it_14/iteration_out_reg[6]_i_22__6/O[2]
+                         net (fo=2, routed)           0.773    20.270    inst_Convergence/g_it_14/enable_out1[30]
+    SLICE_X59Y151        LUT2 (Prop_lut2_I0_O)        0.301    20.571 r  inst_Convergence/g_it_14/iteration_out[6]_i_9__6/O
+                         net (fo=1, routed)           0.000    20.571    inst_Convergence/g_it_14/iteration_out[6]_i_9__6_n_0
+    SLICE_X59Y151        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    20.972 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_2__6/CO[3]
+                         net (fo=8, routed)           0.814    21.785    inst_Convergence/g_it_13/CO[0]
+    SLICE_X58Y148        LUT4 (Prop_lut4_I0_O)        0.124    21.909 r  inst_Convergence/g_it_13/iteration_out[4]_i_1__8/O
+                         net (fo=1, routed)           0.000    21.909    inst_Convergence/g_it_14/iteration_out_reg[5]_0[4]
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.494    14.916    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[4]/C
+                         clock pessimism              0.188    15.104    
+                         clock uncertainty           -0.035    15.069    
+    SLICE_X58Y148        FDRE (Setup_fdre_C_D)        0.081    15.150    inst_Convergence/g_it_14/iteration_out_reg[4]
+  -------------------------------------------------------------------
+                         required time                         15.150    
+                         arrival time                         -21.909    
+  -------------------------------------------------------------------
+                         slack                                 -6.760    
+
+Slack (VIOLATED) :        -6.753ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/iteration_out_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        16.393ns  (logic 10.734ns (65.479%)  route 5.659ns (34.521%))
+  Logic Levels:           26  (CARRY4=20 DSP48E1=1 LUT2=3 LUT4=1 LUT5=1)
+  Clock Path Skew:        -0.403ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 r  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.861    17.918    inst_Convergence/g_it_14/r21
+    SLICE_X60Y146        LUT4 (Prop_lut4_I0_O)        0.124    18.042 r  inst_Convergence/g_it_14/iteration_out[6]_i_84__6/O
+                         net (fo=1, routed)           0.000    18.042    inst_Convergence/g_it_14/iteration_out[6]_i_84__6_n_0
+    SLICE_X60Y146        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    18.555 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6/CO[3]
+                         net (fo=1, routed)           0.000    18.555    inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6_n_0
+    SLICE_X60Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.672 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6/CO[3]
+                         net (fo=1, routed)           0.000    18.672    inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6_n_0
+    SLICE_X60Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.789 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6/CO[3]
+                         net (fo=1, routed)           0.000    18.789    inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6_n_0
+    SLICE_X60Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.906 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6/CO[3]
+                         net (fo=1, routed)           0.001    18.906    inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6_n_0
+    SLICE_X60Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.023 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6/CO[3]
+                         net (fo=1, routed)           0.000    19.023    inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6_n_0
+    SLICE_X60Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.140 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6/CO[3]
+                         net (fo=1, routed)           0.000    19.140    inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6_n_0
+    SLICE_X60Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.257 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6/CO[3]
+                         net (fo=1, routed)           0.000    19.257    inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6_n_0
+    SLICE_X60Y153        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    19.496 f  inst_Convergence/g_it_14/iteration_out_reg[6]_i_22__6/O[2]
+                         net (fo=2, routed)           0.773    20.270    inst_Convergence/g_it_14/enable_out1[30]
+    SLICE_X59Y151        LUT2 (Prop_lut2_I0_O)        0.301    20.571 r  inst_Convergence/g_it_14/iteration_out[6]_i_9__6/O
+                         net (fo=1, routed)           0.000    20.571    inst_Convergence/g_it_14/iteration_out[6]_i_9__6_n_0
+    SLICE_X59Y151        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    20.972 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_2__6/CO[3]
+                         net (fo=8, routed)           0.804    21.776    inst_Convergence/g_it_13/CO[0]
+    SLICE_X58Y148        LUT5 (Prop_lut5_I0_O)        0.124    21.900 r  inst_Convergence/g_it_13/iteration_out[6]_i_1__6/O
+                         net (fo=1, routed)           0.000    21.900    inst_Convergence/g_it_14/iteration_out_reg[5]_0[6]
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.494    14.916    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[6]/C
+                         clock pessimism              0.188    15.104    
+                         clock uncertainty           -0.035    15.069    
+    SLICE_X58Y148        FDRE (Setup_fdre_C_D)        0.079    15.148    inst_Convergence/g_it_14/iteration_out_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.148    
+                         arrival time                         -21.900    
+  -------------------------------------------------------------------
+                         slack                                 -6.753    
+
+Slack (VIOLATED) :        -6.743ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/iteration_out_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        16.383ns  (logic 10.734ns (65.519%)  route 5.649ns (34.481%))
+  Logic Levels:           26  (CARRY4=20 DSP48E1=1 LUT2=3 LUT4=2)
+  Clock Path Skew:        -0.403ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 r  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.861    17.918    inst_Convergence/g_it_14/r21
+    SLICE_X60Y146        LUT4 (Prop_lut4_I0_O)        0.124    18.042 r  inst_Convergence/g_it_14/iteration_out[6]_i_84__6/O
+                         net (fo=1, routed)           0.000    18.042    inst_Convergence/g_it_14/iteration_out[6]_i_84__6_n_0
+    SLICE_X60Y146        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    18.555 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6/CO[3]
+                         net (fo=1, routed)           0.000    18.555    inst_Convergence/g_it_14/iteration_out_reg[6]_i_52__6_n_0
+    SLICE_X60Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.672 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6/CO[3]
+                         net (fo=1, routed)           0.000    18.672    inst_Convergence/g_it_14/iteration_out_reg[6]_i_76__6_n_0
+    SLICE_X60Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.789 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6/CO[3]
+                         net (fo=1, routed)           0.000    18.789    inst_Convergence/g_it_14/iteration_out_reg[6]_i_59__6_n_0
+    SLICE_X60Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.906 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6/CO[3]
+                         net (fo=1, routed)           0.001    18.906    inst_Convergence/g_it_14/iteration_out_reg[6]_i_58__6_n_0
+    SLICE_X60Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.023 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6/CO[3]
+                         net (fo=1, routed)           0.000    19.023    inst_Convergence/g_it_14/iteration_out_reg[6]_i_34__6_n_0
+    SLICE_X60Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.140 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6/CO[3]
+                         net (fo=1, routed)           0.000    19.140    inst_Convergence/g_it_14/iteration_out_reg[6]_i_33__6_n_0
+    SLICE_X60Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.257 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6/CO[3]
+                         net (fo=1, routed)           0.000    19.257    inst_Convergence/g_it_14/iteration_out_reg[6]_i_23__6_n_0
+    SLICE_X60Y153        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    19.496 f  inst_Convergence/g_it_14/iteration_out_reg[6]_i_22__6/O[2]
+                         net (fo=2, routed)           0.773    20.270    inst_Convergence/g_it_14/enable_out1[30]
+    SLICE_X59Y151        LUT2 (Prop_lut2_I0_O)        0.301    20.571 r  inst_Convergence/g_it_14/iteration_out[6]_i_9__6/O
+                         net (fo=1, routed)           0.000    20.571    inst_Convergence/g_it_14/iteration_out[6]_i_9__6_n_0
+    SLICE_X59Y151        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    20.972 r  inst_Convergence/g_it_14/iteration_out_reg[6]_i_2__6/CO[3]
+                         net (fo=8, routed)           0.794    21.766    inst_Convergence/g_it_13/CO[0]
+    SLICE_X58Y148        LUT4 (Prop_lut4_I0_O)        0.124    21.890 r  inst_Convergence/g_it_13/iteration_out[5]_i_1__7/O
+                         net (fo=1, routed)           0.000    21.890    inst_Convergence/g_it_14/iteration_out_reg[5]_0[5]
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.494    14.916    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X58Y148        FDRE                                         r  inst_Convergence/g_it_14/iteration_out_reg[5]/C
+                         clock pessimism              0.188    15.104    
+                         clock uncertainty           -0.035    15.069    
+    SLICE_X58Y148        FDRE (Setup_fdre_C_D)        0.079    15.148    inst_Convergence/g_it_14/iteration_out_reg[5]
+  -------------------------------------------------------------------
+                         required time                         15.148    
+                         arrival time                         -21.890    
+  -------------------------------------------------------------------
+                         slack                                 -6.743    
+
+Slack (VIOLATED) :        -6.731ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/r22__2/B[12]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.840ns  (logic 9.979ns (62.998%)  route 5.861ns (37.002%))
+  Logic Levels:           24  (CARRY4=19 DSP48E1=1 LUT2=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.224ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.095ns = ( 15.095 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 f  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.684    17.741    inst_Convergence/g_it_14/r21
+    SLICE_X63Y146        LUT5 (Prop_lut5_I3_O)        0.124    17.865 r  inst_Convergence/g_it_14/r22_i_64__12/O
+                         net (fo=2, routed)           0.682    18.547    inst_Convergence/g_it_14/r22_i_64__12_n_0
+    SLICE_X62Y146        LUT6 (Prop_lut6_I0_O)        0.124    18.671 r  inst_Convergence/g_it_14/r22_i_68__12/O
+                         net (fo=1, routed)           0.000    18.671    inst_Convergence/g_it_14/r22_i_68__12_n_0
+    SLICE_X62Y146        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    19.047 r  inst_Convergence/g_it_14/r22_i_8__12/CO[3]
+                         net (fo=1, routed)           0.000    19.047    inst_Convergence/g_it_14/r22_i_8__12_n_0
+    SLICE_X62Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.164 r  inst_Convergence/g_it_14/r22_i_7__12/CO[3]
+                         net (fo=1, routed)           0.000    19.164    inst_Convergence/g_it_14/r22_i_7__12_n_0
+    SLICE_X62Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.281 r  inst_Convergence/g_it_14/r22_i_6__12/CO[3]
+                         net (fo=1, routed)           0.000    19.281    inst_Convergence/g_it_14/r22_i_6__12_n_0
+    SLICE_X62Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.398 r  inst_Convergence/g_it_14/r22_i_5__12/CO[3]
+                         net (fo=1, routed)           0.001    19.398    inst_Convergence/g_it_14/r22_i_5__12_n_0
+    SLICE_X62Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.515 r  inst_Convergence/g_it_14/r22_i_4__12/CO[3]
+                         net (fo=1, routed)           0.000    19.515    inst_Convergence/g_it_14/r22_i_4__12_n_0
+    SLICE_X62Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.632 r  inst_Convergence/g_it_14/r22_i_3__12/CO[3]
+                         net (fo=1, routed)           0.000    19.632    inst_Convergence/g_it_14/r22_i_3__12_n_0
+    SLICE_X62Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.749 r  inst_Convergence/g_it_14/r22_i_2__12/CO[3]
+                         net (fo=1, routed)           0.000    19.749    inst_Convergence/g_it_14/r22_i_2__12_n_0
+    SLICE_X62Y153        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    20.072 r  inst_Convergence/g_it_14/r22_i_1__12/O[1]
+                         net (fo=6, routed)           1.275    21.347    inst_Convergence/g_it_15/startreal_out_reg[29]_0[12]
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/B[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.673    15.095    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/CLK
+                         clock pessimism              0.188    15.284    
+                         clock uncertainty           -0.035    15.248    
+    DSP48_X2Y57          DSP48E1 (Setup_dsp48e1_CLK_B[12])
+                                                     -0.632    14.616    inst_Convergence/g_it_15/r22__2
+  -------------------------------------------------------------------
+                         required time                         14.616    
+                         arrival time                         -21.347    
+  -------------------------------------------------------------------
+                         slack                                 -6.731    
+
+Slack (VIOLATED) :        -6.692ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_4/i22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_5/r22__0/B[17]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.883ns  (logic 10.340ns (65.101%)  route 5.543ns (34.899%))
+  Logic Levels:           25  (CARRY4=20 DSP48E1=1 LUT2=2 LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.141ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.206ns = ( 15.206 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.542ns
+    Clock Pessimism Removal (CPR):    0.195ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.940     5.542    inst_Convergence/g_it_4/clock_IBUF_BUFG
+    DSP48_X2Y14          DSP48E1                                      r  inst_Convergence/g_it_4/i22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X2Y14          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.748 r  inst_Convergence/g_it_4/i22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.750    inst_Convergence/g_it_4/i22__1_n_106
+    DSP48_X2Y15          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.268 r  inst_Convergence/g_it_4/i22__2/P[0]
+                         net (fo=2, routed)           0.782    12.050    inst_Convergence/g_it_4/i22__2_n_105
+    SLICE_X77Y34         LUT2 (Prop_lut2_I0_O)        0.124    12.174 r  inst_Convergence/g_it_4/r22_i_227__2/O
+                         net (fo=1, routed)           0.000    12.174    inst_Convergence/g_it_4/r22_i_227__2_n_0
+    SLICE_X77Y34         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.724 r  inst_Convergence/g_it_4/r22_i_197__2/CO[3]
+                         net (fo=1, routed)           0.000    12.724    inst_Convergence/g_it_4/r22_i_197__2_n_0
+    SLICE_X77Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.838 r  inst_Convergence/g_it_4/r22_i_167__2/CO[3]
+                         net (fo=1, routed)           0.000    12.838    inst_Convergence/g_it_4/r22_i_167__2_n_0
+    SLICE_X77Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.952 r  inst_Convergence/g_it_4/r22_i_89__2/CO[3]
+                         net (fo=1, routed)           0.000    12.952    inst_Convergence/g_it_4/r22_i_89__2_n_0
+    SLICE_X77Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.066 r  inst_Convergence/g_it_4/r22_i_87__2/CO[3]
+                         net (fo=1, routed)           0.000    13.066    inst_Convergence/g_it_4/r22_i_87__2_n_0
+    SLICE_X77Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.180 r  inst_Convergence/g_it_4/r22_i_85__2/CO[3]
+                         net (fo=1, routed)           0.000    13.180    inst_Convergence/g_it_4/r22_i_85__2_n_0
+    SLICE_X77Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.294 r  inst_Convergence/g_it_4/r22_i_83__2/CO[3]
+                         net (fo=1, routed)           0.000    13.294    inst_Convergence/g_it_4/r22_i_83__2_n_0
+    SLICE_X77Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.408 r  inst_Convergence/g_it_4/r22_i_81__2/CO[3]
+                         net (fo=1, routed)           0.000    13.408    inst_Convergence/g_it_4/r22_i_81__2_n_0
+    SLICE_X77Y41         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.522 r  inst_Convergence/g_it_4/r22_i_79__2/CO[3]
+                         net (fo=1, routed)           0.000    13.522    inst_Convergence/g_it_4/r22_i_79__2_n_0
+    SLICE_X77Y42         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.636 r  inst_Convergence/g_it_4/r22_i_77__2/CO[3]
+                         net (fo=1, routed)           0.000    13.636    inst_Convergence/g_it_4/r22_i_77__2_n_0
+    SLICE_X77Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.750 r  inst_Convergence/g_it_4/r22_i_73__2/CO[3]
+                         net (fo=1, routed)           0.000    13.750    inst_Convergence/g_it_4/r22_i_73__2_n_0
+    SLICE_X77Y44         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    13.972 f  inst_Convergence/g_it_4/r22_i_118__2/O[0]
+                         net (fo=4, routed)           0.883    14.856    inst_Convergence/g_it_5/p_0_in_0[31]
+    SLICE_X73Y40         LUT2 (Prop_lut2_I1_O)        0.299    15.155 r  inst_Convergence/g_it_5/r22_i_96__2/O
+                         net (fo=1, routed)           0.000    15.155    inst_Convergence/g_it_4/i22__2_4[0]
+    SLICE_X73Y40         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    15.556 r  inst_Convergence/g_it_4/r22_i_72__2/CO[3]
+                         net (fo=96, routed)          1.635    17.191    inst_Convergence/g_it_4/i21
+    SLICE_X50Y34         LUT3 (Prop_lut3_I1_O)        0.116    17.307 r  inst_Convergence/g_it_4/r22_i_66__2/O
+                         net (fo=2, routed)           0.490    17.797    inst_Convergence/g_it_4/r22_i_66__2_n_0
+    SLICE_X50Y34         LUT6 (Prop_lut6_I0_O)        0.328    18.125 r  inst_Convergence/g_it_4/r22_i_70__2/O
+                         net (fo=1, routed)           0.000    18.125    inst_Convergence/g_it_4/r22_i_70__2_n_0
+    SLICE_X50Y34         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    18.658 r  inst_Convergence/g_it_4/r22_i_8__2/CO[3]
+                         net (fo=1, routed)           0.000    18.658    inst_Convergence/g_it_4/r22_i_8__2_n_0
+    SLICE_X50Y35         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.775 r  inst_Convergence/g_it_4/r22_i_7__2/CO[3]
+                         net (fo=1, routed)           0.000    18.775    inst_Convergence/g_it_4/r22_i_7__2_n_0
+    SLICE_X50Y36         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.892 r  inst_Convergence/g_it_4/r22_i_6__2/CO[3]
+                         net (fo=1, routed)           0.000    18.892    inst_Convergence/g_it_4/r22_i_6__2_n_0
+    SLICE_X50Y37         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.009 r  inst_Convergence/g_it_4/r22_i_5__2/CO[3]
+                         net (fo=1, routed)           0.000    19.009    inst_Convergence/g_it_4/r22_i_5__2_n_0
+    SLICE_X50Y38         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.126 r  inst_Convergence/g_it_4/r22_i_4__2/CO[3]
+                         net (fo=1, routed)           0.000    19.126    inst_Convergence/g_it_4/r22_i_4__2_n_0
+    SLICE_X50Y39         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.243 r  inst_Convergence/g_it_4/r22_i_3__2/CO[3]
+                         net (fo=1, routed)           0.000    19.243    inst_Convergence/g_it_4/r22_i_3__2_n_0
+    SLICE_X50Y40         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.360 r  inst_Convergence/g_it_4/r22_i_2__2/CO[3]
+                         net (fo=1, routed)           0.000    19.360    inst_Convergence/g_it_4/r22_i_2__2_n_0
+    SLICE_X50Y41         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    19.675 r  inst_Convergence/g_it_4/r22_i_1__2/O[3]
+                         net (fo=48, routed)          1.751    21.425    inst_Convergence/g_it_5/startreal_out_reg[29]_0[14]
+    DSP48_X0Y19          DSP48E1                                      r  inst_Convergence/g_it_5/r22__0/B[17]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.784    15.206    inst_Convergence/g_it_5/clock_IBUF_BUFG
+    DSP48_X0Y19          DSP48E1                                      r  inst_Convergence/g_it_5/r22__0/CLK
+                         clock pessimism              0.195    15.401    
+                         clock uncertainty           -0.035    15.366    
+    DSP48_X0Y19          DSP48E1 (Setup_dsp48e1_CLK_B[17])
+                                                     -0.633    14.733    inst_Convergence/g_it_5/r22__0
+  -------------------------------------------------------------------
+                         required time                         14.733    
+                         arrival time                         -21.425    
+  -------------------------------------------------------------------
+                         slack                                 -6.692    
+
+Slack (VIOLATED) :        -6.691ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/r22__2/B[14]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.799ns  (logic 9.971ns (63.110%)  route 5.828ns (36.890%))
+  Logic Levels:           24  (CARRY4=19 DSP48E1=1 LUT2=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.224ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.095ns = ( 15.095 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 f  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.684    17.741    inst_Convergence/g_it_14/r21
+    SLICE_X63Y146        LUT5 (Prop_lut5_I3_O)        0.124    17.865 r  inst_Convergence/g_it_14/r22_i_64__12/O
+                         net (fo=2, routed)           0.682    18.547    inst_Convergence/g_it_14/r22_i_64__12_n_0
+    SLICE_X62Y146        LUT6 (Prop_lut6_I0_O)        0.124    18.671 r  inst_Convergence/g_it_14/r22_i_68__12/O
+                         net (fo=1, routed)           0.000    18.671    inst_Convergence/g_it_14/r22_i_68__12_n_0
+    SLICE_X62Y146        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    19.047 r  inst_Convergence/g_it_14/r22_i_8__12/CO[3]
+                         net (fo=1, routed)           0.000    19.047    inst_Convergence/g_it_14/r22_i_8__12_n_0
+    SLICE_X62Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.164 r  inst_Convergence/g_it_14/r22_i_7__12/CO[3]
+                         net (fo=1, routed)           0.000    19.164    inst_Convergence/g_it_14/r22_i_7__12_n_0
+    SLICE_X62Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.281 r  inst_Convergence/g_it_14/r22_i_6__12/CO[3]
+                         net (fo=1, routed)           0.000    19.281    inst_Convergence/g_it_14/r22_i_6__12_n_0
+    SLICE_X62Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.398 r  inst_Convergence/g_it_14/r22_i_5__12/CO[3]
+                         net (fo=1, routed)           0.001    19.398    inst_Convergence/g_it_14/r22_i_5__12_n_0
+    SLICE_X62Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.515 r  inst_Convergence/g_it_14/r22_i_4__12/CO[3]
+                         net (fo=1, routed)           0.000    19.515    inst_Convergence/g_it_14/r22_i_4__12_n_0
+    SLICE_X62Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.632 r  inst_Convergence/g_it_14/r22_i_3__12/CO[3]
+                         net (fo=1, routed)           0.000    19.632    inst_Convergence/g_it_14/r22_i_3__12_n_0
+    SLICE_X62Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.749 r  inst_Convergence/g_it_14/r22_i_2__12/CO[3]
+                         net (fo=1, routed)           0.000    19.749    inst_Convergence/g_it_14/r22_i_2__12_n_0
+    SLICE_X62Y153        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    20.064 r  inst_Convergence/g_it_14/r22_i_1__12/O[3]
+                         net (fo=48, routed)          1.242    21.307    inst_Convergence/g_it_15/startreal_out_reg[29]_0[14]
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/B[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.673    15.095    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/CLK
+                         clock pessimism              0.188    15.284    
+                         clock uncertainty           -0.035    15.248    
+    DSP48_X2Y57          DSP48E1 (Setup_dsp48e1_CLK_B[14])
+                                                     -0.633    14.615    inst_Convergence/g_it_15/r22__2
+  -------------------------------------------------------------------
+                         required time                         14.615    
+                         arrival time                         -21.307    
+  -------------------------------------------------------------------
+                         slack                                 -6.691    
+
+Slack (VIOLATED) :        -6.691ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/r22__2/B[15]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.799ns  (logic 9.971ns (63.110%)  route 5.828ns (36.890%))
+  Logic Levels:           24  (CARRY4=19 DSP48E1=1 LUT2=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.224ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.095ns = ( 15.095 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 f  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.684    17.741    inst_Convergence/g_it_14/r21
+    SLICE_X63Y146        LUT5 (Prop_lut5_I3_O)        0.124    17.865 r  inst_Convergence/g_it_14/r22_i_64__12/O
+                         net (fo=2, routed)           0.682    18.547    inst_Convergence/g_it_14/r22_i_64__12_n_0
+    SLICE_X62Y146        LUT6 (Prop_lut6_I0_O)        0.124    18.671 r  inst_Convergence/g_it_14/r22_i_68__12/O
+                         net (fo=1, routed)           0.000    18.671    inst_Convergence/g_it_14/r22_i_68__12_n_0
+    SLICE_X62Y146        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    19.047 r  inst_Convergence/g_it_14/r22_i_8__12/CO[3]
+                         net (fo=1, routed)           0.000    19.047    inst_Convergence/g_it_14/r22_i_8__12_n_0
+    SLICE_X62Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.164 r  inst_Convergence/g_it_14/r22_i_7__12/CO[3]
+                         net (fo=1, routed)           0.000    19.164    inst_Convergence/g_it_14/r22_i_7__12_n_0
+    SLICE_X62Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.281 r  inst_Convergence/g_it_14/r22_i_6__12/CO[3]
+                         net (fo=1, routed)           0.000    19.281    inst_Convergence/g_it_14/r22_i_6__12_n_0
+    SLICE_X62Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.398 r  inst_Convergence/g_it_14/r22_i_5__12/CO[3]
+                         net (fo=1, routed)           0.001    19.398    inst_Convergence/g_it_14/r22_i_5__12_n_0
+    SLICE_X62Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.515 r  inst_Convergence/g_it_14/r22_i_4__12/CO[3]
+                         net (fo=1, routed)           0.000    19.515    inst_Convergence/g_it_14/r22_i_4__12_n_0
+    SLICE_X62Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.632 r  inst_Convergence/g_it_14/r22_i_3__12/CO[3]
+                         net (fo=1, routed)           0.000    19.632    inst_Convergence/g_it_14/r22_i_3__12_n_0
+    SLICE_X62Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.749 r  inst_Convergence/g_it_14/r22_i_2__12/CO[3]
+                         net (fo=1, routed)           0.000    19.749    inst_Convergence/g_it_14/r22_i_2__12_n_0
+    SLICE_X62Y153        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    20.064 r  inst_Convergence/g_it_14/r22_i_1__12/O[3]
+                         net (fo=48, routed)          1.242    21.307    inst_Convergence/g_it_15/startreal_out_reg[29]_0[14]
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/B[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.673    15.095    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/CLK
+                         clock pessimism              0.188    15.284    
+                         clock uncertainty           -0.035    15.248    
+    DSP48_X2Y57          DSP48E1 (Setup_dsp48e1_CLK_B[15])
+                                                     -0.633    14.615    inst_Convergence/g_it_15/r22__2
+  -------------------------------------------------------------------
+                         required time                         14.615    
+                         arrival time                         -21.307    
+  -------------------------------------------------------------------
+                         slack                                 -6.691    
+
+Slack (VIOLATED) :        -6.676ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/r22__2/B[16]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.784ns  (logic 9.971ns (63.172%)  route 5.813ns (36.828%))
+  Logic Levels:           24  (CARRY4=19 DSP48E1=1 LUT2=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.224ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.095ns = ( 15.095 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 f  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.684    17.741    inst_Convergence/g_it_14/r21
+    SLICE_X63Y146        LUT5 (Prop_lut5_I3_O)        0.124    17.865 r  inst_Convergence/g_it_14/r22_i_64__12/O
+                         net (fo=2, routed)           0.682    18.547    inst_Convergence/g_it_14/r22_i_64__12_n_0
+    SLICE_X62Y146        LUT6 (Prop_lut6_I0_O)        0.124    18.671 r  inst_Convergence/g_it_14/r22_i_68__12/O
+                         net (fo=1, routed)           0.000    18.671    inst_Convergence/g_it_14/r22_i_68__12_n_0
+    SLICE_X62Y146        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    19.047 r  inst_Convergence/g_it_14/r22_i_8__12/CO[3]
+                         net (fo=1, routed)           0.000    19.047    inst_Convergence/g_it_14/r22_i_8__12_n_0
+    SLICE_X62Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.164 r  inst_Convergence/g_it_14/r22_i_7__12/CO[3]
+                         net (fo=1, routed)           0.000    19.164    inst_Convergence/g_it_14/r22_i_7__12_n_0
+    SLICE_X62Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.281 r  inst_Convergence/g_it_14/r22_i_6__12/CO[3]
+                         net (fo=1, routed)           0.000    19.281    inst_Convergence/g_it_14/r22_i_6__12_n_0
+    SLICE_X62Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.398 r  inst_Convergence/g_it_14/r22_i_5__12/CO[3]
+                         net (fo=1, routed)           0.001    19.398    inst_Convergence/g_it_14/r22_i_5__12_n_0
+    SLICE_X62Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.515 r  inst_Convergence/g_it_14/r22_i_4__12/CO[3]
+                         net (fo=1, routed)           0.000    19.515    inst_Convergence/g_it_14/r22_i_4__12_n_0
+    SLICE_X62Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.632 r  inst_Convergence/g_it_14/r22_i_3__12/CO[3]
+                         net (fo=1, routed)           0.000    19.632    inst_Convergence/g_it_14/r22_i_3__12_n_0
+    SLICE_X62Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.749 r  inst_Convergence/g_it_14/r22_i_2__12/CO[3]
+                         net (fo=1, routed)           0.000    19.749    inst_Convergence/g_it_14/r22_i_2__12_n_0
+    SLICE_X62Y153        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    20.064 r  inst_Convergence/g_it_14/r22_i_1__12/O[3]
+                         net (fo=48, routed)          1.227    21.291    inst_Convergence/g_it_15/startreal_out_reg[29]_0[14]
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/B[16]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.673    15.095    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/CLK
+                         clock pessimism              0.188    15.284    
+                         clock uncertainty           -0.035    15.248    
+    DSP48_X2Y57          DSP48E1 (Setup_dsp48e1_CLK_B[16])
+                                                     -0.633    14.615    inst_Convergence/g_it_15/r22__2
+  -------------------------------------------------------------------
+                         required time                         14.615    
+                         arrival time                         -21.291    
+  -------------------------------------------------------------------
+                         slack                                 -6.676    
+
+Slack (VIOLATED) :        -6.658ns  (required time - arrival time)
+  Source:                 inst_Convergence/g_it_14/r22__1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/r22__2/B[11]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.778ns  (logic 9.875ns (62.585%)  route 5.903ns (37.414%))
+  Logic Levels:           24  (CARRY4=19 DSP48E1=1 LUT2=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.224ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.095ns = ( 15.095 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.507ns
+    Clock Pessimism Removal (CPR):    0.188ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.025     3.506    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.905     5.507    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    DSP48_X0Y60          DSP48E1                                      r  inst_Convergence/g_it_14/r22__1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y60          DSP48E1 (Prop_dsp48e1_CLK_PCOUT[47])
+                                                      4.206     9.713 r  inst_Convergence/g_it_14/r22__1/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.715    inst_Convergence/g_it_14/r22__1_n_106
+    DSP48_X0Y61          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    11.233 r  inst_Convergence/g_it_14/r22__2/P[0]
+                         net (fo=2, routed)           0.760    11.993    inst_Convergence/g_it_14/p_1_in[17]
+    SLICE_X11Y149        LUT2 (Prop_lut2_I0_O)        0.124    12.117 r  inst_Convergence/g_it_14/r22_i_230__12/O
+                         net (fo=1, routed)           0.000    12.117    inst_Convergence/g_it_14/r22_i_230__12_n_0
+    SLICE_X11Y149        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.667 r  inst_Convergence/g_it_14/r22_i_202__12/CO[3]
+                         net (fo=1, routed)           0.001    12.668    inst_Convergence/g_it_14/r22_i_202__12_n_0
+    SLICE_X11Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.782 r  inst_Convergence/g_it_14/r22_i_172__12/CO[3]
+                         net (fo=1, routed)           0.000    12.782    inst_Convergence/g_it_14/r22_i_172__12_n_0
+    SLICE_X11Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.896 r  inst_Convergence/g_it_14/r22_i_90__12/CO[3]
+                         net (fo=1, routed)           0.000    12.896    inst_Convergence/g_it_14/r22_i_90__12_n_0
+    SLICE_X11Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.010 r  inst_Convergence/g_it_14/r22_i_88__12/CO[3]
+                         net (fo=1, routed)           0.000    13.010    inst_Convergence/g_it_14/r22_i_88__12_n_0
+    SLICE_X11Y153        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.124 r  inst_Convergence/g_it_14/r22_i_86__12/CO[3]
+                         net (fo=1, routed)           0.000    13.124    inst_Convergence/g_it_14/r22_i_86__12_n_0
+    SLICE_X11Y154        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.238 r  inst_Convergence/g_it_14/r22_i_84__12/CO[3]
+                         net (fo=1, routed)           0.000    13.238    inst_Convergence/g_it_14/r22_i_84__12_n_0
+    SLICE_X11Y155        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.352 r  inst_Convergence/g_it_14/r22_i_82__12/CO[3]
+                         net (fo=1, routed)           0.000    13.352    inst_Convergence/g_it_14/r22_i_82__12_n_0
+    SLICE_X11Y156        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.466 r  inst_Convergence/g_it_14/r22_i_80__12/CO[3]
+                         net (fo=1, routed)           0.000    13.466    inst_Convergence/g_it_14/r22_i_80__12_n_0
+    SLICE_X11Y157        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.580 r  inst_Convergence/g_it_14/r22_i_78__12/CO[3]
+                         net (fo=1, routed)           0.000    13.580    inst_Convergence/g_it_14/r22_i_78__12_n_0
+    SLICE_X11Y158        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    13.893 r  inst_Convergence/g_it_14/r22_i_75__12/O[3]
+                         net (fo=6, routed)           1.457    15.350    inst_Convergence/g_it_15/r22__3_1[30]
+    SLICE_X40Y153        LUT2 (Prop_lut2_I0_O)        0.306    15.656 r  inst_Convergence/g_it_15/r22_i_109__12/O
+                         net (fo=1, routed)           0.000    15.656    inst_Convergence/g_it_14/r22__2_4[0]
+    SLICE_X40Y153        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    16.057 f  inst_Convergence/g_it_14/r22_i_74__12/CO[3]
+                         net (fo=125, routed)         1.684    17.741    inst_Convergence/g_it_14/r21
+    SLICE_X63Y146        LUT5 (Prop_lut5_I3_O)        0.124    17.865 r  inst_Convergence/g_it_14/r22_i_64__12/O
+                         net (fo=2, routed)           0.682    18.547    inst_Convergence/g_it_14/r22_i_64__12_n_0
+    SLICE_X62Y146        LUT6 (Prop_lut6_I0_O)        0.124    18.671 r  inst_Convergence/g_it_14/r22_i_68__12/O
+                         net (fo=1, routed)           0.000    18.671    inst_Convergence/g_it_14/r22_i_68__12_n_0
+    SLICE_X62Y146        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    19.047 r  inst_Convergence/g_it_14/r22_i_8__12/CO[3]
+                         net (fo=1, routed)           0.000    19.047    inst_Convergence/g_it_14/r22_i_8__12_n_0
+    SLICE_X62Y147        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.164 r  inst_Convergence/g_it_14/r22_i_7__12/CO[3]
+                         net (fo=1, routed)           0.000    19.164    inst_Convergence/g_it_14/r22_i_7__12_n_0
+    SLICE_X62Y148        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.281 r  inst_Convergence/g_it_14/r22_i_6__12/CO[3]
+                         net (fo=1, routed)           0.000    19.281    inst_Convergence/g_it_14/r22_i_6__12_n_0
+    SLICE_X62Y149        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.398 r  inst_Convergence/g_it_14/r22_i_5__12/CO[3]
+                         net (fo=1, routed)           0.001    19.398    inst_Convergence/g_it_14/r22_i_5__12_n_0
+    SLICE_X62Y150        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.515 r  inst_Convergence/g_it_14/r22_i_4__12/CO[3]
+                         net (fo=1, routed)           0.000    19.515    inst_Convergence/g_it_14/r22_i_4__12_n_0
+    SLICE_X62Y151        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.632 r  inst_Convergence/g_it_14/r22_i_3__12/CO[3]
+                         net (fo=1, routed)           0.000    19.632    inst_Convergence/g_it_14/r22_i_3__12_n_0
+    SLICE_X62Y152        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.749 r  inst_Convergence/g_it_14/r22_i_2__12/CO[3]
+                         net (fo=1, routed)           0.000    19.749    inst_Convergence/g_it_14/r22_i_2__12_n_0
+    SLICE_X62Y153        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    19.968 r  inst_Convergence/g_it_14/r22_i_1__12/O[0]
+                         net (fo=6, routed)           1.317    21.286    inst_Convergence/g_it_15/startreal_out_reg[29]_0[11]
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/B[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clock (IN)
+                         net (fo=0)                   0.000    10.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.920    13.331    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        1.673    15.095    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    DSP48_X2Y57          DSP48E1                                      r  inst_Convergence/g_it_15/r22__2/CLK
+                         clock pessimism              0.188    15.284    
+                         clock uncertainty           -0.035    15.248    
+    DSP48_X2Y57          DSP48E1 (Setup_dsp48e1_CLK_B[11])
+                                                     -0.621    14.627    inst_Convergence/g_it_15/r22__2
+  -------------------------------------------------------------------
+                         required time                         14.627    
+                         arrival time                         -21.286    
+  -------------------------------------------------------------------
+                         slack                                 -6.658    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.058ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_14/startimag_out_reg[18]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/startimag_out_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.498ns  (logic 0.209ns (41.942%)  route 0.289ns (58.058%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.560     1.479    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X50Y148        FDRE                                         r  inst_Convergence/g_it_14/startimag_out_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y148        FDRE (Prop_fdre_C_Q)         0.164     1.643 r  inst_Convergence/g_it_14/startimag_out_reg[18]/Q
+                         net (fo=2, routed)           0.289     1.933    inst_Convergence/g_it_14/s_startimag_15[18]
+    SLICE_X52Y155        LUT2 (Prop_lut2_I1_O)        0.045     1.978 r  inst_Convergence/g_it_14/startimag_out[18]_i_1__13/O
+                         net (fo=1, routed)           0.000     1.978    inst_Convergence/g_it_15/enable_out_reg_5[18]
+    SLICE_X52Y155        FDRE                                         r  inst_Convergence/g_it_15/startimag_out_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.914     2.079    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    SLICE_X52Y155        FDRE                                         r  inst_Convergence/g_it_15/startimag_out_reg[18]/C
+                         clock pessimism             -0.250     1.829    
+    SLICE_X52Y155        FDRE (Hold_fdre_C_D)         0.091     1.920    inst_Convergence/g_it_15/startimag_out_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -1.920    
+                         arrival time                           1.978    
+  -------------------------------------------------------------------
+                         slack                                  0.058    
+
+Slack (MET) :             0.094ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_13/startreal_out_reg[20]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/startreal_out_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.563ns  (logic 0.209ns (37.141%)  route 0.354ns (62.859%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.348ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.480ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.561     1.480    inst_Convergence/g_it_13/clock_IBUF_BUFG
+    SLICE_X46Y147        FDRE                                         r  inst_Convergence/g_it_13/startreal_out_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y147        FDRE (Prop_fdre_C_Q)         0.164     1.644 r  inst_Convergence/g_it_13/startreal_out_reg[20]/Q
+                         net (fo=3, routed)           0.354     1.998    inst_Convergence/g_it_13/Q[20]
+    SLICE_X54Y153        LUT2 (Prop_lut2_I1_O)        0.045     2.043 r  inst_Convergence/g_it_13/startreal_out[20]_i_1__12/O
+                         net (fo=1, routed)           0.000     2.043    inst_Convergence/g_it_14/enable_out_reg_3[20]
+    SLICE_X54Y153        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.914     2.079    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X54Y153        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[20]/C
+                         clock pessimism             -0.250     1.829    
+    SLICE_X54Y153        FDRE (Hold_fdre_C_D)         0.120     1.949    inst_Convergence/g_it_14/startreal_out_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -1.949    
+                         arrival time                           2.043    
+  -------------------------------------------------------------------
+                         slack                                  0.094    
+
+Slack (MET) :             0.100ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_14/startimag_out_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/startimag_out_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.559ns  (logic 0.227ns (40.577%)  route 0.332ns (59.423%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.352ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.080ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.558     1.477    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X52Y146        FDRE                                         r  inst_Convergence/g_it_14/startimag_out_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y146        FDRE (Prop_fdre_C_Q)         0.128     1.605 r  inst_Convergence/g_it_14/startimag_out_reg[11]/Q
+                         net (fo=2, routed)           0.332     1.938    inst_Convergence/g_it_14/s_startimag_15[11]
+    SLICE_X52Y152        LUT2 (Prop_lut2_I1_O)        0.099     2.037 r  inst_Convergence/g_it_14/startimag_out[11]_i_1__13/O
+                         net (fo=1, routed)           0.000     2.037    inst_Convergence/g_it_15/enable_out_reg_5[11]
+    SLICE_X52Y152        FDRE                                         r  inst_Convergence/g_it_15/startimag_out_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.915     2.080    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    SLICE_X52Y152        FDRE                                         r  inst_Convergence/g_it_15/startimag_out_reg[11]/C
+                         clock pessimism             -0.250     1.830    
+    SLICE_X52Y152        FDRE (Hold_fdre_C_D)         0.107     1.937    inst_Convergence/g_it_15/startimag_out_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.937    
+                         arrival time                           2.037    
+  -------------------------------------------------------------------
+                         slack                                  0.100    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_13/startreal_out_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/startreal_out_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.544ns  (logic 0.186ns (34.205%)  route 0.358ns (65.795%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.348ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.080ns
+    Source Clock Delay      (SCD):    1.481ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.562     1.481    inst_Convergence/g_it_13/clock_IBUF_BUFG
+    SLICE_X44Y146        FDRE                                         r  inst_Convergence/g_it_13/startreal_out_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y146        FDRE (Prop_fdre_C_Q)         0.141     1.622 r  inst_Convergence/g_it_13/startreal_out_reg[10]/Q
+                         net (fo=3, routed)           0.358     1.980    inst_Convergence/g_it_13/Q[10]
+    SLICE_X52Y150        LUT2 (Prop_lut2_I1_O)        0.045     2.025 r  inst_Convergence/g_it_13/startreal_out[10]_i_1__12/O
+                         net (fo=1, routed)           0.000     2.025    inst_Convergence/g_it_14/enable_out_reg_3[10]
+    SLICE_X52Y150        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.915     2.080    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X52Y150        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[10]/C
+                         clock pessimism             -0.250     1.830    
+    SLICE_X52Y150        FDRE (Hold_fdre_C_D)         0.091     1.921    inst_Convergence/g_it_14/startreal_out_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.921    
+                         arrival time                           2.025    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.105ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_13/startreal_out_reg[26]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/startreal_out_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.576ns  (logic 0.209ns (36.255%)  route 0.367ns (63.745%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.351ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.082ns
+    Source Clock Delay      (SCD):    1.480ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.561     1.480    inst_Convergence/g_it_13/clock_IBUF_BUFG
+    SLICE_X46Y149        FDRE                                         r  inst_Convergence/g_it_13/startreal_out_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y149        FDRE (Prop_fdre_C_Q)         0.164     1.644 r  inst_Convergence/g_it_13/startreal_out_reg[26]/Q
+                         net (fo=3, routed)           0.367     2.012    inst_Convergence/g_it_13/Q[26]
+    SLICE_X58Y153        LUT2 (Prop_lut2_I1_O)        0.045     2.057 r  inst_Convergence/g_it_13/startreal_out[26]_i_1__12/O
+                         net (fo=1, routed)           0.000     2.057    inst_Convergence/g_it_14/enable_out_reg_3[26]
+    SLICE_X58Y153        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.917     2.082    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X58Y153        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[26]/C
+                         clock pessimism             -0.250     1.832    
+    SLICE_X58Y153        FDRE (Hold_fdre_C_D)         0.120     1.952    inst_Convergence/g_it_14/startreal_out_reg[26]
+  -------------------------------------------------------------------
+                         required time                         -1.952    
+                         arrival time                           2.057    
+  -------------------------------------------------------------------
+                         slack                                  0.105    
+
+Slack (MET) :             0.109ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_13/startreal_out_reg[18]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_14/startreal_out_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.581ns  (logic 0.186ns (32.030%)  route 0.395ns (67.970%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.351ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.083ns
+    Source Clock Delay      (SCD):    1.481ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.562     1.481    inst_Convergence/g_it_13/clock_IBUF_BUFG
+    SLICE_X44Y146        FDRE                                         r  inst_Convergence/g_it_13/startreal_out_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y146        FDRE (Prop_fdre_C_Q)         0.141     1.622 r  inst_Convergence/g_it_13/startreal_out_reg[18]/Q
+                         net (fo=3, routed)           0.395     2.017    inst_Convergence/g_it_13/Q[18]
+    SLICE_X58Y152        LUT2 (Prop_lut2_I1_O)        0.045     2.062 r  inst_Convergence/g_it_13/startreal_out[18]_i_1__12/O
+                         net (fo=1, routed)           0.000     2.062    inst_Convergence/g_it_14/enable_out_reg_3[18]
+    SLICE_X58Y152        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.918     2.083    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X58Y152        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[18]/C
+                         clock pessimism             -0.250     1.833    
+    SLICE_X58Y152        FDRE (Hold_fdre_C_D)         0.120     1.953    inst_Convergence/g_it_14/startreal_out_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -1.953    
+                         arrival time                           2.062    
+  -------------------------------------------------------------------
+                         slack                                  0.109    
+
+Slack (MET) :             0.113ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_14/startimag_out_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/startimag_out_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.582ns  (logic 0.209ns (35.938%)  route 0.373ns (64.062%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.348ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.078ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.560     1.479    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X50Y148        FDRE                                         r  inst_Convergence/g_it_14/startimag_out_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y148        FDRE (Prop_fdre_C_Q)         0.164     1.643 r  inst_Convergence/g_it_14/startimag_out_reg[16]/Q
+                         net (fo=2, routed)           0.373     2.016    inst_Convergence/g_it_14/s_startimag_15[16]
+    SLICE_X54Y157        LUT2 (Prop_lut2_I1_O)        0.045     2.061 r  inst_Convergence/g_it_14/startimag_out[16]_i_1__13/O
+                         net (fo=1, routed)           0.000     2.061    inst_Convergence/g_it_15/enable_out_reg_5[16]
+    SLICE_X54Y157        FDRE                                         r  inst_Convergence/g_it_15/startimag_out_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.913     2.078    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    SLICE_X54Y157        FDRE                                         r  inst_Convergence/g_it_15/startimag_out_reg[16]/C
+                         clock pessimism             -0.250     1.828    
+    SLICE_X54Y157        FDRE (Hold_fdre_C_D)         0.120     1.948    inst_Convergence/g_it_15/startimag_out_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.948    
+                         arrival time                           2.061    
+  -------------------------------------------------------------------
+                         slack                                  0.113    
+
+Slack (MET) :             0.113ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_14/startreal_out_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/startreal_out_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.594ns  (logic 0.245ns (41.272%)  route 0.349ns (58.728%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.560     1.479    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X56Y147        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y147        FDRE (Prop_fdre_C_Q)         0.148     1.627 r  inst_Convergence/g_it_14/startreal_out_reg[3]/Q
+                         net (fo=3, routed)           0.349     1.976    inst_Convergence/g_it_14/Q[3]
+    SLICE_X54Y154        LUT2 (Prop_lut2_I1_O)        0.097     2.073 r  inst_Convergence/g_it_14/startreal_out[3]_i_1__13/O
+                         net (fo=1, routed)           0.000     2.073    inst_Convergence/g_it_15/enable_out_reg_4[3]
+    SLICE_X54Y154        FDRE                                         r  inst_Convergence/g_it_15/startreal_out_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.914     2.079    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    SLICE_X54Y154        FDRE                                         r  inst_Convergence/g_it_15/startreal_out_reg[3]/C
+                         clock pessimism             -0.250     1.829    
+    SLICE_X54Y154        FDRE (Hold_fdre_C_D)         0.131     1.960    inst_Convergence/g_it_15/startreal_out_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.073    
+  -------------------------------------------------------------------
+                         slack                                  0.113    
+
+Slack (MET) :             0.122ns  (arrival time - required time)
+  Source:                 inst_Convergence/g_it_14/startreal_out_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Convergence/g_it_15/startreal_out_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.604ns  (logic 0.244ns (40.431%)  route 0.360ns (59.569%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.350ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.079ns
+    Source Clock Delay      (SCD):    1.478ns
+    Clock Pessimism Removal (CPR):    0.250ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.559     1.478    inst_Convergence/g_it_14/clock_IBUF_BUFG
+    SLICE_X54Y149        FDRE                                         r  inst_Convergence/g_it_14/startreal_out_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y149        FDRE (Prop_fdre_C_Q)         0.148     1.626 r  inst_Convergence/g_it_14/startreal_out_reg[13]/Q
+                         net (fo=3, routed)           0.360     1.986    inst_Convergence/g_it_14/Q[13]
+    SLICE_X54Y154        LUT2 (Prop_lut2_I1_O)        0.096     2.082 r  inst_Convergence/g_it_14/startreal_out[13]_i_1__13/O
+                         net (fo=1, routed)           0.000     2.082    inst_Convergence/g_it_15/enable_out_reg_4[13]
+    SLICE_X54Y154        FDRE                                         r  inst_Convergence/g_it_15/startreal_out_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.914     2.079    inst_Convergence/g_it_15/clock_IBUF_BUFG
+    SLICE_X54Y154        FDRE                                         r  inst_Convergence/g_it_15/startreal_out_reg[13]/C
+                         clock pessimism             -0.250     1.829    
+    SLICE_X54Y154        FDRE (Hold_fdre_C_D)         0.131     1.960    inst_Convergence/g_it_15/startreal_out_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.082    
+  -------------------------------------------------------------------
+                         slack                                  0.122    
+
+Slack (MET) :             0.124ns  (arrival time - required time)
+  Source:                 inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg_rep[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_1_2/ADDRBWRADDR[2]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.386ns  (logic 0.141ns (36.569%)  route 0.245ns (63.431%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.078ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.033ns
+    Source Clock Delay      (SCD):    1.475ns
+    Clock Pessimism Removal (CPR):    0.479ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.556     1.475    inst_Affichage_VGA/inst_VGA_bitmap/clock_IBUF_BUFG
+    SLICE_X64Y117        FDRE                                         r  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg_rep[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y117        FDRE (Prop_fdre_C_Q)         0.141     1.616 r  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg_rep[2]/Q
+                         net (fo=30, routed)          0.245     1.861    inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr[2]
+    RAMB36_X1Y23         RAMB36E1                                     r  inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_1_2/ADDRBWRADDR[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2059, routed)        0.868     2.033    inst_Affichage_VGA/inst_VGA_bitmap/clock_IBUF_BUFG
+    RAMB36_X1Y23         RAMB36E1                                     r  inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_1_2/CLKBWRCLK
+                         clock pessimism             -0.479     1.554    
+    RAMB36_X1Y23         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_ADDRBWRADDR[2])
+                                                      0.183     1.737    inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_1_2
+  -------------------------------------------------------------------
+                         required time                         -1.737    
+                         arrival time                           1.861    
+  -------------------------------------------------------------------
+                         slack                                  0.124    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y19   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_0/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y34   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_1/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X2Y22   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_10/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y16   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_11/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y22   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_2/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X2Y6    inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_3/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y15   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_4/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y13   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_5/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y28   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_6/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y26   inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_7/CLKARDCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X80Y76   inst_Affichage_VGA/inst_VGA_bitmap/VGA_green_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X80Y76   inst_Affichage_VGA/inst_VGA_bitmap/VGA_green_reg[1]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X58Y131  inst_Affichage_VGA/inst_VGA_bitmap/inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_0_cooolgate_en_gate_13_cooolDelFlop/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X58Y131  inst_Affichage_VGA/inst_VGA_bitmap/inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_0_0_cooolgate_en_gate_14_cooolDelFlop/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X50Y128  inst_Affichage_VGA/inst_VGA_bitmap/inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_6_0_cooolgate_en_gate_162_cooolDelFlop/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X55Y18   inst_Convergence/g_it_2/iteration_out_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X51Y26   inst_Convergence/g_it_3/startreal_out_reg[4]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X51Y26   inst_Convergence/g_it_3/startreal_out_reg[5]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X51Y26   inst_Convergence/g_it_3/startreal_out_reg[6]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X51Y26   inst_Convergence/g_it_3/startreal_out_reg[7]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X37Y92   inst_Affichage_7seg/aff_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X38Y91   inst_Affichage_7seg/aff_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X38Y91   inst_Affichage_7seg/aff_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X37Y92   inst_Affichage_7seg/aff_reg[3]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X50Y131  inst_Affichage_VGA/inst_VGA_bitmap/inst_Affichage_VGA/inst_VGA_bitmap/screen_reg_4_0_cooolgate_en_gate_113_cooolDelFlop/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X65Y121  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg[16]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X65Y121  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg[17]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X65Y121  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg[18]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y114  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg_rep[0]_rep/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y114  inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_reg_rep[0]_rep__0/C
+
+
+

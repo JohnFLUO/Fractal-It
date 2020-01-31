@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="36273288693fs"></ZoomStartTime>
+      <ZoomEndTime time="36540293910fs"></ZoomEndTime>
+      <Cursor1Time time="40000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="127"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject type="logic" fp_name="/testbench/clock">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/x">
+      <obj_property name="ElementShortName">x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">x[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/y">
+      <obj_property name="ElementShortName">y[8:0]</obj_property>
+      <obj_property name="ObjectShortName">y[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/offset_X">
+      <obj_property name="ElementShortName">offset_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_X[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/offset_Y">
+      <obj_property name="ElementShortName">offset_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/zoom">
+      <obj_property name="ElementShortName">zoom[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zoom[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/testbench/clock_period">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/couleur">
+      <obj_property name="ElementShortName">couleur[11:0]</obj_property>
+      <obj_property name="ObjectShortName">couleur[11:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Nov 29 11:58:07 2019
-# Process ID: 25031
+# Start of session at: Fri Dec 13 12:54:55 2019
+# Process ID: 599
 # Current directory: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1/main.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25290 
+INFO: Helper process launched with PID 609 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1418.090 ; gain = 88.824 ; free physical = 544 ; free virtual = 21439
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1418.082 ; gain = 88.824 ; free physical = 9976 ; free virtual = 26254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:25]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd:40]
@@ -28,102 +28,102 @@ INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/flou
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:49]
 INFO: [Synth 8-3491] module 'convergence_do_convergence' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:12' bound to instance 'grp_convergence_do_convergence_fu_76' of component 'convergence_do_convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'convergence_do_convergence' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:29]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:256]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:259]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:261]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:263]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:265]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:267]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:269]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:271]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:273]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:275]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:277]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:279]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:281]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:283]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:285]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:287]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:289]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:291]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:293]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:295]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:297]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:299]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:301]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:303]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:305]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:307]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:309]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:311]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:313]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:315]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:317]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:319]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:321]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:323]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:325]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:327]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:329]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:331]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:333]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:335]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:337]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:339]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:341]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:343]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:345]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:347]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:349]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:351]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:353]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:355]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:357]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:359]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:361]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:363]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:365]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:367]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:369]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:371]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:373]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:375]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:377]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:379]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:381]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:383]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:385]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:387]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:389]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:391]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:393]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:395]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:397]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:399]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:401]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:403]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:405]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:407]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:409]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:411]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:413]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:415]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:417]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:419]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:421]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:423]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:425]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:427]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:429]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:431]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:433]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:435]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:437]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:439]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:441]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:443]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:445]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:447]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:876]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:879]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:881]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:883]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:885]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:887]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:889]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:891]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:893]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:895]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:897]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:899]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:901]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:903]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:905]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:907]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:909]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:911]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:913]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:915]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:917]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:919]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:921]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:923]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:925]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:927]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:929]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:931]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:933]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:935]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:937]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:939]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:941]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:943]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:945]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:947]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:949]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:951]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:953]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:955]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:957]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:959]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:961]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:963]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:965]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:967]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:969]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:971]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:973]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:975]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:977]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:979]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:981]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:983]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:985]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:987]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:989]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:991]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:993]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:995]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:997]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:999]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1001]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1003]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1005]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1007]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1009]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1011]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1013]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1015]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1017]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1019]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1021]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1023]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1025]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1027]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1029]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1031]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1033]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1035]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1037]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1039]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1041]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1043]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1045]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1047]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1049]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1051]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1053]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1055]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1057]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1059]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1061]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1063]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1065]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:1067]
 INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-256] done synthesizing module 'convergence_do_convergence' (1#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'convergence' (2#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd:27]
@@ -132,18 +132,18 @@ INFO: [Synth 8-638] synthesizing module 'dimage' [/net/e/floupias001/FRACTALE/fr
 INFO: [Synth 8-3491] module 'dimage_do_image' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:12' bound to instance 'grp_dimage_do_image_fu_58' of component 'dimage_do_image' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'dimage_do_image' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:24]
 	Parameter DataWidth bound to: 12 - type: integer 
-	Parameter AddressRange bound to: 51 - type: integer 
+	Parameter AddressRange bound to: 50 - type: integer 
 	Parameter AddressWidth bound to: 6 - type: integer 
 INFO: [Synth 8-3491] module 'dimage_do_image_cbkb' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:85' bound to instance 'color_U' of component 'dimage_do_image_cbkb' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:63]
 INFO: [Synth 8-638] synthesizing module 'dimage_do_image_cbkb' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:98]
 	Parameter DataWidth bound to: 12 - type: integer 
-	Parameter AddressRange bound to: 51 - type: integer 
+	Parameter AddressRange bound to: 50 - type: integer 
 	Parameter AddressWidth bound to: 6 - type: integer 
 INFO: [Synth 8-3491] module 'dimage_do_image_cbkb_rom' declared at '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:12' bound to instance 'dimage_do_image_cbkb_rom_U' of component 'dimage_do_image_cbkb_rom' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:110]
 INFO: [Synth 8-638] synthesizing module 'dimage_do_image_cbkb_rom' [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
 	Parameter DWIDTH bound to: 12 - type: integer 
 	Parameter AWIDTH bound to: 6 - type: integer 
-	Parameter MEM_SIZE bound to: 51 - type: integer 
+	Parameter MEM_SIZE bound to: 50 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'dimage_do_image_cbkb_rom' (3#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
 INFO: [Synth 8-256] done synthesizing module 'dimage_do_image_cbkb' (4#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:98]
 INFO: [Synth 8-256] done synthesizing module 'dimage_do_image' (5#1) [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd:24]
@@ -169,6 +169,28 @@ WARNING: [Synth 8-3331] design fifo_w8_d1_A_shiftReg has unconnected port a[0]
 WARNING: [Synth 8-3331] design dimage_do_image_cbkb has unconnected port reset
 WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[7]
 WARNING: [Synth 8-3331] design dimage_do_image has unconnected port counter_dout[6]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[31]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[30]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[29]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[28]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[27]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[26]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[25]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[24]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[23]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[22]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[21]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[20]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[19]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[18]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[17]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[16]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[15]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[14]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[13]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[12]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[11]
+WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[10]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[9]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[8]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port zoom[7]
@@ -243,8 +265,9 @@ WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port o
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[2]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[1]
 WARNING: [Synth 8-3331] design convergence_do_convergence has unconnected port offset_Y[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 547 ; free virtual = 21443
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1762.137 ; gain = 432.879 ; free physical = 9915 ; free virtual = 26195
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -257,10 +280,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 549 ; free virtual = 21444
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1762.137 ; gain = 432.879 ; free physical = 9928 ; free virtual = 26207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1477.730 ; gain = 148.465 ; free physical = 549 ; free virtual = 21444
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1762.137 ; gain = 432.879 ; free physical = 9928 ; free virtual = 26207
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -274,22 +297,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1849.695 ; gain = 0.004 ; free physical = 260 ; free virtual = 21156
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2228.266 ; gain = 1.004 ; free physical = 9303 ; free virtual = 25583
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 361 ; free virtual = 21257
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:54 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9734 ; free virtual = 26014
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 361 ; free virtual = 21257
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:54 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9734 ; free virtual = 26014
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 362 ; free virtual = 21259
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:54 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9734 ; free virtual = 26014
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -396,7 +419,7 @@ INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instan
 INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "mem". This will be implemented in logic
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 355 ; free virtual = 21252
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9708 ; free virtual = 25990
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -418,7 +441,307 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input    100 Bit        Muxes := 2     
+	   2 Input    400 Bit        Muxes := 2     
+	   2 Input    399 Bit        Muxes := 1     
+	   2 Input    398 Bit        Muxes := 1     
+	   2 Input    397 Bit        Muxes := 1     
+	   2 Input    396 Bit        Muxes := 1     
+	   2 Input    395 Bit        Muxes := 1     
+	   2 Input    394 Bit        Muxes := 1     
+	   2 Input    393 Bit        Muxes := 1     
+	   2 Input    392 Bit        Muxes := 1     
+	   2 Input    391 Bit        Muxes := 1     
+	   2 Input    390 Bit        Muxes := 1     
+	   2 Input    389 Bit        Muxes := 1     
+	   2 Input    388 Bit        Muxes := 1     
+	   2 Input    387 Bit        Muxes := 1     
+	   2 Input    386 Bit        Muxes := 1     
+	   2 Input    385 Bit        Muxes := 1     
+	   2 Input    384 Bit        Muxes := 1     
+	   2 Input    383 Bit        Muxes := 1     
+	   2 Input    382 Bit        Muxes := 1     
+	   2 Input    381 Bit        Muxes := 1     
+	   2 Input    380 Bit        Muxes := 1     
+	   2 Input    379 Bit        Muxes := 1     
+	   2 Input    378 Bit        Muxes := 1     
+	   2 Input    377 Bit        Muxes := 1     
+	   2 Input    376 Bit        Muxes := 1     
+	   2 Input    375 Bit        Muxes := 1     
+	   2 Input    374 Bit        Muxes := 1     
+	   2 Input    373 Bit        Muxes := 1     
+	   2 Input    372 Bit        Muxes := 1     
+	   2 Input    371 Bit        Muxes := 1     
+	   2 Input    370 Bit        Muxes := 1     
+	   2 Input    369 Bit        Muxes := 1     
+	   2 Input    368 Bit        Muxes := 1     
+	   2 Input    367 Bit        Muxes := 1     
+	   2 Input    366 Bit        Muxes := 1     
+	   2 Input    365 Bit        Muxes := 1     
+	   2 Input    364 Bit        Muxes := 1     
+	   2 Input    363 Bit        Muxes := 1     
+	   2 Input    362 Bit        Muxes := 1     
+	   2 Input    361 Bit        Muxes := 1     
+	   2 Input    360 Bit        Muxes := 1     
+	   2 Input    359 Bit        Muxes := 1     
+	   2 Input    358 Bit        Muxes := 1     
+	   2 Input    357 Bit        Muxes := 1     
+	   2 Input    356 Bit        Muxes := 1     
+	   2 Input    355 Bit        Muxes := 1     
+	   2 Input    354 Bit        Muxes := 1     
+	   2 Input    353 Bit        Muxes := 1     
+	   2 Input    352 Bit        Muxes := 1     
+	   2 Input    351 Bit        Muxes := 1     
+	   2 Input    350 Bit        Muxes := 1     
+	   2 Input    349 Bit        Muxes := 1     
+	   2 Input    348 Bit        Muxes := 1     
+	   2 Input    347 Bit        Muxes := 1     
+	   2 Input    346 Bit        Muxes := 1     
+	   2 Input    345 Bit        Muxes := 1     
+	   2 Input    344 Bit        Muxes := 1     
+	   2 Input    343 Bit        Muxes := 1     
+	   2 Input    342 Bit        Muxes := 1     
+	   2 Input    341 Bit        Muxes := 1     
+	   2 Input    340 Bit        Muxes := 1     
+	   2 Input    339 Bit        Muxes := 1     
+	   2 Input    338 Bit        Muxes := 1     
+	   2 Input    337 Bit        Muxes := 1     
+	   2 Input    336 Bit        Muxes := 1     
+	   2 Input    335 Bit        Muxes := 1     
+	   2 Input    334 Bit        Muxes := 1     
+	   2 Input    333 Bit        Muxes := 1     
+	   2 Input    332 Bit        Muxes := 1     
+	   2 Input    331 Bit        Muxes := 1     
+	   2 Input    330 Bit        Muxes := 1     
+	   2 Input    329 Bit        Muxes := 1     
+	   2 Input    328 Bit        Muxes := 1     
+	   2 Input    327 Bit        Muxes := 1     
+	   2 Input    326 Bit        Muxes := 1     
+	   2 Input    325 Bit        Muxes := 1     
+	   2 Input    324 Bit        Muxes := 1     
+	   2 Input    323 Bit        Muxes := 1     
+	   2 Input    322 Bit        Muxes := 1     
+	   2 Input    321 Bit        Muxes := 1     
+	   2 Input    320 Bit        Muxes := 1     
+	   2 Input    319 Bit        Muxes := 1     
+	   2 Input    318 Bit        Muxes := 1     
+	   2 Input    317 Bit        Muxes := 1     
+	   2 Input    316 Bit        Muxes := 1     
+	   2 Input    315 Bit        Muxes := 1     
+	   2 Input    314 Bit        Muxes := 1     
+	   2 Input    313 Bit        Muxes := 1     
+	   2 Input    312 Bit        Muxes := 1     
+	   2 Input    311 Bit        Muxes := 1     
+	   2 Input    310 Bit        Muxes := 1     
+	   2 Input    309 Bit        Muxes := 1     
+	   2 Input    308 Bit        Muxes := 1     
+	   2 Input    307 Bit        Muxes := 1     
+	   2 Input    306 Bit        Muxes := 1     
+	   2 Input    305 Bit        Muxes := 1     
+	   2 Input    304 Bit        Muxes := 1     
+	   2 Input    303 Bit        Muxes := 1     
+	   2 Input    302 Bit        Muxes := 1     
+	   2 Input    301 Bit        Muxes := 1     
+	   2 Input    300 Bit        Muxes := 1     
+	   2 Input    299 Bit        Muxes := 1     
+	   2 Input    298 Bit        Muxes := 1     
+	   2 Input    297 Bit        Muxes := 1     
+	   2 Input    296 Bit        Muxes := 1     
+	   2 Input    295 Bit        Muxes := 1     
+	   2 Input    294 Bit        Muxes := 1     
+	   2 Input    293 Bit        Muxes := 1     
+	   2 Input    292 Bit        Muxes := 1     
+	   2 Input    291 Bit        Muxes := 1     
+	   2 Input    290 Bit        Muxes := 1     
+	   2 Input    289 Bit        Muxes := 1     
+	   2 Input    288 Bit        Muxes := 1     
+	   2 Input    287 Bit        Muxes := 1     
+	   2 Input    286 Bit        Muxes := 1     
+	   2 Input    285 Bit        Muxes := 1     
+	   2 Input    284 Bit        Muxes := 1     
+	   2 Input    283 Bit        Muxes := 1     
+	   2 Input    282 Bit        Muxes := 1     
+	   2 Input    281 Bit        Muxes := 1     
+	   2 Input    280 Bit        Muxes := 1     
+	   2 Input    279 Bit        Muxes := 1     
+	   2 Input    278 Bit        Muxes := 1     
+	   2 Input    277 Bit        Muxes := 1     
+	   2 Input    276 Bit        Muxes := 1     
+	   2 Input    275 Bit        Muxes := 1     
+	   2 Input    274 Bit        Muxes := 1     
+	   2 Input    273 Bit        Muxes := 1     
+	   2 Input    272 Bit        Muxes := 1     
+	   2 Input    271 Bit        Muxes := 1     
+	   2 Input    270 Bit        Muxes := 1     
+	   2 Input    269 Bit        Muxes := 1     
+	   2 Input    268 Bit        Muxes := 1     
+	   2 Input    267 Bit        Muxes := 1     
+	   2 Input    266 Bit        Muxes := 1     
+	   2 Input    265 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 1     
+	   2 Input    263 Bit        Muxes := 1     
+	   2 Input    262 Bit        Muxes := 1     
+	   2 Input    261 Bit        Muxes := 1     
+	   2 Input    260 Bit        Muxes := 1     
+	   2 Input    259 Bit        Muxes := 1     
+	   2 Input    258 Bit        Muxes := 1     
+	   2 Input    257 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input    255 Bit        Muxes := 1     
+	   2 Input    254 Bit        Muxes := 1     
+	   2 Input    253 Bit        Muxes := 1     
+	   2 Input    252 Bit        Muxes := 1     
+	   2 Input    251 Bit        Muxes := 1     
+	   2 Input    250 Bit        Muxes := 1     
+	   2 Input    249 Bit        Muxes := 1     
+	   2 Input    248 Bit        Muxes := 1     
+	   2 Input    247 Bit        Muxes := 1     
+	   2 Input    246 Bit        Muxes := 1     
+	   2 Input    245 Bit        Muxes := 1     
+	   2 Input    244 Bit        Muxes := 1     
+	   2 Input    243 Bit        Muxes := 1     
+	   2 Input    242 Bit        Muxes := 1     
+	   2 Input    241 Bit        Muxes := 1     
+	   2 Input    240 Bit        Muxes := 1     
+	   2 Input    239 Bit        Muxes := 1     
+	   2 Input    238 Bit        Muxes := 1     
+	   2 Input    237 Bit        Muxes := 1     
+	   2 Input    236 Bit        Muxes := 1     
+	   2 Input    235 Bit        Muxes := 1     
+	   2 Input    234 Bit        Muxes := 1     
+	   2 Input    233 Bit        Muxes := 1     
+	   2 Input    232 Bit        Muxes := 1     
+	   2 Input    231 Bit        Muxes := 1     
+	   2 Input    230 Bit        Muxes := 1     
+	   2 Input    229 Bit        Muxes := 1     
+	   2 Input    228 Bit        Muxes := 1     
+	   2 Input    227 Bit        Muxes := 1     
+	   2 Input    226 Bit        Muxes := 1     
+	   2 Input    225 Bit        Muxes := 1     
+	   2 Input    224 Bit        Muxes := 1     
+	   2 Input    223 Bit        Muxes := 1     
+	   2 Input    222 Bit        Muxes := 1     
+	   2 Input    221 Bit        Muxes := 1     
+	   2 Input    220 Bit        Muxes := 1     
+	   2 Input    219 Bit        Muxes := 1     
+	   2 Input    218 Bit        Muxes := 1     
+	   2 Input    217 Bit        Muxes := 1     
+	   2 Input    216 Bit        Muxes := 1     
+	   2 Input    215 Bit        Muxes := 1     
+	   2 Input    214 Bit        Muxes := 1     
+	   2 Input    213 Bit        Muxes := 1     
+	   2 Input    212 Bit        Muxes := 1     
+	   2 Input    211 Bit        Muxes := 1     
+	   2 Input    210 Bit        Muxes := 1     
+	   2 Input    209 Bit        Muxes := 1     
+	   2 Input    208 Bit        Muxes := 1     
+	   2 Input    207 Bit        Muxes := 1     
+	   2 Input    206 Bit        Muxes := 1     
+	   2 Input    205 Bit        Muxes := 1     
+	   2 Input    204 Bit        Muxes := 1     
+	   2 Input    203 Bit        Muxes := 1     
+	   2 Input    202 Bit        Muxes := 1     
+	   2 Input    201 Bit        Muxes := 1     
+	   2 Input    200 Bit        Muxes := 1     
+	   2 Input    199 Bit        Muxes := 1     
+	   2 Input    198 Bit        Muxes := 1     
+	   2 Input    197 Bit        Muxes := 1     
+	   2 Input    196 Bit        Muxes := 1     
+	   2 Input    195 Bit        Muxes := 1     
+	   2 Input    194 Bit        Muxes := 1     
+	   2 Input    193 Bit        Muxes := 1     
+	   2 Input    192 Bit        Muxes := 1     
+	   2 Input    191 Bit        Muxes := 1     
+	   2 Input    190 Bit        Muxes := 1     
+	   2 Input    189 Bit        Muxes := 1     
+	   2 Input    188 Bit        Muxes := 1     
+	   2 Input    187 Bit        Muxes := 1     
+	   2 Input    186 Bit        Muxes := 1     
+	   2 Input    185 Bit        Muxes := 1     
+	   2 Input    184 Bit        Muxes := 1     
+	   2 Input    183 Bit        Muxes := 1     
+	   2 Input    182 Bit        Muxes := 1     
+	   2 Input    181 Bit        Muxes := 1     
+	   2 Input    180 Bit        Muxes := 1     
+	   2 Input    179 Bit        Muxes := 1     
+	   2 Input    178 Bit        Muxes := 1     
+	   2 Input    177 Bit        Muxes := 1     
+	   2 Input    176 Bit        Muxes := 1     
+	   2 Input    175 Bit        Muxes := 1     
+	   2 Input    174 Bit        Muxes := 1     
+	   2 Input    173 Bit        Muxes := 1     
+	   2 Input    172 Bit        Muxes := 1     
+	   2 Input    171 Bit        Muxes := 1     
+	   2 Input    170 Bit        Muxes := 1     
+	   2 Input    169 Bit        Muxes := 1     
+	   2 Input    168 Bit        Muxes := 1     
+	   2 Input    167 Bit        Muxes := 1     
+	   2 Input    166 Bit        Muxes := 1     
+	   2 Input    165 Bit        Muxes := 1     
+	   2 Input    164 Bit        Muxes := 1     
+	   2 Input    163 Bit        Muxes := 1     
+	   2 Input    162 Bit        Muxes := 1     
+	   2 Input    161 Bit        Muxes := 1     
+	   2 Input    160 Bit        Muxes := 1     
+	   2 Input    159 Bit        Muxes := 1     
+	   2 Input    158 Bit        Muxes := 1     
+	   2 Input    157 Bit        Muxes := 1     
+	   2 Input    156 Bit        Muxes := 1     
+	   2 Input    155 Bit        Muxes := 1     
+	   2 Input    154 Bit        Muxes := 1     
+	   2 Input    153 Bit        Muxes := 1     
+	   2 Input    152 Bit        Muxes := 1     
+	   2 Input    151 Bit        Muxes := 1     
+	   2 Input    150 Bit        Muxes := 1     
+	   2 Input    149 Bit        Muxes := 1     
+	   2 Input    148 Bit        Muxes := 1     
+	   2 Input    147 Bit        Muxes := 1     
+	   2 Input    146 Bit        Muxes := 1     
+	   2 Input    145 Bit        Muxes := 1     
+	   2 Input    144 Bit        Muxes := 1     
+	   2 Input    143 Bit        Muxes := 1     
+	   2 Input    142 Bit        Muxes := 1     
+	   2 Input    141 Bit        Muxes := 1     
+	   2 Input    140 Bit        Muxes := 1     
+	   2 Input    139 Bit        Muxes := 1     
+	   2 Input    138 Bit        Muxes := 1     
+	   2 Input    137 Bit        Muxes := 1     
+	   2 Input    136 Bit        Muxes := 1     
+	   2 Input    135 Bit        Muxes := 1     
+	   2 Input    134 Bit        Muxes := 1     
+	   2 Input    133 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 1     
+	   2 Input    131 Bit        Muxes := 1     
+	   2 Input    130 Bit        Muxes := 1     
+	   2 Input    129 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input    127 Bit        Muxes := 1     
+	   2 Input    126 Bit        Muxes := 1     
+	   2 Input    125 Bit        Muxes := 1     
+	   2 Input    124 Bit        Muxes := 1     
+	   2 Input    123 Bit        Muxes := 1     
+	   2 Input    122 Bit        Muxes := 1     
+	   2 Input    121 Bit        Muxes := 1     
+	   2 Input    120 Bit        Muxes := 1     
+	   2 Input    119 Bit        Muxes := 1     
+	   2 Input    118 Bit        Muxes := 1     
+	   2 Input    117 Bit        Muxes := 1     
+	   2 Input    116 Bit        Muxes := 1     
+	   2 Input    115 Bit        Muxes := 1     
+	   2 Input    114 Bit        Muxes := 1     
+	   2 Input    113 Bit        Muxes := 1     
+	   2 Input    112 Bit        Muxes := 1     
+	   2 Input    111 Bit        Muxes := 1     
+	   2 Input    110 Bit        Muxes := 1     
+	   2 Input    109 Bit        Muxes := 1     
+	   2 Input    108 Bit        Muxes := 1     
+	   2 Input    107 Bit        Muxes := 1     
+	   2 Input    106 Bit        Muxes := 1     
+	   2 Input    105 Bit        Muxes := 1     
+	   2 Input    104 Bit        Muxes := 1     
+	   2 Input    103 Bit        Muxes := 1     
+	   2 Input    102 Bit        Muxes := 1     
+	   2 Input    101 Bit        Muxes := 1     
+	   2 Input    100 Bit        Muxes := 1     
 	   2 Input     99 Bit        Muxes := 1     
 	   2 Input     98 Bit        Muxes := 1     
 	   2 Input     97 Bit        Muxes := 1     
@@ -513,8 +836,8 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
@@ -530,7 +853,307 @@ Hierarchical RTL Component report
 Module convergence_do_convergence 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input    100 Bit        Muxes := 2     
+	   2 Input    400 Bit        Muxes := 2     
+	   2 Input    399 Bit        Muxes := 1     
+	   2 Input    398 Bit        Muxes := 1     
+	   2 Input    397 Bit        Muxes := 1     
+	   2 Input    396 Bit        Muxes := 1     
+	   2 Input    395 Bit        Muxes := 1     
+	   2 Input    394 Bit        Muxes := 1     
+	   2 Input    393 Bit        Muxes := 1     
+	   2 Input    392 Bit        Muxes := 1     
+	   2 Input    391 Bit        Muxes := 1     
+	   2 Input    390 Bit        Muxes := 1     
+	   2 Input    389 Bit        Muxes := 1     
+	   2 Input    388 Bit        Muxes := 1     
+	   2 Input    387 Bit        Muxes := 1     
+	   2 Input    386 Bit        Muxes := 1     
+	   2 Input    385 Bit        Muxes := 1     
+	   2 Input    384 Bit        Muxes := 1     
+	   2 Input    383 Bit        Muxes := 1     
+	   2 Input    382 Bit        Muxes := 1     
+	   2 Input    381 Bit        Muxes := 1     
+	   2 Input    380 Bit        Muxes := 1     
+	   2 Input    379 Bit        Muxes := 1     
+	   2 Input    378 Bit        Muxes := 1     
+	   2 Input    377 Bit        Muxes := 1     
+	   2 Input    376 Bit        Muxes := 1     
+	   2 Input    375 Bit        Muxes := 1     
+	   2 Input    374 Bit        Muxes := 1     
+	   2 Input    373 Bit        Muxes := 1     
+	   2 Input    372 Bit        Muxes := 1     
+	   2 Input    371 Bit        Muxes := 1     
+	   2 Input    370 Bit        Muxes := 1     
+	   2 Input    369 Bit        Muxes := 1     
+	   2 Input    368 Bit        Muxes := 1     
+	   2 Input    367 Bit        Muxes := 1     
+	   2 Input    366 Bit        Muxes := 1     
+	   2 Input    365 Bit        Muxes := 1     
+	   2 Input    364 Bit        Muxes := 1     
+	   2 Input    363 Bit        Muxes := 1     
+	   2 Input    362 Bit        Muxes := 1     
+	   2 Input    361 Bit        Muxes := 1     
+	   2 Input    360 Bit        Muxes := 1     
+	   2 Input    359 Bit        Muxes := 1     
+	   2 Input    358 Bit        Muxes := 1     
+	   2 Input    357 Bit        Muxes := 1     
+	   2 Input    356 Bit        Muxes := 1     
+	   2 Input    355 Bit        Muxes := 1     
+	   2 Input    354 Bit        Muxes := 1     
+	   2 Input    353 Bit        Muxes := 1     
+	   2 Input    352 Bit        Muxes := 1     
+	   2 Input    351 Bit        Muxes := 1     
+	   2 Input    350 Bit        Muxes := 1     
+	   2 Input    349 Bit        Muxes := 1     
+	   2 Input    348 Bit        Muxes := 1     
+	   2 Input    347 Bit        Muxes := 1     
+	   2 Input    346 Bit        Muxes := 1     
+	   2 Input    345 Bit        Muxes := 1     
+	   2 Input    344 Bit        Muxes := 1     
+	   2 Input    343 Bit        Muxes := 1     
+	   2 Input    342 Bit        Muxes := 1     
+	   2 Input    341 Bit        Muxes := 1     
+	   2 Input    340 Bit        Muxes := 1     
+	   2 Input    339 Bit        Muxes := 1     
+	   2 Input    338 Bit        Muxes := 1     
+	   2 Input    337 Bit        Muxes := 1     
+	   2 Input    336 Bit        Muxes := 1     
+	   2 Input    335 Bit        Muxes := 1     
+	   2 Input    334 Bit        Muxes := 1     
+	   2 Input    333 Bit        Muxes := 1     
+	   2 Input    332 Bit        Muxes := 1     
+	   2 Input    331 Bit        Muxes := 1     
+	   2 Input    330 Bit        Muxes := 1     
+	   2 Input    329 Bit        Muxes := 1     
+	   2 Input    328 Bit        Muxes := 1     
+	   2 Input    327 Bit        Muxes := 1     
+	   2 Input    326 Bit        Muxes := 1     
+	   2 Input    325 Bit        Muxes := 1     
+	   2 Input    324 Bit        Muxes := 1     
+	   2 Input    323 Bit        Muxes := 1     
+	   2 Input    322 Bit        Muxes := 1     
+	   2 Input    321 Bit        Muxes := 1     
+	   2 Input    320 Bit        Muxes := 1     
+	   2 Input    319 Bit        Muxes := 1     
+	   2 Input    318 Bit        Muxes := 1     
+	   2 Input    317 Bit        Muxes := 1     
+	   2 Input    316 Bit        Muxes := 1     
+	   2 Input    315 Bit        Muxes := 1     
+	   2 Input    314 Bit        Muxes := 1     
+	   2 Input    313 Bit        Muxes := 1     
+	   2 Input    312 Bit        Muxes := 1     
+	   2 Input    311 Bit        Muxes := 1     
+	   2 Input    310 Bit        Muxes := 1     
+	   2 Input    309 Bit        Muxes := 1     
+	   2 Input    308 Bit        Muxes := 1     
+	   2 Input    307 Bit        Muxes := 1     
+	   2 Input    306 Bit        Muxes := 1     
+	   2 Input    305 Bit        Muxes := 1     
+	   2 Input    304 Bit        Muxes := 1     
+	   2 Input    303 Bit        Muxes := 1     
+	   2 Input    302 Bit        Muxes := 1     
+	   2 Input    301 Bit        Muxes := 1     
+	   2 Input    300 Bit        Muxes := 1     
+	   2 Input    299 Bit        Muxes := 1     
+	   2 Input    298 Bit        Muxes := 1     
+	   2 Input    297 Bit        Muxes := 1     
+	   2 Input    296 Bit        Muxes := 1     
+	   2 Input    295 Bit        Muxes := 1     
+	   2 Input    294 Bit        Muxes := 1     
+	   2 Input    293 Bit        Muxes := 1     
+	   2 Input    292 Bit        Muxes := 1     
+	   2 Input    291 Bit        Muxes := 1     
+	   2 Input    290 Bit        Muxes := 1     
+	   2 Input    289 Bit        Muxes := 1     
+	   2 Input    288 Bit        Muxes := 1     
+	   2 Input    287 Bit        Muxes := 1     
+	   2 Input    286 Bit        Muxes := 1     
+	   2 Input    285 Bit        Muxes := 1     
+	   2 Input    284 Bit        Muxes := 1     
+	   2 Input    283 Bit        Muxes := 1     
+	   2 Input    282 Bit        Muxes := 1     
+	   2 Input    281 Bit        Muxes := 1     
+	   2 Input    280 Bit        Muxes := 1     
+	   2 Input    279 Bit        Muxes := 1     
+	   2 Input    278 Bit        Muxes := 1     
+	   2 Input    277 Bit        Muxes := 1     
+	   2 Input    276 Bit        Muxes := 1     
+	   2 Input    275 Bit        Muxes := 1     
+	   2 Input    274 Bit        Muxes := 1     
+	   2 Input    273 Bit        Muxes := 1     
+	   2 Input    272 Bit        Muxes := 1     
+	   2 Input    271 Bit        Muxes := 1     
+	   2 Input    270 Bit        Muxes := 1     
+	   2 Input    269 Bit        Muxes := 1     
+	   2 Input    268 Bit        Muxes := 1     
+	   2 Input    267 Bit        Muxes := 1     
+	   2 Input    266 Bit        Muxes := 1     
+	   2 Input    265 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 1     
+	   2 Input    263 Bit        Muxes := 1     
+	   2 Input    262 Bit        Muxes := 1     
+	   2 Input    261 Bit        Muxes := 1     
+	   2 Input    260 Bit        Muxes := 1     
+	   2 Input    259 Bit        Muxes := 1     
+	   2 Input    258 Bit        Muxes := 1     
+	   2 Input    257 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input    255 Bit        Muxes := 1     
+	   2 Input    254 Bit        Muxes := 1     
+	   2 Input    253 Bit        Muxes := 1     
+	   2 Input    252 Bit        Muxes := 1     
+	   2 Input    251 Bit        Muxes := 1     
+	   2 Input    250 Bit        Muxes := 1     
+	   2 Input    249 Bit        Muxes := 1     
+	   2 Input    248 Bit        Muxes := 1     
+	   2 Input    247 Bit        Muxes := 1     
+	   2 Input    246 Bit        Muxes := 1     
+	   2 Input    245 Bit        Muxes := 1     
+	   2 Input    244 Bit        Muxes := 1     
+	   2 Input    243 Bit        Muxes := 1     
+	   2 Input    242 Bit        Muxes := 1     
+	   2 Input    241 Bit        Muxes := 1     
+	   2 Input    240 Bit        Muxes := 1     
+	   2 Input    239 Bit        Muxes := 1     
+	   2 Input    238 Bit        Muxes := 1     
+	   2 Input    237 Bit        Muxes := 1     
+	   2 Input    236 Bit        Muxes := 1     
+	   2 Input    235 Bit        Muxes := 1     
+	   2 Input    234 Bit        Muxes := 1     
+	   2 Input    233 Bit        Muxes := 1     
+	   2 Input    232 Bit        Muxes := 1     
+	   2 Input    231 Bit        Muxes := 1     
+	   2 Input    230 Bit        Muxes := 1     
+	   2 Input    229 Bit        Muxes := 1     
+	   2 Input    228 Bit        Muxes := 1     
+	   2 Input    227 Bit        Muxes := 1     
+	   2 Input    226 Bit        Muxes := 1     
+	   2 Input    225 Bit        Muxes := 1     
+	   2 Input    224 Bit        Muxes := 1     
+	   2 Input    223 Bit        Muxes := 1     
+	   2 Input    222 Bit        Muxes := 1     
+	   2 Input    221 Bit        Muxes := 1     
+	   2 Input    220 Bit        Muxes := 1     
+	   2 Input    219 Bit        Muxes := 1     
+	   2 Input    218 Bit        Muxes := 1     
+	   2 Input    217 Bit        Muxes := 1     
+	   2 Input    216 Bit        Muxes := 1     
+	   2 Input    215 Bit        Muxes := 1     
+	   2 Input    214 Bit        Muxes := 1     
+	   2 Input    213 Bit        Muxes := 1     
+	   2 Input    212 Bit        Muxes := 1     
+	   2 Input    211 Bit        Muxes := 1     
+	   2 Input    210 Bit        Muxes := 1     
+	   2 Input    209 Bit        Muxes := 1     
+	   2 Input    208 Bit        Muxes := 1     
+	   2 Input    207 Bit        Muxes := 1     
+	   2 Input    206 Bit        Muxes := 1     
+	   2 Input    205 Bit        Muxes := 1     
+	   2 Input    204 Bit        Muxes := 1     
+	   2 Input    203 Bit        Muxes := 1     
+	   2 Input    202 Bit        Muxes := 1     
+	   2 Input    201 Bit        Muxes := 1     
+	   2 Input    200 Bit        Muxes := 1     
+	   2 Input    199 Bit        Muxes := 1     
+	   2 Input    198 Bit        Muxes := 1     
+	   2 Input    197 Bit        Muxes := 1     
+	   2 Input    196 Bit        Muxes := 1     
+	   2 Input    195 Bit        Muxes := 1     
+	   2 Input    194 Bit        Muxes := 1     
+	   2 Input    193 Bit        Muxes := 1     
+	   2 Input    192 Bit        Muxes := 1     
+	   2 Input    191 Bit        Muxes := 1     
+	   2 Input    190 Bit        Muxes := 1     
+	   2 Input    189 Bit        Muxes := 1     
+	   2 Input    188 Bit        Muxes := 1     
+	   2 Input    187 Bit        Muxes := 1     
+	   2 Input    186 Bit        Muxes := 1     
+	   2 Input    185 Bit        Muxes := 1     
+	   2 Input    184 Bit        Muxes := 1     
+	   2 Input    183 Bit        Muxes := 1     
+	   2 Input    182 Bit        Muxes := 1     
+	   2 Input    181 Bit        Muxes := 1     
+	   2 Input    180 Bit        Muxes := 1     
+	   2 Input    179 Bit        Muxes := 1     
+	   2 Input    178 Bit        Muxes := 1     
+	   2 Input    177 Bit        Muxes := 1     
+	   2 Input    176 Bit        Muxes := 1     
+	   2 Input    175 Bit        Muxes := 1     
+	   2 Input    174 Bit        Muxes := 1     
+	   2 Input    173 Bit        Muxes := 1     
+	   2 Input    172 Bit        Muxes := 1     
+	   2 Input    171 Bit        Muxes := 1     
+	   2 Input    170 Bit        Muxes := 1     
+	   2 Input    169 Bit        Muxes := 1     
+	   2 Input    168 Bit        Muxes := 1     
+	   2 Input    167 Bit        Muxes := 1     
+	   2 Input    166 Bit        Muxes := 1     
+	   2 Input    165 Bit        Muxes := 1     
+	   2 Input    164 Bit        Muxes := 1     
+	   2 Input    163 Bit        Muxes := 1     
+	   2 Input    162 Bit        Muxes := 1     
+	   2 Input    161 Bit        Muxes := 1     
+	   2 Input    160 Bit        Muxes := 1     
+	   2 Input    159 Bit        Muxes := 1     
+	   2 Input    158 Bit        Muxes := 1     
+	   2 Input    157 Bit        Muxes := 1     
+	   2 Input    156 Bit        Muxes := 1     
+	   2 Input    155 Bit        Muxes := 1     
+	   2 Input    154 Bit        Muxes := 1     
+	   2 Input    153 Bit        Muxes := 1     
+	   2 Input    152 Bit        Muxes := 1     
+	   2 Input    151 Bit        Muxes := 1     
+	   2 Input    150 Bit        Muxes := 1     
+	   2 Input    149 Bit        Muxes := 1     
+	   2 Input    148 Bit        Muxes := 1     
+	   2 Input    147 Bit        Muxes := 1     
+	   2 Input    146 Bit        Muxes := 1     
+	   2 Input    145 Bit        Muxes := 1     
+	   2 Input    144 Bit        Muxes := 1     
+	   2 Input    143 Bit        Muxes := 1     
+	   2 Input    142 Bit        Muxes := 1     
+	   2 Input    141 Bit        Muxes := 1     
+	   2 Input    140 Bit        Muxes := 1     
+	   2 Input    139 Bit        Muxes := 1     
+	   2 Input    138 Bit        Muxes := 1     
+	   2 Input    137 Bit        Muxes := 1     
+	   2 Input    136 Bit        Muxes := 1     
+	   2 Input    135 Bit        Muxes := 1     
+	   2 Input    134 Bit        Muxes := 1     
+	   2 Input    133 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 1     
+	   2 Input    131 Bit        Muxes := 1     
+	   2 Input    130 Bit        Muxes := 1     
+	   2 Input    129 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input    127 Bit        Muxes := 1     
+	   2 Input    126 Bit        Muxes := 1     
+	   2 Input    125 Bit        Muxes := 1     
+	   2 Input    124 Bit        Muxes := 1     
+	   2 Input    123 Bit        Muxes := 1     
+	   2 Input    122 Bit        Muxes := 1     
+	   2 Input    121 Bit        Muxes := 1     
+	   2 Input    120 Bit        Muxes := 1     
+	   2 Input    119 Bit        Muxes := 1     
+	   2 Input    118 Bit        Muxes := 1     
+	   2 Input    117 Bit        Muxes := 1     
+	   2 Input    116 Bit        Muxes := 1     
+	   2 Input    115 Bit        Muxes := 1     
+	   2 Input    114 Bit        Muxes := 1     
+	   2 Input    113 Bit        Muxes := 1     
+	   2 Input    112 Bit        Muxes := 1     
+	   2 Input    111 Bit        Muxes := 1     
+	   2 Input    110 Bit        Muxes := 1     
+	   2 Input    109 Bit        Muxes := 1     
+	   2 Input    108 Bit        Muxes := 1     
+	   2 Input    107 Bit        Muxes := 1     
+	   2 Input    106 Bit        Muxes := 1     
+	   2 Input    105 Bit        Muxes := 1     
+	   2 Input    104 Bit        Muxes := 1     
+	   2 Input    103 Bit        Muxes := 1     
+	   2 Input    102 Bit        Muxes := 1     
+	   2 Input    101 Bit        Muxes := 1     
+	   2 Input    100 Bit        Muxes := 1     
 	   2 Input     99 Bit        Muxes := 1     
 	   2 Input     98 Bit        Muxes := 1     
 	   2 Input     97 Bit        Muxes := 1     
@@ -625,8 +1248,8 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
@@ -678,43 +1301,17 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design main has unconnected port zoom[9]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[8]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[7]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[6]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[5]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[4]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[3]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[2]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[1]
-WARNING: [Synth 8-3331] design main has unconnected port zoom[0]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[31]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[30]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[29]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[28]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[27]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[26]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[25]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[24]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[23]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[22]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[21]
-WARNING: [Synth 8-3331] design main has unconnected port offset_X[20]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3936] Found unconnected internal register 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0]' and it is trimmed from '8' to '6' bits. [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd:36]
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][5]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][4]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0]'
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][3]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
-INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][6]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
-INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][7]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
 INFO: [Synth 8-3886] merging instance 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][2]' (FDE) to 'sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sc_fifo_chn_1_fifo_U/U_fifo_w8_d1_A_shiftReg/SRL_SIG_reg[0][0] )
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[4]' (FDE) to 'grp_convergence_fu_102/out_y_reg[5]'
 INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[5]' (FDE) to 'grp_convergence_fu_102/out_y_reg[6]'
 INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[6]' (FDE) to 'grp_convergence_fu_102/out_y_reg[7]'
 INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[7]' (FDE) to 'grp_convergence_fu_102/out_y_reg[8]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[8]' (FDE) to 'grp_convergence_fu_102/out_x_reg[4]'
-INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[4]' (FDE) to 'grp_convergence_fu_102/out_x_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_y_reg[8]' (FDE) to 'grp_convergence_fu_102/out_x_reg[5]'
 INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[5]' (FDE) to 'grp_convergence_fu_102/out_x_reg[6]'
 INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[6]' (FDE) to 'grp_convergence_fu_102/out_x_reg[7]'
 INFO: [Synth 8-3886] merging instance 'grp_convergence_fu_102/out_x_reg[7]' (FDE) to 'grp_convergence_fu_102/out_x_reg[8]'
@@ -746,7 +1343,7 @@ INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[8]' (FDE) t
 INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[9]' (FDE) to 'grp_dimage_fu_124/couleur_reg[10]'
 INFO: [Synth 8-3886] merging instance 'grp_dimage_fu_124/couleur_reg[10]' (FDE) to 'grp_dimage_fu_124/couleur_reg[11]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:46 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 343 ; free virtual = 21242
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:05 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9688 ; free virtual = 25977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -773,13 +1370,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:58 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 222 ; free virtual = 21121
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:17 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9573 ; free virtual = 25862
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 207 ; free virtual = 21106
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:20 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9543 ; free virtual = 25832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -791,7 +1388,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:20 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9539 ; free virtual = 25828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -815,7 +1412,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -828,7 +1425,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 205 ; free virtual = 21104
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -840,25 +1437,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -874,35 +1471,34 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |LUT1 |     2|
-|2     |LUT2 |     6|
-|3     |LUT3 |    10|
-|4     |LUT4 |     4|
-|5     |LUT5 |    26|
-|6     |LUT6 |    34|
-|7     |FDRE |   114|
-|8     |FDSE |     2|
+|1     |LUT2 |    31|
+|2     |LUT3 |    70|
+|3     |LUT4 |    12|
+|4     |LUT5 |   107|
+|5     |LUT6 |   125|
+|6     |FDRE |   414|
+|7     |FDSE |     4|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+-----------------------------------------+---------------------------+------+
 |      |Instance                                 |Module                     |Cells |
 +------+-----------------------------------------+---------------------------+------+
-|1     |top                                      |                           |   198|
-|2     |  grp_convergence_fu_102                 |convergence                |   180|
-|3     |    grp_convergence_do_convergence_fu_76 |convergence_do_convergence |   172|
-|4     |  grp_dimage_fu_124                      |dimage                     |     8|
-|5     |    grp_dimage_do_image_fu_58            |dimage_do_image            |     7|
+|1     |top                                      |                           |   763|
+|2     |  grp_convergence_fu_102                 |convergence                |   745|
+|3     |    grp_convergence_do_convergence_fu_76 |convergence_do_convergence |   735|
+|4     |  grp_dimage_fu_124                      |dimage                     |     7|
+|5     |    grp_dimage_do_image_fu_58            |dimage_do_image            |     6|
 |6     |      color_U                            |dimage_do_image_cbkb       |     3|
 |7     |        dimage_do_image_cbkb_rom_U       |dimage_do_image_cbkb_rom   |     3|
-|8     |  sc_fifo_chn_1_fifo_U                   |fifo_w8_d1_A               |    10|
+|8     |  sc_fifo_chn_1_fifo_U                   |fifo_w8_d1_A               |    11|
 +------+-----------------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 206 ; free virtual = 21105
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9540 ; free virtual = 25829
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1849.695 ; gain = 148.465 ; free physical = 258 ; free virtual = 21157
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:59 . Memory (MB): peak = 1849.695 ; gain = 520.430 ; free physical = 269 ; free virtual = 21168
+Synthesis finished with 0 errors, 0 critical warnings and 100 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 2229.504 ; gain = 432.879 ; free physical = 9592 ; free virtual = 25881
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:01:21 . Memory (MB): peak = 2229.504 ; gain = 900.246 ; free physical = 9603 ; free virtual = 25892
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -910,11 +1506,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-282 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+278 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 1857.703 ; gain = 541.066 ; free physical = 264 ; free virtual = 21163
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:22 . Memory (MB): peak = 2229.508 ; gain = 912.879 ; free physical = 9613 ; free virtual = 25902
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/project.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1881.723 ; gain = 0.000 ; free physical = 264 ; free virtual = 21163
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 29 11:59:16 2019...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2253.527 ; gain = 0.000 ; free physical = 9613 ; free virtual = 25902
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 12:56:25 2019...

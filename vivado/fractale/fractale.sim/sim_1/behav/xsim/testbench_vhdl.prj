@@ -1,12 +1,20 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/convergence.vhd" \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/convergence_do_convergence.vhd" \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/dimage.vhd" \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image.vhd" \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/fifo_w8_d1_A.vhd" \
-"../../../../../../fractale_hls/solution1/impl/ip/hdl/vhdl/main.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_dadd_64ns_64g8j.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_dadddsub_64nfYi.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_dcmp_64ns_64ibs.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_dmul_64ns_64hbi.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_do_conv.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_faddfsub_32nbkb.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_fmul_32ns_32dEe.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_fpext_32ns_6eOg.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/conv_fsub_32ns_32cud.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/convergence.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/dimage.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/dimage_do_image_cjbC.vhd" \
+"../../../../../../fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd" \
 "../../../../fractale.srcs/sources_1/new/test.vhd" \
 "../../../../fractale.srcs/sources_1/new/testbench.vhd" \
 

@@ -11,7 +11,7 @@ addr0, ce0, q0, clk);
 
 parameter DWIDTH = 12;
 parameter AWIDTH = 6;
-parameter MEM_SIZE = 51;
+parameter MEM_SIZE = 50;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -48,7 +48,7 @@ module dimage_do_image_cbkb(
     q0);
 
 parameter DataWidth = 32'd12;
-parameter AddressRange = 32'd51;
+parameter AddressRange = 32'd50;
 parameter AddressWidth = 32'd6;
 input reset;
 input clk;

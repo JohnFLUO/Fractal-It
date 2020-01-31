@@ -1,0 +1,49 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/decodeur_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity decodeur_7seg
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/Affichage_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Affichage_7seg
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/vga_bitmap_640x480.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity VGA_bitmap_640x480
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/Affichage_VGA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Affichage_VGA
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/Gestionnaire_Horloge.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Gestionnaire_Horloge
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/imports/src/PmodJSTK_Demo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity JSTK
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/ViewController.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ViewController
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/imports/conv/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/convergence/convergence/convergence.srcs/sources_1/new/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+WARNING: [VRFC 10-1193] overwriting existing primary unit convergence [/net/e/floupias001/FRACTALE/fractale/convergence/convergence/convergence.srcs/sources_1/new/convergence.vhd:34]
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/convergence/convergence/convergence.srcs/sources_1/new/couleur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity couleur
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/convergence/convergence/convergence.srcs/sources_1/new/iteration.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity iteration
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/convergence/convergence/convergence.srcs/sources_1/new/point.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity point
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/push_detector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity push_detector
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/imports/src/spiCtrl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity spiCtrl
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/imports/src/spiMode0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity spiMode0
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sources_1/new/top_Mandelbrot.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_Mandelbrot
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_Mandelbrot_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_Mandelbrot_tb
+ERROR: [VRFC 10-91] reset is not declared [/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd:93]
+ERROR: [VRFC 10-91] reset is not declared [/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd:97]
+ERROR: [VRFC 10-1504] unit bench ignored due to previous errors [/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd:8]
+INFO: [VRFC 10-240] VHDL file /net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_Mandelbrot_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_Mandelbrot_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/Mandelbrot/Mandelbrot.srcs/sim_1/new/fullTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity top_Mandelbrot_tb

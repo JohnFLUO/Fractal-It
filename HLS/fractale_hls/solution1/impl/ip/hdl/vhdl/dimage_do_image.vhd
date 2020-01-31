@@ -63,7 +63,7 @@ begin
     color_U : component dimage_do_image_cbkb
     generic map (
         DataWidth => 12,
-        AddressRange => 51,
+        AddressRange => 50,
         AddressWidth => 6)
     port map (
         clk => ap_clk,

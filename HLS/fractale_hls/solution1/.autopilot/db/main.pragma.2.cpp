@@ -34280,7 +34280,7 @@ static bool __ssdm_thread_M_do_convergence;;
   public:
   sc_in<bool> clk;
   sc_in<bool> reset;
-  sc_in <sc_uint<10> > zoom;
+  sc_in <float > zoom;
   sc_in <float > offset_X;
   sc_in <float > offset_Y;
   sc_fifo_out<sc_uint<8> > s_out;
@@ -34294,7 +34294,7 @@ static bool __ssdm_thread_M_do_convergence;;
     _ssdm_op_SpecSensitive("do_convergence", "reset", &reset, _ssdm_sensitive_reset0);;
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"bool\"", "clk", 0, 0, &clk);
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"bool\"", "reset", 0, 0, &reset);
-    _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"sc_uint<10>\"", "zoom", 0, 0, &zoom);
+    _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "zoom", 0, 0, &zoom);
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "offset_X", 0, 0, &offset_X);
     _ssdm_op_SpecPort("convergence", _ssdm_sc_in, "\"float\"", "offset_Y", 0, 0, &offset_Y);
     _ssdm_op_SpecInterface(&s_out, "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
@@ -34359,7 +34359,7 @@ struct main {
   sc_out <sc_uint<9> > y;
   sc_out <sc_uint<12> > couleur;
   sc_fifo<sc_uint<8> > counter;
-  sc_in <sc_uint<10> > zoom;
+  sc_in <float > zoom;
   sc_in <float> offset_X;
   sc_in <float> offset_Y;
   main(::sc_core::sc_module_name )
@@ -34372,7 +34372,7 @@ struct main {
     _ssdm_op_SpecPort("main", _ssdm_sc_out, "\"sc_uint<10>\"", "x", 0, 0, &x);
     _ssdm_op_SpecPort("main", _ssdm_sc_out, "\"sc_uint<9>\"", "y", 0, 0, &y);
     _ssdm_op_SpecPort("main", _ssdm_sc_out, "\"sc_uint<12>\"", "couleur", 0, 0, &couleur);
-    _ssdm_op_SpecPort("main", _ssdm_sc_in, "\"sc_uint<10>\"", "zoom", 0, 0, &zoom);
+    _ssdm_op_SpecPort("main", _ssdm_sc_in, "\"float\"", "zoom", 0, 0, &zoom);
     _ssdm_op_SpecPort("main", _ssdm_sc_in, "\"float\"", "offset_X", 0, 0, &offset_X);
     _ssdm_op_SpecPort("main", _ssdm_sc_in, "\"float\"", "offset_Y", 0, 0, &offset_Y);
   convergence.clk(clk);
@@ -34407,10 +34407,10 @@ _ssdm_op_SpecExt("member_name", "dimage", &dimage);;
 };
 
 
-convergence ssdm_ins_convergence_2_0("ssdm_dut");
+convergence ssdm_ins_convergence_0_0("ssdm_dut");
 
 
-dimage ssdm_ins_dimage_2_0("ssdm_dut");
+dimage ssdm_ins_dimage_0_0("ssdm_dut");
 
 
-main ssdm_ins_main_2_0("ssdm_dut");
+main ssdm_ins_main_0_0("ssdm_dut");

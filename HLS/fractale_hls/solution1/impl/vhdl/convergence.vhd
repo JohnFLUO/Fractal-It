@@ -13,7 +13,7 @@ entity convergence is
 port (
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
-    zoom : IN STD_LOGIC_VECTOR (9 downto 0);
+    zoom : IN STD_LOGIC_VECTOR (31 downto 0);
     offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
     offset_Y : IN STD_LOGIC_VECTOR (31 downto 0);
     s_out_din : OUT STD_LOGIC_VECTOR (7 downto 0);
@@ -27,7 +27,7 @@ end;
 architecture behav of convergence is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "convergence,hls_ip_2018_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.908000,HLS_SYN_LAT=51,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=119,HLS_SYN_LUT=554,HLS_VERSION=2018_2}";
+    "convergence,hls_ip_2018_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.908000,HLS_SYN_LAT=201,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=419,HLS_SYN_LUT=1960,HLS_VERSION=2018_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
@@ -53,7 +53,7 @@ architecture behav of convergence is
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
-        zoom : IN STD_LOGIC_VECTOR (9 downto 0);
+        zoom : IN STD_LOGIC_VECTOR (31 downto 0);
         offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
         offset_Y : IN STD_LOGIC_VECTOR (31 downto 0);
         s_out_din : OUT STD_LOGIC_VECTOR (7 downto 0);

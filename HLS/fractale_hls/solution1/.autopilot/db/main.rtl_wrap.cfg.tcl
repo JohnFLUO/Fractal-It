@@ -48,7 +48,7 @@ lappend portList $port4
 set portName5 "zoom"
 set isMeta5 0
 set portInterface5 [list "sc_in"]
-set portData5 [list "sc_uint" 10]
+set portData5 [list "float"]
 set isClock5 0
 set isReset5 0
 set portAttribute5 [list $isClock5 $isReset5]

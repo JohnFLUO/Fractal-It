@@ -1,0 +1,1 @@
+-wto "dd7aa73214ae4eda9ffc513e7a1aaaa3" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "top_Mandelbrot_tb_behav" "xil_defaultlib.top_Mandelbrot_tb" -log "elaborate.log" 

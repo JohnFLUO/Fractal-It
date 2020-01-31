@@ -48,7 +48,7 @@ end
 
 dimage_do_image_cbkb #(
     .DataWidth( 12 ),
-    .AddressRange( 51 ),
+    .AddressRange( 50 ),
     .AddressWidth( 6 ))
 color_U(
     .clk(ap_clk),

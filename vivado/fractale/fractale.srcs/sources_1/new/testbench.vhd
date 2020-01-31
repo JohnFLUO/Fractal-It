@@ -42,27 +42,51 @@ signal reset : std_logic;
 signal x : STD_LOGIC_VECTOR (9 downto 0);
 signal y : STD_LOGIC_VECTOR (8 downto 0);
 signal couleur : STD_LOGIC_VECTOR (11 downto 0);
+signal offset_X :  std_logic_vector (31 downto 0);
+signal offset_Y :  std_logic_vector (31 downto 0);
+signal zoom :  std_logic_vector ( 31 downto 0);
+
 
 constant clock_period: time := 10 ns;
 
-component main IS
+component convergence IS
 port (
 clk : IN STD_LOGIC;
 reset : IN STD_LOGIC;
 x : OUT STD_LOGIC_VECTOR (9 downto 0);
 y : OUT STD_LOGIC_VECTOR (8 downto 0);
-couleur : OUT STD_LOGIC_VECTOR (11 downto 0));
+couleur : OUT STD_LOGIC_VECTOR (11 downto 0);
+zoom : in std_logic_vector (31 downto 0);
+offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
+offset_Y : IN STD_LOGIC_VECTOR (31 downto 0) );
+end component;
+
+component test is
+port(
+offset_X : out std_logic_vector (31 downto 0);
+offset_Y : out std_logic_vector (31 downto 0);
+zoom : out std_logic_vector ( 31 downto 0));
 end component;
 
 begin
 
-    grp_main : component main
+    grp_convergence : component convergence
     port map (
         clk => clock,
         reset => reset,
         x => x,
         couleur => couleur,
+        offset_X => offset_X,
+        offset_Y => offset_Y,
+        zoom => zoom,
         y => y);
+        
+   grp_test : component test
+    port map (
+        offset_X => offset_X,
+        offset_Y => offset_Y,
+        zoom => zoom
+        );
         
     init : process
     begin

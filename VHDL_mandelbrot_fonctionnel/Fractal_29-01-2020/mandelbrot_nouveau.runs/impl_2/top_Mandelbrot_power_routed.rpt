@@ -1,0 +1,193 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Wed Jan 29 10:54:34 2020
+| Host             : DESKTOP-OVE3R84 running 64-bit major release  (build 9200)
+| Command          : report_power -file top_Mandelbrot_power_routed.rpt -pb top_Mandelbrot_power_summary_routed.pb -rpx top_Mandelbrot_power_routed.rpx
+| Design           : top_Mandelbrot
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.404        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.302        |
+| Device Static (W)        | 0.102        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 83.2         |
+| Junction Temperature (C) | 26.8         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.033 |        3 |       --- |             --- |
+| Slice Logic             |     0.057 |    20238 |       --- |             --- |
+|   LUT as Logic          |     0.045 |     5805 |     63400 |            9.16 |
+|   LUT as Shift Register |     0.005 |     1712 |     19000 |            9.01 |
+|   CARRY4                |     0.004 |      972 |     15850 |            6.13 |
+|   Register              |     0.002 |     7279 |    126800 |            5.74 |
+|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
+|   F7/F8 Muxes           |    <0.001 |       40 |     63400 |            0.06 |
+|   Others                |     0.000 |      143 |       --- |             --- |
+| Signals                 |     0.059 |    16628 |       --- |             --- |
+| Block RAM               |     0.028 |       80 |       135 |           59.26 |
+| DSPs                    |     0.123 |      173 |       240 |           72.08 |
+| I/O                     |     0.002 |       60 |       210 |           28.57 |
+| Static Power            |     0.102 |          |           |                 |
+| Total                   |     0.404 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.315 |       0.297 |      0.018 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.005 |       0.002 |      0.002 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------+--------+-----------------+
+| Clock       | Domain | Constraint (ns) |
++-------------+--------+-----------------+
+| sys_clk_pin | clock  |            10.0 |
++-------------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| top_Mandelbrot              |     0.302 |
+|   gestion_bouton_bas        |    <0.001 |
+|     deb_inst                |    <0.001 |
+|   gestion_bouton_haut       |    <0.001 |
+|     deb_inst                |    <0.001 |
+|   inst_Affichage_7seg       |    <0.001 |
+|   inst_Affichage_VGA        |     0.029 |
+|     inst_VGA_bitmap         |     0.029 |
+|   inst_Convergence          |     0.264 |
+|     Gen_IT[0].ITX           |     0.013 |
+|     Gen_IT[10].ITX          |     0.009 |
+|     Gen_IT[11].ITX          |     0.009 |
+|     Gen_IT[12].ITX          |     0.009 |
+|     Gen_IT[13].ITX          |     0.009 |
+|     Gen_IT[14].ITX          |     0.009 |
+|     Gen_IT[15].ITX          |     0.008 |
+|     Gen_IT[16].ITX          |     0.008 |
+|     Gen_IT[17].ITX          |     0.008 |
+|     Gen_IT[18].ITX          |     0.008 |
+|     Gen_IT[19].ITX          |     0.007 |
+|     Gen_IT[1].ITX           |     0.015 |
+|     Gen_IT[20].ITX          |     0.007 |
+|     Gen_IT[21].ITX          |     0.007 |
+|     Gen_IT[22].ITX          |     0.006 |
+|     Gen_IT[23].ITX          |     0.006 |
+|     Gen_IT[24].ITX          |     0.006 |
+|     Gen_IT[25].ITX          |     0.006 |
+|     Gen_IT[26].ITX          |     0.005 |
+|     Gen_IT[27].ITX          |     0.010 |
+|     Gen_IT[2].ITX           |     0.013 |
+|     Gen_IT[3].ITX           |     0.012 |
+|     Gen_IT[4].ITX           |     0.011 |
+|     Gen_IT[5].ITX           |     0.011 |
+|     Gen_IT[6].ITX           |     0.011 |
+|     Gen_IT[7].ITX           |     0.010 |
+|     Gen_IT[8].ITX           |     0.010 |
+|     Gen_IT[9].ITX           |     0.010 |
+|     g_point                 |     0.011 |
+|   inst_Gestionnaire_Horloge |    <0.001 |
+|   inst_ViewController       |     0.002 |
+|   joystick                  |    <0.001 |
+|     SPI_Ctrl                |    <0.001 |
+|     SPI_Int                 |    <0.001 |
++-----------------------------+-----------+
+
+

@@ -18,3 +18,153 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fr
 INFO: [VRFC 10-307] analyzing entity main
 INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/convergence_do_convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_do_convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A_shiftReg
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity main
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/convergence_do_convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_do_convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A_shiftReg
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity main
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity test
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/convergence_do_convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_do_convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A_shiftReg
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity main
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+WARNING: [VRFC 10-1194] overwriting existing secondary unit rtl [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/ip/hdl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+WARNING: [VRFC 10-1194] overwriting existing secondary unit rtl [/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd:27]
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity test
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_dadd_g8j.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_dadd_g8j
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_dadddfYi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_dadddfYi
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_dcmp_ibs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_dcmp_ibs
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_dmul_hbi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_dmul_hbi
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_do_convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_do_convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_faddfbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_faddfbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_fmul_dEe.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_fmul_dEe
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_fpexteOg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_fpexteOg
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence_fsub_cud.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence_fsub_cud
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cjbC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A_shiftReg
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity main
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cjbC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cjbC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_dadd_64ns_64g8j.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_dadd_64ns_64g8j
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_dadddsub_64nfYi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_dadddsub_64nfYi
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_dcmp_64ns_64ibs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_dcmp_64ns_64ibs
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_dmul_64ns_64hbi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_dmul_64ns_64hbi
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_do_conv.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_do_conv
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_faddfsub_32nbkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_faddfsub_32nbkb
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_fmul_32ns_32dEe.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_fmul_32ns_32dEe
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_fpext_32ns_6eOg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_fpext_32ns_6eOg
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/conv_fsub_32ns_32cud.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv_fsub_32ns_32cud
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/convergence.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity convergence
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cjbC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/fifo_w8_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A_shiftReg
+INFO: [VRFC 10-307] analyzing entity fifo_w8_d1_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/vivado/fractale/fractale.srcs/sources_1/new/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [VRFC 10-163] Analyzing VHDL file "/net/e/floupias001/FRACTALE/fractale/Fractale-It/fractale_hls/solution1/impl/vhdl/dimage_do_image_cjbC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC_rom
+INFO: [VRFC 10-307] analyzing entity dimage_do_image_cjbC

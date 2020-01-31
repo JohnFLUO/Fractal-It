@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Jan 14 14:21:38 2020
+| Host         : ewe running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_control_sets -verbose -file top_Mandelbrot_control_sets_placed.rpt
+| Design       : top_Mandelbrot
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      8 |            2 |
+|    16+ |           14 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              58 |           26 |
+| No           | No                    | Yes                    |             108 |           17 |
+| No           | Yes                   | No                     |            2792 |          379 |
+| Yes          | No                    | No                     |              26 |            7 |
+| Yes          | No                    | Yes                    |             136 |           23 |
+| Yes          | Yes                   | No                     |             234 |           38 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|       Clock Signal      |                           Enable Signal                          |                         Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++-------------------------+------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/VGA_hs                        | inst_Convergence/g_point/SR[0]                                   |                1 |              2 |
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/VGA_vs_i_1_n_0                | inst_Convergence/g_point/SR[0]                                   |                1 |              2 |
+|  clock_IBUF_BUFG        | inst_Gestionnaire_Horloge/aff_reg[0]                             | inst_Gestionnaire_Horloge/Num_aff_reg[3]                         |                2 |              8 |
+|  clock_IBUF_BUFG        | inst_Gestionnaire_Horloge/aff_reg[0]                             | inst_Gestionnaire_Horloge/Num_aff_reg[4]                         |                2 |              8 |
+|  s_CE_SPI_66_67kHz_BUFG | joystick/SPI_Int/rSR                                             | inst_Convergence/g_point/SR[0]                                   |                2 |             16 |
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/v_counter_0                   | inst_Convergence/g_point/SR[0]                                   |                3 |             20 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Convergence/g_it_19/couleur_out_reg[11]                     |                9 |             22 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Convergence/g_point/tempy1_i_1_n_0                          |                5 |             22 |
+|  clock_IBUF_BUFG        | inst_Convergence/g_point/tempx1_i_1_n_0                          | inst_Convergence/g_point/tempx1_i_2_n_0                          |                4 |             22 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Affichage_VGA/inst_VGA_bitmap/VGA_red[3]_i_1_n_0            |                9 |             24 |
+|  clock_IBUF_BUFG        | inst_Gestionnaire_Horloge/aff_reg[0]                             |                                                                  |                7 |             26 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Gestionnaire_Horloge/cmpt_3kHz[15]_i_1_n_0                  |                4 |             30 |
+| ~s_CE_SPI_66_67kHz_BUFG |                                                                  | inst_Convergence/g_point/SR[0]                                   |                6 |             36 |
+| ~s_CE_SPI_66_67kHz_BUFG | joystick/SPI_Ctrl/FSM_onehot_STATE_reg_n_0_[4]                   | inst_Convergence/g_point/SR[0]                                   |                9 |             40 |
+|  clock_IBUF_BUFG        |                                                                  |                                                                  |               26 |             58 |
+| ~s_CE_SPI_66_67kHz_BUFG | joystick/SPI_Ctrl/tmpSR_0                                        | inst_Convergence/g_point/SR[0]                                   |               12 |             80 |
+|  clock_IBUF_BUFG        | inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_rep[18]_i_2_n_0 | inst_Affichage_VGA/inst_VGA_bitmap/pix_read_addr_rep[18]_i_1_n_0 |               25 |            172 |
+|  clock_IBUF_BUFG        |                                                                  | inst_Convergence/g_point/SR[0]                                   |              363 |           2766 |
++-------------------------+------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+
+

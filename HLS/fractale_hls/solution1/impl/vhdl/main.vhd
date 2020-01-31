@@ -16,7 +16,7 @@ port (
     x : OUT STD_LOGIC_VECTOR (9 downto 0);
     y : OUT STD_LOGIC_VECTOR (8 downto 0);
     couleur : OUT STD_LOGIC_VECTOR (11 downto 0);
-    zoom : IN STD_LOGIC_VECTOR (9 downto 0);
+    zoom : IN STD_LOGIC_VECTOR (31 downto 0);
     offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
     offset_Y : IN STD_LOGIC_VECTOR (31 downto 0) );
 end;
@@ -25,7 +25,7 @@ end;
 architecture behav of main is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "main,hls_ip_2018_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.165000,HLS_SYN_LAT=52,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=150,HLS_SYN_LUT=606,HLS_VERSION=2018_2}";
+    "main,hls_ip_2018_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a100tcsg324-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.165000,HLS_SYN_LAT=202,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=450,HLS_SYN_LUT=2012,HLS_VERSION=2018_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
@@ -48,7 +48,7 @@ architecture behav of main is
 
     component convergence IS
     port (
-        zoom : IN STD_LOGIC_VECTOR (9 downto 0);
+        zoom : IN STD_LOGIC_VECTOR (31 downto 0);
         offset_X : IN STD_LOGIC_VECTOR (31 downto 0);
         offset_Y : IN STD_LOGIC_VECTOR (31 downto 0);
         s_out_din : OUT STD_LOGIC_VECTOR (7 downto 0);
