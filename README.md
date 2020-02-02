@@ -10,30 +10,30 @@ Ce projet s'inscrit dans le cadre des projet de semestre 9 de l'option systèmes
 
 # Implantation logicielle
 ## Convergence
-L'implémentation C++ proposera à terme plusieurs modes de convergence :
+L'implémentation C++ propose plusieurs modes de convergence :
 - CPU
 	- Flottant double précision
 		- [x] Sans optimisation
 		- [x] OpenMP
 		- [x] OpenMP + AVX
-		- [x] OpenMP + AVX amélioré
+		- [x] OpenMP + AVX entrelacé
 	- Flottant simple précision
 		- [x] Sans optimisation
 		- [x]  OpenMP
 		- [x]  OpenMP + AVX
-		- [x]  OpenMP + AVX amélioré
+		- [x]  OpenMP + AVX entrelacé
 	- Virgule fixe
 		- [x] Sans optimisation
 		- [x] OpenMP
-		- [ ] OpenMP + AVX
-		- [ ] OpenMP + AVX amélioré
+		- [X] OpenMP + SSE
 - GPU
 	- CUDA
 		- [x] Simple précision
-		- [x] Double précision
-		- [ ] Virgule fixe ? 
+		- [x] Double précision 
 	- OpenCL ?
 
 # Implantation Matérielle
-L'implantation matérielle alliera des modules issus de synthèse de haut niveau HLS et de modules VHDL.
+L'implantation matérielle se base sur deux approches :
+- approche VHDL uniquement
+- approche VHDL + modules issus de synthèse de haut niveau HLS.
 
