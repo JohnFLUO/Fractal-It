@@ -1,7 +1,7 @@
 .\" Manpage for fractal.
 .\" Contact jsaussereau@enseirb-matmeca.fr to correct errors or typos.
 
-.TH man 7 "14 January 2020" "1.1" "fractal man page"
+.TH man 7 "14 January 2020" "1.2" "fractal man page"
 
 .SH NAME
 fractal \- a program that displays the Mandelbrot fractal
@@ -22,7 +22,7 @@ Several color maps are also available.
 \fIinteger\fR y size of the window
 .IP "\fB\-x\fP \fIoffsetx\fR"
 \fIreal\fR x start position
-.IP "\fB\-y\fP \fIoffsetx\fR"
+.IP "\fB\-y\fP \fIoffsety\fR"
 \fIreal\fR y start position
 .IP "\fB\-i, \-\-maxiter\fP \fIiter\fR"
 maximum number of iteration, must be an \fIinteger\fR
@@ -33,11 +33,11 @@ If several simulations are done, -f (--first) and -l (--last) should be used so 
 .IP "\fB\-d, \-\-testID\fP \fIID\fR"
 If the saving option -s (--save) is used, a test ID should be added to tell the program which simulation is performed. It corresponds to the column in the .csv result output. The first column has an ID of 1. Must be an \fIinteger\fR
 .IP "\fB\-f, \-\-first\fP
-first element of a set of simulation. If used, the source file is for result output is tmp.csv (cumulative result storing), otherwise results_template.csv is used.
+first element of a set of simulation. If used, the source file for result output is tmp.csv (cumulative result storing), otherwise results_template.csv is used.
 .IP "\fB\-l, \-\-last\fP 
 last element of a set of simulation. If used, the cumulative results are stored into a new file results_<date>_<time>.csv, instead of tmp.csv.
-.IP "\fB\-\-fluffy\fP
-enable a cute fluffy mode (WIP)
+.IP "\fB\-\-cute\fP
+enable a cute kitten mode
 
 .SH CONVERGENCE OPTIONS
 .TP
@@ -51,7 +51,7 @@ double precision floatting point computation with OpenMP and AVX vectorization.
 .IP "\fB\-\-dp_omp_avx+\fP"
 double precision floatting point computation with OpenMP, AVX vectorization and latency optimization.
 .IP "\fB\-\-dp_omp_avx++\fP"
-double precision floatting point computation with OpenMP, AVX vectorization and experimental optimizations.
+double precision floatting point computation with OpenMP, AVX vectorization and experimental optimizations (actually slower than dp_omp_avx).
 .TP
 .B ----------- simple precision floatting point -----------
 .IP "\fB\-\-sp\fP"
@@ -62,24 +62,27 @@ simple precision floatting point computation with OpenMP.
 simple precision floatting point computation with OpenMP and AVX vectorization.
 .IP "\fB\-\-sp_omp_avx+\fP"
 simple precision floatting point computation with OpenMP, AVX vectorization and latency optimization.
-.IP "\fB\-\-sp_omp_avx++\fP"
-simple precision floatting point computation with OpenMP, AVX vectorization and experimental optimizations.
 .TP
 .B ---------------------- fixed point ----------------------
 .IP "\fB\-\-fp\fP"
 fixed point computation without any optimization.
 .IP "\fB\-\-fp_omp\fP"
 sfixed point computation with OpenMP.
-.IP "\fB\-\-fp_omp_sse\fP"
+.IP "\fB\-\-fp_omp_sse2\fP"
 fixed point computation with OpenMP and SSE vectorization.
-.IP "\fB\-\-fp_omp_sse+\fP"
-fixed point computation with OpenMP and SSE vectorization, latency optimization.
-.IP "\fB\-\-fp_omp_sse++\fP"
-fixed point computation with OpenMP and SSE vectorization, experimental optimizations.
 .TP
-.B --------- GPU double precision floatting point ---------
-.IP "\fB\-\-cuda\fP"
+.B --------- GPU double precision floatting point ----------
+.IP "\fB\-\-cuda_d\fP"
 double precision floatting point computation using GPU.
+.IP "\fB\-\-cuda_d2\fP"
+double precision floatting point computation using GPU using double2.
+.IP "\fB\-\-cuda_d2_wp\fP"
+double precision floatting point computation using GPU using double2 with pinned memory.
+.TP
+.B --------- GPU simple precision floatting point ----------
+.IP "\fB\-\-cuda_s\fP"
+double precision floatting point computation using GPU.
+
 
 \.SH EXAMPLES
 .TP
@@ -104,4 +107,4 @@ simu(7)
 No known bugs (of course).
 
 .SH AUTHOR
-Jonathan SAUSSEREAU (jsaussereau@enseirb-matmeca.fr)
+Jonathan SAUSSEREAU (jona.saussereau@gmail.com)
